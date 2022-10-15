@@ -13,6 +13,63 @@
     line-height: 1.4em;
 
 } */
-body{
-    background: #eeee;
+ .wrapper{
+    background: #fff;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* img{
+    float: left;
+    margin: 10px;
+
+}  */
+
+
+/* .blue{
+
+    float: right; 
+    background: blue;
+
+}
+.red{
+    background: red;
+}
+.green{
+    background: green;
+}
+.box{
+    height: 100px;
+    width:1000px;
+} */
+
+ .wrapper:after{
+    content: "";
+    display: block;
+    clear: both;
+} 
+.service:after{
+    content: "";
+    display:block;
+    clear: both;
+}
+.service h2, .service p{
+    color : #9999;
+    margin: 10px 0;
+    text-align: center;
+}
+.service{
+     float: left;
+     background: #eeee;
+     width: 29%;
+     margin: 1%;
+     padding: 1%;
+     height: 140px;
+}
+.content{
+    padding: 10px;
+    background: #ccc;
+    clear: left;
+    margin-top: 100px;
 }
