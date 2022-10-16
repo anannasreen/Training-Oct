@@ -49,26 +49,27 @@ p, a{
     clear: both;
 }  
 .service:after{
-    content: "";
+    content: " ";
     display:block;
     clear: both;
+    
 }
 .service h2, .service p{
     color : #9999;
     margin: 1 px 0;
     text-align: center;
 }
-.service{
+ .service{
      float: left;
      background: #eeee;
-     width: 29%;
-     margin: 1%;
-     padding: 1%;
+     width: 20%;
+      margin: 1%;
+     padding: 1%; 
      height: 140px;
-}
+} 
 .content{
     padding: 10px;
     background: #ccc;
     clear: left;
-    margin-top: 100px; 
+    margin-top: 100px;  
 }
