@@ -64,8 +64,40 @@ button{
      border-radius: 11px;
 }
 /* //POP-UP ANIMATION STYLES// */
+      #pop-up{
+        top: -400px;
+        transform-origin: 10px 10px;
+        animation: drop 0.5s ease forwards, 
+                   swing 2s 3s ease forwards;
+      }
+      @keyframes drop{
+        0%{
+            opacity: 0;
+        }
+        70%{ 
+            transform:translateY(700px);
+        }
+        100%{ 
+            transform: translateY(650px);
+            opacity: 1;
+        }
+      }
 
-
+@keyframes swing{
+    0%{
+        transform: translateY(650px) rotateZ(0deg)
+    }
+    40%{
+        transform: translateY(650px) rotateZ(90deg)
+        
+    }
+    70%{
+        transform: translateY(650px) rotateZ(70deg)
+    }
+    100%{
+        transform: translateY(650px) rotateZ(75deg)
+    }
+}
 
 /* //BASKET BASE STYLES// */
 header{
@@ -101,3 +133,4 @@ header:after{
 .basket header h1{
     float: left;
 }
+/* //BASKET ANIMATION STYLES// */
