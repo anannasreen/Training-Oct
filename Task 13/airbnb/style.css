@@ -5,6 +5,10 @@ header img{
     left: 0;
     margin-left: 0;
 }
+body{
+    display: grid;
+    font-family: arial;
+}
 .wrapper{
     width: 100%;
     max-width: 960px;
@@ -17,7 +21,7 @@ nav ul{
 nav a{
     text-decoration: none;
     text-align: center;
-    color: gray;
+    color: rgb(53, 51, 51);
     display: block;
     padding: 10px;
 }
