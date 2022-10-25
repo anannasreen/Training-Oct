@@ -76,9 +76,9 @@ svg:hover{
     
     background-color:rgb(214, 207, 207);
 }
-#search img{
-   background: none;
-}
+.search img:hover{
+   cursor: pointer;
+} 
 .search{
     display: flex;
     justify-content: center;
