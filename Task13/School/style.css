@@ -22,7 +22,7 @@ header h1{
 }
 form{
     padding-right: 500px;
-   position: relative;
+   /* position: relative; */
    top: 250px; 
     display: flex;
     justify-content: center;
