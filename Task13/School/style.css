@@ -137,3 +137,8 @@ footer{
         margin-top: 20px;
     }
 }
+@media screen and (max-width:319px){
+      header img{
+        height: 300px;
+      }   
+}
