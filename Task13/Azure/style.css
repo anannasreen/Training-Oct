@@ -1,84 +1,52 @@
-   body{
-     /* font-size: 16px;
-     font-weight: 500;  
-    line-height: 1;  */
-    margin: 0;
-    padding: 0;
-}  
-.background{
-    
-}
-header{
-    background-color: white;
-    display: grid;
-    padding: 60px;
-    grid-template-columns: repeat(5, 1fr);
+*{
     font-family:'Segoe UI',SegoeUI,'Helvetica Neue',Helvetica,Arial,sans-serif;
-    /* position: absolute;
-    text-align: center; */
-    align-items: center;
-    
 }
-header a{
+/*     background-color: white; */
+/*     display: flex;
+    padding: 60px;
+    grid-template-columns: repeat(5, 1fr); */
+    
+/*     align-items: center; */
+    
+
+/* header a{
     text-decoration: none;
     color: black;
-    font-size: 20px;
+    font-size: 50px;
     
 }
 header h2{
     font-size: 50px;
     margin-left: -40px;
     
+} */
+.banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%; 
+    align-content: center;
 }
-.container{
-    width: 100%;
-    background-color: rgb(9, 105, 214);
-    font-size: 20px;
-    padding: 50px;
-    font-family:'Segoe UI',SegoeUI,'Helvetica Neue',Helvetica,Arial,sans-serif;
-    color: white;
-    text-align: center;
-
+.azure{
+    display: flex;
+    align-items: center;
 }
-.content{
-    font-family:'Segoe UI',SegoeUI,'Helvetica Neue',Helvetica,Arial,sans-serif;
-    background-image: url(img/background.webp);
-    background-size: 2800px; 
-    background-repeat: no-repeat;
-    padding: 540px;
-    /* width: 740px;
-    height: 320px; */
+.azure h2{
+     font-size: 380%;
+}
+.icon{
+    display: flex;
+}
+.signin{
+    display: flex;
     
+    align-items: center;
 }
- .one{
-    color: aqua;
-    transform: translateY(-500px);
-    position: absolute;
-    text-align: center;
-    font-size: 30px;
-    padding: 100px;
-    left: 150px; 
+.signin a{
+    text-decoration: none;
+    color: black;
+    font-size: 380%;
 }
-.content .two{
-    position: absolute;
-    color: white;
-    top: 800px;
-    font-size: 80px;
-    text-align: center;
-    transform: translateX(-300px);
+@media screen and (min-width:768px){
+    display: none;
 }
- .three p{
-    color: white;
-    transform: translateY(600px);
-    text-align: center;
-    font-weight: 400px;
-    font-size: 18px;
-    /* display: inline-block; */
-     /* margin-left: -100px;  */
-     /* text-align: center; */
-}
-.three p{
-    text-align: center;
-   
-} 
- 
