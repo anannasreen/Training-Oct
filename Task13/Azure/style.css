@@ -1,7 +1,7 @@
 *{
     font-family:'Segoe UI',SegoeUI,'Helvetica Neue',Helvetica,Arial,sans-serif;
     font-size: 17px;
-    /* line-height: 1.5; */
+    line-height: 1.5;
     margin: 0;
     padding: 0;
 }
@@ -94,19 +94,22 @@ header h2{
     display: flex;
     align-items: center;
     /* padding: 2%; */
-    /* padding: 12px;  */
+    padding: 12px;
     /* margin: 0; */
     /* padding: 10px; */
     width: 100%;
     justify-content: space-between;
-    margin-bottom: 22px;
-    margin-top: 22px;
+    /* margin-bottom: 22px; */
+    /* margin-top: 22px; */
     /* margin-left: 12px; */
-    position: relative;
+    /* position: relative; */
     /* left: 12px;  */
-    right: 22px; 
+    /* right: 22px; */
     white-space: nowrap;
 }
+ /* .banner .image{
+    width: 100%;
+}  */
 .azure{
     display: flex;
     align-items: center;
@@ -119,7 +122,7 @@ header h2{
 
 .azure h1{
      font-size: 100%;
-    margin-left: 10px;
+     /* margin-left: 10px; */
 }
 .icon{
     display: flex;
@@ -130,17 +133,20 @@ header h2{
     /* margin-left: 21px; */
     align-items: center;
     justify-content: flex-end;
+    width: 54px;
 }
 .signin a{
     text-decoration: none;
     color: black;
-    font-size: 13px;
+    font-size: 17px;
     /* margin-right: 100px; */
 }
-.signin .image{
-    width: 35px;
-    /* margin-right: 50px; */
-}
+ .banner .signin .image img{
+      width: 25px;
+      background-color: y;
+      height: 25px;
+      /* margin-right: 50px; */
+} 
 .banner1{
     display: none;
 }
@@ -162,7 +168,7 @@ header h2{
         display: flex;
     }
     .banner1 h2{
-        margin-left: 10px;
+        /* margin-left: 10px; */
     }
     /* .banner1 .header2{
         display: flex;
@@ -192,12 +198,13 @@ header h2{
     .banner1 .signin{
         display: flex;
         align-items: center;
-        margin-top: 8px;
+        /* margin-top: 8px; */
         /* margin-right: 0; */
         justify-content: flex-start;
+        
     }
     .banner1 .signin .image{
-        /* width: 30px; */
+         width: 5px; 
     }
     .banner1 .signin button{
         border: none;
@@ -275,8 +282,8 @@ header h2{
 }
 @media screen and (min-width:1320px){
     .banner1{
-        margin-left: 150px;
-        margin-right: 150px;
+        /* margin-left: 150px;
+        margin-right: 150px; */
     }
 }
 @media screen and (min-width:960px){
