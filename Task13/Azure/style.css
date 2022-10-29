@@ -21,16 +21,19 @@
     color: white;
     margin-left: 5px;
 }
-.section{
+.explore{
     /* width: 1490px; */
+    width: 100%;
     background-color: rgba(0, 89, 255, 0.815);
     height: 70px;
     display: flex;
     justify-content: center;
     align-content: center;
+    width: 1;
+    padding-right: 1;
     align-items: center;
 }
-.section a{
+.explore a{
      color: white;
      text-align: center;
      text-decoration: none;
@@ -43,7 +46,7 @@
 }
 .container .bgimage{
     display: flex;
-    width: 100%;
+    /* width: 100%; */
 }
 .container .bgimage1{
     display: none;
