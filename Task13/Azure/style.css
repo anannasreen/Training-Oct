@@ -1,7 +1,7 @@
 *{
     font-family:'Segoe UI',SegoeUI,'Helvetica Neue',Helvetica,Arial,sans-serif;
     font-size: 17px;
-    line-height: 1.5;
+    /* line-height: 1.5; */
     margin: 0;
     padding: 0;
 }
@@ -19,7 +19,7 @@
 }
 .chat span{
     color: white;
-    margin-left: 5px;
+    /* margin-left: 5px; */
 }
 .explore{
     /* width: 1490px; */
@@ -96,31 +96,22 @@ header h2{
 .banner{
     display: flex;
     align-items: center;
-    /* padding: 2%; */
     padding: 12px;
-    /* margin: 0; */
-    /* padding: 10px; */
     width: 100%;
     justify-content: space-between;
-    /* margin-bottom: 22px; */
-    /* margin-top: 22px; */
-    /* margin-left: 12px; */
-    /* position: relative; */
-    /* left: 12px;  */
-    /* right: 22px; */
     white-space: nowrap;
 }
- /* .banner .image{
-    width: 100%;
-}  */
+ 
 .azure{
     display: flex;
     align-items: center;
     /* margin-right: 80px; */
     /* margin-left: 2px; */
     /* justify-content: ; */
-    position: relative;
     /* left: 43px; */
+    width: 130px;
+    height: 45px;
+    justify-content: space-between;
 }
 
 .azure h1{
@@ -129,6 +120,9 @@ header h2{
 }
 .icon{
     display: flex;
+    width: 458px;
+    /* height: 78px; */
+    justify-content: center;
     align-items: center;
 }
 .signin{
@@ -136,18 +130,20 @@ header h2{
     /* margin-left: 21px; */
     align-items: center;
     justify-content: flex-end;
-    width: 54px;
+    width: 130px;
+    height: 54px;
 }
 .signin a{
     text-decoration: none;
     color: black;
     font-size: 17px;
+    padding: 20px;
     /* margin-right: 100px; */
 }
  .banner .signin .image img{
-      width: 25px;
+      width: 44px;
       background-color: y;
-      height: 25px;
+      height: 44px;
       /* margin-right: 50px; */
 } 
 .banner1{
