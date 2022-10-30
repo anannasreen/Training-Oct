@@ -275,8 +275,8 @@ header h2{
 }
 @media screen and (min-width:1320px){
     .banner1{
-        margin-left: 150px;
-        margin-right: 150px;
+        /* margin-left: 150px;
+        margin-right: 150px; */
     }
 }
 @media screen and (min-width:960px){
