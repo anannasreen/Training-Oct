@@ -111,6 +111,7 @@ header h2{
     /* left: 43px; */
     width: 130px;
     height: 45px;
+    justify-content: space-evenly;
 }
 
 .azure h1{
@@ -119,7 +120,7 @@ header h2{
 }
 .icon{
     display: flex;
-    width: 458px;
+    /* width: 458px; */
     /* height: 78px; */
     justify-content: center;
     align-items: center;
@@ -140,8 +141,7 @@ header h2{
     /* margin-right: 100px; */
 }
  .banner .signin .image img{
-      width: 44px;
-      background-color: y;
+      width: 40px;
       height: 44px;
       /* margin-right: 50px; */
 } 
@@ -202,7 +202,8 @@ header h2{
         
     }
     .banner1 .signin .image{
-         width: 5px; 
+         /* width: 5px; 
+         height: 5px; */
     }
     .banner1 .signin button{
         border: none;
