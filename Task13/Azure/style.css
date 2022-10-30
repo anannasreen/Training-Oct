@@ -787,6 +787,11 @@ footer .list p{
 
     .banner1 .header1 {
         display: flex;
+        padding: 0 12px;
+        margin-right: 67px;
+    }
+    .banner1 .header1 .azure{
+        height: 55px;
     }
 
     .banner1 .header1 .azure {
@@ -815,7 +820,7 @@ footer .list p{
 
     .banner1 ul li a {
         text-decoration: none;
-        font-size: 13px;
+        font-size: 17px;
         color: black;
     }
 
