@@ -19,10 +19,8 @@
 }
 .chat span{
     color: white;
-    /* margin-left: 5px; */
 }
 .explore{
-    /* width: 1490px; */
     width: 100%;
     background-color: rgba(0, 89, 255, 0.815);
     height: 70px;
@@ -46,7 +44,7 @@
 }
 .container .bgimage{
     display: flex;
-    /* width: 100%; */
+     width: 100%; 
 }
 .container .bgimage1{
     display: none;
@@ -100,6 +98,7 @@ header h2{
     width: 100%;
     justify-content: space-between;
     white-space: nowrap;
+
 }
  
 .azure{
@@ -129,20 +128,20 @@ header h2{
     display: flex;
     /* margin-left: 21px; */
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     width: 130px;
     height: 54px;
 }
 .signin a{
     text-decoration: none;
     color: black;
-    font-size: 17px;
+    font-size: 16px;
     padding: 20px;
     /* margin-right: 100px; */
 }
  .banner .signin .image img{
       width: 40px;
-      height: 44px;
+      height: 40px;
       /* margin-right: 50px; */
 } 
 .banner1{
@@ -155,18 +154,22 @@ header h2{
     }
     .banner1{
         display: flex;
-        align-content: space-between;
         /* margin-top: 10px; */
         /* margin-bottom: 10px; */
-        justify-content: space-between;
         white-space: nowrap;
         /* width: 100%; */
+        height: 55px;
     }
     .banner1 .header1{
         display: flex;
+        padding: 0 12px;
+        margin-right: 67px;
+    }
+    .banner1 .header1 .azure{
+        height: 55px;
     }
     .banner1 h2{
-        /* margin-left: 10px; */
+        margin-left: 12px; 
     }
     /* .banner1 .header2{
         display: flex;
@@ -184,13 +187,13 @@ header h2{
         align-items: center;
     }
     .banner1 ul li{
-        padding: 0 8px;
+        padding: 20px 8px;
         list-style-type: none;
         
     }
     .banner1 ul li a{
         text-decoration: none;
-        font-size: 13px;
+        font-size: 17px;
         color: black;
     }
     .banner1 .signin{
@@ -198,12 +201,11 @@ header h2{
         align-items: center;
         /* margin-top: 8px; */
         /* margin-right: 0; */
-        justify-content: flex-start;
-        
+        justify-content: space-between;
     }
-    .banner1 .signin .image{
-         /* width: 5px; 
-         height: 5px; */
+    .banner1 .signin .image img{
+         width: 30px; 
+         height: 30px; 
     }
     .banner1 .signin button{
         border: none;
