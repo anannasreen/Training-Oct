@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding:0;
+   white-space: nowrap;
+}
+@font-face {
+    font-family: font;
+    src: url(GTZirkon-Book.woff2);
+}
+div{
+    font-family: font;
+}
+header{
+    display: flex;
+    position: relative;
+     /* left: 850vw;    */
+     margin-left: 880px;
+}
+header a{
+   
+   color: #b5b5b5;
+   padding: 10px;
+   font-size: 18px;
+   text-decoration: none;
+
+}
+header .a:hover{
+     color: #07691c;
+}
+.container{
+    margin-left: 50px;
+    background-color: #ffe8dc;
+     width: 350vw;
+    height: 580vw; 
+    position: relative;
+}
+.content{
+    display: flex;
+    color: #2b2b2b;
+    flex-direction: column;
+    position: absolute;
+}
+.content h1{
+    position: relative;
+    left: -20px;
+    font-size: 43.945px;
+}
+.content img{
+    position: relative;
+    left: 100px;
+    top: 50px;
+}
+.content1{
+    display: flex;
+    position: relative;
+    top: 100px;
+    flex-direction: column;
+}
+.content span{
+    color:#07691c;
+    font-size: 18px;
+    
+}
+.content p{
+    font-size: 18px;
+    position: relative;
+    top: 50px;;
+}
+.posts p{
+    font-size: 18px;
+    padding: 20px;
+}
+.dates{
+    display: none;
+}
+.recentposts{
+    font-size: 14.4px;
+}
+.links{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 40px;
+   
+}
+.link1 :nth-child(4){
+    color: #b5b5b5;
+
+}
+.links a{
+     text-decoration: none;
+     color: #2b2b2b;
+    line-height: 50px;
+}
+.copyright{
+    color: #b5b5b5;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    
+    line-height: 20px;
+    width: 300px;
+}
+@media screen and (min-width:1024px){
+    
+    .container{
+        width: 100%;
+    }
+    header{
+        left: 900px;
+    }
+    .content h1{
+        font-size: 54.932px;
+    }
+    .subheading{
+        position: relative;
+        top: -200px;
+        left: 280px;
+        transform: rotate(90deg);
+    }
+    .about{
+        margin-bottom: 20px;
+        
+    }
+    .about p{
+        top: -90px;
+        left: 700px;
+    }
+    .dates{
+        display: grid;
+        
+    }
+    .dates a:hover{
+        color:#07691c;
+        cursor: pointer;
+    }
+    .posts{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+    .links{
+        gap: 200px;
+        margin-left: 200px;
+    }
+    .link1{
+        display: flex;
+        flex-direction: column;
+    }
+    .link2{
+        display: flex;
+        flex-direction: column;
+    }
+    .container{
+        height: 200vh;
+        width: 100%;
+    }
+    .header{
+        width: 100%;
+    }
+    
+}
+
+
