@@ -263,17 +263,26 @@ header h2{
     font-size: 20px;
     padding-bottom: 20px;
 }
-.card button{
+.card{
+    display: flex;
+    flex-direction: column;
+}
+.card div{
     display: flex;
     background-color: white;
-    border-color: white;
-    border-width: 0;
-    /* padding: 24px 24px 24px 80px; */
+    border: 5px solid white;
+    /* border-color: rgb(24, 22, 22);
+    border-width: 1px; */
+    box-shadow: 0 2px 5px rgb(182, 177, 177);
+    border-radius: 3px;
     color: #0062ad;
-    font-size: 20px;
-    font-weight: bolder;
     align-items: center;
     align-content: space-around;
+}
+.card p{
+    padding: 24px 24px 24px 24px; 
+    font-size: 20px;
+    font-weight: bolder;
 }
 @media only screen and (min-width: 768px) {
 
