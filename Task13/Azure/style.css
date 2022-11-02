@@ -1,10 +1,18 @@
 * {
-    font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 17px;
+    /* font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif; */
+    /* font-size: 17px; */
     /* line-height: 1.5; */
     margin: 0;
     padding: 0;
+    /* border: 1px solid red; */
     
+}
+@font-face {
+    font-family: font;
+    src: url(SegoeUI-Roman-VF_web.woff2);
+}
+body{
+    font-family: font;
 }
 
 .chat {
@@ -26,15 +34,13 @@
 }
 
 .explore {
-    width: 100%;
-    background-color: rgba(0, 89, 255, 0.815);
+    /* width: 100%; */
+    background-color: #0078d4;
     /* height: 67px; */
     display: flex;
     justify-content: center;
-    align-content: center;
     /* width: 1; */
     /* padding-right: 1; */
-    align-items: flex-end;
     padding: 12px 0px;
 }
 
@@ -45,9 +51,8 @@
     font-weight: bold;
     /* line-height: 20px;  */
     padding-right: 14px;
-    height: 42px;
+    /* height: 42px; */
     font-size: 14px;
-
 }
 
 .container {
@@ -58,8 +63,7 @@
 .container .bgimage {
     display: flex;
     width: 100%;
-    height: 714px;
-
+    height: 741px;
 }
 
 .container .bgimage1 {
@@ -80,29 +84,29 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    /* align-content: center; */
     top: 50px;
     /* width: 290px; */
     /* width: 100%; */
     /* height: 714px; */
-    padding: 15px;
+    /* padding: 15px; */
 }
 
 .content1 {
     /* width: 75%; */
-    height: 55px;
+    /* height: 55px; */
     position: relative;
     /* float: left; */
     display: flex;
+    text-align: center;
+    justify-content: center;
 }
 
 .content span {
     color: #50e6ff;
-    font-size: 20px;
-    font-weight: 800;
+    font-size: 23px;
+    font-weight: 600;
     margin-bottom: 9px;
-    text-align: center;
+    /* top: 100px; */
 }
 
 .content2 {
@@ -115,17 +119,16 @@
 
 .content h1 {
     color: white;
-    font-size: 50px;
+    font-size: 57px;
 }
 
 .content3 {
     display: flex;
-    height: 187px;
+    /* height: 187px; */
     text-align: center;
     position: relative;
     margin-top: 10px;
     /* top: 50px; */
-
 }
 
 .content p {
@@ -161,8 +164,7 @@ header h2{
     padding-bottom: 12px;
     width: 100%;
     justify-content: space-between;
-    white-space: nowrap;
-
+    /* white-space: nowrap; */
 }
 
 .azure {
@@ -172,14 +174,15 @@ header h2{
     /* margin-left: 2px; */
     /* justify-content: ; */
     /* left: 43px; */
-    width: 130px;
+    /* width: 130px; */
     height: 45px;
-    justify-content: space-evenly;
-    white-space: nowrap;
+    /* white-space: nowrap; */
+    padding-left: 12px;
 }
 
 .azure h1 {
     font-size: 100%;
+    padding-left: 12px;
     /* margin-left: 10px; */
 }
 
@@ -196,7 +199,7 @@ header h2{
     /* margin-left: 21px; */
     align-items: center;
     justify-content: space-between;
-    width: 130px;
+    /* width: 130px; */
     height: 54px;
     white-space: nowrap;
 }
@@ -224,6 +227,7 @@ header h2{
     display: flex;
     width: 85%;
     flex-direction: column;
+    padding-left: 5%;
 }
 
 .btn1 {
@@ -249,7 +253,7 @@ header h2{
     margin-top: 12px;
 }
 .class1{
-    padding: 60px 0px;
+    padding-top: 60px;
     display: flex;
     flex-direction: column;
     /* white-space: nowrap; */
@@ -261,7 +265,7 @@ header h2{
     width: 75%;
     text-align: center;
     font-size: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
 }
 .card{
     display: flex;
@@ -278,11 +282,17 @@ header h2{
     color: #0062ad;
     align-items: center;
     align-content: space-around;
+    margin-top: 20px;
+    width: 90%;
+    margin-left: 10px;
 }
 .card p{
-    padding: 24px 24px 24px 24px; 
+    padding: 24px 24px 24px 0px; 
     font-size: 20px;
     font-weight: bolder;
+}
+.card-2{
+    display: none;
 }
 @media only screen and (min-width: 768px) {
 
@@ -291,19 +301,20 @@ header h2{
     }
 
     .banner1 {
+        /* background-color: aliceblue; */
         display: flex;
         /* margin-top: 10px; */
         /* margin-bottom: 10px; */
-        white-space: nowrap;
-        width: 122vw;
+        /* white-space: nowrap; */
+        /* width: 122vw; */
         height: 55px;
         justify-content: space-between;
     }
 
     .banner1 .header1 {
         display: flex;
-        padding: 0 15px;
-        margin-right: 5%;
+        /* padding: 0 15px; */
+        /* margin-right: 5%; */
     }
 
     .banner1 .header1 .azure {
@@ -331,14 +342,13 @@ header h2{
     }
 
     .banner1 ul li {
-        padding: 20px 8px;
+        padding: 0 8px;
         list-style-type: none;
-
     }
 
     .banner1 ul li a {
         text-decoration: none;
-        font-size: 17px;
+        font-size: 14px;
         color: black;
     }
 
@@ -373,23 +383,22 @@ header h2{
         /* justify-content: space-around; */
     }
 
-    main {
-        width: 123vw;
-    }
+
 
     .content {
+        padding: 0 15px;
         width: 60%;
         align-items: flex-start;
     }
-    .container .bgimage img{
+    /* .container .bgimage{
         height: 600px;
-    }
+    } */
     .content1 {
         text-align: start;
     }
 
     .content1 span {
-        font-size: 25px;
+        font-size: 20px;
 
     }
 
@@ -406,20 +415,109 @@ header h2{
     }
 
     .content3 p {
-        font-size: 22px;
+        font-size: 17px;
     }
 
     .explore a {
         font-size: 17px;
         position: relative;
-        top: 15px;
-
+        /* top: 15px; */
     }
+    .button{
+        display: flex;
+        flex-direction: row;
+    }
+    .btn1{
+        margin-top: 12px;
+        margin-right: 24px;
+        padding: 20px;
+        font-weight: bolder;
+    }
+    .btn2{
+        padding: 20px;
+        font-weight: bolder;
+    }
+    .class1 h1{
+        font-size: 25px;
+        width: 95%;
+    }
+    .card{
+        display: none;
+    }
+    .card-2{
+        padding-left: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        column-gap: 30px;
+        row-gap: 24px;
+    }
+    .card-2-1{
+        grid-row: 1/2;
+        /* display: flex; */
+        background-image: url(img/microsoft-ignite-desktop.jpg);
+        background-size: 100%;
+        /* height: 100%; */
+        /* width: 100%; */
+        background-position: 10% 10%;
+        background-size: cover;
+        overflow: hidden;
+        /* position: relative; */
+        background-repeat: no-repeat;
+        /* flex-direction: column; */
+        padding: 150px 24px 150px 24px;
+        border-radius: 3px;
+        /* height: 642px; */
+    }
+    .card-2-1 h2{
+        color: #151469;
+        position: relative;
+        top: 80%;
+    }
+    .card-2-1 p{
+        color: #702573;
+        position: relative;
+        width: 60%;
+        top: 85%;
+    }
+    .card-2-2{
+        /* display: flex;
+        flex-direction: column; */
+        /* grid-row: 1/2; */
+        display: grid;
+        /* justify-items: stretch; */
+    }
+    .card-2-2 div{
+        display: flex;
+        background-color: white;
+        border: 5px solid white;
+        /* border-color: rgb(24, 22, 22);
+        border-width: 1px; */
+        box-shadow: 0 2px 5px rgb(182, 177, 177);
+        border-radius: 3px;
+        color: #0062ad;
+        align-items: center;
+        align-content: space-around;
+        margin-top: 20px;
+        width: 90%;
+        margin-left: 10px;
+    }
+    .card-2-2 p{
+        /* padding: 80px;  */
+        font-size: 20px;
+        font-weight: bolder;
+    }
+    .card-2-2 img{
+         width: 100%;
+         height: 100%;
+    }
+    
 }
 
 @media screen and (min-width:1080px) {
     .banner {
         display: none;
+        width: 1;
     }
 
     .banner1 .signin {
@@ -427,17 +525,18 @@ header h2{
     }
 
     .banner1 {
-        margin-left: 125px;
-        padding: 13px;
+        /* margin-left: 125px; */
+        /* padding: 13px; */
+        width: 1;
     }
 
     .banner1 .search1 {
-        width: 100%;
+        /* width: 100%; */
         display: flex;
         /* margin-left: -95px; */
         align-items: center;
         flex-wrap: nowrap;
-        justify-content: center;
+        /* justify-content: center; */
         /* width: 1201px; */
         font-size: 20px;
         margin-right: 11px;
@@ -447,16 +546,9 @@ header h2{
         width: 180px;
     }
     .chat span{
-        font-size: 20px;
+        font-size: 15px;
     }
-    main {
-        width: 137vw;
-    }
-    .bgimage1 img{
-        height: 902px;
-        /* object-fit: contain; */
-    }
-
+  
     .search1 form {
         display: flex;
         /* margin-left: 2; */
@@ -468,7 +560,7 @@ header h2{
     }  */
     .search1 form .search-box {
         background-color: rgba(112, 128, 144, 0.082);
-        width: 120px;
+        /* width: 120px; */
         height: 30px;
         border-radius: 4px;
         border-width: 1px;
@@ -476,7 +568,6 @@ header h2{
         /* flex-direction: column; */
         border: 0.5px solid black;
         /* margin-right: 25px; */
-
     }
 
     .search1 form .search-box img {
@@ -494,7 +585,7 @@ header h2{
     .search1 ul {
         display: flex;
         justify-content: space-between;
-        width: 350px;
+        /* width: 350px; */
         align-items: center;
     }
 
@@ -516,25 +607,12 @@ header h2{
         width: 40%;
     }
     .content h1{
-        font-size: 5vw;
+        font-size: 50px;
     }
     .content p{
-        font-size: 25px;
+        font-size: 20px;
     }
-    .button{
-        display: flex;
-        flex-direction: row;
-    }
-    .btn1{
-        margin-top: 12px;
-        margin-right: 24px;
-        padding: 20px;
-        font-weight: bolder;
-    }
-    .btn2{
-        padding: 20px;
-        font-weight: bolder;
-    }
+    
 }
 
  /* @media screen and (min-width:1320px) {
@@ -559,37 +637,52 @@ header h2{
         .container .bgimage1 {
             display: flex;
             /* position: relative; */
-            /* height: 577px; */
+            height: 577px;
         }
 
         .content {
-            height: 373.73px;
+            /* height: 373.73px; */
         }
     }
+     @media screen and (min-width:1280px) {
+        .content{
+            /* margin: 0 10%; */
+            /* padding: 0px 224px; */
+            max-width: 400px;
+        }
+        /* .content div{
+            
+        } */
+    }  
     @media screen and (min-width:1320px) {
         .banner1 {
-            margin-left: 125px;
-           align-items: center;
+            /* margin-left: 125px; */
+            align-items: center;
             white-space: nowrap;
-            display: flex; 
-             justify-content: center; 
+            display: flex;
+            justify-content: space-evenly;
         }
-    
-        .content {
-            margin: 0px 125px;
-        }
+        
+        .content p{
+             font-size: 17px;
+            }
     } 
-    @media screen and (min-width:1986px) {
-        .container .bgimage1 img{
+    @media screen and (min-width:1518px) {
+         .container .bgimage1 img{
             display: flex;
             object-fit: cover;
             
         }
-        .container .bgimage1{
-           position: absolute;
+         .container .bgimage1{
+           position: absolute;  
            top: 0;
            bottom: 0;
            left: 0;
            right: 0;
+        }  
+        .class1{
+            position: relative;
+            top: 550px;
         }
+     
     }
