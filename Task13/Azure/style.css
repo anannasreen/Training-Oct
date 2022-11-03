@@ -58,14 +58,14 @@ body{
 .container {
     display: flex;
     position: relative;
+    height: 700px;
 }
 
 .container .bgimage {
     display: flex;
     width: 100%;
-    height: 741px;
+   height: 100%;
 }
-
 .container .bgimage1 {
     display: none;
     
@@ -253,7 +253,7 @@ header h2{
     margin-top: 12px;
 }
 .class1{
-    padding-top: 60px;
+    padding: 60px 0;
     display: flex;
     flex-direction: column;
     /* white-space: nowrap; */
@@ -270,6 +270,7 @@ header h2{
 .card{
     display: flex;
     flex-direction: column;
+    width: 90%;
 }
 .card div{
     display: flex;
@@ -283,9 +284,14 @@ header h2{
     align-items: center;
     align-content: space-around;
     margin-top: 20px;
-    width: 90%;
+    /* width: 100%; */
+    margin-left: 10px;
+    /* height: 68px;  */
+}
+.card p{
     margin-left: 10px;
 }
+
 .card p{
     padding: 24px 24px 24px 0px; 
     font-size: 20px;
@@ -293,6 +299,49 @@ header h2{
 }
 .card-2{
     display: none;
+}
+.overview{
+    display: flex;
+    flex-direction: column;
+    padding:45px 0px  24px 0px;
+    width: 100%;
+}
+.overview span{
+    padding-bottom: 24px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+.overview button{
+    border:1px solid #0078d4;
+    padding: 18px 16px;
+    width: 75%;
+    position: relative;
+    left: 12.5%;
+    border-radius: 5px;
+    background-color: white;
+}
+.overview button a{
+  
+    text-decoration: none;
+    color: #0062ad;
+    font-weight: 600;
+}
+.media h2{
+    text-align: center;
+    padding-bottom: 40px;
+}
+.tag {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px;
+}
+@media screen and (min-width:540px) {
+    .overview button{
+        width: 150px;
+        position: relative;
+        left: 38%;
+    }
 }
 @media only screen and (min-width: 768px) {
 
@@ -379,12 +428,141 @@ header h2{
         /* position: relative;
         width: 100% */
         display: flex;
-        width: 1;
         /* justify-content: space-around; */
     }
-
-
-
+    .explore a {
+        font-size: 17px;
+        position: relative;
+        /* top: 15px; */
+    }
+    
+    .class1 h1{
+        font-size: 25px;
+        width: 95%;
+    }
+    .card{
+        display: none;
+    }
+    .card-2{
+        padding-left: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        column-gap: 30px;
+        row-gap: 24px;
+        /* padding-bottom: 40px; */
+    }
+    .card-2-1{
+        grid-row: 1/2;
+        /* display: flex; */
+        background-image: url(img/microsoft-ignite-desktop.jpg);
+        background-size: 100%;
+        /* height: 100%; */
+        /* width: 100%; */
+        background-position: 10% 10%;
+        background-size: cover;
+        overflow: hidden;
+        /* position: relative; */
+        background-repeat: no-repeat;
+        /* flex-direction: column; */
+        /* padding: 150px 24px 150px 24px; */
+        border-radius: 3px;
+        /* height: 642px; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .card-2-1 h2{
+        color: #151469;
+    }
+    .card-2-1 p{
+        color: #702573;
+        width: 60%;
+    }
+    .card-2-2{
+        /* display: flex;
+        flex-direction: column; */
+        /* grid-row: 1/2; */
+        display: grid;
+        column-gap: 30px;
+        row-gap: 24px;
+        /* justify-items: stretch; */
+    }
+    .card-2-2 p{
+        color: #4c4c51;
+    }
+    .card-2-2 .card4{
+        display: flex;
+        background-color: white;
+        border: 5px solid white;
+        /* border-color: rgb(24, 22, 22);
+        border-width: 1px; */
+        box-shadow: 0 2px 5px rgb(182, 177, 177);
+        border-radius: 3px;
+        color: #0062ad;
+        align-items: center;
+        align-content: space-around;
+        /* margin-top: 20px; */
+        /* width: 90%; */
+        /* margin-left: 10px; */
+    }
+    .card-2-2 .card5{
+        display: flex;
+        background-color: white;
+        border: 5px solid white;
+        /* border-color: rgb(24, 22, 22);
+        border-width: 1px; */
+        box-shadow: 0 2px 5px rgb(182, 177, 177);
+        border-radius: 3px;
+        color: #0062ad;
+        align-items: center;
+        align-content: space-around;
+        /* margin-top: 20px; */
+        /* width: 90%; */
+        /* margin-left: 10px; */
+    }
+    .card-2-2 h2{
+        /* padding: 80px;  */
+        font-size: 20px;
+        font-weight: bolder;
+    }
+    .card-2-2 picture{
+        width: 100%;
+        height: 100%;
+    }
+    .card-2-2 img{
+         width: 100%;
+         height: 100%;
+    }
+    .card4-1{
+        display: flex;
+        flex-direction: column;
+        padding: 24px 24px 24px 24px;
+    }
+    .card4-2{
+        display: flex;
+        flex-direction: column;
+        /* padding: 24px 24px 24px 24px; */
+    }
+    .overview{
+        flex-direction: row;
+        width: 16%;
+    }
+    .overview span{
+        /* position: relative;
+        left: 300px; */
+        width: 52%;
+        text-align: left;
+        padding-bottom: 0;
+    }
+    .overview button{
+        width: 70%;
+    }
+   .media h2{
+       text-align: left;
+   } 
+}
+@media screen and (min-width:770px) {
     .content {
         padding: 0 15px;
         width: 60%;
@@ -417,12 +595,6 @@ header h2{
     .content3 p {
         font-size: 17px;
     }
-
-    .explore a {
-        font-size: 17px;
-        position: relative;
-        /* top: 15px; */
-    }
     .button{
         display: flex;
         flex-direction: row;
@@ -437,83 +609,7 @@ header h2{
         padding: 20px;
         font-weight: bolder;
     }
-    .class1 h1{
-        font-size: 25px;
-        width: 95%;
-    }
-    .card{
-        display: none;
-    }
-    .card-2{
-        padding-left: 20px;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr;
-        column-gap: 30px;
-        row-gap: 24px;
-    }
-    .card-2-1{
-        grid-row: 1/2;
-        /* display: flex; */
-        background-image: url(img/microsoft-ignite-desktop.jpg);
-        background-size: 100%;
-        /* height: 100%; */
-        /* width: 100%; */
-        background-position: 10% 10%;
-        background-size: cover;
-        overflow: hidden;
-        /* position: relative; */
-        background-repeat: no-repeat;
-        /* flex-direction: column; */
-        padding: 150px 24px 150px 24px;
-        border-radius: 3px;
-        /* height: 642px; */
-    }
-    .card-2-1 h2{
-        color: #151469;
-        position: relative;
-        top: 80%;
-    }
-    .card-2-1 p{
-        color: #702573;
-        position: relative;
-        width: 60%;
-        top: 85%;
-    }
-    .card-2-2{
-        /* display: flex;
-        flex-direction: column; */
-        /* grid-row: 1/2; */
-        display: grid;
-        /* justify-items: stretch; */
-    }
-    .card-2-2 div{
-        display: flex;
-        background-color: white;
-        border: 5px solid white;
-        /* border-color: rgb(24, 22, 22);
-        border-width: 1px; */
-        box-shadow: 0 2px 5px rgb(182, 177, 177);
-        border-radius: 3px;
-        color: #0062ad;
-        align-items: center;
-        align-content: space-around;
-        margin-top: 20px;
-        width: 90%;
-        margin-left: 10px;
-    }
-    .card-2-2 p{
-        /* padding: 80px;  */
-        font-size: 20px;
-        font-weight: bolder;
-    }
-    .card-2-2 img{
-         width: 100%;
-         height: 100%;
-    }
-    
 }
-
 @media screen and (min-width:1080px) {
     .banner {
         display: none;
@@ -612,7 +708,6 @@ header h2{
     .content p{
         font-size: 20px;
     }
-    
 }
 
  /* @media screen and (min-width:1320px) {
@@ -637,16 +732,15 @@ header h2{
         .container .bgimage1 {
             display: flex;
             /* position: relative; */
-            height: 577px;
-        }
-
-        .content {
-            /* height: 373.73px; */
+            /* height: 577px; */
         }
     }
      @media screen and (min-width:1280px) {
+        .container{
+            height: 787px;
+        }
         .content{
-            /* margin: 0 10%; */
+            /* margin: 0 100px;  */
             /* padding: 0px 224px; */
             max-width: 400px;
         }
@@ -662,10 +756,19 @@ header h2{
             display: flex;
             justify-content: space-evenly;
         }
-        
         .content p{
              font-size: 17px;
             }
+            .content{
+                max-width: 90%;
+                margin-left: 10%;
+            }
+            .card-2{
+                max-width: 90%;
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+            
     } 
     @media screen and (min-width:1518px) {
          .container .bgimage1 img{
@@ -680,9 +783,6 @@ header h2{
            left: 0;
            right: 0;
         }  
-        .class1{
-            position: relative;
-            top: 550px;
-        }
+        
      
     }
