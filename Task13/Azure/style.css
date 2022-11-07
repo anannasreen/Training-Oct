@@ -510,7 +510,6 @@ header h2{
 }
 form{
     font-size: 15px;
-    padding-bottom: 50px;
 }
 select{
     width: 200px;
@@ -532,7 +531,111 @@ footer .list p{
     padding: 2px;
     margin: 0 0 12px 16px;
 }
-
+.discover{
+    padding: 84px 0;
+}
+.discover h2{
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0 0 22px;
+}
+.functions{
+    display: grid;
+    grid-template-columns: repeat(6, 75vw);
+    column-gap: 30px;
+    row-gap: 24px;
+    overflow: scroll;
+    padding: 0 15px;
+}
+.fntn{
+    display: flex;
+    border: 1px solid transparent;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 14%);
+    flex-direction: column;
+    border-radius: 6px;
+    box-sizing: inherit;
+    margin-bottom: 40px;
+}
+.functions p{
+    color: #4c4c51;
+    font-size: 12px;
+}
+.functions a{
+    text-decoration: none;
+    color: #1a1a1f;
+    font-size: 16px;
+}
+.ftxt{
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    gap: 12px;
+    flex-grow: 1;
+}
+.fimg img{
+    border-radius: 6px 6px 0 0;
+    height: 18vh;
+}
+.ai{
+    display: flex;
+    flex-direction: column;
+}
+.ai1{
+    display: none;
+}
+.agi{
+    display: flex;
+    flex-direction: column;
+}
+.agi1{
+    display: none;
+}
+.developer p{
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 12px 12px 36px 12px;
+}
+.developer button{
+        border:1px solid #0078d4;
+        padding: 10px 10px;
+        width: 75%;
+        position: relative;
+        left: 12.5%;
+        border-radius: 5px;
+        background-color: white;
+}
+.developer button a{
+      
+        text-decoration: none;
+        color: #0062ad;
+        font-weight: 600;
+}
+.btn{
+        padding: 84px 0;
+        display: grid;
+        column-gap: 30px;
+        row-gap: 24px;
+}
+ .btn button{
+    display: flex;
+    align-items: center;
+   
+    border-radius: 6px;
+    width: 85%;
+ }   
+ .btn-img{
+    width: 68px;
+ }
+ .btn-p{
+    display: none;
+ }
+ .btn1-txt h3{
+    /* padding: 24px 24px 24px 80px; */
+ }
 @media screen and (min-width:540px) {
     .overview button{
         width: 150px;
@@ -545,6 +648,9 @@ footer .list p{
     .toolkit button{
        width: 50%;
        left: 0;
+    }
+    .functions{
+        grid-template-columns: repeat(6, 35vw);
     }
 }
 @media only screen and (min-width: 768px) {
@@ -826,14 +932,58 @@ footer .list p{
    .tools{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
     padding: 60px 0px;
    }
    .tools picture{
-     width: 40%;
+     width: 35%;
+     height: 35%;
    }
    .toolkit{
-    width: 40%;
+    width: 50%;
+   }
+   .toolkit button{
+    padding: 18px 16px;
+   }
+   .functions{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2,1fr);
+   }
+   .ai{
+    display: none;
+   }
+   .ai1{
+    display: flex;
+    background-image: url(//azurecomcdn.azureedge.net/cvt-4fa37bc4e46129b5c49c6d6549e0de5c057007fcbdecdff3a4eb0fbd80b8460b/images/page/home/news/azure-ignite-ai-automation.png);
+    background-position: 15% 24%;
+    height: 100%; 
+    border-radius: inherit;
+   }
+   .ai1 p{
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    position: relative;
+    bottom: -180px;
+   }
+   .agi{
+    display: none;
+   }
+   .agi1{
+    display: flex;
+    background-image: url(//azurecomcdn.azureedge.net/cvt-4fa37bc4e46129b5c49c6d6549e0de5c057007fcbdecdff3a4eb0fbd80b8460b/images/page/home/news/azure-regions.png);
+    height: 100%;
+    border-radius: inherit;
+   }
+   .agi1 p{
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    position: relative;
+    bottom: -160px;
    }
 }
 @media screen and (min-width:769px) {
@@ -908,6 +1058,9 @@ footer .list p{
     .container .bgimage1 {
         display: flex;
     }
+    .media{
+        overflow: hidden;
+    }
     .tag{
         width: 65%;
     }
@@ -919,16 +1072,13 @@ footer .list p{
         position: relative;
         left: 624px;
     }
-    .row{
-        overflow: hidden;
-    }
     .tablet img{
         width: 50%;
     }
     .media{
         height: 800px;
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-around;
     }
    
     .fullscreen{
@@ -940,8 +1090,10 @@ footer .list p{
     }
     .casestudy1{
         display: flex;
+        flex-direction: column;
         justify-content: center;
     }
+
     .logo{
         width: 100%;
     }
@@ -959,6 +1111,30 @@ footer .list p{
         margin: 12px;
         filter: grayscale(100%);
 
+    }
+     .casestudy2{
+        position: relative;
+        width: 100%;
+    } 
+
+    .study{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        background-color: rgba( 26, 26, 31, .94);
+        color: white;
+        padding: 24px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        bottom: 60px;
+        left: 20px;
+        border-radius: 5px;
+    }
+    .study a{
+        color: white;
+        margin-top: 24px;
     }
 }
 @media screen and (min-width:1080px) {
