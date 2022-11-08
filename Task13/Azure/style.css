@@ -54,7 +54,13 @@ body{
     /* height: 42px; */
     font-size: 14px;
 }
-
+.explore:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.explore:hover img{
+    transform: translateX(2px);
+}
 .container {
     display: flex;
     position: relative;
@@ -70,16 +76,6 @@ body{
     display: none;
     
 }
-
-/* .container picture{
-    background-size: cover;
-    width: 100%;
-    box-sizing: border-box;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-} */
 .content {
     position: absolute;
     display: flex;
@@ -242,6 +238,10 @@ header h2{
     color: white;
     /* margin-right: 20px; */
 }
+.btn1:hover{
+    text-decoration: underline;
+    background-color: #0062ad;
+}
 .btn2{
     padding: 10px 16px;
     border-radius: 5px;
@@ -251,6 +251,13 @@ header h2{
     border-width: 2px;
     /* width: 85%; */
     margin-top: 12px;
+    font-weight: bold;
+}
+.btn2:hover{
+    text-decoration: underline;
+    background-color: #50e6f4;
+    color: #243a5e;
+    cursor: pointer;
 }
 .class1{
     padding: 60px 0;
@@ -288,6 +295,14 @@ header h2{
     margin-left: 10px;
     /* height: 68px;  */
 }
+.card div:hover{
+    text-decoration: underline;
+    box-shadow: 0 3px 10px rgb(182, 177, 177);
+}
+.card p:hover{
+    color: #243a5e;
+    text-decoration: underline #243a5e;
+}
 .card p{
     margin-left: 10px;
 }
@@ -314,12 +329,19 @@ header h2{
 }
 .overview button{
     border:1px solid #0078d4;
-    padding: 18px 16px;
+    padding: 16px 16px;
     width: 75%;
     position: relative;
     left: 12.5%;
     border-radius: 5px;
     background-color: white;
+}
+.overview button:hover{
+    background-color: #0062ad;
+}
+.overview button:hover a{
+    text-decoration: underline;
+    color: white;
 }
 .overview button a{
   
@@ -358,6 +380,12 @@ header h2{
     min-height: 60px;
     gap: 10px;
 }
+.tag button:hover{
+    color: #0078d4;
+}
+.tag button:hover{
+    text-decoration: underline #0078d4;
+}
 .tag img{
     width: 16px;
     display: flex;
@@ -390,6 +418,12 @@ header h2{
     margin-bottom: 9px;
     display: flex;
 }
+.subtags div:hover{
+    box-shadow:  0 4px 10px  rgb(0 0 0 / 24%);
+}
+.subtags span:hover{
+    text-decoration: underline;
+}
 .subtags div p{
     color: #4c4c51;
     font-size: 16px;
@@ -404,6 +438,11 @@ header h2{
     padding-top: 5%;
     /* position: relative; */
     /* top: -400px; */
+}
+.products a:hover{
+    color: #243a5e;
+    text-decoration: underline;
+
 }
 .products a{
     color: #0062ad;
@@ -470,6 +509,12 @@ header h2{
     padding-top: 30px;
     align-items: baseline;
 }
+.case3 a:hover{
+    text-decoration: underline;
+}
+.case3 a:hover i{
+    transform: translateX(2px);
+}
 .casestudy{
     padding: 60px 0;
 }
@@ -513,20 +558,24 @@ form{
 }
 select{
     width: 200px;
-    height: 50px;
+    height: 40px;
 }
 footer .list{
     display: flex;
-    align-items: flex-end;
-    flex-direction: column;
+    justify-content: flex-end;
+    flex-direction: row;
+    flex-wrap: wrap;
     padding-bottom: 40px;
+    margin-top: 36px;
 }
-footer .list div{
+/* footer .list div{
     display: flex;
-}
+} */
+
+
 footer .list p{
     box-sizing: border-box;
-    font-size: 14px;
+    font-size: 12px;
     display: flex;
     padding: 2px;
     margin: 0 0 12px 16px;
@@ -614,27 +663,145 @@ footer .list p{
         color: #0062ad;
         font-weight: 600;
 }
-.btn{
+.bar{
         padding: 84px 0;
         display: grid;
         column-gap: 30px;
         row-gap: 24px;
 }
- .btn button{
+ .bar button{
     display: flex;
-    align-items: center;
-   
     border-radius: 6px;
-    width: 85%;
+    width: 98%;
+    padding: 24px;
+    position: relative;
+    left: 1%;
+    /* align-items: center; */
  }   
- .btn-img{
-    width: 68px;
+ .bar1{
+    background-color: #243a5e;
+ }
+ .bar2{
+    background-color: #242429;
+ }
+ .bar3{
+   background-color: #0062ad;
  }
  .btn-p{
     display: none;
  }
  .btn1-txt h3{
-    /* padding: 24px 24px 24px 80px; */
+    color: white;
+    font-size: 20px;
+    display: flex;
+ }
+ .btn2-txt h3{
+    color: white;
+    font-size: 20px;
+ }
+ .btn3-txt h3{
+    color: white;
+    font-size: 20px;
+ }
+ .bar svg{
+    display: flex;
+ }
+ .socialmedia{
+    display: flex;
+    flex-direction: row;
+    padding: 0 18px;
+    background-color: #f4f5f6;
+    padding-top: 50px;
+    flex-wrap: wrap;
+ }
+ .app{
+    display: flex;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    background-color: #eaebec;
+    color: #4c4c51;
+    padding: 12px;
+    width: 70%;
+    max-width: 223px;
+ }
+ .app span{
+    font-size: 14px;
+    margin-left: 12px;
+    font-weight: 600;
+ }
+ .network{
+    display: flex;
+    flex-direction: row;
+    margin: 12px 0 0 12px;
+ }
+ .twitter{
+    margin-left: 36px;
+ }
+ .insta{
+    padding-left: 17px;
+ }
+ .linkedin{
+    padding-left: 17px;
+ }
+ footer{
+    background-color: #f4f5f6;
+    color: #1a1a1f;
+    padding: 0 18px;
+    max-width: 1310px;
+ }
+ .about-tags{
+    display: none;
+ }
+ .about{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    background-color: #eaebec;
+    color: #4c4c51;
+    padding: 12px;
+    width: 95%;
+    margin-bottom: 36px;
+ }
+ .about a{
+    text-decoration: none;
+    color: #1a1a1f;
+ }
+ .about h3{
+    font-size: 14px;
+ }
+ .stories{
+    position: relative;
+}
+
+ .video img{
+    width: 20px;
+    background-color: white;
+    position: absolute;
+    top: 32vw;
+    left: 42vw;
+    padding: 13px;
+    border-radius: 100%;
+    
+}
+ .support{
+    padding: 28px 0;
+ }
+ .copyright{
+    font-weight: bold;
+ }
+ .story{
+    display: none;
+ }
+ .support1{
+    display: none;
+ }
+ .toolkit button:hover{
+    background-color: #0078d4;
+    text-decoration: underline;
+ }
+ .toolkit button:hover a{
+    color: white;
  }
 @media screen and (min-width:540px) {
     .overview button{
@@ -985,6 +1152,30 @@ footer .list p{
     position: relative;
     bottom: -160px;
    }
+   .bar .button{
+    align-items: flex-start;
+   }
+   .bar1{
+    flex-direction: column;
+   }
+   .bar2{
+    flex-direction: column;
+   }
+   .bar3{
+    flex-direction: column;
+   }
+   .btn-p{
+    display: flex;
+    text-align: initial;
+    color: white;
+   }
+   .bar h3{
+    margin: 24px 0 12px 0;
+    text-align: left;
+   }
+   /* .btn2-txt{
+    align-items: flex-start;
+   } */
 }
 @media screen and (min-width:769px) {
     .fullscreen{
@@ -1135,6 +1326,92 @@ footer .list p{
     .study a{
         color: white;
         margin-top: 24px;
+    }
+    .video{
+        display: none;
+    }
+    .developer{
+        position: absolute;
+        top: 50px;
+        width: 60%;
+        color: #f8f9fa;
+        font-size: 16px;
+        font-weight: 400;
+        background-color: rgba(26, 26, 31, .94);
+        left: 20px;
+        padding: 20px;
+        border-radius: 6px;
+    }
+    .developer button{
+        display: none;
+    }
+    .story{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .part1{
+        display: flex;
+        background-color: #0078d4;
+        border-radius: 5px;
+        padding: 10px;
+        align-items: center;
+        font-weight: bolder;
+    }
+    .part1 img{
+        width: 10px;
+        height: 10px;
+        padding: 10px;
+        background-color: #50e6ff;
+        border-radius: 100%;
+    }
+    .part2 a{
+        color: white;
+        font-weight: bolder;
+    }
+    .bar{
+        display: flex;
+        flex-direction: row;
+        padding-right: 20px;
+    }
+    .btn-p{
+        line-height: 2;
+    } 
+    .support{
+        display: none;
+    }
+   .functions{
+    grid-template-columns: repeat(4, 1fr);
+    overflow: hidden;
+   }
+    .fntn:nth-child(3){
+    display: grid;
+    grid-column: 3/5;
+   } 
+     .fntn:nth-child(5){
+    display: grid;
+    grid-column: 2/4;
+   }  
+}
+@media screen and (min-width:961px) {
+    .support1{
+        display: grid;
+        padding-top: 36px;
+        column-gap: 24px;
+        grid-template-columns: repeat(6,1fr);
+        padding: 18px;
+    }
+    .about1 h3{
+        font-size: 14px;
+    }
+    .about-tags{
+        display: flex;
+        color: #1a1a1f;
+        font-size: 12px;
+    }
+    .about-tags li{
+        list-style-type: none;
+        padding-top: 20px;
     }
 }
 @media screen and (min-width:1080px) {
