@@ -642,6 +642,9 @@ footer .list p{
 .agi1{
     display: none;
 }
+.developer{
+    padding: 20px;
+}
 .developer p{
     font-size: 22px;
     font-weight: 400;
@@ -650,18 +653,25 @@ footer .list p{
 }
 .developer button{
         border:1px solid #0078d4;
-        padding: 10px 10px;
-        width: 75%;
+        padding: 15px 10px;
         position: relative;
-        left: 12.5%;
         border-radius: 5px;
         background-color: white;
+        max-width: 247px;
+        left: 15px;
 }
 .developer button a{
       
         text-decoration: none;
         color: #0062ad;
         font-weight: 600;
+}
+.developer button:hover{
+    background-color: #0078d4;
+}
+.developer button:hover a{
+    color: white;
+    text-decoration: underline;
 }
 .bar{
         padding: 84px 0;
@@ -676,8 +686,11 @@ footer .list p{
     padding: 24px;
     position: relative;
     left: 1%;
-    /* align-items: center; */
- }   
+    align-items: flex-start;
+ }  
+ .bar button:hover h3{
+    text-decoration: underline white;
+ } 
  .bar1{
     background-color: #243a5e;
  }
@@ -729,10 +742,16 @@ footer .list p{
     margin-left: 12px;
     font-weight: 600;
  }
+ .app:hover{
+    text-decoration: underline;
+ }
  .network{
     display: flex;
     flex-direction: row;
     margin: 12px 0 0 12px;
+ }
+ .network div:hover{
+    opacity: 0.5;
  }
  .twitter{
     margin-left: 36px;
@@ -780,9 +799,12 @@ footer .list p{
     position: absolute;
     top: 32vw;
     left: 42vw;
-    padding: 13px;
+    padding: 23px;
     border-radius: 100%;
     
+}
+.video img:hover{
+    border: 3px solid #0078d4;
 }
  .support{
     padding: 28px 0;
@@ -802,6 +824,12 @@ footer .list p{
  }
  .toolkit button:hover a{
     color: white;
+ }
+ .fntn:hover a{
+    text-decoration: underline;
+ }
+ .list p:hover{
+    text-decoration: underline;
  }
 @media screen and (min-width:540px) {
     .overview button{
@@ -1116,6 +1144,7 @@ footer .list p{
    .functions{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2,1fr);
+    overflow: hidden;
    }
    .ai{
     display: none;
@@ -1264,7 +1293,11 @@ footer .list p{
         left: 624px;
     }
     .tablet img{
-        width: 50%;
+        width: 60%;
+    }
+    .tablet img:hover{
+        transform: translateX(-50px);
+        transition-duration: 0.5s;
     }
     .media{
         height: 800px;
@@ -1302,6 +1335,10 @@ footer .list p{
         margin: 12px;
         filter: grayscale(100%);
 
+    }
+    .logo li:hover{
+        filter: grayscale(0%);
+        background-color: #e6e6ee;
     }
      .casestudy2{
         position: relative;
@@ -1358,6 +1395,9 @@ footer .list p{
         align-items: center;
         font-weight: bolder;
     }
+    .part1:hover{
+        text-decoration: underline;
+    }
     .part1 img{
         width: 10px;
         height: 10px;
@@ -1368,6 +1408,9 @@ footer .list p{
     .part2 a{
         color: white;
         font-weight: bolder;
+    }
+    .part2 a:hover{
+        text-decoration: none;
     }
     .bar{
         display: flex;
@@ -1412,6 +1455,9 @@ footer .list p{
     .about-tags li{
         list-style-type: none;
         padding-top: 20px;
+    }
+    .about-tags li:hover{
+        text-decoration: underline;
     }
 }
 @media screen and (min-width:1080px) {
