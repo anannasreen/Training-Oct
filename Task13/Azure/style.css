@@ -160,7 +160,6 @@ body{
     display: flex;
     width: 85%;
     flex-direction: column;
-    padding-left: 5%;
 }
 
 .btn1 {
@@ -169,7 +168,6 @@ body{
     background-color: #0078d4;
     border-color: #0078d4;
     border-width: 1px;
-    margin-top: 12px;
     color: white;
 }
 .btn1:hover{
@@ -183,7 +181,6 @@ body{
     border-color: #50e6f4;
     color: #50e6f4;
     border-width: 2px;
-    margin-top: 12px;
     font-weight: bold;
 }
 .btn2:hover{
@@ -244,9 +241,9 @@ body{
 }
 .overview{
     display: flex;
+    align-items: center;
     flex-direction: column;
     padding:45px 0px  24px 0px;
-    width: 100%;
 }
 .overview span{
     padding-bottom: 24px;
@@ -257,7 +254,6 @@ body{
 .overview button{
     border:1px solid #0078d4;
     padding: 16px 16px;
-    width: 75%;
     position: relative;
     left: 12.5%;
     border-radius: 5px;
@@ -752,7 +748,6 @@ footer .list p{
     .overview button{
         width: 150px;
         position: relative;
-        left: 38%;
     }
     .toolkit h2{
         text-align: left;
@@ -1115,8 +1110,9 @@ footer .list p{
 @media screen and (min-width:770px) {
     .content {
         padding: 0 15px;
-        width: 60%;
+        width: 40%;
         align-items: flex-start;
+        margin: 0;
     }
     .content1 {
         text-align: start;
@@ -1153,7 +1149,6 @@ footer .list p{
         font-weight: bolder;
     }
     .btn2{
-        padding: 20px;
         font-weight: bolder;
     }
 }
@@ -1431,10 +1426,13 @@ footer .list{
     .search1 form .search-box {
         background-color: rgba(112, 128, 144, 0.082);
         height: 30px;
+        width: 120px;
         border-radius: 4px;
         border-width: 1px;
         display: flex;
         border: 0.5px solid black;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .search1 form .search-box img {
@@ -1472,19 +1470,17 @@ footer .list{
         text-decoration: underline;
     }
     .content h1{
-        font-size: 50px;
+        font-size: 52px;
+        font-weight: 600;
     }
     .content p{
         font-size: 20px;
     }
 }
      @media screen and (min-width:1280px) {
-     .content{
-            max-width: 1310px;
-            margin-left: auto;
-            margin-right: auto;
-            
-        } 
+        .content{
+            margin-left: 7%;
+        }
     }  
     @media screen and (min-width:1320px) {
         .banner1 {
