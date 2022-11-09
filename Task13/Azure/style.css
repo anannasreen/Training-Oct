@@ -1,11 +1,6 @@
 * {
-    /* font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif; */
-    /* font-size: 17px; */
-    /* line-height: 1.5; */
     margin: 0;
     padding: 0;
-    /* border: 1px solid red; */
-    
 }
 @font-face {
     font-family: font;
@@ -13,6 +8,7 @@
 }
 body{
     font-family: font;
+    color: #1a1a1f;
 }
 
 .chat {
@@ -34,14 +30,10 @@ body{
 }
 
 .explore {
-    /* width: 100%; */
     background-color: #0078d4;
-    /* height: 67px; */
     display: flex;
     justify-content: center;
-    /* width: 1; */
-    /* padding-right: 1; */
-    padding: 12px 0px;
+    padding: 14px 0px;
 }
 
 .explore a {
@@ -49,9 +41,7 @@ body{
     text-align: center;
     text-decoration: none;
     font-weight: bold;
-    /* line-height: 20px;  */
     padding-right: 14px;
-    /* height: 42px; */
     font-size: 14px;
 }
 .explore:hover{
@@ -81,17 +71,10 @@ body{
     display: flex;
     flex-direction: column;
     top: 50px;
-    /* width: 290px; */
-    /* width: 100%; */
-    /* height: 714px; */
-    /* padding: 15px; */
 }
 
 .content1 {
-    /* width: 75%; */
-    /* height: 55px; */
     position: relative;
-    /* float: left; */
     display: flex;
     text-align: center;
     justify-content: center;
@@ -102,15 +85,12 @@ body{
     font-size: 23px;
     font-weight: 600;
     margin-bottom: 9px;
-    /* top: 100px; */
 }
 
 .content2 {
     display: flex;
-    /* height: 177px; */
     text-align: center;
     position: relative;
-    /* background-color: yellow; */
 }
 
 .content h1 {
@@ -120,82 +100,41 @@ body{
 
 .content3 {
     display: flex;
-    /* height: 187px; */
     text-align: center;
     position: relative;
     margin-top: 10px;
-    /* top: 50px; */
-}
+} 
 
 .content p {
     color: white;
     line-height: 1.5;
 
 }
-
-/*     background-color: white; */
-/*     display: flex;
-    padding: 60px;
-    grid-template-columns: repeat(5, 1fr); */
-
-/*     align-items: center; */
-
-
-/* header a{
-    text-decoration: none;
-    color: black;
-    font-size: 50px;
-    
-}
-header h2{
-    font-size: 50px;
-    margin-left: -40px;
-    
-} */
 .banner {
     display: flex;
     align-items: center;
-    /* padding: 12px; */
     padding-top: 12px;
     padding-bottom: 12px;
     width: 100%;
     justify-content: space-between;
-    /* white-space: nowrap; */
 }
 
 .azure {
     display: flex;
     align-items: center;
-    /* margin-right: 80px; */
-    /* margin-left: 2px; */
-    /* justify-content: ; */
-    /* left: 43px; */
-    /* width: 130px; */
     height: 45px;
-    /* white-space: nowrap; */
     padding-left: 12px;
 }
-
-.azure h1 {
-    font-size: 100%;
-    padding-left: 12px;
-    /* margin-left: 10px; */
-}
-
 .icon {
     display: flex;
-    /* width: 458px; */
-    /* height: 78px; */
     white-space: nowrap;
     padding: 10px;
 }
 
 .signin {
     display: flex;
-    /* margin-left: 21px; */
     align-items: center;
     justify-content: space-between;
-    /* width: 130px; */
     height: 54px;
     white-space: nowrap;
 }
@@ -205,13 +144,11 @@ header h2{
     color: black;
     font-size: 16px;
     padding: 20px;
-    /* margin-right: 100px; */
 }
 
 .banner .signin .image img {
     width: 40px;
     height: 40px;
-    /* margin-right: 50px; */
 }
 
 .banner1 {
@@ -232,11 +169,8 @@ header h2{
     background-color: #0078d4;
     border-color: #0078d4;
     border-width: 1px;
-    /* width: 85%; */
-    /* padding-right: 2; */
     margin-top: 12px;
     color: white;
-    /* margin-right: 20px; */
 }
 .btn1:hover{
     text-decoration: underline;
@@ -249,7 +183,6 @@ header h2{
     border-color: #50e6f4;
     color: #50e6f4;
     border-width: 2px;
-    /* width: 85%; */
     margin-top: 12px;
     font-weight: bold;
 }
@@ -263,9 +196,7 @@ header h2{
     padding: 60px 0;
     display: flex;
     flex-direction: column;
-    /* white-space: nowrap; */
     justify-content: center;
-    /* padding: 0px 15px; */
     align-items: center;
 }
 .class1 h1{
@@ -283,17 +214,13 @@ header h2{
     display: flex;
     background-color: white;
     border: 5px solid white;
-    /* border-color: rgb(24, 22, 22);
-    border-width: 1px; */
     box-shadow: 0 2px 5px rgb(182, 177, 177);
     border-radius: 3px;
     color: #0062ad;
     align-items: center;
     align-content: space-around;
     margin-top: 20px;
-    /* width: 100%; */
     margin-left: 10px;
-    /* height: 68px;  */
 }
 .card div:hover{
     text-decoration: underline;
@@ -360,9 +287,6 @@ header h2{
 .tag {
     display: flex;
     flex-direction: column;
-    /* padding-bottom: 40px; */
-    /* margin: 20px; */
-    /* justify-content: center; */
 }
 .tag button{
     display:flex;
@@ -436,8 +360,6 @@ header h2{
 .products{
     text-align: center;
     padding-top: 5%;
-    /* position: relative; */
-    /* top: -400px; */
 }
 .products a:hover{
     color: #243a5e;
@@ -463,12 +385,11 @@ header h2{
     border-radius: 12px;
     box-shadow: 0 10px 20px transparent;
     width: 100%;
-    height: 100%;
-    margin-top: 10%;
+    height: 45vw;
 } 
-.fullscreen{
+ .fullscreen{ 
     display: none;
-}
+} 
 .text{
    text-align: center;
 }
@@ -565,14 +486,9 @@ footer .list{
     justify-content: flex-end;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-bottom: 40px;
-    margin-top: 36px;
+    padding-bottom: 80px;
+    padding-top: 40px;
 }
-/* footer .list div{
-    display: flex;
-} */
-
-
 footer .list p{
     box-sizing: border-box;
     font-size: 12px;
@@ -687,6 +603,7 @@ footer .list p{
     position: relative;
     left: 1%;
     align-items: flex-start;
+    border: 1px solid transparent;
  }  
  .bar button:hover h3{
     text-decoration: underline white;
@@ -722,7 +639,6 @@ footer .list p{
  .socialmedia{
     display: flex;
     flex-direction: row;
-    padding: 0 18px;
     background-color: #f4f5f6;
     padding-top: 50px;
     flex-wrap: wrap;
@@ -766,7 +682,6 @@ footer .list p{
     background-color: #f4f5f6;
     color: #1a1a1f;
     padding: 0 18px;
-    max-width: 1310px;
  }
  .about-tags{
     display: none;
@@ -792,7 +707,9 @@ footer .list p{
  .stories{
     position: relative;
 }
-
+.image-tab{
+    display: none;
+}
  .video img{
     width: 20px;
     background-color: white;
@@ -848,6 +765,15 @@ footer .list p{
         grid-template-columns: repeat(6, 35vw);
     }
 }
+@media screen and (min-width:960px) {
+    .stories .image-mobile{
+        display: none;
+    }
+    .stories .image-tab{
+        display: flex;
+    }
+
+}
 @media only screen and (min-width: 768px) {
 
     .banner {
@@ -855,20 +781,13 @@ footer .list p{
     }
 
     .banner1 {
-        /* background-color: aliceblue; */
         display: flex;
-        /* margin-top: 10px; */
-        /* margin-bottom: 10px; */
-        /* white-space: nowrap; */
-        /* width: 122vw; */
         height: 55px;
         justify-content: space-between;
     }
 
     .banner1 .header1 {
         display: flex;
-        /* padding: 0 15px; */
-        /* margin-right: 5%; */
     }
 
     .banner1 .header1 .azure {
@@ -876,23 +795,18 @@ footer .list p{
     }
 
     .banner1 h2 {
-        margin-left: 12px;
+        margin-left: 24px;
+        font-size: 18px;
     }
-
-    /* .banner1 .header2{
-        display: flex;
-    } */
     .banner1 .search {
         display: flex;
-        align-items: stretch;
     }
 
     .banner1 ul {
         display: flex;
         white-space: nowrap;
-        /* margin-left: 50px; */
-        /* margin-right: 20px; */
         align-items: center;
+        margin-left: 24px;
     }
 
     .banner1 ul li {
@@ -902,14 +816,13 @@ footer .list p{
 
     .banner1 ul li a {
         text-decoration: none;
-        font-size: 14px;
+        font-size: 13px;
         color: black;
     }
 
     .banner1 .signin {
         display: flex;
         align-items: center;
-        /* margin-top: 8px; */
         justify-content: space-between;
     }
 
@@ -921,29 +834,31 @@ footer .list p{
     .banner1 .signin button {
         border: none;
         background: none;
-        /* font-size: 220%; */
-        /* margin-right: 20px; */
     }
-
+    .banner1 .signin a{
+        font-size: 13px;
+    }
     .banner1 .search1 {
         display: none;
     }
 
     .container {
-        /* position: relative;
-        width: 100% */
         display: flex;
-        /* justify-content: space-around; */
     }
     .explore a {
         font-size: 17px;
         position: relative;
-        /* top: 15px; */
     }
     
     .class1 h1{
         font-size: 25px;
         width: 95%;
+    }
+    .card-2-1:hover h2{
+       text-decoration: underline;
+    }
+    .card-2-2 div:hover h2{
+        text-decoration: underline;
     }
     .card{
         display: none;
@@ -955,24 +870,16 @@ footer .list p{
         grid-template-rows: 1fr;
         column-gap: 30px;
         row-gap: 24px;
-        /* padding-bottom: 40px; */
     }
     .card-2-1{
         grid-row: 1/2;
-        /* display: flex; */
         background-image: url(img/microsoft-ignite-desktop.jpg);
         background-size: 100%;
-        /* height: 100%; */
-        /* width: 100%; */
         background-position: 10% 10%;
         background-size: cover;
         overflow: hidden;
-        /* position: relative; */
         background-repeat: no-repeat;
-        /* flex-direction: column; */
-        /* padding: 150px 24px 150px 24px; */
         border-radius: 3px;
-        /* height: 642px; */
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -986,13 +893,9 @@ footer .list p{
         width: 60%;
     }
     .card-2-2{
-        /* display: flex;
-        flex-direction: column; */
-        /* grid-row: 1/2; */
         display: grid;
         column-gap: 30px;
         row-gap: 24px;
-        /* justify-items: stretch; */
     }
     .card-2-2 p{
         color: #4c4c51;
@@ -1002,17 +905,10 @@ footer .list p{
         display: flex;
         background-color: white;
         border: 5px solid white;
-        /* border-color: rgb(24, 22, 22);
-        border-width: 1px; */
         box-shadow: 0 2px 5px rgb(182, 177, 177);
         border-radius: 3px;
-        
         align-items: center;
         align-content: space-around;
-        /* margin-top: 20px; */
-        /* width: 90%; */
-        /* margin-left: 10px; */
-        
     }
     .card4 h2{
         color: #0062ad;
@@ -1024,19 +920,13 @@ footer .list p{
         display: flex;
         background-color: white;
         border: 5px solid white;
-        /* border-color: rgb(24, 22, 22);
-        border-width: 1px; */
         box-shadow: 0 2px 5px rgb(182, 177, 177);
         border-radius: 3px;
         color: #0062ad;
         align-items: center;
         align-content: space-around;
-        /* margin-top: 20px; */
-        /* width: 90%; */
-        /* margin-left: 10px; */
     }
     .card-2-2 h2{
-        /* padding: 80px;  */
         font-size: 20px;
         font-weight: bolder;
     }
@@ -1048,7 +938,6 @@ footer .list p{
     .card-2-2 img{
          position: absolute;
          width: 100%;
-         /* object-fit: cover; */
          height: 100%;
     }
     .card4-1{
@@ -1066,8 +955,6 @@ footer .list p{
         width: 16%;
     }
     .overview span{
-        /* position: relative;
-        left: 300px; */
         width: 52%;
         text-align: left;
         padding-bottom: 0;
@@ -1096,8 +983,8 @@ footer .list p{
     list-style-type: none;
    }
    .subtags{
-    transform: translateX(200px);
-    width: 75%;
+    transform: translateX(216px);
+    width: 70%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding-top: 30px;
@@ -1157,12 +1044,15 @@ footer .list p{
     border-radius: inherit;
    }
    .ai1 p{
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 600;
     color: white;
-    text-align: center;
+    text-align: left;
     position: relative;
     bottom: -180px;
+   }
+   .ai1:hover{
+    text-decoration: underline white;
    }
    .agi{
     display: none;
@@ -1173,11 +1063,14 @@ footer .list p{
     height: 100%;
     border-radius: inherit;
    }
+   .agi1:hover{
+    text-decoration: underline white;
+   }
    .agi1 p{
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 600;
     color: white;
-    text-align: center;
+    text-align: left;
     position: relative;
     bottom: -160px;
    }
@@ -1202,9 +1095,6 @@ footer .list p{
     margin: 24px 0 12px 0;
     text-align: left;
    }
-   /* .btn2-txt{
-    align-items: flex-start;
-   } */
 }
 @media screen and (min-width:769px) {
     .fullscreen{
@@ -1215,7 +1105,7 @@ footer .list p{
         padding-bottom: 40px;
     }
     .fullscreen span{
-        padding-right: 30px;
+        padding-right: 10px;
         transform: translateY(-5px);
     }
     .fullscreen p{
@@ -1228,9 +1118,6 @@ footer .list p{
         width: 60%;
         align-items: flex-start;
     }
-    /* .container .bgimage{
-        height: 600px;
-    } */
     .content1 {
         text-align: start;
     }
@@ -1284,16 +1171,25 @@ footer .list p{
     .tag{
         width: 65%;
     }
+    .tab li:hover{
+        text-decoration: underline;
+        color: #0062ad;
+    }
     .tablet{
         display: flex;
         transform: translateY(-650px);
         margin-left: 0;
         margin-right: 0;
         position: relative;
-        left: 624px;
+        left: 824px;
     }
     .tablet img{
-        width: 60%;
+        width: 900px;
+        height: 38vh;
+        border: 24px solid black;
+    }
+    .explore a{
+        font-size: 14px;
     }
     .tablet img:hover{
         transform: translateX(-50px);
@@ -1307,7 +1203,9 @@ footer .list p{
    
     .fullscreen{
         position: relative;
-        bottom: 450px;
+        bottom: 750px;
+        max-width: 226px;
+        left: 980px;
     }
     .casestudy{
         display: none;
@@ -1320,6 +1218,8 @@ footer .list p{
 
     .logo{
         width: 100%;
+        display: flex;
+        justify-content: center;
     }
     .logo ul{
         display: flex;
@@ -1343,6 +1243,9 @@ footer .list p{
      .casestudy2{
         position: relative;
         width: 100%;
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
     } 
 
     .study{
@@ -1353,11 +1256,11 @@ footer .list p{
         background-color: rgba( 26, 26, 31, .94);
         color: white;
         padding: 24px;
-        font-size: 16px;
+        font-size: 20px;
         font-weight: 400;
         line-height: 1.5;
         bottom: 60px;
-        left: 20px;
+        left: 10%;
         border-radius: 5px;
     }
     .study a{
@@ -1375,7 +1278,7 @@ footer .list p{
         font-size: 16px;
         font-weight: 400;
         background-color: rgba(26, 26, 31, .94);
-        left: 20px;
+        left: 10%;
         padding: 20px;
         border-radius: 6px;
     }
@@ -1404,6 +1307,7 @@ footer .list p{
         padding: 10px;
         background-color: #50e6ff;
         border-radius: 100%;
+        margin-right: 10px;
     }
     .part2 a{
         color: white;
@@ -1416,6 +1320,9 @@ footer .list p{
         display: flex;
         flex-direction: row;
         padding-right: 20px;
+        max-width: 1310px;
+        margin-left: auto;
+        margin-right: auto;
     }
     .btn-p{
         line-height: 2;
@@ -1426,6 +1333,9 @@ footer .list p{
    .functions{
     grid-template-columns: repeat(4, 1fr);
     overflow: hidden;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
    }
     .fntn:nth-child(3){
     display: grid;
@@ -1435,6 +1345,21 @@ footer .list p{
     display: grid;
     grid-column: 2/4;
    }  
+   .foot{
+    display: flex;
+    justify-content: space-between;
+}
+}
+footer .list{
+    width: 605px;
+    margin-right: 0;
+}
+.media{
+    max-width: 1310px;
+    margin-left: auto;
+}
+.casestudy2 .study a:hover{
+    text-decoration: none;
 }
 @media screen and (min-width:961px) {
     .support1{
@@ -1459,26 +1384,38 @@ footer .list p{
     .about-tags li:hover{
         text-decoration: underline;
     }
+    footer div{
+        max-width: 1310px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 @media screen and (min-width:1080px) {
     .banner {
         display: none;
     }
-
+    
     .banner1 .signin {
         display: none;
     }
 
     .banner1 .search1 {
-        /* width: 100%; */
         display: flex;
-        /* margin-left: -95px; */
         align-items: center;
         flex-wrap: nowrap;
-        /* justify-content: center; */
-        /* width: 1201px; */
         font-size: 20px;
         margin-right: 11px;
+    }
+    .banner1{
+        max-width: 1310px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .banner1 li:hover{
+        text-decoration: underline;
+    }
+    .banner1 h2:hover{
+        text-decoration: underline;
     }
     .chat{
         height: 50px;
@@ -1490,23 +1427,14 @@ footer .list p{
   
     .search1 form {
         display: flex;
-        /* margin-left: 2; */
     }
-
-    /* .searching{
-       display: flex;
-       height: 28px;
-    }  */
     .search1 form .search-box {
         background-color: rgba(112, 128, 144, 0.082);
-        /* width: 120px; */
         height: 30px;
         border-radius: 4px;
         border-width: 1px;
         display: flex;
-        /* flex-direction: column; */
         border: 0.5px solid black;
-        /* margin-right: 25px; */
     }
 
     .search1 form .search-box img {
@@ -1518,21 +1446,17 @@ footer .list p{
         border: none;
         width: 80px;
         padding: 5px 10px 5px 12px;
-        font-size: 14px;
+        font-size: 13px;
+        font-family: inherit;
     }
 
     .search1 ul {
         display: flex;
         justify-content: space-between;
-        /* width: 350px; */
-        align-items: center;
+        align-items: flex-start;
     }
 
     .freeac {
-        /* background-color: rgb(6, 212, 6);
-        height: 40px;
-        border-width: 1px;
-        border-radius: 5px; */
         background-color: #89c402;
         border: 1px solid #6f9e02;
         border-radius: 4px;
@@ -1541,9 +1465,11 @@ footer .list p{
         padding: 9px;
         display: flex;
         align-items: center;
+        font-size: 12px;
     }
-    .content{
-        width: 40%;
+    .freeac:hover{
+        background-color: #a2e407;
+        text-decoration: underline;
     }
     .content h1{
         font-size: 50px;
@@ -1552,55 +1478,30 @@ footer .list p{
         font-size: 20px;
     }
 }
-
- /* @media screen and (min-width:1320px) {
-    .banner1 {
-        margin-left: 125px;
-
-        white-space: nowrap;
-        display: flex; 
-         justify-content: center; 
-    }
-
-    .content {
-        margin: 0px 125px;
-    }
-}  */
-
-   
      @media screen and (min-width:1280px) {
-        .container{
-            height: 787px;
-        }
-        .content{
-            /* margin: 0 100px;  */
-            /* padding: 0px 224px; */
-            max-width: 400px;
-        }
-        /* .content div{
+     .content{
+            max-width: 1310px;
+            margin-left: auto;
+            margin-right: auto;
             
-        } */
+        } 
     }  
     @media screen and (min-width:1320px) {
         .banner1 {
-            /* margin-left: 125px; */
             align-items: center;
             white-space: nowrap;
             display: flex;
-            justify-content: space-evenly;
+            justify-content: space-between;
         }
         .content p{
-             font-size: 17px;
-            }
-            .content{
-                max-width: 90%;
-                margin-left: 10%;
-            }
-            .card-2{
+         font-size: 17px;
+        }
+            
+        .card-2{
                 max-width: 90%;
                 margin-left: 10%;
                 margin-right: 10%;
-            }
+        }
             
     } 
     @media screen and (min-width:1518px) {
@@ -1616,6 +1517,4 @@ footer .list p{
            left: 0;
            right: 0;
         }  
-        
-     
-    }
+}
