@@ -113,30 +113,25 @@ body{
 .banner {
     display: flex;
     align-items: center;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    width: 100%;
+    padding: 12px;
     justify-content: space-between;
 }
-
 .azure {
     display: flex;
     align-items: center;
-    height: 45px;
-    padding-left: 12px;
+    font-size: 12px;
+}
+.azure svg{
+    padding: 0 15px;
 }
 .icon {
     display: flex;
-    white-space: nowrap;
-    padding: 10px;
 }
 
 .signin {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 54px;
-    white-space: nowrap;
 }
 
 .signin a {
@@ -147,8 +142,8 @@ body{
 }
 
 .banner .signin .image img {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
 }
 
 .banner1 {
@@ -160,6 +155,7 @@ body{
     display: flex;
     width: 85%;
     flex-direction: column;
+    padding:0 7.5%;
 }
 
 .btn1 {
@@ -182,6 +178,7 @@ body{
     color: #50e6f4;
     border-width: 2px;
     font-weight: bold;
+    margin-top: 10px;
 }
 .btn2:hover{
     text-decoration: underline;
@@ -498,7 +495,7 @@ footer .list p{
 .discover h2{
     text-align: center;
     width: 100%;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 600;
     line-height: 1.2;
     margin: 0 0 22px;
@@ -646,8 +643,6 @@ footer .list p{
     background-color: #eaebec;
     color: #4c4c51;
     padding: 12px;
-    width: 70%;
-    max-width: 223px;
  }
  .app span{
     font-size: 14px;
@@ -744,6 +739,14 @@ footer .list p{
  .list p:hover{
     text-decoration: underline;
  }
+ .tools picture{
+    max-width: 619px;
+    margin-left: auto;
+ }
+ .toolkit{
+    max-width: 619px;
+    margin-right: auto;
+ }
 @media screen and (min-width:540px) {
     .overview button{
         width: 150px;
@@ -766,6 +769,7 @@ footer .list p{
     }
     .stories .image-tab{
         display: flex;
+       height: 700px;
     }
 
 }
@@ -1037,6 +1041,7 @@ footer .list p{
     background-position: 15% 24%;
     height: 100%; 
     border-radius: inherit;
+    padding-left: 10px;
    }
    .ai1 p{
     font-size: 20px;
@@ -1057,6 +1062,7 @@ footer .list p{
     background-image: url(//azurecomcdn.azureedge.net/cvt-4fa37bc4e46129b5c49c6d6549e0de5c057007fcbdecdff3a4eb0fbd80b8460b/images/page/home/news/azure-regions.png);
     height: 100%;
     border-radius: inherit;
+    padding-left: 10px;
    }
    .agi1:hover{
     text-decoration: underline white;
@@ -1172,7 +1178,7 @@ footer .list p{
     }
     .tablet{
         display: flex;
-        transform: translateY(-650px);
+        transform: translateY(-600px);
         margin-left: 0;
         margin-right: 0;
         position: relative;
@@ -1180,7 +1186,7 @@ footer .list p{
     }
     .tablet img{
         width: 900px;
-        height: 38vh;
+        height: 48vh;
         border: 24px solid black;
     }
     .explore a{
@@ -1198,7 +1204,7 @@ footer .list p{
    
     .fullscreen{
         position: relative;
-        bottom: 750px;
+        bottom: 700px;
         max-width: 226px;
         left: 980px;
     }
@@ -1247,7 +1253,7 @@ footer .list p{
         position: absolute;
         display: flex;
         flex-direction: column;
-        width: 40%;
+        width: 36%;
         background-color: rgba( 26, 26, 31, .94);
         color: white;
         padding: 24px;
@@ -1268,10 +1274,10 @@ footer .list p{
     .developer{
         position: absolute;
         top: 50px;
-        width: 60%;
+        width: 45%;
         color: #f8f9fa;
-        font-size: 16px;
-        font-weight: 400;
+        font-size: 18px;
+        font-weight: 600;
         background-color: rgba(26, 26, 31, .94);
         left: 10%;
         padding: 20px;
@@ -1345,14 +1351,8 @@ footer .list p{
     justify-content: space-between;
 }
 }
-footer .list{
-    width: 605px;
-    margin-right: 0;
-}
-.media{
-    max-width: 1310px;
-    margin-left: auto;
-}
+
+
 .casestudy2 .study a:hover{
     text-decoration: none;
 }
@@ -1379,7 +1379,17 @@ footer .list{
     .about-tags li:hover{
         text-decoration: underline;
     }
-    footer div{
+    footer .socialmedia{
+        max-width: 1310px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    footer .support1{
+        max-width: 1310px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    footer .foot{
         max-width: 1310px;
         margin-left: auto;
         margin-right: auto;
@@ -1480,6 +1490,9 @@ footer .list{
      @media screen and (min-width:1280px) {
         .content{
             margin-left: 7%;
+        }
+        .media{
+            margin-left: auto;
         }
     }  
     @media screen and (min-width:1320px) {
