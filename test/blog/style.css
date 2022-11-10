@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: font;
+    src: url(GTZirkon-Book.woff2);
+}
+div{
+    font-family: font;
+} 
+header{
+    display: flex;
+    background-color: #ffe8dc;
+    height: 100px;
+}
+header a{
+    text-decoration: none;
+    color: black;
+    position: relative;
+    top: 0;
+    right: -80px;
+}
+header span{
+    position: relative;
+    top: 70px;
+    left: -220px;
+}
+
+.posts section{
+    padding: 40px;
+}
+button{
+    background-color: #ffe8dc;
+    border-radius: 15px;
+    width: 200px;
+    height: 30px;
+    
+}
+section h2{
+    padding: 10px;
+}
+section p{
+    padding-bottom: 10px;
+}
+.links{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 50px;
+    margin-left: 20px;
+    padding: 40px;
+    /* gap: 200px; */
+    /* margin-left: 200px; */
+}
+.link1 :nth-child(4){
+    color: #b5b5b5;
+
+}
+.links a{
+     text-decoration: none;
+     color: #2b2b2b;
+    line-height: 50px;
+}
+.copyright{
+    color: #b5b5b5;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* margin-left: 20px; */
+    line-height: 20px;
+    width: 300px;
+}
