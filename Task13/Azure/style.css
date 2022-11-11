@@ -122,7 +122,7 @@ body{
     font-size: 12px;
 }
 .azure svg{
-    padding: 0 15px;
+    padding: 0 13px;
 }
 .icon {
     display: flex;
@@ -787,8 +787,6 @@ footer .list p{
 
     .banner1 .header1 {
         display: flex;
-        padding: 0 12px;
-        margin-right: 67px;
     }
     .banner1 .header1 .azure{
         height: 55px;
@@ -799,7 +797,7 @@ footer .list p{
     }
 
     .banner1 h2 {
-        margin-left: 24px;
+        /* margin-left: 24px; */
         font-size: 18px;
     }
     .banner1 .search {
@@ -810,7 +808,7 @@ footer .list p{
         display: flex;
         white-space: nowrap;
         align-items: center;
-        margin-left: 24px;
+        /* margin-left: 24px; */
     }
 
     .banner1 ul li {
@@ -820,7 +818,7 @@ footer .list p{
 
     .banner1 ul li a {
         text-decoration: none;
-        font-size: 17px;
+        font-size: 14px;
         color: black;
     }
 
@@ -840,7 +838,7 @@ footer .list p{
         background: none;
     }
     .banner1 .signin a{
-        font-size: 13px;
+        font-size: 12px;
     }
     .banner1 .search1 {
         display: none;
@@ -877,8 +875,8 @@ footer .list p{
     }
     .card-2-1{
         grid-row: 1/2;
-        background-image: url(img/microsoft-ignite-desktop.jpg);
-        background-size: 100%;
+        background-image: url(img/card1.jpg);
+        background-size: cover;
         background-position: 10% 10%;
         background-size: cover;
         overflow: hidden;
@@ -886,7 +884,7 @@ footer .list p{
         border-radius: 3px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-end;
         padding: 24px;
     }
     .card-2-1 h2{
@@ -1042,8 +1040,8 @@ footer .list p{
    }
    .ai1{
     display: flex;
-    background-image: url(//azurecomcdn.azureedge.net/cvt-4fa37bc4e46129b5c49c6d6549e0de5c057007fcbdecdff3a4eb0fbd80b8460b/images/page/home/news/azure-ignite-ai-automation.png);
-    background-position: 15% 24%;
+    background-image: url(img/img3.webp);
+    background-size: cover;
     height: 100%; 
     border-radius: inherit;
     padding-left: 10px;
@@ -1064,7 +1062,9 @@ footer .list p{
    }
    .agi1{
     display: flex;
-    background-image: url(//azurecomcdn.azureedge.net/cvt-4fa37bc4e46129b5c49c6d6549e0de5c057007fcbdecdff3a4eb0fbd80b8460b/images/page/home/news/azure-regions.png);
+    background-image: url(img/img5.png);
+    object-fit: cover;
+    background-position: 50% 50%;
     height: 100%;
     border-radius: inherit;
     padding-left: 10px;
@@ -1279,7 +1279,7 @@ footer .list p{
     .developer{
         position: absolute;
         top: 50px;
-        width: 45%;
+        width: 57%;
         color: #f8f9fa;
         font-size: 18px;
         font-weight: 600;
@@ -1414,7 +1414,7 @@ footer .list p{
         align-items: center;
         flex-wrap: nowrap;
         font-size: 20px;
-        margin-right: 11px;
+        /* margin-right: 11px; */
     }
     .banner1{
         max-width: 1310px;
@@ -1474,7 +1474,7 @@ footer .list p{
         border: 1px solid #6f9e02;
         border-radius: 4px;
         height: 32px;
-        margin: 0px 6px;
+        /* margin: 0px 6px; */
         padding: 9px;
         display: flex;
         align-items: center;
