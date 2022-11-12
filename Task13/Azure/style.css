@@ -70,7 +70,7 @@ body{
     position: absolute;
     display: flex;
     flex-direction: column;
-    top: 50px;
+    top: 70px;
 }
 
 .content1 {
@@ -81,7 +81,7 @@ body{
 }
 
 .content span {
-    color: #50e6ff;
+    color: #0078d4;
     font-size: 23px;
     font-weight: 600;
     margin-bottom: 9px;
@@ -94,7 +94,7 @@ body{
 }
 
 .content h1 {
-    color: white;
+    color: black;
     font-size: 57px;
 }
 
@@ -106,7 +106,7 @@ body{
 } 
 
 .content p {
-    color: white;
+    color: #4c4c51;
     line-height: 1.5;
 
 }
@@ -934,7 +934,7 @@ footer .list p{
     }
     .card-2-2 picture{
         position: relative;
-        width: 80%;
+        width: 30%;
         height: 100%;
     }
     .card-2-2 img{
@@ -1121,7 +1121,7 @@ footer .list p{
 @media screen and (min-width:770px) {
     .content {
         padding: 0 15px;
-        width: 40%;
+        width: 39%;
         align-items: flex-start;
         margin: 0;
     }
@@ -1493,12 +1493,16 @@ footer .list p{
     }
 }
      @media screen and (min-width:1280px) {
-        .content{
-            margin-left: 7%;
-        }
+       
         .media{
             margin-left: auto;
         }
+        .card-2{
+            max-width: 1310px;
+            margin-left: auto;
+            margin-right: auto;
+    }
+   
     }  
     @media screen and (min-width:1320px) {
         .banner1 {
@@ -1511,13 +1515,14 @@ footer .list p{
          font-size: 17px;
         }
             
-        .card-2{
-                max-width: 90%;
-                margin-left: 10%;
-                margin-right: 10%;
-        }
+       
             
-    } 
+    }  
+    @media screen and (min-width:1440px) {
+        .content{
+            margin-left: 14%;
+        }
+    }
     @media screen and (min-width:1518px) {
          .container .bgimage1 img{
             display: flex;
@@ -1531,4 +1536,10 @@ footer .list p{
            left: 0;
            right: 0;
         }  
-}
+    }
+    @media screen and (min-width:1595px) {
+        .content{
+            margin-left: 9%;
+        }
+    }
+   
