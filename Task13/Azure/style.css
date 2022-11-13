@@ -1537,9 +1537,5 @@ footer .list p{
            right: 0;
         }  
     }
-    @media screen and (min-width:1595px) {
-        .content{
-            margin-left: 9%;
-        }
-    }
+  
    
