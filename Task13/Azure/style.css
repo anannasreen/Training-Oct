@@ -4,36 +4,19 @@
 }
 @font-face {
     font-family: font;
-    src: url(SegoeUI-Roman-VF_web.woff2);
+    src: url(SegoeUI-Roman-VF_web.woff2); 
 }
 body{
     font-family: font;
     color: #1a1a1f;
 }
 
-.chat {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    bottom: 0;
-    right: 20px;
-    position: fixed;
-    background-color: #0078d4;
-    height: 40px;
-    width: 150px;
-    z-index: 2;
-}
-
-.chat span {
-    color: white;
-    
-}
 
 .explore {
     background-color: #0078d4;
     display: flex;
     justify-content: center;
-    padding: 14px 0px;
+    padding: 14px 15px;
 }
 
 .explore a {
@@ -51,27 +34,24 @@ body{
 .explore:hover img{
     transform: translateX(2px);
 }
-.container {
+.main-section {
     display: flex;
-    position: relative;
-    height: 700px;
+    background-image: url(img/banner-mobile.png);
 }
 
-.container .bgimage {
+ .container .bgimage {
     display: flex;
     width: 100%;
-   height: 100%;
-}
+    height: 100%; 
+} 
 .container .bgimage1 {
     display: none;
     
 }
 .content {
-    position: absolute;
     display: flex;
     flex-direction: column;
-    top: 70px;
-    padding: 0 16px;
+    padding: 60px 16px;
 }
 
 .container .content1 {
@@ -83,45 +63,50 @@ body{
 
 .content span {
     color: #0078d4;
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 600;
     margin-bottom: 9px;
+    line-height: 1.3;
+    padding: 0 10px;
 }
 
 .content2 {
     display: flex;
     text-align: center;
-    position: relative;
-    margin-bottom: 36px;
+    margin-bottom: 10%;
+    padding: 0 2px;
 }
 
 .content h1 {
-    color: black;
-    font-size: 57px;
+    color: #1a1a1f;
+    font-size: 54px;
+    line-height: 1.1;
+    font-weight: 600;
 }
 
 .content3 {
     display: flex;
     text-align: center;
     position: relative;
-    margin-bottom: 36px;
+    margin-bottom: 14%;
 } 
 
 .content p {
     color: #4c4c51;
-    line-height: 1.5;
-
+    line-height: 1.3;
+    font-size: 18px;
 }
 .banner {
     display: flex;
     align-items: center;
-    padding: 12px;
+    padding: 10px;
     justify-content: space-between;
 }
 .azure {
     display: flex;
     align-items: center;
     font-size: 12px;
+    min-width: 130px;
 }
 .azure svg{
     padding: 0 13px;
@@ -129,7 +114,9 @@ body{
 .icon {
     display: flex;
 }
-
+.hamburger{
+    height: 13px;
+}
 .signin {
     display: flex;
     align-items: center;
@@ -139,15 +126,21 @@ body{
 .signin a {
     text-decoration: none;
     color: black;
-    font-size: 16px;
+    font-size: 14px;
     padding: 20px;
 }
 
 .banner .signin .image img {
-    width: 30px;
-    height: 30px;
+    width: 18px;
+    height: 18px;
 }
-
+.banner .signin .image{
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .banner1 {
     display: none;
 }
@@ -172,19 +165,19 @@ body{
     background-color: #0062ad;
 }
 .btn2{
-    padding: 10px 16px;
+    padding: 10px;
     border-radius: 5px;
     background: transparent;
-    border-color: #50e6f4;
-    color: #50e6f4;
+    border:1px solid black;
+    color: black;
     border-width: 2px;
     font-weight: bold;
     margin-top: 10px;
 }
 .btn2:hover{
     text-decoration: underline;
-    background-color: #50e6f4;
-    color: #243a5e;
+    background-color: black;
+    color: white;
     cursor: pointer;
 }
 .class1{
@@ -195,15 +188,16 @@ body{
     align-items: center;
 }
 .class1 h1{
-    width: 75%;
+    width: 80%;
     text-align: center;
     font-size: 20px;
-    padding-bottom: 40px;
+    padding-bottom: 10%;
 }
 .card{
     display: flex;
     flex-direction: column;
     width: 90%;
+    gap: 24px;
 }
 .card div{
     display: flex;
@@ -214,8 +208,6 @@ body{
     color: #0062ad;
     align-items: center;
     align-content: space-around;
-    margin-top: 20px;
-    margin-left: 10px;
 }
 .card div:hover{
     text-decoration: underline;
@@ -242,6 +234,7 @@ body{
     align-items: center;
     flex-direction: column;
     padding:45px 0px  24px 0px;
+    width: 75%;
 }
 .overview span{
     padding-bottom: 24px;
@@ -251,11 +244,15 @@ body{
 }
 .overview button{
     border:1px solid #0078d4;
-    padding: 16px 16px;
-    position: relative;
-    left: 12.5%;
+    padding: 12px 16px;
     border-radius: 5px;
     background-color: white;
+    width: 100%;
+}
+.row{
+    max-width: 1310px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .overview button:hover{
     background-color: #0062ad;
@@ -265,22 +262,24 @@ body{
     color: white;
 }
 .overview button a{
-  
+     
     text-decoration: none;
     color: #0062ad;
     font-weight: 600;
 }
 .media{
     background-color: #f8f9fa;
-    padding: 10px;
+    padding: 60px 10px;
 }
 .media h2{
     text-align: center;
     padding-bottom: 40px;
+    font-size: 20px;
 }
 .tag {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 .tag button{
     display:flex;
@@ -353,7 +352,7 @@ body{
 }
 .products{
     text-align: center;
-    padding-top: 5%;
+    padding-top: 10%;
 }
 .products a:hover{
     color: #243a5e;
@@ -363,19 +362,19 @@ body{
 .products a{
     color: #0062ad;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 600;
 }
 .tablet{
-   max-width: 90%;
+   max-width: 95%;
    margin-left: auto;
    margin-right: auto;
    display: flex;
-   padding-bottom: 40px;
    justify-content: center;
+   margin-top: 24px;
 }
 .tablet img{
-    border: 12px solid black;
+    border: 8px solid black;
     border-radius: 12px;
     box-shadow: 0 10px 20px transparent;
     width: 100%;
@@ -386,9 +385,10 @@ body{
 } 
 .text{
    text-align: center;
+   padding: 60px 20px 0 10px;
 }
 .text h2{
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 800;
 }
 .division{
@@ -431,7 +431,7 @@ body{
     transform: translateX(2px);
 }
 .casestudy{
-    padding: 60px 0;
+    padding-top: 10%;
 }
 .casestudy1{
     display: none;
@@ -480,8 +480,8 @@ footer .list{
     justify-content: flex-end;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-bottom: 80px;
-    padding-top: 40px;
+    padding: 40px 0;
+    max-width: 828px;
 }
 footer .list p{
     box-sizing: border-box;
@@ -516,7 +516,6 @@ footer .list p{
     flex-direction: column;
     border-radius: 6px;
     box-sizing: inherit;
-    margin-bottom: 40px;
 }
 .functions p{
     color: #4c4c51;
@@ -584,19 +583,18 @@ footer .list p{
     text-decoration: underline;
 }
 .bar{
-        padding: 84px 0;
+        padding: 60px 0;
         display: grid;
         column-gap: 30px;
         row-gap: 24px;
+        justify-items: center;
 }
  .bar button{
     display: flex;
     border-radius: 6px;
-    width: 98%;
+    width: 90%;
     padding: 24px;
-    position: relative;
-    left: 1%;
-    align-items: flex-start;
+    align-items: center;
     border: 1px solid transparent;
  }  
  .bar button:hover h3{
@@ -618,14 +616,24 @@ footer .list p{
     color: white;
     font-size: 20px;
     display: flex;
+    text-align: left;
+    padding-left: 20px;
  }
  .btn2-txt h3{
     color: white;
     font-size: 20px;
+    text-align: left;
+    padding-left: 20px;
+ }
+ .bar2 .btn-img img{
+    width: 100%;
+    height: 100%;
  }
  .btn3-txt h3{
     color: white;
     font-size: 20px;
+    text-align: left;
+    padding-left: 20px;
  }
  .bar svg{
     display: flex;
@@ -684,7 +692,6 @@ footer .list p{
     border-radius: 4px;
     border: 1px solid transparent;
     background-color: #eaebec;
-    color: #4c4c51;
     padding: 12px;
     width: 95%;
     margin-bottom: 36px;
@@ -715,14 +722,14 @@ footer .list p{
 .video img:hover{
     border: 3px solid #0078d4;
 }
- .support{
-    padding: 28px 0;
- }
  .copyright{
     font-weight: bold;
  }
  .story{
     display: none;
+ }
+ .support{
+    margin-top: 36px;
  }
  .support1{
     display: none;
@@ -752,6 +759,10 @@ footer .list p{
     .overview button{
         width: 150px;
         position: relative;
+    }
+    .overview{
+        gap: 20px;
+        white-space: nowrap;
     }
     .toolkit h2{
         text-align: left;
@@ -800,6 +811,7 @@ footer .list p{
     .banner1 h2 {
         /* margin-left: 24px; */
         font-size: 18px;
+        margin-left: 12px;
     }
     .banner1 .search {
         display: flex;
@@ -856,6 +868,7 @@ footer .list p{
     .class1 h1{
         font-size: 25px;
         width: 95%;
+        padding-bottom: 0;
     }
     .card-2-1:hover h2{
        text-decoration: underline;
@@ -889,10 +902,10 @@ footer .list p{
         padding: 24px;
     }
     .card-2-1 h2{
-        color: #151469;
+        color: #0062ad;
     }
     .card-2-1 p{
-        color: #702573;
+        color: #4c4c51;
         width: 60%;
     }
     .card-2-2{
@@ -987,7 +1000,7 @@ footer .list p{
    }
    .subtags{
     transform: translateX(216px);
-    width: 70%;
+    width: 75%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding-top: 30px;
@@ -1011,7 +1024,7 @@ footer .list p{
    }
    .products{
     display: flex;
-    transform: translateY(-140px);
+    transform: translateY(-240px);
     padding-left: 20px;
    }
    .tools{
@@ -1019,7 +1032,7 @@ footer .list p{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    padding: 60px 0px;
+    padding: 145px 36px;
    }
    .tools picture{
      width: 35%;
@@ -1102,6 +1115,14 @@ footer .list p{
     margin: 24px 0 12px 0;
     text-align: left;
    }
+   .casestudy{
+    padding-top: 0;
+   }
+   .container{
+    max-width: 1310px;
+    margin-left: auto;
+    margin-right: auto;
+   }
 }
 @media screen and (min-width:769px) {
     .fullscreen{
@@ -1165,12 +1186,10 @@ footer .list p{
     }
 }
 @media screen and (min-width:960px) {
-    .container .bgimage {
-        display: none;
-    }
-
-    .container .bgimage1 {
-        display: flex;
+    .main-section{
+        background-image: url(img/banner-desktop.webp);
+        background-size: cover;
+        background-position: 50% 50%;
     }
     .media{
         overflow: hidden;
@@ -1184,15 +1203,15 @@ footer .list p{
     }
     .tablet{
         display: flex;
-        transform: translateY(-600px);
+        transform: translateY(-677px);
         margin-left: 0;
         margin-right: 0;
         position: relative;
-        left: 824px;
+        left: 922px;
     }
     .tablet img{
-        width: 900px;
-        height: 48vh;
+        width: 1020px;
+        height: 51vh;
         border: 24px solid black;
     }
     .explore a{
@@ -1205,14 +1224,14 @@ footer .list p{
     .media{
         height: 800px;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
     }
    
     .fullscreen{
         position: relative;
-        bottom: 700px;
+        bottom: 730px;
         max-width: 226px;
-        left: 980px;
+        left: 1040px;
     }
     .casestudy{
         display: none;
@@ -1280,14 +1299,16 @@ footer .list p{
     .developer{
         position: absolute;
         top: 50px;
-        width: 57%;
+        width: 45%;
         color: #f8f9fa;
-        font-size: 18px;
-        font-weight: 600;
         background-color: rgba(26, 26, 31, .94);
-        left: 10%;
+        left: 14%;
         padding: 20px;
         border-radius: 6px;
+    }
+    .developer p{
+        font-size: 24px;
+        font-weight: 600;
     }
     .developer button{
         display: none;
@@ -1440,7 +1461,7 @@ footer .list p{
         display: flex;
     }
     .search1 form .search-box {
-        background-color: rgba(112, 128, 144, 0.082);
+        background-color: #f8f9fa;
         height: 30px;
         width: 120px;
         border-radius: 4px;
@@ -1449,6 +1470,7 @@ footer .list p{
         border: 0.5px solid black;
         align-items: center;
         justify-content: space-between;
+        margin-right: 24px;
     }
 
     .search1 form .search-box img {
@@ -1503,7 +1525,22 @@ footer .list p{
             margin-left: auto;
             margin-right: auto;
     }
-   
+    .content{
+        padding: 72px 0 280px 0;
+    }
+    .content3{
+        margin-top: 5%;
+        margin-bottom: 0;
+        width: 586px;
+    }
+    .content2{
+        margin: 0;
+       
+    }
+    .button{
+        padding: 0;
+        margin-top: 36px;
+    }
     }  
     @media screen and (min-width:1320px) {
         .banner1 {
@@ -1514,29 +1551,7 @@ footer .list p{
         }
         .content p{
          font-size: 17px;
-        }
-            
-       
-            
+        }   
     }  
-    @media screen and (min-width:1440px) {
-        .content{
-            margin-left: 14%;
-        }
-    }
-    @media screen and (min-width:1518px) {
-         .container .bgimage1 img{
-            display: flex;
-            object-fit: cover;
-            
-        }
-         .container .bgimage1{
-           position: absolute;  
-           top: 0;
-           bottom: 0;
-           left: 0;
-           right: 0;
-        }  
-    }
-  
+   
    
