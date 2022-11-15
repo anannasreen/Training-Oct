@@ -168,7 +168,7 @@ body{
     padding: 10px;
     border-radius: 5px;
     background: transparent;
-    border:1px solid black;
+    border: 1px solid black;
     color: black;
     border-width: 2px;
     font-weight: bold;
@@ -868,7 +868,7 @@ footer .list p{
     .class1 h1{
         font-size: 25px;
         width: 95%;
-        padding-bottom: 0;
+        padding-bottom: 30px;
     }
     .card-2-1:hover h2{
        text-decoration: underline;
@@ -1178,7 +1178,6 @@ footer .list p{
     .btn1{
         margin-top: 12px;
         margin-right: 24px;
-        padding: 20px;
         font-weight: bolder;
     }
     .btn2{
@@ -1261,6 +1260,10 @@ footer .list p{
         margin: 12px;
         filter: grayscale(100%);
 
+    }
+    .logo ul li:nth-child(1){
+        filter: grayscale(0%);
+        border-bottom: 3px solid #0062ad;
     }
     .logo li:hover{
         filter: grayscale(0%);
@@ -1497,11 +1500,11 @@ footer .list p{
         border: 1px solid #6f9e02;
         border-radius: 4px;
         height: 32px;
-        /* margin: 0px 6px; */
+        font-weight: bold;
         padding: 9px;
         display: flex;
         align-items: center;
-        font-size: 12px;
+        font-size: 11px;
     }
     .freeac:hover{
         background-color: #a2e407;
