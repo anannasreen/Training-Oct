@@ -10,7 +10,19 @@ body{
     font-family: font;
     color: #1a1a1f;
 }
-
+.chat{
+    position: fixed;
+    right: 10px;
+    bottom: 0;
+    background-color: #0078d4;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    padding: 11px 19px;
+    font-size: 14px;
+    border-radius: 3px;
+    gap: 3px;
+}
 
 .explore {
     background-color: #0078d4;
@@ -164,13 +176,15 @@ body{
     text-decoration: underline;
     background-color: #0062ad;
 }
+.tools img{
+    max-width: 100%;
+}
 .btn2{
     padding: 10px;
     border-radius: 5px;
     background: transparent;
     border: 1px solid black;
     color: black;
-    border-width: 2px;
     font-weight: bold;
     margin-top: 10px;
 }
@@ -279,7 +293,6 @@ body{
 .tag {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 .tag button{
     display:flex;
@@ -374,7 +387,7 @@ body{
    margin-top: 24px;
 }
 .tablet img{
-    border: 8px solid black;
+    border: 10px solid black;
     border-radius: 12px;
     box-shadow: 0 10px 20px transparent;
     width: 100%;
@@ -408,6 +421,7 @@ body{
 .case1{
     display: flex;
     justify-content: center;
+    padding: 10px 0;
 }
 .case3 {
     background-color: #f8f9fa;
@@ -430,9 +444,7 @@ body{
 .case3 a:hover i{
     transform: translateX(2px);
 }
-.casestudy{
-    padding-top: 10%;
-}
+
 .casestudy1{
     display: none;
 }
@@ -594,7 +606,7 @@ footer .list p{
     border-radius: 6px;
     width: 90%;
     padding: 24px;
-    align-items: center;
+    align-items: flex-start;
     border: 1px solid transparent;
  }  
  .bar button:hover h3{
@@ -617,13 +629,11 @@ footer .list p{
     font-size: 20px;
     display: flex;
     text-align: left;
-    padding-left: 20px;
  }
  .btn2-txt h3{
     color: white;
     font-size: 20px;
     text-align: left;
-    padding-left: 20px;
  }
  .bar2 .btn-img img{
     width: 100%;
@@ -633,7 +643,6 @@ footer .list p{
     color: white;
     font-size: 20px;
     text-align: left;
-    padding-left: 20px;
  }
  .bar svg{
     display: flex;
@@ -762,7 +771,6 @@ footer .list p{
     }
     .overview{
         gap: 20px;
-        white-space: nowrap;
     }
     .toolkit h2{
         text-align: left;
@@ -809,7 +817,6 @@ footer .list p{
     }
 
     .banner1 h2 {
-        /* margin-left: 24px; */
         font-size: 18px;
         margin-left: 12px;
     }
@@ -821,7 +828,6 @@ footer .list p{
         display: flex;
         white-space: nowrap;
         align-items: center;
-        /* margin-left: 24px; */
     }
 
     .banner1 ul li {
@@ -987,7 +993,7 @@ footer .list p{
    }
    .tab{
     display: flex;
-    transform: translateY(-535px);
+    transform: translateY(-492px);
     padding-left: 10px;
     position: absolute;
    }
@@ -1024,7 +1030,7 @@ footer .list p{
    }
    .products{
     display: flex;
-    transform: translateY(-240px);
+    transform: translateY(-190px);
     padding-left: 20px;
    }
    .tools{
@@ -1032,7 +1038,8 @@ footer .list p{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    padding: 145px 36px;
+    padding: 145px 50px;
+    gap: 35px;
    }
    .tools picture{
      width: 35%;
@@ -1123,6 +1130,9 @@ footer .list p{
     margin-left: auto;
     margin-right: auto;
    }
+   .tablet img{
+    border: 22px solid black;
+   }
 }
 @media screen and (min-width:769px) {
     .fullscreen{
@@ -1143,12 +1153,17 @@ footer .list p{
 @media screen and (min-width:770px) {
     .content {
         padding: 0 15px;
-        width: 39%;
+        width: 72%;
         align-items: flex-start;
         margin: 0;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 21%;
+        gap: 35%;
     }
     .content1 {
         text-align: start;
+        margin-top: 5%;
     }
 
     .content1 span {
@@ -1183,6 +1198,12 @@ footer .list p{
     .btn2{
         font-weight: bolder;
     }
+    .media1{
+        height: 555px;
+    }
+    .casestudy{
+        padding-top: 10%;
+    }
 }
 @media screen and (min-width:960px) {
     .main-section{
@@ -1202,7 +1223,7 @@ footer .list p{
     }
     .tablet{
         display: flex;
-        transform: translateY(-677px);
+        transform: translateY(-650px);
         margin-left: 0;
         margin-right: 0;
         position: relative;
@@ -1210,7 +1231,7 @@ footer .list p{
     }
     .tablet img{
         width: 1020px;
-        height: 51vh;
+        height: 55vh;
         border: 24px solid black;
     }
     .explore a{
@@ -1228,7 +1249,7 @@ footer .list p{
    
     .fullscreen{
         position: relative;
-        bottom: 730px;
+        bottom: 30px;
         max-width: 226px;
         left: 1040px;
     }
@@ -1275,6 +1296,7 @@ footer .list p{
         max-width: 1920px;
         margin-left: auto;
         margin-right: auto;
+        max-height: 700px;
     } 
 
     .study{
@@ -1452,14 +1474,7 @@ footer .list p{
     .banner1 h2:hover{
         text-decoration: underline;
     }
-    .chat{
-        height: 50px;
-        width: 180px;
-    }
-    .chat span{
-        font-size: 15px;
-    }
-  
+
     .search1 form {
         display: flex;
     }
@@ -1474,6 +1489,7 @@ footer .list p{
         align-items: center;
         justify-content: space-between;
         margin-right: 24px;
+        padding-right: 5px;
     }
 
     .search1 form .search-box img {
@@ -1494,7 +1510,9 @@ footer .list p{
         justify-content: space-between;
         align-items: flex-start;
     }
-
+    .subtags{
+        width: 83%;
+    }
     .freeac {
         background-color: #89c402;
         border: 1px solid #6f9e02;
@@ -1516,6 +1534,20 @@ footer .list p{
     }
     .content p{
         font-size: 20px;
+    }
+    .content{
+        width: 40%;
+    }
+    .overview{
+        white-space: nowrap;
+    }
+    .story{
+        justify-content: flex-start;
+        gap: 10px;
+    }
+    .fullscreen{
+        bottom: 0;
+        margin-top: 75px;
     }
 }
      @media screen and (min-width:1280px) {
@@ -1554,7 +1586,7 @@ footer .list p{
         }
         .content p{
          font-size: 17px;
-        }   
+        }  
     }  
    
    
