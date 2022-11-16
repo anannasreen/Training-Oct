@@ -459,7 +459,7 @@ body{
     text-align: center;
 }
 .toolkit h2{
-    font-size: 40px;
+    font-size: 36px;
     font-weight: 600;
     line-height: 1.2;
     color: #1a1a1f;
@@ -839,7 +839,7 @@ footer .list p{
     }
 
     .banner1 ul li {
-        padding: 0 8px;
+        padding-left: 8px;
         list-style-type: none;
     }
 
@@ -1046,7 +1046,7 @@ footer .list p{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    padding: 145px 50px;
+    padding: 100px 130px;
     gap: 35px;
    }
    .tools picture{
@@ -1222,6 +1222,9 @@ footer .list p{
     .media{
         overflow: hidden;
     }
+    .media1{
+        margin-left: 143px;
+    }
     .tag{
         width: 65%;
     }
@@ -1229,9 +1232,14 @@ footer .list p{
         text-decoration: underline;
         color: #0062ad;
     }
+    .tab ul{
+        transform: translateY(-91px);
+    }
     .tablet{
         display: flex;
-        transform: translateY(-650px);
+
+    transform: translate(-140px, -714px);
+        /* transform: translateY(-650px); */
         margin-left: 0;
         margin-right: 0;
         position: relative;
@@ -1254,7 +1262,9 @@ footer .list p{
         display: flex;
         justify-content: center;
     }
-   
+    .media h2{
+        text-align: center;
+    }
     .fullscreen{
         position: relative;
         bottom: 30px;
@@ -1405,6 +1415,7 @@ footer .list p{
     max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 10px;
    }
     .fntn:nth-child(3){
     display: grid;
@@ -1483,6 +1494,7 @@ footer .list p{
         max-width: 1310px;
         margin-left: auto;
         margin-right: auto;
+        display: flex;
     }
     .banner1 li:hover{
         text-decoration: underline;
@@ -1490,7 +1502,9 @@ footer .list p{
     .banner1 h2:hover{
         text-decoration: underline;
     }
-
+    .tab ul{
+        transform: translateY(0);
+    }
     .search1 form {
         display: flex;
     }
@@ -1539,6 +1553,10 @@ footer .list p{
         display: flex;
         align-items: center;
         font-size: 11px;
+        margin-left: 8px;
+    }
+    .tablet{
+        transform: translateY(-650px);
     }
     .freeac:hover{
         background-color: #a2e407;
@@ -1564,6 +1582,12 @@ footer .list p{
     .fullscreen{
         bottom: 0;
         margin-top: 75px;
+    }
+    .media1{
+        margin-left: 0;
+    }
+    .media h2{
+        text-align: left;
     }
 }
      @media screen and (min-width:1280px) {
