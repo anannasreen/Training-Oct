@@ -109,6 +109,7 @@ body{
 }
  .image-card:hover .scroll{
     opacity: 1;
+    cursor: pointer;
  } 
 ::-webkit-scrollbar{
     display: none;
@@ -124,6 +125,7 @@ body{
 }
 .icons div:hover {
     opacity: 1;
+    border-bottom: 2px solid #222222;
 }
 .icons p{
     font-size: 12px;
@@ -185,8 +187,10 @@ body{
 }
 footer{
     color: #222222;
-    padding: 89px 0 70px 0;
+    padding: 89px 0 15px 0;
     font-size: 14px;
+    position: relative;
+    bottom: 40px;
 }
 .terms-conditions{
     padding-bottom: 10px;
@@ -199,7 +203,6 @@ footer{
     color: #222222;
     font-weight: bold;
     padding-top: 20px;
-    padding-bottom: 24px;
 }
 .category a{
     font-weight: bold;
@@ -249,7 +252,7 @@ footer{
    
 }
 .category p{
-    padding-bottom: 24px;
+    padding-bottom: 20px;
 }
 .source .list p{
     line-height: 40px;
@@ -291,14 +294,14 @@ footer{
 }
 .map{
     background-color: #222222;
-    padding: 14px 19px;
+    padding: 15px 19px;
     border-radius: 24px;
     color: white;
     display: flex;
     gap: 9px;
     position: fixed;
     z-index: 1;
-    bottom: 80px;
+    bottom: 44px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -327,6 +330,12 @@ footer{
     }
 }
 @media screen and (min-width:744px) {
+    .footer-icon{
+        display: none;
+    }
+    .icons div{
+        gap:7px;
+    }
     .map-mobile{
         display: none;
     }
@@ -337,7 +346,7 @@ footer{
         display: none;
     }
     .container{
-        margin-top: 200px;
+        margin-top: 20px;
     }
     .profile{
         display: flex;
@@ -349,6 +358,10 @@ footer{
         height: 80px;
         padding-top: 13px;
     }
+    .filter-tab p{
+        font-size: 12px;
+        font-weight: 600;
+    }
     .searchbar-tab{
         display: flex;
         flex-direction: row;
@@ -356,7 +369,7 @@ footer{
         align-items: center;
         border-bottom: 0.5px solid #e9e1e1;
         width: 100%;
-        
+        padding: 0 40px;
     }
     header{
         position: fixed;
@@ -387,7 +400,7 @@ footer{
         color: #222222;
         font-size: 14px;
         font-weight: 600;
-        padding-left: 10px;
+        padding-left: 5px;
     }
     .btn2{
         color: #222222;
@@ -429,12 +442,14 @@ footer{
         flex-direction: row;
         white-space: nowrap;
         align-items: center;
+        margin-right: 5px;
     }
     .host p{
         font-weight: 600;
         font-size: 14px;
         font-family: arial;
         color: #222222;
+        margin-right: 7px;
     }
     .global{
         display: flex;
@@ -467,10 +482,10 @@ footer{
     .filter-tab{
         display: flex;
         flex-direction: row;
-        padding: 16px 7px;
+        padding: 16px 16px;
         border: 1px solid #e3dbdb;
         border-radius: 10px;
-        gap: 2px;
+        gap: 8px;
 
     }
     .banner-mobile{
@@ -482,19 +497,22 @@ footer{
          flex-direction: row;
          position: fixed;
          right: 0;
-         padding: 12px 80px 0 0;
+         padding: 32px 40px 0 0;
          background-color: white;
          align-items: center;  
-         gap:10px; 
+         gap:20px; 
     }
     .icons{
         border-bottom: none;
-        gap: 3%;
+        gap: 5%;
+        padding: 20px 0 0 0;
     }
     .searchbar{
         padding: 0 40px;
     }
-
+    .sites{
+        padding: 0 40px;
+    }
     .banner{
         padding: 0 40px;
     }
@@ -517,12 +535,18 @@ footer{
     .currency{
         padding-right: 10px;
     }
+    .container{
+        padding-top: 24px;
+    }
+    footer{
+        bottom: 0;
+    }
 }
 @media screen and (min-width:950px) {
     .heading{
         display: flex;
         justify-content: space-between;
-        width:64%;
+        width:71%;
     }
     .searchbar-tab{
         display: flex;
@@ -538,6 +562,12 @@ footer{
     }
 }
 @media screen and (min-width:1128px) {
+    .icons{
+       gap: 2%;
+    }
+   .heading{
+    width: 64%;
+   }
     .logo{
         display: none;
     }
@@ -551,6 +581,7 @@ footer{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         padding: 0 40px;
+        column-gap: 24px;
     }
     .image-card{
         height: 20vw;
@@ -598,7 +629,48 @@ footer{
         padding: 8px 80px;
     }
     .banner{
-        padding: 20px 60px 0;
+        padding:0 80px;
+    }
+    .arrow-filter{
+        padding-right: 80px;
+    }
+    .container{
+        padding-top: 14px;
+    }
+    .searchbtn-tab button:hover{
+        box-shadow: 0 6px 20px  rgb(0 0 0/10%);
+        cursor: pointer;
+    }
+    .account:hover{
+        box-shadow: 0 6px 20px  rgb(0 0 0/10%);
+        cursor: pointer;
+    }
+    .global:hover{
+        background-color: #eeecec;
+        border-radius: 90%;
+        cursor: pointer;
+    }
+    .host p:hover{
+        background-color: #eeecec;
+        border-radius: 20px;
+        padding: 10px 0;
+        cursor: pointer;
+    }
+    .category p:hover{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .language p:hover{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .currency p:hover{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .arrow:hover{
+        box-shadow: 0 6px 20px  rgb(0 0 0/10%);
+        cursor: pointer; 
     }
 }
 @media screen and (min-width:1640px) {
@@ -608,5 +680,8 @@ footer{
     }
     .image-card{
         height: 16vw;
+    }
+    .icons{
+        gap:3%;
     }
 }
