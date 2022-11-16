@@ -10,6 +10,12 @@ body{
 .header {
     width: 100%;
 }
+.main-header{
+    position: fixed;
+    z-index: 1;
+    background-color: white;
+    top: 0;
+}
 .searchbtn{
     display: flex;
     flex-direction: row;
@@ -24,7 +30,7 @@ body{
 }
 .searchbar{
     display: flex;
-    padding: 14px 14px 0;
+    padding: 14px 12px 0 24px;
     width: 100%;
 }
 .searchbar-tab{
@@ -66,11 +72,9 @@ body{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    
+    width: 173px;
 }
 .subquestion p{
-    overflow: hidden;
-    text-overflow: ellipsis;
     white-space: nowrap;
     color: #717171;
 }
@@ -87,22 +91,36 @@ body{
     white-space: nowrap;
     overflow: scroll;
     padding: 0 24px;
+    width: 100%;
     gap: 20px;
     border-bottom: 0.5px solid #e3dbdb;
 
 }
+.scroll{
+    border-radius: 100%;
+    border: 1px solid #dddddd;
+    position: absolute;
+    top: 140px;
+    right: 10px;
+    z-index: 1;
+    opacity: 0;
+    background-color: white;
+    padding: 12px 0 20px 35px;
+}
+ .image-card:hover .scroll{
+    opacity: 1;
+ } 
 ::-webkit-scrollbar{
     display: none;
 }
 .icons div{
     display: flex;
     flex-direction: column;
-    padding: 4px 0 14px;
     margin-top: 12px;
     align-items: center;
-    gap:5px;
-    opacity: 0.4;
-    
+    gap:4px;
+    opacity: 0.5;
+    padding: 4px 0 14px;
 }
 .icons div:hover {
     opacity: 1;
@@ -143,7 +161,7 @@ body{
 }
 .sites{
     padding: 0 24px;
-    margin-top: 20px;
+    margin-top: 170px;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -165,6 +183,140 @@ body{
 .area p{
     font-weight: bold;
 }
+footer{
+    color: #222222;
+    padding: 89px 0 70px 0;
+    font-size: 14px;
+}
+.terms-conditions{
+    padding-bottom: 10px;
+}
+.getaways{
+    padding: 0 20px 120px 20px;
+}
+.getaways h2{
+    font-size: 22px;
+    color: #222222;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 24px;
+}
+.category a{
+    font-weight: bold;
+    color: #222222;
+}
+.footer-icon{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    background-color: white;
+    width: 100%;
+    justify-content: center;
+    gap: 8%;
+    padding: 10px 0;
+}
+.footer-icon p{
+    font-size: 11px;
+}
+.footer-icon div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+.foot{
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+.language{
+    display: flex;
+    flex-direction: row;
+    margin-right: 24px;
+    gap: 10px;
+}
+.copyright{
+    line-height: 18px;
+    font-size: 16px;
+}
+.source .list{
+    border-bottom: 1px solid #dddddd;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+   
+}
+.category p{
+    padding-bottom: 24px;
+}
+.source .list p{
+    line-height: 40px;
+}
+.source .list h1{
+    font-size: 16px;
+    padding-bottom: 10px;
+} 
+.footer-list{
+    background-color: rgb(247, 247, 247);
+    padding: 32px 20px 0 20px;
+}
+.tags{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #dddddd;
+}
+.tags a{
+    text-decoration: none;
+    color: #222222;
+    padding: 16px 0;
+    font-weight: bold;
+}
+.tags :nth-child(1){
+    border-bottom: 1px solid #222222;
+}
+.tags :nth-child(2){
+    color: #717171;
+}
+.socialmedia{
+    display: none;
+}
+.map-mobile{
+    display: flex;
+}
+.map-lap{
+    display: none;
+}
+.map{
+    background-color: #222222;
+    padding: 14px 19px;
+    border-radius: 24px;
+    color: white;
+    display: flex;
+    gap: 9px;
+    position: fixed;
+    z-index: 1;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+@media screen and (min-width:375px) {
+    .category{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .copyright{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .foot{
+        display: flex;
+        justify-content: center;
+    }
+}
 @media screen and (min-width:550px) {
     .sites{
         display: grid;
@@ -175,6 +327,12 @@ body{
     }
 }
 @media screen and (min-width:744px) {
+    .map-mobile{
+        display: none;
+    }
+    .map-lap{
+        display: flex;
+    }
     .searchbar{
         display: none;
     }
@@ -195,9 +353,9 @@ body{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 0 40px;
         align-items: center;
         border-bottom: 0.5px solid #e9e1e1;
+        width: 100%;
         
     }
     header{
@@ -227,16 +385,17 @@ body{
     }
     .btn1{
         color: #222222;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 600;
+        padding-left: 10px;
     }
     .btn2{
         color: #222222;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 600;
     }
     .btn3{
-        font-size: 16px;
+        font-size: 15px;
         color: #717171;
     }
     .searchbtn-tab{
@@ -246,6 +405,9 @@ body{
         display: flex;
         flex-direction: row;
         align-items: center;
+    }
+    .line{
+        color: #717171;
     }
     .lens{
         padding: 10px;
@@ -314,27 +476,58 @@ body{
     .banner-mobile{
         display: flex;
         flex-direction: row;
-        padding: 0 40px;
-        
     }
     .arrow-filter{
          display: flex;
          flex-direction: row;
          position: fixed;
          right: 0;
-         padding-top: 14px;
+         padding: 12px 80px 0 0;
          background-color: white;
          align-items: center;  
          gap:10px; 
     }
     .icons{
         border-bottom: none;
+        gap: 3%;
+    }
+    .searchbar{
+        padding: 0 40px;
+    }
+
+    .banner{
+        padding: 0 40px;
+    }
+    .category{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .sub-list{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 10px;
+    }
+    .socialmedia{
+        display: flex;
+        justify-content: center;
+    }
+    .socialmedia div{
+        padding-left: 30px;
+    }
+    .currency{
+        padding-right: 10px;
     }
 }
 @media screen and (min-width:950px) {
     .heading{
         display: flex;
-        padding: 0 24px;
+        justify-content: space-between;
+        width:64%;
+    }
+    .searchbar-tab{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
     }
     .sites{
         display: grid;
@@ -351,13 +544,61 @@ body{
     .logo-lap{
         display: flex;
     }
+    .logo-lap svg{
+        padding-top: 15px;
+    }
     .sites{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        padding: 0 80px;
+        padding: 0 40px;
     }
     .image-card{
         height: 20vw;
+    }
+    .category{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    }
+    .source{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .sub-list{
+        grid-template-columns: 1fr;
+    }
+    .footer-list{
+        padding: 32px 80px 0 80px;
+    }
+    .getaways{
+        padding: 0 40px;
+    }
+    .terms-conditions{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .foot{
+        margin-bottom: 0;
+    }
+    .copyright{
+        display: flex;
+        flex-direction: row;
+    }
+}
+@media screen and (min-width:1440px) {
+    .sites{
+        padding: 0 80px;
+    }
+    .getaways{
+        padding: 0 80px;
+        line-height: 50px;
+    }
+    .searchbar-tab{
+        padding: 8px 80px;
+    }
+    .banner{
+        padding: 20px 60px 0;
     }
 }
 @media screen and (min-width:1640px) {
