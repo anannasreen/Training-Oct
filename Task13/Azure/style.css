@@ -545,9 +545,12 @@ footer .list p{
     gap: 12px;
     flex-grow: 1;
 }
+.fimg{
+    height: 50%;
+}
 .fimg img{
     border-radius: 6px 6px 0 0;
-    height: 18vh;
+    height: 100%;
 }
 .ai{
     display: flex;
@@ -789,8 +792,13 @@ footer .list p{
     }
     .stories .image-tab{
         display: flex;
-       height: 700px;
+        max-height: 700px;
     }
+    .stories .image-tab img{
+        height: 100%;        
+        max-height: 700px;
+        object-fit: cover;
+    }    
 
 }
 @media only screen and (min-width: 768px) {
@@ -1296,9 +1304,17 @@ footer .list p{
         max-width: 1920px;
         margin-left: auto;
         margin-right: auto;
-        max-height: 700px;
     } 
-
+    .casestudy2 .img-box{
+        height: 100%;
+        max-height:700px;
+    }
+    .casestudy2 .img-box img{
+        height: 100%;
+        width: 100%;
+        max-height: 700px;
+        object-fit: cover;
+    }
     .study{
         position: absolute;
         display: flex;
