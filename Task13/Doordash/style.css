@@ -134,6 +134,10 @@
     padding: 8px 0;
     gap: 15px;
 }
+.address{
+    display: flex;
+    justify-content: center;
+}
 .dasher{
     display: flex;
 }
@@ -297,6 +301,78 @@
     margin-top: -290px;
     background-color: rgb(255, 240, 237);
 }
+footer{
+    background-color: #191919;
+    max-width: 1160px;
+    margin-inline: auto;
+    padding: 0 20px;
+}
+footer h2{
+    color: white;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-family: font-regular;
+}
+footer p{
+    color: #c4c4c4;
+    font-size: 14px;
+    font-family: font-medium;
+}
+.location{
+    display: flex;
+    flex-direction: row;
+}
+.cities{
+    padding: 0 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cuisines{
+    padding: 0 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    white-space: nowrap;
+}
+.app-footer-section{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.about-us{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.help{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.business{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.socialmedia{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.copyright{
+    box-sizing: border-box;
+    display: flex;
+    white-space: nowrap;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 @media screen and (min-width:768px) {
     .searchbtn{
         display: none;
@@ -359,9 +435,6 @@
     }
     .search p{
         text-align: left;
-    }
-    .address{
-        padding-right: 133px;
     }
     .image-card-section1{
         max-width: 1184px;
