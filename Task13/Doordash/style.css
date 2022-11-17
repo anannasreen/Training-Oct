@@ -294,6 +294,8 @@
 }
 .section2{
     padding: 336px 0 96px;
+    margin-top: -290px;
+    background-color: rgb(255, 240, 237);
 }
 @media screen and (min-width:768px) {
     .searchbtn{
@@ -301,6 +303,26 @@
     }
     .searchbtn1{
         display: flex;
+    }
+    .image-card-section1{
+        display: flex;
+        flex-direction: row-reverse;
+        margin-left: 64px;
+    }
+    .image-card-section2{
+        display: flex;
+        flex-direction: row;
+    }
+    .image-card1{
+        max-width: 686px;
+        min-width: 426px;
+    }
+    .image-card-content2{
+        margin-left: 64px;
+    }
+    .image-card2{
+        max-width: 686px;
+        min-width: 426px;
     }
 }
 @media screen and (min-width:960px) {
@@ -322,7 +344,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        position: fixed;
+        position: absolute;
         top: 16px;
     }
     .logo-mobile svg{
@@ -341,6 +363,18 @@
     .address{
         padding-right: 133px;
     }
+    .image-card-section1{
+        max-width: 1184px;
+        margin-inline: auto;
+    }
+    .image-card-section2{
+        max-width: 1184px;
+        margin-inline: auto;
+    }
+    .delivery{
+        max-width: 1184px;
+        margin-inline: auto;
+    }
 }
 @media screen and (min-width:1184px) {
     .arrow1{
@@ -349,6 +383,19 @@
         display: flex;
         padding: 8px;
     }
+    .section2{
+        padding-top: 210px;
+        margin-top: -76px;
+    }
+    .overview span{
+        font-size: 40px;
+    }
+    .overview p{
+        font-size: 18px;
+    }
+    .overview button{
+        font-size: 16px;
+    }
     .arrow{
         display: none;
     }
@@ -356,6 +403,12 @@
         max-width: 408px;
         padding-top: 0;
         padding-bottom: 0;
+    }
+    .image-card-content1{
+        justify-content: center;
+    }
+    .image-card-content2{
+        justify-content: center;
     }
     .delivery{
         display: flex;
