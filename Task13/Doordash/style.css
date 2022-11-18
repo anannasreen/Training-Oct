@@ -215,7 +215,7 @@
 .image-card-content1{
     display: flex;
     flex-direction: column;
-    max-width: 400px;
+    max-width: 410px;
     padding-left: 16px;
     padding-right: 81.6px;
     margin-left: auto;
@@ -223,7 +223,7 @@
 }
 .image-card-content1 span{
     margin-bottom: 8px;
-    margin-top: 20px;
+    margin-top: 12px;
 }
 .image-card-content1 p{
     margin-bottom: 16px;
@@ -235,13 +235,14 @@
     letter-spacing: -0.04ch;
     color: #191919;
     font-family: font-bold;
+    white-space: nowrap;
 }
 .overview p{
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;
     color: #191919;
-    font-family: font-bold;
+    font-family: font-medium;
 }
 .image-card1{
     display: flex;
@@ -257,9 +258,8 @@
 .image-card-content2{
     display: flex;
     flex-direction: column;
-    max-width: 400px;
+    max-width: 410px;
     padding-left: 16px;
-    padding-right: 81.6px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -303,33 +303,36 @@
 }
 footer{
     background-color: #191919;
-    max-width: 1160px;
-    margin-inline: auto;
     padding: 0 20px;
+    margin-bottom: 18px;
 }
 footer h2{
     color: white;
     margin-bottom: 8px;
     font-size: 16px;
     font-family: font-regular;
+    line-height: 22px;
 }
 footer p{
     color: #c4c4c4;
     font-size: 14px;
     font-family: font-medium;
+    margin-bottom: 8px;
+    line-height: 20px;
 }
 .location{
     display: flex;
     flex-direction: row;
+    justify-content:space-evenly;
 }
 .cities{
-    padding: 0 32px;
+    padding: 32px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .cuisines{
-    padding: 0 32px;
+    padding: 32px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -373,6 +376,78 @@ footer p{
     flex-wrap: wrap;
     justify-content: center;
 }
+.app-footer-section{
+    padding: 32px 0;
+}
+.app-footer-section svg{
+    padding: 2px 8px;
+    border-radius: 8px;
+    background-color: rgb(73, 73, 73);
+    opacity: 0.7;
+}
+.app-footer-section svg:hover{
+    opacity: 1;
+}
+.playstore{
+    margin-top: 12px;
+}
+.socialmedia{
+    padding-top: 32px;
+}
+.copyright{
+    padding-bottom: 32px;
+    margin-top: 12px;
+}
+.copyright p{
+    margin-left: 16px;
+    line-height: 18px;
+    font-size: 12px;
+    margin-bottom: 0;
+}
+.twitter{
+    margin: 0 12px;
+}
+.city-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cuisine-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.signin:hover{
+    cursor: pointer;
+}
+.signup:hover{
+    cursor: pointer;
+}
+.main-section button:hover{
+    cursor: pointer;
+    background-color: #d51803;
+}
+.dasher:hover{
+    cursor: pointer;
+}
+.merchant:hover{
+    cursor: pointer;
+}
+.lead:hover{
+    cursor: pointer;
+}
+.image-card-content1 button:hover{
+    cursor: pointer;
+    background-color: #d51803;
+}
+.image-card-content2 button:hover{
+    cursor: pointer;
+    background-color: #d51803;
+}
+footer p:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
 @media screen and (min-width:768px) {
     .searchbtn{
         display: none;
@@ -399,6 +474,72 @@ footer p{
     .image-card2{
         max-width: 686px;
         min-width: 426px;
+    }
+    .section2{
+        padding-top: 114px;
+        margin-top: -26px;
+    }
+    .location{
+        flex-direction: column;
+    }
+    .cities{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .subsection{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    .city-section{
+        display: flex;
+        width: 100%;
+        align-items: flex-start;
+    }
+    .cuisines{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .cuisine-section{
+        display: flex;
+        width: 100%;
+        align-items: flex-start;
+    }
+    .about-us{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    .about{
+        align-items: flex-start;
+    }
+    .help{
+        align-items: flex-start;
+    }
+    .business{
+        align-items: flex-start;
+    }
+    .foot{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+    .copyright{
+        justify-content: flex-start;
+        margin-top: 0;
+        padding-bottom: 0;
+    }
+    .socialmedia{
+        padding: 32px 0;
+    }
+    .socialmedia div{
+        opacity: 0.7;
+    }
+    .socialmedia div:hover{
+        opacity: 1;
     }
 }
 @media screen and (min-width:960px) {
@@ -448,6 +589,41 @@ footer p{
         max-width: 1184px;
         margin-inline: auto;
     }
+    .location{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .info{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .cuisines{
+        width: 100%;
+    }
+    .cities{
+        width: 100%;
+    }
+    .about-us{
+        width: 100%;
+    }
+    .app-footer-section{
+        width: 100%;
+        align-items: flex-end;
+    }
+    .location{
+        max-width: 1160px;
+        margin-inline: auto;
+    }
+    .info{
+        max-width: 1160px;
+        margin-inline: auto;
+    }
+    .foot{
+        max-width: 1160px;
+        margin-inline: auto;
+    }
 }
 @media screen and (min-width:1184px) {
     .arrow1{
@@ -456,9 +632,12 @@ footer p{
         display: flex;
         padding: 8px;
     }
+    .arrow1:hover{
+        cursor: pointer;
+    }
     .section2{
-        padding-top: 210px;
-        margin-top: -76px;
+        padding-top: 122px;
+        margin-top: -31px;
     }
     .overview span{
         font-size: 40px;
@@ -482,6 +661,14 @@ footer p{
     }
     .image-card-content2{
         justify-content: center;
+    }
+    .image-card-content1 button{
+        width: 120px;
+        height: 40px;
+    }
+    .image-card-content2 button{
+        width: 155px;
+        height: 40px
     }
     .delivery{
         display: flex;
@@ -519,5 +706,9 @@ footer p{
     }
     .lead{
         justify-content: center;
+    }
+    .delivery{
+        margin: 96px 0;
+        margin-inline: auto;
     }
 }
