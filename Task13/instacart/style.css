@@ -325,12 +325,49 @@
     padding: 32px;
     background-color: #f6f7f8;
     margin-bottom: 8px;
+    border-radius: 8px;
 }
 .status-card h3{
     padding: 1px 6px;
     color: #343538;
     font-size:28px;
     font-family: font-semibold;
+}
+.questions{
+    padding: 32px 32px 60px 32px;
+}
+.common-questions{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 16px 0;
+    align-items: center;
+}
+.questions h2{
+    margin-bottom: 32px;
+    font-size: 23px;
+    font-family: font-regular;
+    font-weight: lighter;
+    text-align: center;
+}
+.common-questions h3{
+    color: #424242;
+    font-size: 24px;
+    font-family: font-regular;
+    font-weight: lighter;
+    line-height: 36px;
+    text-align: left;
+}
+.plus{
+    margin: 24px 0 24px 15%;
+    display: flex;
+    justify-content: flex-end;
+    width: 24px;
+    height: 24px;
+}
+.plus svg{
+    width: 24px;
+    height: 24px;
 }
 @media screen and (min-width:385px) {
     .header-notification{
