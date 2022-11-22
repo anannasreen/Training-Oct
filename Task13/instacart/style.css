@@ -57,6 +57,7 @@
     padding: 1px 6px;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 .profile{
     display: flex;
@@ -67,6 +68,7 @@
 .instacart{
    height: 24px;
    margin-bottom: 5px;
+   cursor: pointer;
 }
 .instacart img{
     width: 100%;
@@ -80,7 +82,8 @@
     border-radius: 50px;
     border: none;
     font-weight: 700;
-    font-family: font-bold;
+    font-family: font-semibold;
+    cursor: pointer;
 }
 .profile span{
     margin-right: 11px;
@@ -89,13 +92,15 @@
     font-weight: 600;
     color: #323538;
     font-family: font-semibold;
+    cursor: pointer;
 }
 .order{
     padding: 16px;
     margin-bottom: 24px;
     background-color: #deedd6;
     position: relative;
-    font-family: font-regular;
+    /* font-family: font-bold;
+    font-weight: bold; */
 }
 .order h1{
     font-size: 31px;
@@ -103,7 +108,7 @@
     color: #343538;
     max-width: 256px;
     margin-right: auto;
-    font-family: font-semibold;
+    font-family: font-bold;
     line-height: 40px;
     padding-bottom: 18px;
 }
@@ -121,7 +126,7 @@
     flex-direction: column;
 }
 .content h2{
-    font-family: 23px;
+    font-size: 23px;
     font-family: font-regular;
     font-weight: lighter;
     text-align: center;
@@ -129,6 +134,9 @@
 }
 .content h2 span{
     color: #0aad0a;
+}
+.content h2 span:hover {
+    text-decoration: 3px underline #0aad0a;
 }
 .links{
     display: flex;
@@ -168,6 +176,7 @@
     line-height: 26px;
     font-weight: 600;
     color: #343538;
+    font-family: font-semibold;
 }
 .link-section .text p{
     color: #0aad0a;
@@ -209,7 +218,7 @@
 }
 .scanner-text{
     padding-left: 30px;
-    width: 73%;
+    /* width: 73%; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -236,10 +245,9 @@
     text-align: center;
     font-size: 23px;
     padding: 0 24px 32px 24px;
+    color: #343538;
 }
 .image-card-image{
-    /* width: 300px; */
-    /* height: 185px;  */
     width: 100%;
 }
 .image-card-image img{
@@ -252,7 +260,7 @@
     gap: 8px;
     overflow-x: scroll;
     overflow-y: hidden;
-    max-width: 1152px;
+    max-width: 1080px;
     margin-inline: auto;
     width: 100%;
 }
@@ -269,6 +277,7 @@
 .image-card-text p{
     font-family: font-regular;
     margin: 15px 0;
+    color: #343538;
 }
 .image-card-section{
     border-radius: 8px;
@@ -283,6 +292,9 @@
     max-width: 350px;
     border-radius: 12px;
 }
+.shopping button:hover{
+    background-color: #048504;
+}
 .shopping button span{
     color: white;
     font-size: 18px;
@@ -295,7 +307,7 @@
     padding: 32px;
 }
 .service h2{
-    font-size: 28px;
+    font-size: 23px;
     padding-bottom: 32px;
     text-align: center;
     line-height: 32px;
@@ -352,6 +364,7 @@
     font-family: font-regular;
     font-weight: lighter;
     text-align: center;
+    color: #343538;
 }
 .common-questions h3{
     color: #424242;
@@ -390,7 +403,7 @@ footer{
 .footer-title h2{
     font-size: 18px;
     color: #343538;
-    padding: 20px 0 13px 6px;
+    padding: 20px 0 13px 5px;
     font-family: font-semibold;
 }
 .footer-title img{
@@ -441,7 +454,7 @@ footer{
     color: #343538;
 }
 .footer-list{
-    padding-bottom: 40px;
+    padding: 0 20px 40px 20px;
     border-bottom: 1px solid #e8e9eb;
 }
 .accessibility{
@@ -487,6 +500,7 @@ footer{
 }
 .socialmedia div{
     padding: 20px 14px 0 0;
+    cursor: pointer;
 }
 .legal ul li{
     list-style-type: none;
@@ -514,8 +528,12 @@ footer{
     font-family: font-regular;
     padding-left: 6px;
     margin-bottom: 40px;
+    line-height: 18px;
 }
 .legal-tab{
+    display: none;
+}
+.image-card::-webkit-scrollbar{
     display: none;
 }
 @media screen and (min-width:385px) {
@@ -537,22 +555,30 @@ footer{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding:17px 40px;
+        padding:19px 40px;
     }
     .logo{
         display: flex;
         flex-direction: row;
         align-items: center;
     }
+    .profile span{
+        font-size: 18px;
+        margin-right: 20px;
+    }
+    .profile button{
+        font-size: 18px;
+    }
     .country-lang-container{
-        position: absolute;
+        /* position: absolute; */
         display: flex;
         border: 1px solid #C7C8CD;
         gap: 7px;
-        padding: 10px 12px;
+        padding: 8px 12px;
         border-radius: 8px;
         align-items: center;
         background: white;
+        width: 72px;
     }
     .country-box{
         margin-top: 3px;
@@ -584,18 +610,20 @@ footer{
     .order h1, .order p{
         max-width: 596px;
         margin-inline: auto;
-        padding-left: 50px;
+        padding-left: 57px;
     }
     .order h1{
         font-size: 41px;
         line-height: 52px;
         font-weight: 600;
+        font-family: font-semibold;
     }
     .order p{
         display: flex;
-        margin-top: 16px;
         font-size: 15px;
         line-height: 22px;
+        font-family: font-regular;
+        color: #343538;
     }
     .links{
         gap: 24px;
@@ -607,9 +635,19 @@ footer{
         padding: 0 32px;
         margin-bottom: 32px;
     }
+    .content h2{
+        font-size: 32px;
+    }
+    .shopping h2{
+        font-size: 28px;
+    }
     .link-section{
         box-shadow: rgb(0 0 0 / 16%) 0 2px 8px;
         border-radius: 12px;
+    }
+    .link-section:hover{
+        box-shadow:  rgb(0 0 0 / 20%) 0 4px 10px;
+        cursor: pointer;
     }
     .mobile{
         display: flex;
@@ -619,6 +657,9 @@ footer{
     .mobile img{
         width: 100%;
         height: 100%;
+    }
+    .service h2{
+        font-size: 28px;
     }
     .service-image-mobile{
         display: none;
@@ -641,14 +682,20 @@ footer{
         display: flex;
         flex-direction: row;
         padding: 20px 80px 48px 39px;
-        border-top: 1px solid #e8e9eb;
         justify-content: space-between;
+        max-width: 760px;
+        margin-right: auto;
+        width: 85%;
+        border-bottom: none;
     }
     .access{
         flex: 2 0 0;
     }
     .contrast{
         align-items: center;
+    }
+    .contrast span{
+        margin-right: 24px;
     }
     .legal{
         display: grid;
@@ -657,7 +704,7 @@ footer{
     }
     .legal-list{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
     .legal-list ul{
         /* padding-right:5%; */
@@ -667,7 +714,49 @@ footer{
         width: 20px;
         height: 20px;
     }
-    
+    .questions h2{
+        font-size: 31px;
+    }
+    .common-questions h3{
+        font-size: 28px;
+    }
+    .common-questions{
+        gap: 50px;
+        padding: 24px 0;
+    }
+    .footer-text{
+        align-items: flex-start;
+    }
+    .software{
+        padding-left: 39px;
+    }
+    .copyright{
+        padding-left: 39px;
+    }
+    .legal{
+        padding: 0;
+        margin: 0;
+    }
+    .legal-title{
+        padding: 0 20px;
+    }
+    .legal-title h2{
+        padding: 20px 0 13px 39px;
+    }
+    .legal-list{
+        padding: 0 20px;
+        margin: 2px 0 20px;
+    }
+    .questions{
+        border-bottom: none;
+    }
+    .footer-section{
+        border-top: 1px solid #E8E9EB;
+        border-bottom: 1px solid #E8E9EB;
+    }
+    .footer-list{
+        border-bottom: none;
+    }
 }
 @media screen and (min-width:776px) {
     .links{
@@ -678,7 +767,7 @@ footer{
         grid-template-columns: repeat(2,1fr);
         gap: 24px;
     }
-    .order-text{
+    .order-content{
         max-width: 1080px;
         margin-inline: auto;
     }
@@ -702,7 +791,8 @@ footer{
     }
     .footer-section{
         display: grid;
-        grid-template-columns: 25% 75%;
+        grid-template-columns: 25% 67%;
+        gap: 8%;
     }
     .footer-list{
         display: grid;
@@ -719,6 +809,9 @@ footer{
         list-style-type: none;
         font-family: font-regular;
         color: #343538;
+    }
+    .list ul li:hover{
+        text-decoration: underline;
     }
     .list{
         display: flex;
@@ -767,15 +860,32 @@ footer{
     }
     .legal-tab{
         margin-bottom: 20px;
-        padding: 20px 20px 0 20px;
+        border-top: 1px solid #E8E9EB;
+        max-width: 1180px;
+        margin-inline: auto;
+        margin-right: 60px;
+        margin-left: 20px;
     }
     .legal-tab h2{
         color: #343538;
         font-family: font-semibold;
         font-size: 18px;
+        padding: 0;
+    }
+    .legal-list{
+        margin: 0;
+        padding: 0;
+        margin-right: 75px;
     }
     .order{
         background-size: auto;
+    }
+    .image-card-text{
+        width: 353px;
+    }
+    .image-card-text p{
+        margin-top: 48px;
+        font-size: 18px;
     }
 }
 @media screen and (min-width:1280px) {
@@ -817,3 +927,13 @@ footer{
         bottom: 0;
     }
 } 
+@media screen and (min-width:768px) { 
+    .order-content{
+        display: flex;
+        align-items: center;
+        gap: 3%;
+    }
+    .country-lang-container{
+        transform: translateY(-32px);
+    }
+}
