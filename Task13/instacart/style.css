@@ -103,7 +103,7 @@
     color: #343538;
     max-width: 256px;
     margin-right: auto;
-    font-family: font-bold;
+    font-family: font-semibold;
     line-height: 40px;
     padding-bottom: 18px;
 }
@@ -335,6 +335,8 @@
 }
 .questions{
     padding: 32px 32px 60px 32px;
+    border-bottom: 1px solid #E8E9EB;
+    padding-bottom: 100px;
 }
 .common-questions{
     display: flex;
@@ -342,6 +344,7 @@
     justify-content: space-between;
     padding: 16px 0;
     align-items: center;
+    border-bottom: 1px solid #E8E9EB;
 }
 .questions h2{
     margin-bottom: 32px;
@@ -368,6 +371,152 @@
 .plus svg{
     width: 24px;
     height: 24px;
+}
+footer{
+    padding: 0 5%;
+}
+.footer-text{
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+    padding: 0 20px 40px;
+}
+.footer-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.footer-title h2{
+    font-size: 18px;
+    color: #343538;
+    padding: 20px 0 13px 6px;
+    font-family: font-semibold;
+}
+.footer-title img{
+    width: 33px;
+    height: 33px;
+}
+.list ul{
+    display: none;
+}
+.software{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.software a{
+    text-decoration: none;
+    color: #343538;
+    font-family: font-bold;
+    font-size: 15px;
+}
+.ios{
+    padding: 7px 25px 7px 0;
+}
+.ios svg{
+    margin-right: 13px;
+}
+.android{
+    padding: 7px 25px 7px 0;
+}
+.android svg{
+    margin-right: 13px;
+}
+.list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #E8E9EB;;
+}
+.footer-list :nth-child(4){
+    border-bottom: none;
+}
+.list h2{
+    padding: 28px 0;
+    font-size: 18px;
+    font-family: font-semibold;
+    color: #343538;
+}
+.footer-list{
+    padding-bottom: 40px;
+    border-bottom: 1px solid #e8e9eb;
+}
+.accessibility{
+    border-bottom: 1px solid #e8e9eb;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.accessibility h2{
+    padding: 12px 0;
+    color: #343538;
+    font-family: font-semibold;
+    font-size: 18px;
+}
+.contrast{
+    display: flex;
+    justify-content: space-between;
+}
+.contrast span{
+    margin-right: 12px;
+    font-size: 15px;
+    color: #343538;
+    font-family: font-regular;
+}
+.button{
+    background-color: white;
+    display: flex;
+    border-radius: 100%;
+    padding: 5px;
+}
+.close-button{
+    background-color: #C7C8CD;
+    padding: 0px 28px 0px 5px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    height: 32px;
+}
+.socialmedia{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.socialmedia div{
+    padding: 20px 14px 0 0;
+}
+.legal ul li{
+    list-style-type: none;
+    padding: 20px 20px 0 0;
+    font-family: font-semibold;
+    color: #343538;
+    font-size: 15px;
+}
+.legal ul{
+    display: flex;
+    flex-direction: row;
+}
+.legal{
+    margin-bottom: 20px;
+    padding: 20px 20px 0 20px;
+}
+.legal h2{
+    color: #343538;
+    font-family: font-semibold;
+    font-size: 18px;
+}
+.copyright{
+    color: #72767e;
+    font-size: 12px;
+    font-family: font-regular;
+    padding-left: 6px;
+    margin-bottom: 40px;
+}
+.legal-tab{
+    display: none;
 }
 @media screen and (min-width:385px) {
     .header-notification{
@@ -484,6 +633,41 @@
         height: 100%;
         border-radius: 8px;
     }
+    .footer-section{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .accessibility{
+        display: flex;
+        flex-direction: row;
+        padding: 20px 80px 48px 39px;
+        border-top: 1px solid #e8e9eb;
+        justify-content: space-between;
+    }
+    .access{
+        flex: 2 0 0;
+    }
+    .contrast{
+        align-items: center;
+    }
+    .legal{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border-top: 1px solid #e8e9eb;
+    }
+    .legal-list{
+        display: flex;
+        flex-direction: row;
+    }
+    .legal-list ul{
+        /* padding-right:5%; */
+        flex: 3 0 0;
+    }
+    .socialmedia svg{
+        width: 20px;
+        height: 20px;
+    }
+    
 }
 @media screen and (min-width:776px) {
     .links{
@@ -496,6 +680,10 @@
     }
     .order-text{
         max-width: 1080px;
+        margin-inline: auto;
+    }
+    .questions{
+        max-width: 1014px;
         margin-inline: auto;
     }
 }
@@ -511,6 +699,83 @@
     .status{
         max-width: 1088px;
         margin-inline: auto;
+    }
+    .footer-section{
+        display: grid;
+        grid-template-columns: 25% 75%;
+    }
+    .footer-list{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        border-bottom: none;
+        justify-items: start;
+    }
+    .list svg{
+        display: none;
+    }
+    .list ul{
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        font-family: font-regular;
+        color: #343538;
+    }
+    .list{
+        display: flex;
+        flex-direction: column;
+        border-bottom: none;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .list h2{
+        padding: 20px 0 13px;
+        width: 100%;
+    }
+    .list li{
+        padding: 7px 0;
+    }
+    .ios{
+        display: flex;
+        flex-direction: row;
+    }
+    .android{
+        display: flex;
+        flex-direction: row;
+    }
+    .footer-section{
+        border-bottom: 1px solid #E8E9EB;
+    }
+    .legal{
+        display: none;
+    }
+    .legal-tab{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    .legal-tab ul li{
+        list-style-type: none;
+        padding: 20px 20px 0 0;
+        font-family: font-semibold;
+        color: #343538;
+        font-size: 15px;
+    }
+    .legal-tab ul{
+        display: flex;
+        flex-direction: row;
+    }
+    .legal-tab{
+        margin-bottom: 20px;
+        padding: 20px 20px 0 20px;
+    }
+    .legal-tab h2{
+        color: #343538;
+        font-family: font-semibold;
+        font-size: 18px;
+    }
+    .order{
+        background-size: auto;
     }
 }
 @media screen and (min-width:1280px) {
@@ -528,8 +793,16 @@
         margin: 0;
         padding: 0;
     }
+    .order-content{
+        max-width: 1283px;
+        margin-inline: auto;
+    }
     .order{
         padding: 40px 74px;
+    }
+    footer{
+        max-width: 1380px;
+        margin-inline: auto;
     }
 }
  @media screen and (min-width:1440px) {
