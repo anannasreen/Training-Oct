@@ -922,9 +922,18 @@ footer{
         position: relative;
         overflow: hidden; 
     }
+    .image-card{
+        gap: 24px;
+    }
     .image-card-image{
         position: absolute;
         bottom: 0;
+    }
+    .order p{
+        margin-top: 16px;
+    }
+    .list li{
+        line-height: 22px;
     }
 } 
 @media screen and (min-width:768px) { 
