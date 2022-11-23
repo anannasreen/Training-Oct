@@ -1,0 +1,26 @@
+body{
+    padding: 5em;
+    text-align: center;
+}
+.box{
+    background: aquamarine;
+    padding: 2em;
+    width: 50%;
+    margin: 0em auto 10em;
+    border: none;
+    outline: 5px solid white;
+    outline-offset:  5px ;
+}
+.button{
+    text-decoration: none;
+    display: inline-block;
+    background: steelblue;
+    padding: 1em 3em;
+    color: white;
+    outline: 3px solid steelblue;
+    transition: 3px solid ease-in-out 300ms;
+}
+.button:hover{
+    outline-offset: 5px;
+    outline: 3px solid steelblue;
+}
