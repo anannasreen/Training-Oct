@@ -918,7 +918,7 @@ footer{
  @media screen and (min-width:1440px) {
     .image-card-section{
         flex-basis: 33.33%;
-        height: 398px;
+        height: 500px;
         position: relative;
         overflow: hidden; 
     }
