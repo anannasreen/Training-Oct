@@ -1,0 +1,20 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 100px 1fr 1fr;
+    width: 960px;
+    margin: 0 auto;
+    background-color: lightblue;
+    height: 500px;
+    color: black;
+    margin-top: 100px;
+}
+.header{
+    grid-column: 1/ 13;
+    grid-row: 1/ 2;
+    background: pink;
+}
+.main-content{
+    grid-column: 3/ 8;
+    background: yellow;
+}

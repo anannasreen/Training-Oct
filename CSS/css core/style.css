@@ -1,0 +1,123 @@
+body{
+    padding: 5em;
+    text-align: center;
+}
+.box{
+    background: aquamarine;
+    padding: 2em;
+    width: 50%;
+    margin: 0em auto 10em;
+    border: none;
+    outline: 5px solid white;
+    outline-offset:  5px ;
+}
+.button{
+    text-decoration: none;
+    display: inline-block;
+    background: steelblue;
+    padding: 1em 3em;
+    color: white;
+    outline: 3px solid steelblue;
+    transition: 3px solid ease-in-out 300ms;
+}
+.button:hover{
+    outline-offset: 5px;
+    outline: 3px solid steelblue;
+}
+
+
+
+body {
+
+  line-height: 1.6;
+  
+  display: grid;
+  grid-template: 
+    "header header header header" 10em
+    "hero hero hero hero" 50vh
+    ". main sidebar ." auto
+    "footer footer footer footer" 10em 
+    / 1fr minmax(30em, 5fr) minmax(15em, 2fr) 1fr;
+  grid-column-gap: 1.5em;
+}
+
+header {
+  grid-area: header;
+}
+
+header,
+footer {
+  background: black;
+  color: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-title,
+.footer-title {
+  @include font-alt($color: $yellow, $font-size: $fs-h2 );
+}
+
+.hero {
+  grid-area: hero;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/308367/gridarea-hero-bg.jpg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-title {
+  margin: 0;
+}
+
+.hero-subtitle {
+  margin: 0;
+}
+
+main {
+  grid-area: main;
+}
+
+aside {
+  grid-area: sidebar;
+  background: dark-gray;
+  padding: 2em;
+}
+
+footer {
+  grid-area: footer;
+}
+
+
+.card {
+  display: grid;
+  grid-template:
+    "img title" min-content
+    "img content" auto / 1fr 3fr;
+  grid-column-gap: 1.5em;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+  padding: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.card-img {
+  grid-area: img;
+  max-width: 100%;
+}
+
+.card-title {
+  grid-area: title;
+  margin: 0;
+  font-weight: 300;
+}
+
+.card-content {
+  grid-area: content;
+}
+  
+  a {
+    color: yellow;
+    font-size: 1.1em;
+  }
