@@ -1,0 +1,33 @@
+.link{
+    background-color: black;
+    color: yellow;
+    display: inline-block;
+    padding: 20px;
+    outline: 5px solid yellow;
+}
+ul{
+    display: none;
+}
+.link:hover{
+    background-color: yellow;
+    color: black;
+    outline: 5px solid black;
+}
+section{
+    display: inline-block;
+}
+section:hover ul{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    padding: 32px;
+    margin-top: -20px;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+
+}
+section ul li:hover{
+    color: red;
+}
