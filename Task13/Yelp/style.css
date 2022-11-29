@@ -122,6 +122,10 @@ input{
     font-size: 14px;
     line-height: 20px;
 }
+.header-tags p:hover{
+    background-color: #ebebeb58;
+    cursor: pointer;
+}
 /* .header-tags p:first-child{
     margin-right: 8px;
 } */
@@ -138,6 +142,9 @@ input{
     color: white;
     font-family: medium;
 }
+.login:hover{
+    background-color: #ebebeb58;
+}
 .signup{
     color: white;
     padding: 5px 16px;
@@ -146,6 +153,9 @@ input{
     cursor: pointer;
     background-color: #e00707;
     margin-left: 12px;
+}
+.signup:hover{
+    background-color: #f60505;
 }
 .signup a{
     text-decoration: none;
@@ -193,6 +203,10 @@ input{
    color: white;
    font-size: 14px;
    font-family: sans-regular;
+}
+.description p strong:hover{
+    text-decoration: underline;
+    cursor: pointer;
 }
 .banner-container{
     max-width: 1224px;
@@ -343,6 +357,7 @@ input{
     display: flex;
     flex-direction: column;
     gap: 8px;
+    height: 126px;
 }
 .card-content a{
     font-size: 14px;
@@ -356,6 +371,13 @@ input{
     color: #2d2e2f;
     height: 40px;
     overflow: scroll;
+}
+.card-content a:hover{
+    text-decoration: underline;
+}
+.card-content span:hover{
+    text-decoration: underline;
+    cursor: pointer;
 }
 .card-content p::-webkit-scrollbar{
     display: none;
@@ -412,6 +434,10 @@ input{
     gap: 16px;
     align-items: center;
     justify-content: center;
+    font-family: sans-semibold;
+}
+.category-section:hover{
+    box-shadow: 0px 0px 20px rgb(0 0 0/14%);
 }
 footer{
     background-color: #f7f7f7;
@@ -438,6 +464,9 @@ footer{
     color: #6e7072;
     font-family: sans-regular;
     margin-bottom: 8px;
+}
+.footer-list p:hover{
+    text-decoration: underline;
 }
 .copyright{
     padding: 48px 0;
