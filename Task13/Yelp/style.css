@@ -58,7 +58,7 @@ header{
     width: 100%;
 }
 .logo{
-    margin-right: 32px;
+    margin-right: 12%;
 }
 .search-bar{
     display: flex;
@@ -112,7 +112,7 @@ input{
     align-items: center;
     margin-left: 16px;
     white-space: nowrap;
-    margin-left: 40px;
+    /* margin-left: 40px; */
     margin-bottom: 5px;
 }
 .header-tags p{
@@ -154,7 +154,7 @@ input{
 }
 .header-nav{
     display: flex;
-    max-width: 1300px;
+    max-width: 1160px;
     margin-inline: auto;
 }
 .header-nav a{
@@ -249,6 +249,7 @@ input{
 
 .activities{
     padding: 54px 0;
+    border-bottom: 1px solid #ebebeb;
 }
 .activities h2{
     font-family: bold;
@@ -258,4 +259,193 @@ input{
     color: #2d2e2f;
     letter-spacing: -0.4px;
 }
-
+.content{
+    display: grid;
+    grid-template-columns: repeat(3, 360px);
+    max-width: 1176px;
+    margin-inline: auto;
+    gap: 32px;
+}
+.image-card{
+    width: 358px;
+    height: 93px;
+    margin: 16px 0;
+}
+.image-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.images-review{
+    display: flex;
+    flex-direction: row; 
+    gap: 10px;
+    justify-content: space-between;
+}
+.review-image-card{
+    height: 168px;
+    width: 155px;
+}
+.review{
+    border: 1px solid #ebebeb;
+    margin: 0 16px;
+    height: 240px;
+}
+.review-card{
+    display: flex;
+    flex-direction: column;
+}
+.images-review img{
+    width: 100%;
+    height: 100%;
+}
+.profile-picture{
+    border-radius: 100%;
+}
+.profile-picture img{
+    border-radius: 100%;
+}
+.card{
+    width: 360px;
+    height: 376px;
+    border: 1px solid #ebebeb;
+    padding-top: 16px;
+}
+.review-card{
+    width: 360px;
+    height: 376px;
+    border: 1px solid #ebebeb;
+    padding: 16px 0;
+}
+.profile{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 0 24px;
+}
+.profile-id{
+    display: flex;
+    flex-direction: column;
+}
+.profile-id a{
+    font-size: 16px;
+    font-family: sans-bold;
+    color: #2d2e2f;
+    text-decoration: none;
+}
+.profile-id span{
+    font-size: 14px;
+    color: #2d2e2f;
+    font-family: sans-regular;
+}
+.card-content{
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.card-content a{
+    font-size: 14px;
+    color: #027a97;
+    font-family: sans-bold;
+    text-decoration: none;
+}
+.card-content p{
+    font-size: 14px;
+    font-family: sans-regular;
+    color: #2d2e2f;
+    height: 40px;
+    overflow: scroll;
+}
+.card-content p::-webkit-scrollbar{
+    display: none;
+}
+.card-content, .review-card p{
+    font-size: 14px;
+    font-family: sans-semibold;
+    color: #027a97;
+}
+.review-card p{
+    padding: 50px 0 0 20px;
+}
+.reaction{
+    padding: 16px 24px;
+    display: flex;
+    gap: 24px;
+    border-top: 1px solid #ebebeb;
+}
+.more-activities{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 0;
+}
+.more-activities p{
+    font-size: 14px;
+    color: #027a97;
+    font-family: sans-bold;
+    text-decoration: none;
+}
+.categories{
+    padding: 48px 0;
+    max-width: 1176px;
+    margin-inline: auto;
+}
+.categories h2{
+    font-size: 28px;
+    font-family: bold;
+    color: #2d2e2f;
+    text-align: center;
+}
+.category-grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 40px;
+    margin-top: 40px;
+}
+.category-section{
+    padding: 48px 0;
+    border: 1px solid #ebebeb;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+}
+footer{
+    background-color: #f7f7f7;
+}
+.footer-section{
+    padding: 60px 32px 0 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1176px;
+    margin-inline: auto;
+}
+.footer-list{
+    margin: 0 12px;
+}
+.footer-list span{
+    font-size: 16px;
+    font-family: sans-bold;
+    color: #2d2e2f;
+    line-height: 32px;
+}
+.footer-list p{
+    font-size: 14px;
+    color: #6e7072;
+    font-family: sans-regular;
+    margin-bottom: 8px;
+}
+.copyright{
+    padding: 48px 0;
+    max-width: 1100px;
+    margin-inline: auto;
+}
+.copyright p{
+    font-family: sans-regular;
+    color: #6e7072;
+    font-size: 12px;
+}
