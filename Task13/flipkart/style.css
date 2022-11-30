@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: regular;
+    src: url(assets/NotoSansDevanagariUI-Regular.ttf);
+}
+@font-face {
+    font-family: medium;
+    src: url(assets/Medium.ttf);
+}
+@font-face {
+    font-family: roboto-regular;
+    src: url(assets/roboto-regular.woff2);
+}
+header{
+    color: rgb(255, 255, 255);
+    background-color: rgb(40, 116, 240);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 10px;
+}
+.header-elements{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-left: 2px;
+}
+.header-elements svg{
+    width: 43px;
+}
+.header-elements h1{
+    font-size: 16px;
+    font-family: roboto-regular;
+    font-weight: 400;
+    padding-left: 13px;
+    overflow: hidden;
+}
+.header-tags{
+    display: flex;
+    flex-direction: row;
+    gap: 22px;
+    align-items: center;
+    padding-left: 15px;
+}
+.header-tags span{
+    font-size: 16px;
+    font-family: roboto-regular;
+    padding: 16px 16px 17px 16px;
+    color: #eaeaea;
+}
+.logo{
+    width: 23px;
+    height: 23px;
+    padding-top: 2px;
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+.header-list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.sort, .filter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+    justify-content: center;
+    gap: 8px;
+    height: 48px;
+}
+.sort{
+    border-right: 1px solid #eaeaea;
+}
+.sort-img, .filter-img{
+    width: 24px;
+    height: 24px;
+}
+.sort-img img, .filter-img img{
+    width: 100%;
+    height: 100%;
+}
+.sort span, .filter span{
+    font-size: 14px;
+}
+.header-cards{
+    display: flex;
+    flex-direction: row;
+    overflow: scroll;
+    padding: 0 11px 8px 11px;
+
+}
+.header-cards::-webkit-scrollbar{
+    display: none;
+}
+.tag{
+    display: flex;
+    flex-direction: row;
+    border:1px solid rgb(219, 219, 219);
+    border-radius: 4px;
+    padding: 2px 8px 0px 4px;
+    margin: 8px 4px 0;
+    align-items: center;
+}
+.tag-image{
+    width: 36px;
+    height: 36px;
+    margin-right: 4px;
+}
+.tag-image img{
+    width: 32px;
+    height: 32px;
+}
+.tag span{
+    font-size: 12px;
+    font-family: roboto-regular;
+    width: 59px;
+    line-height: 16px;
+    color: #212121;
+}
+.header-cards div:nth-child(2) {
+    color: #717478;
+    background-color:rgb(245, 247, 250);;
+}
+.header-cards div:nth-child(3) {
+    color: #717478;
+    background-color:rgb(245, 247, 250);;
+}
+.border{
+    display: flex;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 4px;
+}
+.border img{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    object-fit: fill;
+    opacity: 1;
+}
+.container-card{
+    position: relative;
+}
+.container-imagecard{
+    display: flex;
+    flex-direction: row;
+    padding: 12px 0;
+}
+.image{
+    width: 96px;
+    height: 114px;
+    margin: 14px 0 0 5px;
+}
+.image img{
+    width: 100%;
+    height: 100%;
+}
+.like-button{
+    width: 36px;
+    height: 36px;
+    border: 1px solid #eaeaea;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.like-button img{
+    width: 18px;
+    height: 18px;
+}
+.image-card-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px 0 6px;
+    padding: 0 20px 0 12px;
+    width: 210px;
+}
+.image-card-content span{
+    font-size: 14px;
+    color: #212121;
+    font-family: roboto-regular;
+    margin: 0 24px 6px 0;
+}
+.rating{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 6px;
+}
+.rating img{
+    width: 55px;
+    height: 14px;
+}
+.rating button{
+    color: white;
+    background-color: #008c00;
+    border: none;
+    border-radius: 4px;
+    padding: 3px 6px;
+    display: flex;
+    gap: 2px;
+    font-size: 12px;
+}
+.rating p{
+    margin-left: 5px;
+    color: #878787;
+    font-family: roboto-regular;
+    font-size: 12px;
+}
+.image-card-content p{
+    font-size: 12px;
+    font-family: roboto-regular;
+}
+.image-card-content a{
+    font-size: 12px;
+    color: #26a541;
+    text-decoration: none;
+    margin-top: 6px;
+}
