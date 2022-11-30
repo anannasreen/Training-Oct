@@ -32,13 +32,13 @@ header{
     padding-left: 2px;
 }
 .header-elements svg{
-    width: 43px;
+    width: 44px;
 }
 .header-elements h1{
     font-size: 16px;
     font-family: roboto-regular;
     font-weight: 400;
-    padding-left: 13px;
+    padding-left: 12px;
     overflow: hidden;
 }
 .header-tags{
@@ -46,7 +46,7 @@ header{
     flex-direction: row;
     gap: 22px;
     align-items: center;
-    padding-left: 15px;
+    padding-left: 10px;
 }
 .header-tags span{
     font-size: 16px;
@@ -57,16 +57,21 @@ header{
 .logo{
     width: 23px;
     height: 23px;
-    padding-top: 2px;
+    padding-top: 1px;
 }
 .logo img{
-    width: 100%;
-    height: 100%;
+    width: 23px;
+    height: 23px;
 }
 .header-list{
     display: flex;
     flex-direction: row;
     align-items: center;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    background: white;
+    width: 100%;
 }
 .sort, .filter{
     display: flex;
@@ -96,7 +101,8 @@ header{
     flex-direction: row;
     overflow: scroll;
     padding: 0 11px 8px 11px;
-
+    max-width: 508px;
+    margin-inline: auto;
 }
 .header-cards::-webkit-scrollbar{
     display: none;
@@ -106,7 +112,7 @@ header{
     flex-direction: row;
     border:1px solid rgb(219, 219, 219);
     border-radius: 4px;
-    padding: 2px 8px 0px 4px;
+    padding: 2px 7px 0px 4px;
     margin: 8px 4px 0;
     align-items: center;
 }
@@ -114,6 +120,7 @@ header{
     width: 36px;
     height: 36px;
     margin-right: 4px;
+    padding-top: 1px;
 }
 .tag-image img{
     width: 32px;
@@ -123,23 +130,27 @@ header{
     font-size: 12px;
     font-family: roboto-regular;
     width: 59px;
-    line-height: 16px;
+    line-height: 17px;
     color: #212121;
 }
-.header-cards div:nth-child(2) {
+.tag:nth-child(2) span{
     color: #717478;
-    background-color:rgb(245, 247, 250);;
+}
+.tag:nth-child(3) span{
+    color: #717478;
+}
+.header-cards div:nth-child(2) {
+    background-color:rgb(245, 247, 250);
+    padding-right: 3px;
 }
 .header-cards div:nth-child(3) {
-    color: #717478;
-    background-color:rgb(245, 247, 250);;
+    background-color:rgb(245, 247, 250);
 }
 .border{
     display: flex;
-    left: 0;
-    right: 0;
-    bottom: 0;
     height: 4px;
+    position: sticky;
+    top: 48px;
 }
 .border img{
     width: 100%;
@@ -167,19 +178,20 @@ header{
 }
 .like-button{
     width: 36px;
-    height: 36px;
-    border: 1px solid #eaeaea;
+    height: 34px;
+    border: 1px solid white;
     border-radius: 100%;
+    box-shadow: 0px 1px 3px rgb(0 0 0/16%);
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    right: 10px;
-    top: 10px;
+    right: 8px;
+    top: 6px;
 }
 .like-button img{
     width: 18px;
-    height: 18px;
+    height: 16px;
 }
 .image-card-content{
     display: flex;
@@ -187,7 +199,7 @@ header{
     justify-content: space-between;
     margin: 10px 0 6px;
     padding: 0 20px 0 12px;
-    width: 210px;
+    width: 220px;
 }
 .image-card-content span{
     font-size: 14px;
@@ -209,10 +221,10 @@ header{
     background-color: #008c00;
     border: none;
     border-radius: 4px;
-    padding: 3px 6px;
+    padding: 4px 6px;
     display: flex;
     gap: 2px;
-    font-size: 12px;
+    font-size: 11px;
 }
 .rating p{
     margin-left: 5px;
@@ -229,4 +241,59 @@ header{
     color: #26a541;
     text-decoration: none;
     margin-top: 6px;
+}
+.features{
+    color: #878787;
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.features p{
+    padding: 4px 8px;
+    margin: 0 0 10px 10px;
+    border: 1px solid rgb(0 0 0/10%);
+}
+.offer-container{
+    padding: 8px 0;
+    background-color: #f0f0f0;
+}
+.offer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px;
+    justify-content: space-between;
+    background-color: white;
+}
+.offer-content{
+    padding-right: 40px;
+}
+.offer-content span{
+    color: #212121;
+    margin-bottom: 2px;
+}
+.offer-content p{
+    color: #878787;
+    font-family: roboto-regular;
+    font-size: 12px;
+}
+.timer{
+    width: 70px;
+    height: 70px;
+}
+.timer img{
+    width: 100%;
+    height: 100%;
+}
+.arrow{
+    width: 8px;
+    height: 10px;
+}
+.arrow img{
+    width: 100%;
+    height: 100%;
+}
+.container-elements{
+    border-bottom: 1px solid rgb(0 0 0/10%);
 }
