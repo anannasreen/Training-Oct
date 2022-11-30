@@ -15,6 +15,13 @@
     font-family: roboto-regular;
     src: url(assets/roboto-regular.woff2);
 }
+.mobile-view{
+    display: flex;
+    flex-direction: column;
+}
+.desktop-view{
+    display: none;
+}
 header{
     color: rgb(255, 255, 255);
     background-color: rgb(40, 116, 240);
