@@ -112,7 +112,6 @@ input{
     align-items: center;
     margin-left: 16px;
     white-space: nowrap;
-    /* margin-left: 40px; */
     margin-bottom: 5px;
 }
 .header-tags p{
@@ -126,9 +125,6 @@ input{
     background-color: #ebebeb58;
     cursor: pointer;
 }
-/* .header-tags p:first-child{
-    margin-right: 8px;
-} */
 .login{
     color: white;
     padding: 5px 16px;
@@ -258,9 +254,6 @@ input{
         height: 89.33px;
     }
 }
-
-/* main-section */
-
 .activities{
     padding: 54px 0;
     border-bottom: 1px solid #ebebeb;
