@@ -441,7 +441,7 @@ header{
         font-family: roboto-regular;
     }
     .main-desktop{
-        max-width: 1664px;
+        max-width: 1500px;
         margin-inline: auto;
         display: flex;
         flex-direction: row;
@@ -695,5 +695,73 @@ header{
     .mobile-options span{
         color: #878787;
         font-size: 12px;
+    }
+    .main-imagecard-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .main-imagecard-desktop{
+        display: flex;
+        flex-direction: row;
+        gap: 30vh;
+        line-height: 1;
+        padding: 24px 0 30px 24px;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    .pricetag-desktop img{
+        width:77px;
+        height: 21px;
+    }
+    .main-imagecard-content{
+        padding-left: 25px;
+        width: 20vw;
+    }
+    .main-imagecard{
+        display: flex;
+        flex-direction: row;
+    }
+    .imagecard-desktop img{
+        width: 170px;
+        height: 200px;
+        margin: 0 16px;
+    }
+    .imagecard-desktop{
+        position: relative;
+    }
+    .pricetag-desktop{
+        display: flex;
+        flex-direction: row;
+        padding-left: 25px;
+    }
+    .like-button-desktop{
+        position: absolute;
+        right: 0;
+    }
+    .checkbox{
+        display: flex;
+        flex-direction: row;
+        margin-top: 16px;
+        gap: 10px;
+    }
+    .features-desktop ul li{
+        list-style-type: none;
+        font-size: 13px;
+        color: #212121;
+    }
+    .features-desktop ul li span{
+        color: rgb(194, 194, 194);;
+    }
+    .features-desktop ul :last-child{
+        line-height: 1.5;
+    }
+    .rating-desktop button{
+        color: white;
+        background-color: #008c00;
+        border: none;
+        border-radius: 4px;
+        padding: 4px 6px;
+        display: flex;
+        gap: 2px;
+        font-size: 11px;
     }
 }
