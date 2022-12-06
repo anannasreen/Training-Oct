@@ -683,6 +683,7 @@ header{
     }
     .home-container-tags{
         padding: 12px 16px 0;
+        border-bottom: 1px solid #f0f0f0;
     }
     .mobile-options{
         padding: 12px 5px 4px 0;
@@ -732,6 +733,7 @@ header{
         display: flex;
         flex-direction: row;
         padding-left: 25px;
+        white-space: nowrap;
     }
     .like-button-desktop{
         position: absolute;
@@ -761,7 +763,174 @@ header{
         border-radius: 4px;
         padding: 4px 6px;
         display: flex;
+        align-items: center;
         gap: 2px;
         font-size: 11px;
+        white-space: nowrap;
+    }
+    .offer-lap{
+        color: #878787;
+        font-size: 14px;
+        text-decoration: line-through;
+    }
+    .rating-desktop{
+        display: flex;
+        flex-direction: row;
+        margin-top: 6px;
+    }
+    .rating-desktop span{
+        color: #878787;
+        font-size: 14px;
+    }
+    .main-imagecard h1{
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 18px;
+    }
+    .main-imagecard :hover h1{
+        color: #2874f0;
+        cursor: pointer;
+    }
+    .mi-mobiles{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .mi-mobiles h1{
+        color: #212121;
+        margin-top: 8px;
+    }
+    .mi-mobiles span{
+        margin-left: 10px;
+        color: #878787;
+        font-size: 12px;
+        margin-top: 8px;
+    }
+    .sort-options span{
+        font-size: 14px;
+        color: #212121;
+    }
+    .sort-options :nth-child(2) {
+        color: #2874f0;
+        border-bottom: 2px solid #2874f0;
+    }
+    .pricetag-content span{
+        color: #008c00;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .pricetag-content p{
+        font-size: 12px;
+    }
+    .pages{
+        display: flex;
+        flex-direction: row;
+        font-size: 14px;
+        padding: 10px;
+        gap: 83px;
+        border-top: 1px solid rgb(0 0 0/16%);
+        display: flex;
+        align-items: center;
+    }
+    .pages p{
+        padding: 0 8px;
+    }
+    .nav-bar{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .nav-bar :first-child {
+        color: white;
+        background-color: #2874f0;
+        border-radius: 100%;
+        padding: 4px 8px;
+    }
+    .pages a{
+        color: #2874f0;
+        text-decoration: none;
+        font-weight: 600;
+        padding: 0 25px;
+    }
+    .nav-bar{
+        display: flex;
+        flex-direction: row;
+    }
+    .find{
+        display: flex;
+        flex-direction: row;
+        padding: 16px;
+        border-top: 8px solid #f1f3f6;
+    }
+    .find p{
+        color: #212121;
+        font-weight: 600;
+        margin-right: 24px;
+    }
+    .find span{
+        font-size: 14px;
+        color: #212121;
+        margin-right: 8px;
+        padding: 6px 28px;
+        border: 1px solid #d7d7d7;
+    }
+    footer{
+        background-color: #172337;
+        color: white;
+        font-size: 12px;
+        height: 320px;
+        padding-top: 41px;
+    }
+    .footer-section{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        line-height: 2;
+    }
+    .footer-section p{
+        color: #878787;
+    }
+    .footer-section ul li{
+        list-style-type: none;
+    }
+    .footer-list{
+        display: flex;
+        flex-direction: row;
+        gap: 73px;
+        border-right: 1px solid #454d5e;
+        padding-right: 35px;
+        height: 110px;
+    }
+    .address-list{
+        display: flex;
+        flex-direction: row;
+    }
+    .address-section{
+        display: flex;
+        flex-direction: row;
+        gap: 160px;
+        padding-left: 35px;
+    }
+    .copyright{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-top: 25px;
+        border-top: 1px solid #454d5e;
+    }
+    .copyright-section{
+        display: flex;
+        flex-direction: row;
+    }
+    .address-list ul li a{
+        color: #2874f0;
+        font-weight: 600;
+        text-decoration: none;
+    }
+}
+@media screen and (min-width:1440px) {
+    .login-button-desktop{
+        margin-left: 20px;
     }
 }
