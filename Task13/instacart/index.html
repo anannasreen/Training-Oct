@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Instacart Cloning</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-notification">
+            <div class="icon">
+                <img src="assets/img/money.svg" alt="">
+            </div>
+            <div class="notification-text">
+                <h2>FREE delivery <span>for your first 3 orders.</span> Place your order today!</h2>
+            </div>
+        </div>
+        <div class="heading">
+            <div class="menu">
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24"
+                    fill="#343538" xmlns="http://www.w3.org/2000/svg" size="24">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M18.8 17.5c.939 0 1.7.672 1.7 1.5s-.761 1.5-1.7 1.5H5.2c-.939 0-1.7-.672-1.7-1.5s.761-1.5 1.7-1.5h13.6zm0-7c.939 0 1.7.672 1.7 1.5s-.761 1.5-1.7 1.5H5.2c-.939 0-1.7-.672-1.7-1.5s.761-1.5 1.7-1.5h13.6zm0-7c.939 0 1.7.672 1.7 1.5s-.761 1.5-1.7 1.5H5.2c-.939 0-1.7-.672-1.7-1.5s.761-1.5 1.7-1.5h13.6z"
+                        fill="#343538"></path>
+                </svg>
+            </div>
+            <div class="instacart">
+                <img src="assets/img/instacart.svg" alt="">
+            </div>
+            <div class="profile">
+                <div class="Login">
+                    <span>Log in</span>
+                </div>
+                <button>Sign up</button>
+            </div>
+        </div>
+        <div class="heading-tab">
+            <div class="logo">
+                <div class="menu">
+                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24"
+                        fill="#343538" xmlns="http://www.w3.org/2000/svg" size="24">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M18.8 17.5c.939 0 1.7.672 1.7 1.5s-.761 1.5-1.7 1.5H5.2c-.939 0-1.7-.672-1.7-1.5s.761-1.5 1.7-1.5h13.6zm0-7c.939 0 1.7.672 1.7 1.5s-.761 1.5-1.7 1.5H5.2c-.939 0-1.7-.672-1.7-1.5s.761-1.5 1.7-1.5h13.6zm0-7c.939 0 1.7.672 1.7 1.5s-.761 1.5-1.7 1.5H5.2c-.939 0-1.7-.672-1.7-1.5s.761-1.5 1.7-1.5h13.6z"
+                            fill="#343538"></path>
+                    </svg>
+                </div>
+                <div class="instacart">
+                    <img src="assets/img/instacart.svg" alt="">
+                </div>
+            </div>
+            <div class="profile">
+                <div class="Login">
+                    <span>Log in</span>
+                </div>
+                <button>Sign up</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="order">
+            <div class="order-content">
+            <div class="country-lang-container">
+                <div class="country-box">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none">
+                        <g clip-path="url(#clip0)">
+                            <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="21"
+                                height="20">
+                                <path
+                                    d="M22.1728 11.9978C22.1728 17.5195 17.6966 21.9957 12.1749 21.9957C6.91157 21.9957 2.59815 17.9284 2.20615 12.7654C2.18692 12.5121 2.17712 12.2561 2.17712 11.9978C2.17712 6.47618 6.6533 2 12.1749 2C17.6966 2 22.1728 6.47618 22.1728 11.9978Z"
+                                    fill="#C4C4C4" />
+                            </mask>
+                            <g mask="url(#mask0)">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M-3.77991 1.99609H36.1114V3.53482H-3.77991V1.99609ZM-3.77991 5.07355H36.1114V6.61228H-3.77991V5.07355ZM-3.77991 8.1471H36.1114V9.68973H-3.77991V8.1471ZM-3.77991 11.2246H36.1114V12.7633H-3.77991V11.2246ZM-3.77991 14.302H36.1114V15.8407H-3.77991V14.302ZM-3.77991 17.3756H36.1114V18.9143H-3.77991V17.3756ZM-3.77991 20.453H36.1114V21.9917H-3.77991V20.453Z"
+                                    fill="#BD3D44" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M-3.77991 3.53516H36.1114V5.07388H-3.77991V3.53516ZM-3.77991 6.61261H36.1114V8.14744H-3.77991V6.61261ZM-3.77991 9.68616H36.1114V11.2249H-3.77991V9.68616ZM-3.77991 12.7636H36.1114V14.3023H-3.77991V12.7636ZM-3.77991 15.8411H36.1114V17.3798H-3.77991V15.8411ZM-3.77991 18.9146H36.1114V20.4534H-3.77991V18.9146Z"
+                                    fill="white" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M-3.77991 1.99609H12.1758V12.7633H-3.77991V1.99609Z" fill="#192F5D" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M-2.45118 2.45703L-2.30356 2.88272H-1.83608L-2.21334 3.14438L-2.06982 3.57398L-2.45118 3.30841L-2.82845 3.57007L-2.68492 3.14438L-3.06628 2.88272H-2.59061L-2.45118 2.45703ZM0.210152 2.45703L0.353675 2.88272H0.825252L0.44389 3.14438L0.587413 3.57398L0.210152 3.30841L-0.171211 3.57007L-0.0276873 3.14438L-0.404949 2.88272H0.0625274L0.210152 2.45703ZM2.86739 2.45703L3.01501 2.88272H3.47839L3.10112 3.14438L3.24465 3.57398L2.86329 3.30841L2.48602 3.57007L2.62955 3.14438L2.24819 2.88272H2.71976L2.86739 2.45703ZM5.52872 2.45703L5.67225 2.88272H6.14382L5.76246 3.14438L5.91008 3.57398L5.52872 3.30841L5.14736 3.57007L5.29498 3.14438L4.91362 2.88272H5.3811L5.52872 2.45703ZM8.18596 2.45703L8.33358 2.88272H8.80106L8.4238 3.14438L8.56732 3.57398L8.18596 3.30841L7.80869 3.57007L7.95222 3.14438L7.57496 2.88272H8.04243L8.18596 2.45703ZM10.8473 2.45703L10.9908 2.88272H11.4624L11.081 3.14438L11.2287 3.57398L10.8473 3.30841L10.4659 3.57007L10.6136 3.14438L10.2322 2.88272H10.7038L10.8473 2.45703ZM-1.11847 3.53492L-0.974942 3.96061H-0.503365L-0.884728 4.22227L-0.745305 4.64796L-1.11437 4.3863L-1.49573 4.64796L-1.36041 4.22227L-1.72947 3.96061H-1.26199L-1.11847 3.53492ZM1.53877 3.53492L1.68639 3.96061H2.15387L1.77251 4.22227L1.92013 4.64796L1.53877 4.3863L1.15741 4.64796L1.30503 4.22227L0.923668 3.96061H1.39525L1.53877 3.53492ZM4.2001 3.53492L4.34363 3.96061H4.81521L4.43384 4.22227L4.57737 4.64796L4.2001 4.3863L3.81874 4.64796L3.96227 4.22227L3.585 3.96061H4.05248L4.2001 3.53492ZM6.85734 3.53492L7.00496 3.96061H7.47244L7.09108 4.22227L7.2387 4.64796L6.85734 4.3863L6.48008 4.64796L6.6236 4.22227L6.24224 3.96061H6.71792L6.85734 3.53492ZM9.51867 3.53492L9.6622 3.96061H10.1338L9.75241 4.22227L9.89594 4.64796L9.51867 4.3863L9.13731 4.64796L9.28084 4.22227L8.90357 3.96061H9.37105L9.51867 3.53492ZM-2.45118 4.60891L-2.30356 5.04241H-1.83608L-2.21334 5.30407L-2.06982 5.72976L-2.45118 5.46419L-2.82845 5.72976L-2.68492 5.30016L-3.06628 5.0385H-2.59061L-2.45118 4.60891ZM0.210152 4.60891L0.353675 5.0385H0.825252L0.44389 5.30016L0.587413 5.72585L0.210152 5.46028L-0.171211 5.72585L-0.0276873 5.29626L-0.404949 5.03459H0.0625274L0.210152 4.60891ZM2.86739 4.60891L3.01501 5.0385H3.47839L3.10112 5.30016L3.24465 5.72585L2.86329 5.46028L2.48602 5.72585L2.62955 5.29626L2.24819 5.03459H2.71976L2.86739 4.60891ZM5.52872 4.60891L5.67225 5.0385H6.14382L5.76246 5.30016L5.91008 5.72585L5.52872 5.46028L5.14736 5.72585L5.29498 5.29626L4.91362 5.03459H5.3811L5.52872 4.60891ZM8.18596 4.60891L8.33358 5.0385H8.80106L8.4238 5.30016L8.56732 5.72585L8.18596 5.46028L7.80869 5.72585L7.95222 5.29626L7.57496 5.03459H8.04243L8.18596 4.60891ZM10.8473 4.60891L10.9908 5.0385H11.4624L11.081 5.30016L11.2287 5.72585L10.8473 5.46028L10.4659 5.72585L10.6136 5.29626L10.2322 5.03459H10.7038L10.8473 4.60891ZM-1.11847 5.6868L-0.974942 6.11248H-0.503365L-0.884728 6.37415L-0.741204 6.80374L-1.11847 6.53817L-1.49983 6.79983L-1.3563 6.37415L-1.73357 6.11248H-1.26609L-1.11847 5.6868ZM1.53877 5.6868L1.68639 6.11248H2.15387L1.77251 6.37415L1.92013 6.80374L1.53877 6.53817L1.15741 6.79983L1.30503 6.37415L0.923668 6.11248H1.39525L1.53877 5.6868ZM4.2001 5.6868L4.34363 6.11248H4.81521L4.43384 6.37415L4.57737 6.80374L4.2001 6.53817L3.81874 6.79983L3.96227 6.37415L3.585 6.11248H4.05248L4.2001 5.6868ZM6.85734 5.6868L7.00496 6.11248H7.47244L7.09518 6.37415L7.2387 6.80374L6.85734 6.53817L6.48008 6.79983L6.6236 6.37415L6.24224 6.11248H6.71792L6.85734 5.6868ZM9.51867 5.6868L9.6622 6.11248H10.1338L9.75241 6.37415L9.89594 6.80374L9.51867 6.53817L9.13731 6.79983L9.28084 6.37415L8.90357 6.11248H9.37105L9.51867 5.6868ZM-2.45118 6.76469L-2.30356 7.19037H-1.83608L-2.21334 7.45204L-2.06982 7.88163L-2.45118 7.61606L-2.82845 7.87773L-2.68492 7.45204L-3.06628 7.19037H-2.59061L-2.45118 6.76469ZM0.210152 6.76469L0.353675 7.19037H0.825252L0.44389 7.45204L0.587413 7.87773L0.210152 7.61606L-0.171211 7.87773L-0.0276873 7.45204L-0.404949 7.19037H0.0625274L0.210152 6.76469ZM2.86739 6.76469L3.01501 7.19037H3.47839L3.10112 7.45204L3.24465 7.88163L2.86329 7.61606L2.48602 7.87773L2.62955 7.45204L2.24819 7.19037H2.71976L2.86739 6.76469ZM5.52872 6.76469L5.67225 7.19037H6.14382L5.76246 7.45204L5.91008 7.88163L5.52872 7.61606L5.14736 7.87773L5.29498 7.45204L4.91362 7.19037H5.3811L5.52872 6.76469ZM8.18596 6.76469L8.33358 7.19037H8.80106L8.4238 7.45204L8.56732 7.88163L8.18596 7.61606L7.80869 7.87773L7.95222 7.45204L7.57496 7.19037H8.04243L8.18596 6.76469ZM10.8473 6.76469L10.9908 7.19037H11.4624L11.081 7.45204L11.2287 7.88163L10.8473 7.61606L10.4659 7.87773L10.6136 7.45204L10.2322 7.19037H10.7038L10.8473 6.76469ZM-1.11847 7.84258L-0.974942 8.26827H-0.503365L-0.884728 8.52993L-0.741204 8.95562L-1.11847 8.69005L-1.49983 8.95562L-1.3563 8.52602L-1.73357 8.26436H-1.26609L-1.11847 7.84258ZM1.53877 7.84258L1.68639 8.26827H2.15387L1.77251 8.52993L1.92013 8.95562L1.53877 8.69005L1.15741 8.95562L1.30503 8.52602L0.923668 8.26436H1.39525L1.53877 7.84258ZM4.2001 7.84258L4.34363 8.26827H4.81521L4.43384 8.52993L4.57737 8.95562L4.2001 8.69005L3.81874 8.95562L3.96227 8.52602L3.585 8.26436H4.05248L4.2001 7.84258ZM6.85734 7.84258L7.00496 8.26827H7.47244L7.09518 8.52993L7.2387 8.95562L6.85734 8.69005L6.48008 8.95562L6.6236 8.52602L6.24224 8.26436H6.71792L6.85734 7.84258ZM9.51867 7.84258L9.6622 8.26827H10.1338L9.75241 8.52993L9.89594 8.95562L9.51867 8.69005L9.13731 8.95562L9.28084 8.52602L8.90357 8.26436H9.37105L9.51867 7.84258ZM-2.45118 8.91656L-2.30356 9.34616H-1.83608L-2.21334 9.60782L-2.06982 10.0296L-2.45118 9.76794L-2.82845 10.0296L-2.68492 9.60391L-3.06628 9.34225H-2.59061L-2.45118 8.91656ZM0.210152 8.91656L0.353675 9.34616H0.825252L0.44389 9.60782L0.591514 10.0296L0.210152 9.76794L-0.171211 10.0296L-0.0235867 9.60391L-0.404949 9.34225H0.0625274L0.210152 8.91656ZM2.86739 8.91656L3.01501 9.34616H3.47839L3.10112 9.60782L3.24465 10.0296L2.86329 9.76794L2.48602 10.0296L2.62955 9.60391L2.24819 9.34225H2.71976L2.86739 8.91656ZM5.52872 8.91656L5.67225 9.34616H6.14382L5.76246 9.60782L5.91008 10.0296L5.52872 9.76794L5.14736 10.0296L5.29498 9.60391L4.91362 9.34225H5.3811L5.52872 8.91656ZM8.18596 8.91656L8.33358 9.34616H8.80106L8.4238 9.60782L8.56732 10.0296L8.18596 9.76794L7.80869 10.0296L7.95222 9.60391L7.57496 9.34225H8.04243L8.18596 8.91656ZM10.8473 8.91656L10.9908 9.34616H11.4624L11.081 9.60782L11.2287 10.0296L10.8473 9.76794L10.4659 10.0296L10.6136 9.60391L10.2322 9.34225H10.7038L10.8473 8.91656ZM-1.11847 9.99445L-0.974942 10.4201H-0.503365L-0.884728 10.6818L-0.741204 11.1114L-1.11847 10.8458L-1.49983 11.1075L-1.3563 10.6818L-1.73357 10.4201H-1.26609L-1.11847 9.99445ZM1.53877 9.99445L1.68639 10.4201H2.15387L1.77251 10.6818L1.92013 11.1114L1.53877 10.8458L1.15741 11.1075L1.30503 10.6818L0.923668 10.4201H1.39525L1.53877 9.99445ZM4.2001 9.99445L4.34363 10.4201H4.81521L4.43384 10.6818L4.57737 11.1114L4.2001 10.8458L3.81874 11.1075L3.96227 10.6818L3.585 10.4201H4.05248L4.2001 9.99445ZM6.85734 9.99445L7.00496 10.4201H7.47244L7.09518 10.6818L7.2387 11.1114L6.85734 10.8458L6.48008 11.1075L6.6236 10.6818L6.24224 10.4201H6.71792L6.85734 9.99445ZM9.51867 9.99445L9.6622 10.4201H10.1338L9.75241 10.6818L9.89594 11.1114L9.51867 10.8458L9.13731 11.1075L9.28084 10.6818L8.90357 10.4201H9.37105L9.51867 9.99445ZM-2.45118 11.0723L-2.30356 11.498H-1.83608L-2.21334 11.7597L-2.06982 12.1854L-2.45118 11.9237L-2.82845 12.1854L-2.68492 11.7558L-3.06628 11.4941H-2.59061L-2.45118 11.0723ZM0.210152 11.0723L0.353675 11.498H0.825252L0.44389 11.7597L0.591514 12.1854L0.210152 11.9237L-0.171211 12.1854L-0.0235867 11.7558L-0.404949 11.4941H0.0625274L0.210152 11.0723ZM2.86739 11.0723L3.01501 11.498H3.47839L3.10933 11.7597L3.25285 12.1854L2.87149 11.9237L2.49423 12.1854L2.63775 11.7558L2.25639 11.4941H2.72796L2.86739 11.0723ZM5.52872 11.0723L5.67225 11.498H6.14382L5.76246 11.7597L5.91008 12.1854L5.52872 11.9237L5.14736 12.1854L5.29498 11.7558L4.91362 11.4941H5.3811L5.52872 11.0723ZM8.18596 11.0723L8.33358 11.498H8.80106L8.4238 11.7597L8.56732 12.1854L8.18596 11.9237L7.80869 12.1854L7.95222 11.7558L7.57496 11.4941H8.04243L8.18596 11.0723ZM10.8473 11.0723L10.9908 11.498H11.4624L11.081 11.7597L11.2287 12.1854L10.8473 11.9237L10.4659 12.1854L10.6136 11.7558L10.2322 11.4941H10.7038L10.8473 11.0723Z"
+                                    fill="white" />
+                            </g>
+                        </g>
+                        <path
+                            d="M22.1728 11.9978C22.1728 17.5195 17.6966 21.9957 12.1749 21.9957C6.91157 21.9957 2.59815 17.9284 2.20615 12.7654C2.18692 12.5121 2.17712 12.2561 2.17712 11.9978C2.17712 6.47618 6.6533 2 12.1749 2C17.6966 2 22.1728 6.47618 22.1728 11.9978Z"
+                            stroke="#BD3D44" stroke-width="0.454447" />
+                        <path
+                            d="M12.1749 2C6.6533 2 2.17712 6.47618 2.17712 11.9978C2.17712 12.2561 2.18692 12.5121 2.20615 12.7654"
+                            stroke="#192F5D" stroke-width="0.454447" />
+                        <defs>
+                            <clipPath id="clip0">
+                                <rect width="19.9957" height="19.9957" fill="white" transform="translate(2.01056 2)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="lang-box">
+                    <button><i class="fa fa-angle-down"></i></button>
+                </div>
+            </div>
+            <div class="order-text">
+                <h1>Order groceries for delivery or pickup today</h1>
+                <p>Whatever you want from local stores, brought right to your door.</p>
+            </div>
+            </div>
+        </div>
+        <section class="content">
+            <h2>Choose your store in <span>Greater Montreal Area, QC</span></h2>
+            <div class="links">
+                <div class="link-section">
+                    <div class="image-text">
+                        <div class="image">
+                            <img src="assets/img/metro.webp" alt="">
+                        </div>
+                        <div class="text">
+                            <span>Metro</span>
+                            <p>Delivery</p>
+                        </div>
+                    </div>
+                    <div class="arrow">
+                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24"
+                            fill="#C7C8CD" xmlns="http://www.w3.org/2000/svg" size="24" color="systemGrayscale30">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M16.879 12l-5.94-5.94a1.5 1.5 0 012.122-2.12l7 7a1.5 1.5 0 010 2.12l-7 7a1.5 1.5 0 01-2.122-2.12L16.88 12z"
+                                fill="#C7C8CD"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="link-section">
+                    <div class="image-text">
+                        <div class="image">
+                            <img src="assets/img/costco.webp" alt="">
+                        </div>
+                        <div class="text">
+                            <span>Costco</span>
+                            <p>Delivery</p>
+                        </div>
+                    </div>
+                    <div class="arrow">
+                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24"
+                            fill="#C7C8CD" xmlns="http://www.w3.org/2000/svg" size="24" color="systemGrayscale30">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M16.879 12l-5.94-5.94a1.5 1.5 0 012.122-2.12l7 7a1.5 1.5 0 010 2.12l-7 7a1.5 1.5 0 01-2.122-2.12L16.88 12z"
+                                fill="#C7C8CD"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="link-section">
+                    <div class="image-text">
+                        <div class="image">
+                            <img src="assets/img/walmart.webp" alt="">
+                        </div>
+                        <div class="text">
+                            <span>Walmart</span>
+                            <p>Delivery</p>
+                        </div>
+                    </div>
+                    <div class="arrow">
+                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24"
+                            fill="#C7C8CD" xmlns="http://www.w3.org/2000/svg" size="24" color="systemGrayscale30">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M16.879 12l-5.94-5.94a1.5 1.5 0 012.122-2.12l7 7a1.5 1.5 0 010 2.12l-7 7a1.5 1.5 0 01-2.122-2.12L16.88 12z"
+                                fill="#C7C8CD"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="link-section">
+                    <div class="image-text">
+                        <div class="image">
+                            <img src="assets/img/indigo.webp" alt="">
+                        </div>
+                        <div class="text">
+                            <span>Indigo</span>
+                            <p>Delivery</p>
+                        </div>
+                    </div>
+                    <div class="arrow">
+                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24"
+                            fill="#C7C8CD" xmlns="http://www.w3.org/2000/svg" size="24" color="systemGrayscale30">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M16.879 12l-5.94-5.94a1.5 1.5 0 012.122-2.12l7 7a1.5 1.5 0 010 2.12l-7 7a1.5 1.5 0 01-2.122-2.12L16.88 12z"
+                                fill="#C7C8CD"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="link-section">
+                    <div class="image-text">
+                        <div class="image">
+                            <img src="assets/img/sephora.webp" alt="">
+                        </div>
+                        <div class="text">
+                            <span>Sephora Canada</span>
+                            <p>Delivery</p>
+                        </div>
+                    </div>
+                    <div class="arrow">
+                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24"
+                            fill="#C7C8CD" xmlns="http://www.w3.org/2000/svg" size="24" color="systemGrayscale30">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M16.879 12l-5.94-5.94a1.5 1.5 0 012.122-2.12l7 7a1.5 1.5 0 010 2.12l-7 7a1.5 1.5 0 01-2.122-2.12L16.88 12z"
+                                fill="#C7C8CD"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="link-section">
+                    <div class="image-text">
+                        <div class="image">
+                            <img src="assets/img/m&m.webp" alt="">
+                        </div>
+                        <div class="text">
+                            <span>Les Aliments M&M</span>
+                            <p>Delivery</p>
+                        </div>
+                    </div>
+                    <div class="arrow">
+                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24"
+                            fill="#C7C8CD" xmlns="http://www.w3.org/2000/svg" size="24" color="systemGrayscale30">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M16.879 12l-5.94-5.94a1.5 1.5 0 012.122-2.12l7 7a1.5 1.5 0 010 2.12l-7 7a1.5 1.5 0 01-2.122-2.12L16.88 12z"
+                                fill="#C7C8CD"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="link-section">
+                    <div class="image-text">
+                        <div class="image">
+                            <img src="assets/img/linen.webp" alt="">
+                        </div>
+                        <div class="text">
+                            <span>Linen Chest</span>
+                            <p>Delivery</p>
+                        </div>
+                    </div>
+                    <div class="arrow">
+                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24"
+                            fill="#C7C8CD" xmlns="http://www.w3.org/2000/svg" size="24" color="systemGrayscale30">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M16.879 12l-5.94-5.94a1.5 1.5 0 012.122-2.12l7 7a1.5 1.5 0 010 2.12l-7 7a1.5 1.5 0 01-2.122-2.12L16.88 12z"
+                                fill="#C7C8CD"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="link-section">
+                    <div class="image-text">
+                        <div class="image">
+                            <img src="assets/img/bureau.webp" alt="">
+                        </div>
+                        <div class="text">
+                            <span>Bureau en Gros</span>
+                            <p>Delivery</p>
+                        </div>
+                    </div>
+                    <div class="arrow">
+                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24"
+                            fill="#C7C8CD" xmlns="http://www.w3.org/2000/svg" size="24" color="systemGrayscale30">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M16.879 12l-5.94-5.94a1.5 1.5 0 012.122-2.12l7 7a1.5 1.5 0 010 2.12l-7 7a1.5 1.5 0 01-2.122-2.12L16.88 12z"
+                                fill="#C7C8CD"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="link-section">
+                    <div class="image-text">
+                        <div class="image">
+                            <img src="assets/img/dollarama.webp" alt="">
+                        </div>
+                        <div class="text">
+                            <span>Dollarama</span>
+                            <p>Delivery</p>
+                        </div>
+                    </div>
+                    <div class="arrow">
+                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24"
+                            fill="#C7C8CD" xmlns="http://www.w3.org/2000/svg" size="24" color="systemGrayscale30">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M16.879 12l-5.94-5.94a1.5 1.5 0 012.122-2.12l7 7a1.5 1.5 0 010 2.12l-7 7a1.5 1.5 0 01-2.122-2.12L16.88 12z"
+                                fill="#C7C8CD"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="link-section">
+                    <div class="image-text">
+                        <div class="image">
+                            <img src="assets/img/pharmaprix.webp" alt="">
+                        </div>
+                        <div class="text">
+                            <span>Pharmaprix</span>
+                            <p>Delivery</p>
+                        </div>
+                    </div>
+                    <div class="arrow">
+                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24"
+                            fill="#C7C8CD" xmlns="http://www.w3.org/2000/svg" size="24" color="systemGrayscale30">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M16.879 12l-5.94-5.94a1.5 1.5 0 012.122-2.12l7 7a1.5 1.5 0 010 2.12l-7 7a1.5 1.5 0 01-2.122-2.12L16.88 12z"
+                                fill="#C7C8CD"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="link-section">
+                    <div class="image-text">
+                        <div class="image">
+                            <img src="assets/img/giant-tiger.webp" alt="">
+                        </div>
+                        <div class="text">
+                            <span>Giant Tiger</span>
+                            <p>Delivery</p>
+                        </div>
+                    </div>
+                    <div class="arrow">
+                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24"
+                            fill="#C7C8CD" xmlns="http://www.w3.org/2000/svg" size="24" color="systemGrayscale30">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M16.879 12l-5.94-5.94a1.5 1.5 0 012.122-2.12l7 7a1.5 1.5 0 010 2.12l-7 7a1.5 1.5 0 01-2.122-2.12L16.88 12z"
+                                fill="#C7C8CD"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="link-section">
+                    <div class="image-text">
+                        <div class="image">
+                            <img src="assets/img/micheals.webp" alt="">
+                        </div>
+                        <div class="text">
+                            <span>Micheals Canada</span>
+                            <p>Delivery</p>
+                        </div>
+                    </div>
+                    <div class="arrow">
+                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24"
+                            fill="#C7C8CD" xmlns="http://www.w3.org/2000/svg" size="24" color="systemGrayscale30">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M16.879 12l-5.94-5.94a1.5 1.5 0 012.122-2.12l7 7a1.5 1.5 0 010 2.12l-7 7a1.5 1.5 0 01-2.122-2.12L16.88 12z"
+                                fill="#C7C8CD"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="show-all">
+                <p>Show all</p>
+            </div>
+        </section>
+        <div class="scanner">
+            <div class="mobile">
+                <img src="assets/img/mobile.webp" alt="">
+            </div>
+            <div class="scanner-text">
+                <span>Get the full Instacart experience</span>
+                <p>Scan the QR code with your camera. First delivery is free</p>
+            </div>
+            <div class="qr-code">
+                <img src="assets/img/qr.png" alt="">
+            </div>
+        </div>
+        <div class="shopping">
+            <h2>Grocery delivery you can count on</h2>
+            <div class="image-card">
+                <div class="image-card-section">
+                    <div class="image-card-text">
+                        <h3>Choose what you want</h3>
+                        <p>Select items from your favorite grocery stores at Instacart.com or in the app.</p>
+                    </div>
+
+                    <div class="image-card-image">
+                        <img src="assets/img/grid1.webp" alt="">
+                    </div>
+                </div>
+
+                <div class="image-card-section">
+                    <div class="image-card-text">
+                        <h3>See real-time updates</h3>
+                        <p>Personal shoppers pick items with care. Chat as they shop and manage your order.</p>
+                    </div>
+                    <div class="image-card-image">
+                        <img src="assets/img/grid2.webp" alt="">
+                    </div>
+                </div>
+                <div class="image-card-section">
+                    <div class="image-card-text">
+                        <h3>Get your items same-day</h3>
+                        <p>Pick a convenient time for you. Enjoy Instacart's 100% quality guarantee on every order.</p>
+                    </div>
+                    <div class="image-card-image">
+                        <img src="assets/img/grid3.webp" alt="">
+                    </div>
+                </div>
+            </div>
+            <button>
+                <span>Start shopping</span>
+            </button>
+        </div>
+        <section class="service">
+            <h2>The world's largest online grocery service</h2>
+            <div class="service-image-mobile">
+                <img src="assets/img/grocery-mobile.webp" alt="">
+            </div>
+            <div class="service-image-tab">
+                <img src="assets/img/grocery-tab.webp" alt="">
+            </div>
+            <div class="status">
+                <div class="status-card">
+                    <h3>500 million products</h3>
+                    <p>available to shop across the catalog</p>
+                </div>
+                <div class="status-card">
+                    <h3>40,000 stories</h3>
+                    <p>from local grocers to chain stories</p>
+                </div>
+                <div class="status-card">
+                    <h3>5,500+ cities</h3>
+                    <p>served across the U.S & Canada</p>
+                </div>
+                <div class="status-card">
+                    <h3>Millions of orders</h3>
+                    <p>delivered or picked up early</p>
+                </div>
+            </div>
+        </section>
+        <section class="questions">
+            <h2>Common questions</h2>
+            <div class="common-questions">
+                <div class="question-section">
+                    <h3>How does Instacart delivery and curbside pickup work?</h3>
+                </div>
+                <div class="plus">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#343538" xmlns="http://www.w3.org/2000/svg"
+                        size="24">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12 3.5A1.5 1.5 0 0113.5 5v5.5H19a1.5 1.5 0 011.493 1.355L20.5 12a1.5 1.5 0 01-1.5 1.5h-5.5V19a1.5 1.5 0 01-1.355 1.493L12 20.5a1.5 1.5 0 01-1.5-1.5v-5.5H5a1.5 1.5 0 01-1.493-1.355L3.5 12A1.5 1.5 0 015 10.5h5.5V5a1.5 1.5 0 011.355-1.493L12 3.5z">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+            <div class="common-questions">
+                <div class="question-section">
+                    <h3>How much does Instacart cost?</h3>
+                </div>
+                <div class="plus">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#343538" xmlns="http://www.w3.org/2000/svg"
+                        size="24">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12 3.5A1.5 1.5 0 0113.5 5v5.5H19a1.5 1.5 0 011.493 1.355L20.5 12a1.5 1.5 0 01-1.5 1.5h-5.5V19a1.5 1.5 0 01-1.355 1.493L12 20.5a1.5 1.5 0 01-1.5-1.5v-5.5H5a1.5 1.5 0 01-1.493-1.355L3.5 12A1.5 1.5 0 015 10.5h5.5V5a1.5 1.5 0 011.355-1.493L12 3.5z">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+            <div class="common-questions">
+                <div class="question-section">
+                    <h3>Will I pay the same price on Instacart as I would in store?</h3>
+                </div>
+                <div class="plus">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#343538" xmlns="http://www.w3.org/2000/svg"
+                        size="24">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12 3.5A1.5 1.5 0 0113.5 5v5.5H19a1.5 1.5 0 011.493 1.355L20.5 12a1.5 1.5 0 01-1.5 1.5h-5.5V19a1.5 1.5 0 01-1.355 1.493L12 20.5a1.5 1.5 0 01-1.5-1.5v-5.5H5a1.5 1.5 0 01-1.493-1.355L3.5 12A1.5 1.5 0 015 10.5h5.5V5a1.5 1.5 0 011.355-1.493L12 3.5z">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+            <div class="common-questions">
+                <div class="question-section">
+                    <h3>What happens if something is out of stock and I need to give specific instructions?</h3>
+                </div>
+                <div class="plus">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#343538" xmlns="http://www.w3.org/2000/svg"
+                        size="24">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12 3.5A1.5 1.5 0 0113.5 5v5.5H19a1.5 1.5 0 011.493 1.355L20.5 12a1.5 1.5 0 01-1.5 1.5h-5.5V19a1.5 1.5 0 01-1.355 1.493L12 20.5a1.5 1.5 0 01-1.5-1.5v-5.5H5a1.5 1.5 0 01-1.493-1.355L3.5 12A1.5 1.5 0 015 10.5h5.5V5a1.5 1.5 0 011.355-1.493L12 3.5z">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+            <div class="common-questions">
+                <div class="question-section">
+                    <h3>What happens if there's an issue with my order?</h3>
+                </div>
+                <div class="plus">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#343538" xmlns="http://www.w3.org/2000/svg"
+                        size="24">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12 3.5A1.5 1.5 0 0113.5 5v5.5H19a1.5 1.5 0 011.493 1.355L20.5 12a1.5 1.5 0 01-1.5 1.5h-5.5V19a1.5 1.5 0 01-1.355 1.493L12 20.5a1.5 1.5 0 01-1.5-1.5v-5.5H5a1.5 1.5 0 01-1.493-1.355L3.5 12A1.5 1.5 0 015 10.5h5.5V5a1.5 1.5 0 011.355-1.493L12 3.5z">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+            <div class="common-questions">
+                <div class="question-section">
+                    <h3>Can I get contactless delivery with Instacart?</h3>
+                </div>
+                <div class="plus">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#343538" xmlns="http://www.w3.org/2000/svg"
+                        size="24">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12 3.5A1.5 1.5 0 0113.5 5v5.5H19a1.5 1.5 0 011.493 1.355L20.5 12a1.5 1.5 0 01-1.5 1.5h-5.5V19a1.5 1.5 0 01-1.355 1.493L12 20.5a1.5 1.5 0 01-1.5-1.5v-5.5H5a1.5 1.5 0 01-1.493-1.355L3.5 12A1.5 1.5 0 015 10.5h5.5V5a1.5 1.5 0 011.355-1.493L12 3.5z">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-section">
+            <div class="footer-text">
+                <div class="footer-title">
+                    <img src="assets/img/instacart-logo.svg" alt="">
+                    <h2>Get deliveries with Instacart</h2>
+                </div>
+                <div class="software">
+                    <div class="ios">
+                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="15"
+                            height="16.875" viewBox="0 0 16 18" fill="none">
+                            <path
+                                d="M12.5555 9.44668C12.5469 7.98145 13.2107 6.87715 14.5514 6.06289C13.8016 4.98867 12.6672 4.39785 11.1719 4.28398C9.75605 4.17227 8.20703 5.10898 7.63984 5.10898C7.04043 5.10898 5.66973 4.32266 4.59121 4.32266C2.36543 4.35703 0 6.09727 0 9.63789C0 10.6842 0.191211 11.7648 0.573633 12.8777C1.08496 14.343 2.92832 17.933 4.85117 17.875C5.85664 17.8514 6.56777 17.1617 7.87617 17.1617C9.1459 17.1617 9.80332 17.875 10.9248 17.875C12.8648 17.8471 14.532 14.5836 15.0176 13.1141C12.4158 11.8873 12.5555 9.52188 12.5555 9.44668ZM10.2975 2.89395C11.3867 1.60059 11.2879 0.423242 11.2557 0C10.2932 0.0558594 9.18027 0.655274 8.54648 1.39219C7.84824 2.18281 7.43789 3.16035 7.52598 4.2625C8.56582 4.34199 9.51543 3.80703 10.2975 2.89395Z"
+                                fill="#46484C"></path>
+                        </svg>
+                        <a href="">iOS</a>
+                    </div>
+                    <div class="android">
+                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="15"
+                            height="15.882352941176471" viewBox="0 0 17 18" fill="none">
+                            <path
+                                d="M8.954 8.60204L11.911 5.64504L2.36 0.277035C1.727 -0.0649652 1.134 -0.112965 0.614 0.261035L8.954 8.60204ZM12.415 12.064L15.489 10.335C16.089 9.99903 16.418 9.52304 16.418 8.99504C16.418 8.46803 16.089 7.99103 15.49 7.65503L12.707 6.09203L9.574 9.22404L12.415 12.064ZM0.0999999 0.988035C0.0359999 1.18503 0 1.40503 0 1.64603V16.351C0 16.732 0.0840001 17.06 0.236 17.321L8.333 9.22304L0.0999999 0.988035ZM8.954 9.84304L0.902 17.896C1.056 17.955 1.222 17.986 1.397 17.986C1.709 17.986 2.034 17.894 2.365 17.71L11.62 12.513L8.954 9.84304Z"
+                                fill="#46484C"></path>
+                        </svg>
+                        <a href="">Android</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-list">
+                <div class="list">
+                    <h2>Top departments</h2>
+                    <ul>
+                        <li>Fresh Produce</li>
+                        <li>Dairy Products</li>
+                        <li>Meat</li>
+                        <li>Meat Alternatives</li>
+                        <li>Seafood</li>
+                        <li>Pantry Food</li>
+                        <li>Baked Goods</li>
+                        <li>View all departments</li>
+                    </ul>
+                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 24 24"
+                        fill="#343538" xmlns="http://www.w3.org/2000/svg" size="20" class="css-1ak6a93">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12 13.379l5.94-5.94a1.5 1.5 0 012.12 2.122l-7 7a1.5 1.5 0 01-2.12 0l-7-7a1.5 1.5 0 112.12-2.122L12 13.38z"
+                            fill="#343538"></path>
+                    </svg>
+                </div>
+                <div class="list">
+                    <h2>More departments</h2>
+                    <ul>
+                        <li>Alcohol</li>
+                        <li>Alcohol by location</li>
+                        <li>Frozen Food</li>
+                        <li>Beverages</li>
+                        <li>Organic Grocery</li>
+                        <li>Household Essentials</li>
+                        <li>Office Supplies</li>
+                        <li>Beauty Products</li>
+                    </ul>
+                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 24 24"
+                        fill="#343538" xmlns="http://www.w3.org/2000/svg" size="20" class="css-1ak6a93">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12 13.379l5.94-5.94a1.5 1.5 0 012.12 2.122l-7 7a1.5 1.5 0 01-2.12 0l-7-7a1.5 1.5 0 112.12-2.122L12 13.38z"
+                            fill="#343538"></path>
+                    </svg>
+                </div>
+                <div class="list">
+                    <h2>Instacart programs</h2>
+                    <ul>
+                        <li>Gift Cards</li>
+                        <li>EBT SNAP</li>
+                        <li>Promos & Coupons</li>
+                        <li>Instacart Ads</li>
+                        <li>Instacart+</li>
+                        <li>Instacart Connect</li>
+                        <li>Careers</li>
+                    </ul>
+                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 24 24"
+                        fill="#343538" xmlns="http://www.w3.org/2000/svg" size="20" class="css-1ak6a93">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12 13.379l5.94-5.94a1.5 1.5 0 012.12 2.122l-7 7a1.5 1.5 0 01-2.12 0l-7-7a1.5 1.5 0 112.12-2.122L12 13.38z"
+                            fill="#343538"></path>
+                    </svg>
+                </div>
+                <div class="list">
+                    <h2>Get to know us</h2>
+                    <ul>
+                        <li>Press</li>
+                        <li>Blog</li>
+                        <li>Ideas & Guides</li>
+                        <li>Help</li>
+                        <li>Shop By Location</li>
+                    </ul>
+                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 24 24"
+                        fill="#343538" xmlns="http://www.w3.org/2000/svg" size="20" class="css-1ak6a93">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12 13.379l5.94-5.94a1.5 1.5 0 012.12 2.122l-7 7a1.5 1.5 0 01-2.12 0l-7-7a1.5 1.5 0 112.12-2.122L12 13.38z"
+                            fill="#343538"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="footer-section">
+            <div class="footer-text">
+                <div class="footer-title">
+                    <img src="assets/img/instacart-bag.svg" alt="">
+                    <h2>Become a Shopper</h2>
+                </div>
+                <div class="software">
+                    <div class="ios">
+                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="15"
+                            height="16.875" viewBox="0 0 16 18" fill="none">
+                            <path
+                                d="M12.5555 9.44668C12.5469 7.98145 13.2107 6.87715 14.5514 6.06289C13.8016 4.98867 12.6672 4.39785 11.1719 4.28398C9.75605 4.17227 8.20703 5.10898 7.63984 5.10898C7.04043 5.10898 5.66973 4.32266 4.59121 4.32266C2.36543 4.35703 0 6.09727 0 9.63789C0 10.6842 0.191211 11.7648 0.573633 12.8777C1.08496 14.343 2.92832 17.933 4.85117 17.875C5.85664 17.8514 6.56777 17.1617 7.87617 17.1617C9.1459 17.1617 9.80332 17.875 10.9248 17.875C12.8648 17.8471 14.532 14.5836 15.0176 13.1141C12.4158 11.8873 12.5555 9.52188 12.5555 9.44668ZM10.2975 2.89395C11.3867 1.60059 11.2879 0.423242 11.2557 0C10.2932 0.0558594 9.18027 0.655274 8.54648 1.39219C7.84824 2.18281 7.43789 3.16035 7.52598 4.2625C8.56582 4.34199 9.51543 3.80703 10.2975 2.89395Z"
+                                fill="#46484C"></path>
+                        </svg>
+                        <a href="">iOS</a>
+                    </div>
+                    <div class="android">
+                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="15"
+                            height="15.882352941176471" viewBox="0 0 17 18" fill="none">
+                            <path
+                                d="M8.954 8.60204L11.911 5.64504L2.36 0.277035C1.727 -0.0649652 1.134 -0.112965 0.614 0.261035L8.954 8.60204ZM12.415 12.064L15.489 10.335C16.089 9.99903 16.418 9.52304 16.418 8.99504C16.418 8.46803 16.089 7.99103 15.49 7.65503L12.707 6.09203L9.574 9.22404L12.415 12.064ZM0.0999999 0.988035C0.0359999 1.18503 0 1.40503 0 1.64603V16.351C0 16.732 0.0840001 17.06 0.236 17.321L8.333 9.22304L0.0999999 0.988035ZM8.954 9.84304L0.902 17.896C1.056 17.955 1.222 17.986 1.397 17.986C1.709 17.986 2.034 17.894 2.365 17.71L11.62 12.513L8.954 9.84304Z"
+                                fill="#46484C"></path>
+                        </svg>
+                        <a href="">Android</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-list">
+                <div class="list">
+                    <h2>Make money with us</h2>
+                    <ul>
+                        <li>Shopper Opportunities</li>
+                        <li>Become a Shopper</li>
+                        <li>In-Store Employee For Instacart</li>
+                        <li>Earnings</li>
+                    </ul>
+                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 24 24"
+                        fill="#343538" xmlns="http://www.w3.org/2000/svg" size="20" class="css-1ak6a93">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12 13.379l5.94-5.94a1.5 1.5 0 012.12 2.122l-7 7a1.5 1.5 0 01-2.12 0l-7-7a1.5 1.5 0 112.12-2.122L12 13.38z"
+                            fill="#343538"></path>
+                    </svg>
+                </div>
+                <div class="list">
+                    <h2>Top cities</h2>
+                    <ul>
+                        <li>Los Angeles</li>
+                        <li>New York City</li>
+                        <li>Chicago</li>
+                        <li>Washington D.C.</li>
+                        <li>San Fransisco</li>
+                    </ul>
+                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 24 24"
+                        fill="#343538" xmlns="http://www.w3.org/2000/svg" size="20" class="css-1ak6a93">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12 13.379l5.94-5.94a1.5 1.5 0 012.12 2.122l-7 7a1.5 1.5 0 01-2.12 0l-7-7a1.5 1.5 0 112.12-2.122L12 13.38z"
+                            fill="#343538"></path>
+                    </svg>
+                </div>
+                <div class="list">
+                    <h2>More cities</h2>
+                    <ul>
+                        <li>Miami</li>
+                        <li>Las Vegas</li>
+                        <li>Atlanta</li>
+                        <li>Dallas</li>
+                        <li>View all Job Locations</li>
+                    </ul>
+                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 24 24"
+                        fill="#343538" xmlns="http://www.w3.org/2000/svg" size="20" class="css-1ak6a93">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12 13.379l5.94-5.94a1.5 1.5 0 012.12 2.122l-7 7a1.5 1.5 0 01-2.12 0l-7-7a1.5 1.5 0 112.12-2.122L12 13.38z"
+                            fill="#343538"></path>
+                    </svg>
+                </div>
+                <div class="list">
+                    <h2>Shopper help</h2>
+                    <ul>
+                        <li>Help</li>
+                        <li>Contact</li>
+                        <li>Safety</li>
+                    </ul>
+                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 24 24"
+                        fill="#343538" xmlns="http://www.w3.org/2000/svg" size="20" class="css-1ak6a93">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12 13.379l5.94-5.94a1.5 1.5 0 012.12 2.122l-7 7a1.5 1.5 0 01-2.12 0l-7-7a1.5 1.5 0 112.12-2.122L12 13.38z"
+                            fill="#343538"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="accessibility">
+            <div class="access">
+                <h2>Accessibility</h2>
+            </div>
+            <div class="contrast">
+                <span>Enable high contrast colors</span>
+                <div class="close-button">
+                    <div class="button">
+                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 24 24"
+                            fill="#343538" xmlns="http://www.w3.org/2000/svg" size="16">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M19.06 4.94a1.5 1.5 0 010 2.12L14.122 12l4.94 4.94a1.5 1.5 0 01.103 2.007l-.103.114a1.5 1.5 0 01-2.122 0L12 14.12l-4.94 4.94a1.5 1.5 0 01-2.12-2.122L9.878 12l-4.94-4.94a1.5 1.5 0 01-.103-2.007l.103-.114a1.5 1.5 0 012.122 0L12 9.88l4.94-4.94a1.5 1.5 0 012.12 0z"
+                                fill="#C7C8CD"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="legal">
+            <div class="legal-title">
+                <h2>Legal</h2>
+            </div>
+            <div class="legal-list">
+                <ul>
+                    <li>Terms of Use</li>
+                    <li>Privacy Policy</li>
+                </ul>
+                <div class="socialmedia">
+                    <div class="fb">
+                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" fill="#343538"
+                            xmlns="http://www.w3.org/2000/svg" class="css-ihks7k" width="35" height="35">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M3.827 5.138C3.5 5.78 3.5 6.62 3.5 8.3v7.4c0 1.68 0 2.52.327 3.162a3 3 0 001.311 1.311c.642.327 1.482.327 3.162.327h4.28v-6.583h-2.215V11.35h2.215V9.459c0-2.196 1.341-3.391 3.3-3.391.938 0 1.745.07 1.98.1v2.295l-1.359.001c-1.065 0-1.271.506-1.271 1.249v1.638h2.54l-.33 2.566h-2.21V20.5h.47c1.68 0 2.52 0 3.162-.327a3 3 0 001.311-1.311c.327-.642.327-1.482.327-3.162V8.3c0-1.68 0-2.52-.327-3.162a3 3 0 00-1.311-1.311C18.22 3.5 17.38 3.5 15.7 3.5H8.3c-1.68 0-2.52 0-3.162.327a3 3 0 00-1.311 1.311z"
+                                fill="#343538"></path>
+                        </svg>
+                    </div>
+                    <div class="twitter">
+                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" fill="#343538"
+                            xmlns="http://www.w3.org/2000/svg" class="css-ihks7k" width="35" height="35">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M8.475 19.647c7.17 0 11.092-6.02 11.092-11.241 0-.171 0-.341-.012-.51A7.992 7.992 0 0021.5 5.85a7.7 7.7 0 01-2.239.622 3.955 3.955 0 001.714-2.185 7.749 7.749 0 01-2.476.958 3.864 3.864 0 00-4.683-.777c-1.555.844-2.358 2.64-1.96 4.38a11.018 11.018 0 01-8.034-4.127C2.788 6.526 3.316 8.836 5.03 9.995A3.83 3.83 0 013.26 9.5v.05c0 1.881 1.309 3.501 3.127 3.873a3.84 3.84 0 01-1.76.068 3.91 3.91 0 003.642 2.744A7.756 7.756 0 012.5 17.872a10.93 10.93 0 005.975 1.772"
+                                fill="#343538"></path>
+                        </svg>
+                    </div>
+                    <div class="insta">
+                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" fill="#343538"
+                            xmlns="http://www.w3.org/2000/svg" class="css-ihks7k" width="35" height="35">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M3.5 8.3c0-1.68 0-2.52.327-3.162a3 3 0 011.311-1.311C5.78 3.5 6.62 3.5 8.3 3.5h7.4c1.68 0 2.52 0 3.162.327a3 3 0 011.311 1.311c.327.642.327 1.482.327 3.162v7.4c0 1.68 0 2.52-.327 3.162a3 3 0 01-1.311 1.311c-.642.327-1.482.327-3.162.327H8.3c-1.68 0-2.52 0-3.162-.327a3 3 0 01-1.311-1.311C3.5 18.22 3.5 17.38 3.5 15.7V8.3zm8.5-.8a4.5 4.5 0 100 9 4.5 4.5 0 000-9zm5 1a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+                                fill="#343538"></path>
+                        </svg>
+                    </div>
+                    <div class="pinterest">
+                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" fill="#343538"
+                            xmlns="http://www.w3.org/2000/svg" class="css-ihks7k" width="35" height="35">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M2.5 12a9.505 9.505 0 006.038 8.85c-.083-.752-.158-1.908.033-2.729.173-.741 1.114-4.722 1.114-4.722S9.4 12.83 9.4 11.99c0-1.321.765-2.307 1.719-2.307.81 0 1.202.608 1.202 1.338 0 .815-.52 2.033-.787 3.163-.224.945.474 1.716 1.407 1.716 1.688 0 2.986-1.78 2.986-4.35 0-2.274-1.634-3.865-3.968-3.865-2.703 0-4.29 2.028-4.29 4.123 0 .816.315 1.692.707 2.168a.284.284 0 01.066.272c-.072.3-.232.946-.264 1.078-.041.174-.137.21-.317.127-1.187-.553-1.929-2.287-1.929-3.68 0-2.997 2.178-5.75 6.277-5.75 3.296 0 5.857 2.349 5.857 5.487 0 3.274-2.065 5.91-4.93 5.91-.962 0-1.867-.5-2.177-1.091 0 0-.477 1.813-.592 2.258-.215.825-.794 1.86-1.18 2.49A9.5 9.5 0 102.5 12z"
+                                fill="#343538"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="legal-tab">
+            <div class="legal-title">
+                <h2>Legal</h2>
+            </div>
+            <div class="legal-list">
+                <ul>
+                    <li>Terms of Use</li>
+                    <li>Privacy Policy</li>
+                </ul>
+            </div>
+            <div class="socialmedia">
+                <div class="fb">
+                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" fill="#343538"
+                        xmlns="http://www.w3.org/2000/svg" class="css-ihks7k" width="35" height="35">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M3.827 5.138C3.5 5.78 3.5 6.62 3.5 8.3v7.4c0 1.68 0 2.52.327 3.162a3 3 0 001.311 1.311c.642.327 1.482.327 3.162.327h4.28v-6.583h-2.215V11.35h2.215V9.459c0-2.196 1.341-3.391 3.3-3.391.938 0 1.745.07 1.98.1v2.295l-1.359.001c-1.065 0-1.271.506-1.271 1.249v1.638h2.54l-.33 2.566h-2.21V20.5h.47c1.68 0 2.52 0 3.162-.327a3 3 0 001.311-1.311c.327-.642.327-1.482.327-3.162V8.3c0-1.68 0-2.52-.327-3.162a3 3 0 00-1.311-1.311C18.22 3.5 17.38 3.5 15.7 3.5H8.3c-1.68 0-2.52 0-3.162.327a3 3 0 00-1.311 1.311z"
+                            fill="#343538"></path>
+                    </svg>
+                </div>
+                <div class="twitter">
+                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" fill="#343538"
+                        xmlns="http://www.w3.org/2000/svg" class="css-ihks7k" width="35" height="35">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M8.475 19.647c7.17 0 11.092-6.02 11.092-11.241 0-.171 0-.341-.012-.51A7.992 7.992 0 0021.5 5.85a7.7 7.7 0 01-2.239.622 3.955 3.955 0 001.714-2.185 7.749 7.749 0 01-2.476.958 3.864 3.864 0 00-4.683-.777c-1.555.844-2.358 2.64-1.96 4.38a11.018 11.018 0 01-8.034-4.127C2.788 6.526 3.316 8.836 5.03 9.995A3.83 3.83 0 013.26 9.5v.05c0 1.881 1.309 3.501 3.127 3.873a3.84 3.84 0 01-1.76.068 3.91 3.91 0 003.642 2.744A7.756 7.756 0 012.5 17.872a10.93 10.93 0 005.975 1.772"
+                            fill="#343538"></path>
+                    </svg>
+                </div>
+                <div class="insta">
+                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" fill="#343538"
+                        xmlns="http://www.w3.org/2000/svg" class="css-ihks7k" width="35" height="35">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M3.5 8.3c0-1.68 0-2.52.327-3.162a3 3 0 011.311-1.311C5.78 3.5 6.62 3.5 8.3 3.5h7.4c1.68 0 2.52 0 3.162.327a3 3 0 011.311 1.311c.327.642.327 1.482.327 3.162v7.4c0 1.68 0 2.52-.327 3.162a3 3 0 01-1.311 1.311c-.642.327-1.482.327-3.162.327H8.3c-1.68 0-2.52 0-3.162-.327a3 3 0 01-1.311-1.311C3.5 18.22 3.5 17.38 3.5 15.7V8.3zm8.5-.8a4.5 4.5 0 100 9 4.5 4.5 0 000-9zm5 1a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+                            fill="#343538"></path>
+                    </svg>
+                </div>
+                <div class="pinterest">
+                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" fill="#343538"
+                        xmlns="http://www.w3.org/2000/svg" class="css-ihks7k" width="35" height="35">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M2.5 12a9.505 9.505 0 006.038 8.85c-.083-.752-.158-1.908.033-2.729.173-.741 1.114-4.722 1.114-4.722S9.4 12.83 9.4 11.99c0-1.321.765-2.307 1.719-2.307.81 0 1.202.608 1.202 1.338 0 .815-.52 2.033-.787 3.163-.224.945.474 1.716 1.407 1.716 1.688 0 2.986-1.78 2.986-4.35 0-2.274-1.634-3.865-3.968-3.865-2.703 0-4.29 2.028-4.29 4.123 0 .816.315 1.692.707 2.168a.284.284 0 01.066.272c-.072.3-.232.946-.264 1.078-.041.174-.137.21-.317.127-1.187-.553-1.929-2.287-1.929-3.68 0-2.997 2.178-5.75 6.277-5.75 3.296 0 5.857 2.349 5.857 5.487 0 3.274-2.065 5.91-4.93 5.91-.962 0-1.867-.5-2.177-1.091 0 0-.477 1.813-.592 2.258-.215.825-.794 1.86-1.18 2.49A9.5 9.5 0 102.5 12z"
+                            fill="#343538"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Apple and the Apple logo are trademarks of Apple Inc.,
+                registered in the U.S. and other countries. App Store
+                is a service mark of Apple Inc. Android, Google Play and
+                the Google Play logo are trademarks of Google LLC.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
