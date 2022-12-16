@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <section>
+        <div>
+        <h1>People entered:</h1>
+        <h2 id="count-el">0</h2>
+        <button id="increment-btn" onclick="increment()">INCREMENT</button>
+        <button id="save-btn" onclick="save()">SAVE</button>
+        <p id="welcome-el"></p>
+        <button onclick="purchase()">purchase-$149</button>
+        <p id="error"></p>
+        </div>
+        </section>
+        <section class="blackjack">
+            <h1>Blackjack</h1>
+            <p id="message-el">Want to play a round?</p>
+            <p id="cards-el">Cards:</p>
+            <p id="result-el">Sum:</p>
+            <button id="start-btn" onclick="startGame()">START GAME</button>
+            <button id="newcard" onclick="newCard()">NEW CARD</button>
+        </section>
+       <section>
+            <p id="greeting-el"></p>
+            <input type="text" id="input-el">
+            <button id="input-btn" onclick="saveLead">SAVE INPUT</button>
+            <ul id="ul-el">      
+            </ul>
+           <div id="container"></div>
+        </section> 
+        <script src="index.js"></script>
+    </body>
+</html>
