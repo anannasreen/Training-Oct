@@ -1,45 +1,283 @@
 'use strict';
 
-const player0El = document.querySelector('.player--0');
-const player1El = document.querySelector('.player--1');
-const score0El = document.querySelector('#score--0');
-const score1El = document.getElementById('score--1');
-const current0El = document.getElementById('current--0');
-const current1El = document.getElementById('current--1');
+const add = function (...numbers) {
+  console.log(numbers);
+};
 
-const diceEl = document.querySelector('.dice');
-const btnNew = document.querySelector('.btn--new');
-const btnRoll = document.querySelector('.btn--roll');
-const btnHold = document.querySelector('.btn--hold');
+add(2, 3);
+add(5, 3, 6, 8);
+add(7, 4, 8, 4, 3, 8);
 
-score0El.textContent = 0;
-score1El.textContent = 0;
-diceEl.classList.add('hidden');
+const x = [23, 5, 7];
+add(...x);
 
-const scores = [0, 0];
-let currentScore = 0;
-let activePlayer = 0;
+// const player0El = document.querySelector('.player--0');
+// const player1El = document.querySelector('.player--1');
+// const score0El = document.querySelector('#score--0');
+// const score1El = document.getElementById('score--1');
+// const current0El = document.getElementById('current--0');
+// const current1El = document.getElementById('current--1');
 
-btnRoll.addEventListener('click', function () {
-  const dice = Math.trunc(Math.random() * 6) + 1;
-  console.log(dice);
+// const diceEl = document.querySelector('.dice');
+// const btnNew = document.querySelector('.btn--new');
+// const btnRoll = document.querySelector('.btn--roll');
+// const btnHold = document.querySelector('.btn--hold');
 
-  diceEl.classList.remove('hidden');
-  diceEl.src = `dice-${dice}.png`;
+// const arr = [1, 2, ...[3, 4]];
+// const [a, b, ...others] = [1, 2, 3, 4, 5];
+// console.log(a, b, others);
 
-  if (dice !== 1) {
-    currentScore += dice;
-    document.getElementById(`current--${activePlayer}`).textContent =
-      currentScore;
-    //   current0El.textContent = currentScore;
-  } else {
-    document.getElementById(`current--${activePlayer}`).textContent = 0;
-    currentScore = 0;
-    activePlayer = activePlayer === 0 ? 1 : 0;
-    player0El.classList.toggle('player--active');
-    player1El.classList.toggle('player--active');
-  }
-});
+// const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+// const openingHours = {
+//   [weekdays[3]]: {
+//     open: 12,
+//     close: 22,
+//   },
+//   [weekdays[4]]: {
+//     open: 11,
+//     close: 23,
+//   },
+//   [weekdays[5]]: {
+//     open: 0,
+//     close: 24,
+//   },
+// };
+
+// const restaurant = {
+//   name: 'Classico Italiano',
+//   location: 'Via Angelo Tavanti 23, Firenze, Italy',
+//   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+//   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+//   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+
+//   openingHours,
+
+//   order(starterIndex, mainIndex) {
+//     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+//   },
+
+//   orderDelivery({ starterIndex = 1, mainIndex = 0, time = '20:00', address }) {
+//     console.log(
+//       `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
+//     );
+//   },
+
+//   orderPasta(ing1, ing2, ing3) {
+//     console.log(
+//       `Here is your declicious pasta with ${ing1}, ${ing2} and ${ing3}`
+//     );
+//   },
+
+//   orderPizza(mainIngredient, ...otherIngredients) {
+//     console.log(mainIngredient);
+//     console.log(otherIngredients);
+//   },
+// };
+
+// const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+// console.log(menu);
+
+// const restaurant = {
+//   name: 'Classico Italiano',
+//   location: 'Via Angelo Tavati 23, Firenze, Italy',
+//   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+//   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'caprese Salad'],
+//   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+
+//   order: function (starterIndex, mainIndex) {
+//     return this.starterMenu;
+//   },
+// };
+
+// const arr = [2, 3, 4];
+// const a = arr[0];
+// const b = arr[1];
+// const c = arr[2];
+
+// const [x, y, z] = arr;
+// console.log(x, y, z);
+// console.log(arr);
+
+// let [first, second] = restaurant.categories;
+// console.log(first, second);
+
+// let temp = first;
+// first = second;
+// second = temp;
+// console.log(first, second);
+
+// [first, second] = [second, first];
+// console.log(first, second);
+
+// let n = 1;
+// if ((n - 1) % 3 === 0) {
+//   console.log(`${n} belongs to the sequence`);
+// } else {
+//   console.log(`${n} doesnot belong to this sequence`);
+// }
+
+// let lastName = 'William';
+// let oldLastName = lastName;
+// lastName = 'Davis';
+// console.log(lastName, oldLastName);
+
+// const jessica={
+//   firstName:'Jessica',
+//   lastName:'Williams',
+//   age:27,
+// }
+
+// let age = 30;
+// let oldAge = age;
+// age = 31;
+// console.log(age);
+// console.log(oldAge);
+
+// var firstName = matilda;
+
+// const jonas = {
+//   firstName: 'jonas',
+//   year: 1991,
+//   calcAge: function () {
+//     console.log(this);
+//     console.log(2037 - this.year);
+//   },
+// };
+
+// function calcAge(birthYear) {
+//   const age = 2037 - birthYear;
+//   console.log(firstName);
+//   function printAge() {
+//     const output = `${firstName}, You are ${age},born in ${birthYear}`;
+//     console.log(output);
+
+//     if (birthYear >= 1981 && birthYear <= 1996) {
+//       var millenial = true;
+//       const str = `Oh, and you're a millenial, ${firstName}`;
+//       console.log(str);
+//       function add(a, b) {
+//         return a + b;
+//       }
+//     }
+//   }
+//   printAge();
+//   return age;
+// }
+
+// const firstName = 'Jonas';
+// calcAge(1991);
+
+// console.log(this);
+
+// const calcAge = function (birthYear)
+
+// console.log(age);
+// printAge();
+
+// --------------pig Game----------------
+
+// 'use strict';
+
+// const player0El = document.querySelector('.player--0');
+// const player1El = document.querySelector('.player--1');
+// const score0El = document.querySelector('#score--0');
+// const score1El = document.getElementById('score--1');
+// const current0El = document.getElementById('current--0');
+// const current1El = document.getElementById('current--1');
+
+// const diceEl = document.querySelector('.dice');
+// const btnNew = document.querySelector('.btn--new');
+// const btnRoll = document.querySelector('.btn--roll');
+// const btnHold = document.querySelector('.btn--hold');
+
+// let scores, currentScore, activePlayer, playing;
+
+// const init = function () {
+//   // score0El.textContent = 0;
+//   // score1El.textContent = 0;
+//   scores = [0, 0];
+//   currentScore = 0;
+//   activePlayer = 0;
+//   playing = true;
+
+//   score0El.textContent = 0;
+//   score1El.textContent = 0;
+//   diceEl.classList.add('hidden');
+//   current0El.textContent = 0;
+//   current1El.textContent = 0;
+
+//   player0El.classList.remove('player--winner');
+//   player1El.classList.remove('player--winner');
+//   player0El.classList.add('player--active');
+//   player1El.classList.remove('player--active');
+// };
+// init();
+
+// const switchPlayer = function () {
+//   document.getElementById(`current--${activePlayer}`).textContent = 0;
+//   currentScore = 0;
+//   activePlayer = activePlayer === 0 ? 1 : 0;
+//   player0El.classList.toggle('player--active');
+//   player1El.classList.toggle('player--active');
+// };
+
+// btnRoll.addEventListener('click', function () {
+//   if (playing) {
+//     const dice = Math.trunc(Math.random() * 6) + 1;
+//     // console.log(dice);
+
+//     diceEl.classList.remove('hidden');
+//     diceEl.src = `dice-${dice}.png`;
+
+//     if (dice !== 1) {
+//       currentScore += dice;
+//       document.getElementById(`current--${activePlayer}`).textContent =
+//         currentScore;
+//       //   current0El.textContent = currentScore;
+//     } else {
+//       switchPlayer();
+//     }
+//   }
+// });
+
+// btnHold.addEventListener('click', function () {
+//   if (playing) {
+//     // console.log('Hold Button');
+//     scores[activePlayer] += currentScore;
+//     // console.log(scores[activePlayer]);
+//     // scores[1] = scores[1] + currentScore;
+//     document.getElementById(`score--${activePlayer}`).textContent =
+//       scores[activePlayer];
+
+//     if (scores[activePlayer] >= 20) {
+//       playing = false;
+//       diceEl.classList.add('hidden');
+//       document
+//         .querySelector(`.player--${activePlayer}`)
+//         .classList.add('player--winner');
+//       document
+//         .querySelector(`.player--${activePlayer}`)
+//         .classList.remove('player--active');
+//     } else {
+//       switchPlayer();
+//     }
+//   }
+//   // switchPlayer();
+// });
+
+//   if (dice !== 1) {
+//     currentScore += dice;
+//     document.getElementById(`current--${activePlayer}`).textContent =
+//       currentScore;
+//     //   current0El.textContent = currentScore;
+//   } else {
+//     document.getElementById(`current--${activePlayer}`).textContent = 0;
+//     currentScore = 0;
+//     activePlayer = activePlayer === 0 ? 1 : 0;
+//     player0El.classList.toggle('player--active');
+//     player1El.classList.toggle('player--active');
+//   }
+// });
 
 // const modal = document.querySelector('.modal');
 // const overlay = document.querySelector('.overlay');
@@ -701,5 +939,3 @@ btnRoll.addEventListener('click', function () {
 //   console.log(str);
 // };
 // printForCast(data1);
-
-// ------------------------------
