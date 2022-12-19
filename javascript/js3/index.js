@@ -1,16 +1,100 @@
 'use strict';
 
-const add = function (...numbers) {
-  console.log(numbers);
+const game = {
+  team: 'Bayern Munich',
+  team2: 'Borrussia Dortmund',
+  players: [
+    [
+      'Never',
+      'Pavard',
+      'Martinez',
+      'Alaba',
+      'Davies',
+      'Kimmich',
+      'Goretzka',
+      'Coman',
+      'Muller',
+    ],
+    ['Burki', 'schulz', 'Hummels', 'Akanji', 'Hakimi'],
+  ],
+  score: '4:0',
+  scored: ['Muller', 'Coman', 'Muller', 'Hummels'],
+  date: 'Nov 9th,2037',
+  odds: {
+    team1: 1.33,
+    x: 3.25,
+    team2: 6.5,
+  },
 };
 
-add(2, 3);
-add(5, 3, 6, 8);
-add(7, 4, 8, 4, 3, 8);
+const [players1, players2] = game.players;
+console.log(players1, players2);
 
-const x = [23, 5, 7];
-add(...x);
+const [gk, ...fieldPlayers] = players1;
+console.log(gk, fieldPlayers);
 
+const allPlayers = [...players1, ...players2];
+console.log(allPlayers);
+
+const players1Final = [...players1, 'Thiago', 'Coutinho', 'Periscic'];
+const {
+  odds: { team1, x: draw, team2 },
+} = game;
+console.log(team1, draw, team2);
+
+const printGoals = function (...players) {
+  console.log(players);
+  console.log(`${players.length} goals were scored`);
+};
+
+printGoals('Davies', 'Muller', 'Kimmich', 'Coman');
+printGoals('Davies', 'Muller');
+printGoals(...game.scored);
+
+team1 < team2 && console.log('Team 1 is more likely to win');
+team1 > team2 && console.log('Team 2 is more likely to win');
+
+// const rest1 = {
+//   name: 'capri',
+//   numGuests: 20,
+//   // numGuests: 0,
+// };
+
+// const rest2 = {
+//   name: 'La Piazza',
+//   owner: 'Giovanni Rossi',
+// };
+
+// rest1.numGuests = rest1.numGuests || 10;
+// rest2.numGuests = rest2.numGuests || 10;
+
+// rest1.numGuests ||= 10;
+// rest2.numGuests ||= 10;
+
+// console.log(rest1);
+// console.log(rest2);
+
+// rest1.numGuests ??= 10;
+// rest2.numGuests ??= 10;
+
+// rest1.owner &&= '<ANONYMOUS>';
+// rest2.owner &&= '<ANONYMOUS>';
+
+// console.log(rest1);
+// console.log(rest2);
+
+// const add = function (...numbers) {
+//   console.log(numbers);
+// };
+
+// add(2, 3);
+// add(5, 3, 6, 8);
+// add(7, 4, 8, 4, 3, 8);
+
+// const x = [23, 5, 7];
+// add(...x);
+
+// ----------------------------------
 // const player0El = document.querySelector('.player--0');
 // const player1El = document.querySelector('.player--1');
 // const score0El = document.querySelector('#score--0');
