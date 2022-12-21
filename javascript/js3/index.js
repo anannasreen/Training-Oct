@@ -1,100 +1,457 @@
 'use strict';
 
-const gameEvents = new Map([
-  [17, 'GOAL'],
-  [36, 'Substitution'],
-  [47, 'GOAL'],
-  [61, 'Substitution'],
-  [64, 'Yellow card'],
-  [69, 'Red card'],
-  [70, 'Substitution'],
-  [72, 'Substitution'],
-  [76, 'GOAL'],
-  [80, 'GOAL'],
-  [92, 'Yellow card'],
-]);
+(function () {
+  const header = document.querySelector('h1');
+  header.style.color = 'red';
+})();
 
-const events = [...new Set(gameEvents.values())];
-console.log(events);
+// let f;
 
-gameEvents.delete(64);
+// const g = function () {
+//   const a = 23;
+//   f = function () {
+//     console.log(a * 2);
+//   };
+// };
 
-console.log(
-  `An event happened, on average, every ${90 / gameEvents.size} minutes`
-);
-const time = [...gameEvents.keys()].pop();
-console.log(time);
-console.log(
-  `An event happened, on average, every ${time / gameEvents.size} minutes`
-);
+// const h = function () {
+//   const b = 777;
+//   f = function () {
+//     console.log(b * 2);
+//   };
+// };
 
-for (const [min, event] of gameEvents) {
-  const half = min <= 45 ? 'FIRST' : 'SECOND';
-  console.log(`[${half} HALF] ${min}: ${event}`);
-}
+// g();
+// f();
+// console.dir(f);
 
-const airline = 'Tap Air Portugal';
-const plane = 'A320';
+// h();
+// f();
+// console.dir(f);
 
-console.log(plane[0]);
-console.log(plane[1]);
-console.log(plane[2]);
-console.log('B737'[0]);
+// const boardpassengers = function (n, wait) {
+//   // const perGroup = n / 3;
 
-console.log(airline.length);
-console.log('B737'.length);
+//   setTimeout(function () {
+//     console.log(`We are now boarding all ${n} passengers`);
+//     console.log(`There are 3 groups, each with ${perGroup} passengers`);
+//   }, wait * 1000);
 
-console.log(airline.indexOf('r'));
-console.log(airline.lastIndexOf('r'));
-console.log(airline.indexOf('Portugal'));
+//   console.log(`Will  start boarding in ${wait} seconds`);
+// };
 
-console.log(airline.slice(4));
-console.log(airline.slice(4, 7));
+// const perGroup = 1000;
+// boardpassengers(180, 3);
 
-console.log(airline.slice(0, airline.indexOf(' ')));
-console.log(airline.slice(airline.lastIndexOf(' ') + 1));
+// setTimeout(function () {
+//   console.log('Timer');
+// }, 1000);
 
-console.log(airline.slice(-2));
-console.log(airline.slice(1, -1));
+// const secureBooking = function () {
+//   let passengerCount = 0;
 
-const checkMiddleSeat = function (seat) {
-  const s = seat.slice(-1);
-  if (s === 'B' || s === 'E') console.log('You got the middle seat');
-  else console.log('You got lucky');
-};
+//   return function () {
+//     passengerCount++;
+//     console.log(`${passengerCount} passengers`);
+//   };
+// };
 
-checkMiddleSeat('11B');
-checkMiddleSeat('23C');
-checkMiddleSeat('3E');
+// const booker = secureBooking();
 
-console.log(new String('jonas'));
-console.log(typeof new String('jonas'));
-console.log(typeof new String('jonas').slice(1));
+// booker();
+// booker();
+// booker();
 
-console.log(airline.toLowerCase());
-console.log(airline.toUpperCase());
+// console.dir(booker);
 
-const passenger = 'AnAn';
-const passengerLower = passenger.toLowerCase();
-const passengerCorrect =
-  passengerLower[0].toUpperCase() + passengerLower.slice(1);
-console.log(passengerCorrect);
+// const runOnce = function () {
+//   console.log('This will never run again');
+// };
+// runOnce();
 
-const email = 'hello@anan.io';
-const loginEmail = '     Hello@anan.Io \n';
+// (function () {
+//   console.log('This will never run again');
+//   const isPrivate = 23;
+// })();
 
-const lowerEmail = loginEmail.toLowerCase();
-const trimmedEmail = lowerEmail.trim();
-console.log(trimmedEmail);
+// // console.log(isPrivate);
 
-const normalizedEmail = loginEmail.toLowerCase().trim();
-console.log(normalizedEmail);
-console.log(email === normalizedEmail);
+// (() => console.log('This will ALSO never run again'))();
 
-const priceGB = '₹3,74,92,98,04,720';
-const priceUS = priceGB.replace('₹', '$');
-console.log(priceUS);
+// {
+//   const isPrivate = 23;
+//   var notPrivate = 46;
+// }
 
+// console.log(notPrivate);
+
+// const poll = {
+//   question: 'What is yot favourite programming language?',
+//   options: ['0:Javascript', '1:Python', '2:Rust', '3:C++'],
+//   answers: new Array(4).fill(0),
+//   registerNewAnswer() {
+//     const answer = Number(
+//       prompt(
+//         `$(this.question)\n${this.options.join('\n')}\n(Write option number)`
+//       )
+//     );
+//     console.log(answer);
+//     typeof answer === 'number' &&
+//       answer < this.answers.length &&
+//       this.answers[answer]++;
+//     console.log(this.answers);
+
+//     this.displayResult();
+//     this.displayResult('string');
+//   },
+//   displayResult(type = 'array') {
+//     if (type === 'array') {
+//       console.log(this.answers);
+//     } else if (type === 'string') {
+//       console.log(`Poll results are ${this.answers.join(', ')}`);
+//     }
+//   },
+// };
+
+// document
+//   .querySelector('.poll')
+//   .addEventListener('click', poll.registerNewAnswer.bind(poll));
+
+// poll.displayResult.call({ answers: [5, 2, 3] }, 'string');
+// poll.displayResult.call({ answers: [1, 3, 2, 4, 5, 5] }, 'string');
+// poll.displayResult.call({ answers: [8, 4, 2, 4, 5, 3, 5] }, 'string');
+
+// poll.registerNewAnswer();
+
+// const lufthansa = {
+//   airline: 'Lufthansa',
+//   iataCode: 'LH',
+//   bookings: [],
+
+//   book(flightNum, name) {
+//     console.log(
+//       `${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`
+//     );
+//     this.bookings.push({ flight: `${this.iataCode}${flightNum}`, name });
+//   },
+// };
+
+// lufthansa.book(239, 'Anan Nasreen');
+// lufthansa.book(239, 'Anu');
+// console.log(lufthansa);
+
+// const eurowings = {
+//   airline: 'Eurowings',
+//   iataCode: 'EW',
+//   bookings: [],
+// };
+
+// const book = lufthansa.book;
+// // book(23, 'Sarah Williams');
+// book.call(eurowings, 23, 'Sarah Williams');
+// console.log(eurowings);
+
+// book.call(lufthansa, 239, 'Mary Cooper');
+// console.log(lufthansa);
+
+// const swiss = {
+//   airline: 'Swiss Air Lines',
+//   iataCode: 'LX',
+//   bookings: [],
+// };
+
+// book.call(swiss, 583, 'Mary Cooper');
+// console.log(swiss);
+
+// const flightData = [583, 'George Cooper'];
+// book.apply(swiss, flightData);
+// console.log(swiss);
+
+// book.call(swiss, ...flightData);
+
+// const bookEW = book.bind(eurowings);
+// const bookLH = book.bind(lufthansa);
+// const bookLX = book.bind(swiss);
+
+// bookEW(23, 'Steven Williams');
+
+// const bookEW23 = book.bind(eurowings, 23, 'Anan Nasreen');
+// bookEW23('Anan Nasreen');
+// bookEW23('Martha Cooper');
+
+// lufthansa.planes = 300;
+// lufthansa.buyPlane = function () {
+//   console.log(this);
+//   this.planes++;
+//   console.log(this.planes);
+// };
+// // lufthansa.buyPlane();
+
+// document
+//   .querySelector('.buy')
+//   .addEventListener('click', lufthansa.buyPlane.bind(lufthansa));
+
+// const addTax = (rate, value) => value + value * rate;
+// console.log(addTax(0.1, 200));
+
+// const addVAT = addTax.bind(null, 0.23);
+// console.log(addVAT(100));
+// console.log(addVAT(23));
+
+// const addTaxRate = function (rate) {
+//   return function (value) {
+//     return value + value * rate;
+//   };
+// };
+
+// const addVAT2 = addTaxRate(0.23);
+// console.log(addVAT2(100));
+// console.log(addVAT2(23));
+
+// const greet = function (greeting) {
+//   return function (name) {
+//     console.log(`${greeting}${name}`);
+//   };
+// };
+
+// const greeterHey = greet('Hey');
+// greeterHey(' anan');
+// greeterHey(' amal');
+
+// greet('Hello')(' anan');
+
+// const greetArr = greeting => name => console.log(`${greeting}${name}`);
+
+// greetArr('Hi')(' anan');
+
+// const oneWord = function (str) {
+//   return str.replace(/ /g, '').toLowerCase();
+// };
+
+// const upperFirstWord = function (str) {
+//   const [first, ...others] = str.split(' ');
+//   return [first.toUpperCase(), ...others].join(' ');
+// };
+
+// const transformer = function (str, fn) {
+//   console.log(`Original string:${str}`);
+//   console.log(`Transformed string:${fn(str)}`);
+//   console.log(`Transformed by:${fn.name}`);
+// };
+
+// transformer('Javascript is the best!', upperFirstWord);
+
+// transformer('Javascript is the best!', oneWord);
+
+// const high5 = function () {
+//   console.log('Hii');
+// };
+
+// document.body.addEventListener('click', high5);
+
+// ['Jonas', 'Martha', 'Adam'].forEach(high5);
+
+// const add = (a, b) => a + b;
+// console.log(add);
+
+// const flight = 'LH234';
+// const anan = {
+//   name: 'Anan Nasreen',
+//   passport: 8275785512846783,
+// };
+
+// const checkIn = function (flightNum, passenger) {
+//   flightNum = 'LH999';
+//   passenger.name = 'Miss.' + passenger.name;
+
+//   if (passenger.passenger === 8275785512846783) {
+//     alert('Check In');
+//   } else {
+//     alert('Wrong Passport');
+//   }
+// };
+
+// checkIn(flight, anan);
+// console.log(flight);
+// console.log(anan);
+
+// // flightNum=flight
+// const flightNum = flight;
+// const passenger = anan;
+
+// const newpassport = function (person) {
+//   person.passport = Math.trunc(Math.random() * 1000000000000);
+// };
+
+// newpassport(anan);
+// checkIn(flight, anan);
+
+// const bookings = [];
+
+// const createBooking = function (
+//   flightNum,
+//   numPassengers = 1,
+//   price = 199 * numPassengers
+// ) {
+//   // numPassengers = numPassengers || 1;
+//   // price = price || 199;
+//   const booking = {
+//     flightNum,
+//     numPassengers,
+//     price,
+//   };
+//   console.log(booking);
+//   bookings.push(booking);
+// };
+
+// createBooking('LH123');
+// createBooking('LH123', 2, 800);
+// createBooking('LH123', 2);
+// createBooking('LH123', undefined, 1000);
+
+// document.body.append(document.createElement('textarea'));
+// document.body.append(document.createElement('button'));
+// const text = document.querySelector('textarea').value;
+
+// document.querySelector('button').addEventListener('click', function () {
+//   const text = document.querySelector('textarea').value;
+//   const rows = text.split('\n');
+//   console.log(rows);
+
+//   for (const [i, row] of rows.entries) {
+//     const [first, second] = row.toLowerCase().trim().split('_');
+//     const output = `${first}${second.replace(
+//       second[0],
+//       second[0].toUpperCase()
+//     )}`;
+//     console.log(`${output.padEnd(20)}`);
+//   }
+// });
+
+// const getCode = str => str.slice(0, 3).toUpperCase();
+
+// const flights =
+//   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
+
+// console.log(flights.split('+'));
+
+// for (const flight of flights.split('+')) {
+//   // console.log(flight);
+//   // console.log(flight.split(';'));
+//   const [type, from, to, time] = flight.split(';');
+//   const output = `${type.replaceAll('_', ' ')} ${from} ${getCode(
+//     to
+//   )} (${time.replace(': ', 'h')})`.padStart(36);
+//   console.log(output);
+// }
+
+// const gameEvents = new Map([
+//   [17, 'GOAL'],
+//   [36, 'Substitution'],
+//   [47, 'GOAL'],
+//   [61, 'Substitution'],
+//   [64, 'Yellow card'],
+//   [69, 'Red card'],
+//   [70, 'Substitution'],
+//   [72, 'Substitution'],
+//   [76, 'GOAL'],
+//   [80, 'GOAL'],
+//   [92, 'Yellow card'],
+// ]);
+
+// const events = [...new Set(gameEvents.values())];
+// console.log(events);
+
+// gameEvents.delete(64);
+
+// console.log(
+//   `An event happened, on average, every ${90 / gameEvents.size} minutes`
+// );
+// const time = [...gameEvents.keys()].pop();
+// console.log(time);
+// console.log(
+//   `An event happened, on average, every ${time / gameEvents.size} minutes`
+// );
+
+// for (const [min, event] of gameEvents) {
+//   const half = min <= 45 ? 'FIRST' : 'SECOND';
+//   console.log(`[${half} HALF] ${min}: ${event}`);
+// }
+
+// const airline = 'Tap Air Portugal';
+// const plane = 'A320';
+
+// console.log(plane[0]);
+// console.log(plane[1]);
+// console.log(plane[2]);
+// console.log('B737'[0]);
+
+// console.log(airline.length);
+// console.log('B737'.length);
+
+// console.log(airline.indexOf('r'));
+// console.log(airline.lastIndexOf('r'));
+// console.log(airline.indexOf('Portugal'));
+
+// console.log(airline.slice(4));
+// console.log(airline.slice(4, 7));
+
+// console.log(airline.slice(0, airline.indexOf(' ')));
+// console.log(airline.slice(airline.lastIndexOf(' ') + 1));
+
+// console.log(airline.slice(-2));
+// console.log(airline.slice(1, -1));
+
+// const checkMiddleSeat = function (seat) {
+//   const s = seat.slice(-1);
+//   if (s === 'B' || s === 'E') console.log('You got the middle seat');
+//   else console.log('You got lucky');
+// };
+
+// checkMiddleSeat('11B');
+// checkMiddleSeat('23C');
+// checkMiddleSeat('3E');
+
+// console.log(new String('jonas'));
+// console.log(typeof new String('jonas'));
+// console.log(typeof new String('jonas').slice(1));
+
+// console.log(airline.toLowerCase());
+// console.log(airline.toUpperCase());
+
+// const passenger = 'AnAn';
+// const passengerLower = passenger.toLowerCase();
+// const passengerCorrect =
+//   passengerLower[0].toUpperCase() + passengerLower.slice(1);
+// console.log(passengerCorrect);
+
+// const email = 'hello@anan.io';
+// const loginEmail = '     Hello@anan.Io \n';
+
+// const lowerEmail = loginEmail.toLowerCase();
+// const trimmedEmail = lowerEmail.trim();
+// console.log(trimmedEmail);
+
+// const normalizedEmail = loginEmail.toLowerCase().trim();
+// console.log(normalizedEmail);
+// console.log(email === normalizedEmail);
+
+// const priceGB = '₹3,74,92,98,04,720';
+// const priceUS = priceGB.replace('₹', '$');
+// console.log(priceUS);
+
+// console.log('a+very+nice+string'.split('+'));
+// console.log('Anan Nasreen'.split(''));
+
+// const maskCreditCard = function (number) {
+//   const str = number + '';
+//   const last = str.slice(-4);
+//   return last.padStart(str.length, '*');
+// };
+
+// console.log(maskCreditCard(8792039280929208734782934));
+// maskCreditCard(6732689469267437623693673)
+// -------------------------
 // const question = new Map([
 //   ['question', 'What is the best programming language in the world?'],
 //   [1, 'C'],
