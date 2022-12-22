@@ -1,19 +1,32 @@
 'use strict';
 
-const checkDogs = function (dogsJulia, dogsKate) {};
+// const calcAverageHumanAge = function (ages) {
+//   const humanAges = ages.map(age => (age <= 2 ? 2 * age : 16 + age * 4));
+// };
+
+// movements.filter(mov => mov > 0).map(mov => mov * eur);
+
+// const eurToUsd=1.1
+// const movementsUSD=movement.map(mov=>mov*eurToUsd)
+
+// console.log(movement);
+// console.log(movementsUSD);
+// const movementsUSDRfor=[]
+
+// const checkDogs = function (dogsJulia, dogsKate)
 
 // const account1 = {
-//   owner: 'Anan Nasreen',
-//   movements: [200, 450, -400, 3000, -650, -130, 70, 1300],
-//   interestRate: 1.2,
-//   pin: 1111,
+// owner: 'Anan Nasreen',
+// movements: [200, 450, -400, 3000, -650, -130, 70, 1300],
+// interestRate: 1.2,
+// pin: 1111,
 // };
 
 // const account2 = {
-//   owner: 'Jessica Davis',
-//   movements: [5000, 3400, -150, -790, -3210, -1000, 8500, -30],
-//   interestRate: 1.5,
-//   pin: 2222,
+// owner: 'Jessica Davis',
+// movements: [5000, 3400, -150, -790, -3210, -1000, 8500, -30],
+// interestRate: 1.5,
+// pin: 2222,
 // };
 
 // const account3 = {
@@ -56,7 +69,42 @@ const checkDogs = function (dogsJulia, dogsKate) {};
 // const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 // const inputCloseUsername = document.querySelector('.form__input--user');
 // const inputClosePin = document.querySelector('.form__input--pin');
-// // dec 21
+// dec 21
+// const out = movement.filter(mov => mov < 0).reduce((acc, mov) => acc + mov, 0);
+// labelSumOut.textContent = `${Math.abs(out)}€`;
+
+// const calcAverageHumanAge = ages =>
+// function (ages) {
+// const humanAges =
+//   ages
+//     .map(age => (age <= 2 ? 2 * age : 16 + age * 4))
+//     .filter(age => age >= 18)
+//     .reduce((acc, age, i, arr) => acc + age / arr.length, 0);
+// const adults = humanAges.filter(age => age >= 18);
+//     console.log(humanAges);
+//     console.log(adults);
+//     // const average = adults.reduce((acc, age) => acc + age, 0) / adults.length;
+//     const average = adults.reduce(
+//       (acc, age, i, arr) => acc + age / arr.length,
+//       0
+//     );
+//     // 2 3. (2+3)/2 = 2.5 === 2/2+3/2 = 2.5
+//     return average;
+//   };
+
+// const avg1 = calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
+// const avg2 = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
+// console.log(avg1, avg2);
+
+// const firstWithdrawal = movements.find(mov => mov < 0);
+// console.log(movements);
+// console.log(firstWithdrawal);
+
+// console.log(accounts);
+
+// const account = accounts.find(acc => acc.owner === 'Jessica Davis');
+// console.log(account);
+
 // const displayMovements = function (movements) {
 //   containerMovements.innerHTML = '';
 
@@ -76,11 +124,57 @@ const checkDogs = function (dogsJulia, dogsKate) {};
 // };
 // displayMovements(account1.movements);
 
+// btnLogin.addEventListener('click', function (e) {
+//   e.preventDefault();
+//   accounts.find(acc => acc.owner === inputLoginUsername.value);
+//   console.log(currentAccount);
+//   if (currentAccount.pin === Number(inputLoginPin.value)) {
+// console.log('LOGIN');
+//   }
+//   if (currentAccount?.pin === Number(inputLoginPin.value)) {
+// labelWelcome.textContent = `Welcome back, ${
+//   currentAccount.owner.split(' ')[0]
+// }`;
+// containerApp.style.opacity = 100;
+
+// displayMovements(currentAccount.movements);
+
+// calcDisplayBalance(currentAccount.movements);
+
+// calcDisplaySummary(currentAccount.movements);
+//   }
+// });
+
+// inputLoginUsername = inputLoginPin.value = '';
+// const btnLogin = document.querySelector('.login__btn');
+// const btnTransfer = document.querySelector('.form__btn--transfer');
+// const btnLoan = document.querySelector('.form__btn--loan');
+// const btnClose = document.querySelector('.form__btn--close');
+// const btnSort = document.querySelector('.btn--sort');
+
+// const inputLoginUsername = document.querySelector('.login__input--user');
+// const inputLoginPin = document.querySelector('.login__input--pin');
+// const inputTransferTo = document.querySelector('.form__input--to');
+// const inputTransferAmount = document.querySelector('.form__input--amount');
+// const inputLoanAmount = document.querySelector('.form__input--loan-amount');
+// const inputCloseUsername = document.querySelector('.form__input--user');
+// const inputClosePin = document.querySelector('.form__input--pin');
+
+// btnTransfer.addEventListener('click', function (e) {
+//   e.preventDefault();
+//   const amount = Number(inputTransferAmount.value);
+//   const receiverAcc = accounts.find(
+//     acc => acc.username === inputTransferAmount.value
+//   );
+//   console.log();
+// });
+
+
 //////////////////////////////////////
 // const currencies = new Map([
-//   ['USD', 'United States dollar'],
-//   ['EUR', 'Euro'],
-//   ['GBP', 'Pound sterling'],
+// ['USD', 'United States dollar'],
+// ['EUR', 'Euro'],
+// ['GBP', 'Pound sterling'],
 // ]);
 
 // currencies.forEach(function (value, key, map) {
