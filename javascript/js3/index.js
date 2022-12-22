@@ -247,6 +247,14 @@ console.log(Math.PI * Number.parseFloat('10px') ** 2);
 console.log(2 ** 53 - 1);
 console.log(Number.MAX_SAFE_INTEGER);
 console.log(2 ** 53 + 1);
+console.log(65927894685685974986576748650286496286589n);
+console.log(BigInt(8756782365465848792679848));
+
+const now = new Date();
+console.log(now);
+
+console.log(new Date('Aug 02 2020 12:45:32'));
+console.log(new Date('December 24, 2015'));
 
 // const arr = [[1, 2, 3], [4, 5, 6], 7, 8];
 // console.log(arr.flat());
