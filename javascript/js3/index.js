@@ -27,21 +27,21 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
-// const startLogOutTimer = function () {
-//   let time = 100;
-//   setInterval(function () {
-// const min = Math.trunc(time / 60).padStart(2, 0);
-// const sec = String(time % 60).padStart(2, 0);
-// labelTimer.textContent = `${min}:${sec}`;
-//   });
-// };
-// const ingredients = ['olives', 'spinach'];
-// const pizzaTimer = setTimeout(
-//   (ing1, ing2) => console.log(`Here is your pizza with ${ing1} and ${ing2}`),
-//   3000,
-//   ...ingredients
-// );
-// console.log('Waiting...');
+const startLogOutTimer = function () {
+  let time = 100;
+  setInterval(function () {
+const min = Math.trunc(time / 60).padStart(2, 0);
+const sec = String(time % 60).padStart(2, 0);
+labelTimer.textContent = `${min}:${sec}`;
+  });
+};
+const ingredients = ['olives', 'spinach'];
+const pizzaTimer = setTimeout(
+  (ing1, ing2) => console.log(`Here is your pizza with ${ing1} and ${ing2}`),
+  3000,
+  ...ingredients
+);
+console.log('Waiting...');
 
 // if (ingredients.includes('spinach')) clearTimeout(pizzaTimer);
 // setInterval(function () {
