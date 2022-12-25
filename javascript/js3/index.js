@@ -43,22 +43,22 @@ const pizzaTimer = setTimeout(
 );
 console.log('Waiting...');
 
-// if (ingredients.includes('spinach')) clearTimeout(pizzaTimer);
-// setInterval(function () {
-//   const now = new Date();
-//   console.log(now);
-// }, 3000);
-// setTimeout(() => console.log('Here is your pizza'), 3000);
-// console.log('Waiting...');
+if (ingredients.includes('spinach')) clearTimeout(pizzaTimer);
+setInterval(function () {
+  const now = new Date();
+  console.log(now);
+}, 3000);
+setTimeout(() => console.log('Here is your pizza'), 3000);
+console.log('Waiting...');
 
-// const num = 2328687.34;
-// console.log('US:    ', new Intl.NumberFormat('en-US').format(num));
+const num = 2328687.34;
+console.log('US:    ', new Intl.NumberFormat('en-US').format(num));
 
-// const options = {
-//   style: 'unit', //percent currency
-//   unit: 'mile-per-hour', //celsius
-//   currency: 'EUR',
-// };
+const options = {
+  style: 'unit', //percent currency
+  unit: 'mile-per-hour', //celsius
+  currency: 'EUR',
+};
 
 // console.log(
 //   navigator.language,
