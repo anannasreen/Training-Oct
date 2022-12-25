@@ -15,50 +15,50 @@ const closeModal = function () {
   overlay.classList.add('hidden');
 };
 
-for (let i = 0; i < btnsOpenModal.length; i++)
-  btnsOpenModal[i].addEventListener('click', openModal);
+// for (let i = 0; i < btnsOpenModal.length; i++)
+//   btnsOpenModal[i].addEventListener('click', openModal);
 
-btnCloseModal.addEventListener('click', closeModal);
-overlay.addEventListener('click', closeModal);
+// btnCloseModal.addEventListener('click', closeModal);
+// overlay.addEventListener('click', closeModal);
 
-document.addEventListener('keydown', function (e) {
-  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-    closeModal();
-  }
-});
+// document.addEventListener('keydown', function (e) {
+//   if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+//     closeModal();
+//   }
+// });
 
-const startLogOutTimer = function () {
-  let time = 100;
-  setInterval(function () {
-const min = Math.trunc(time / 60).padStart(2, 0);
-const sec = String(time % 60).padStart(2, 0);
-labelTimer.textContent = `${min}:${sec}`;
-  });
-};
-const ingredients = ['olives', 'spinach'];
-const pizzaTimer = setTimeout(
-  (ing1, ing2) => console.log(`Here is your pizza with ${ing1} and ${ing2}`),
-  3000,
-  ...ingredients
-);
-console.log('Waiting...');
+// const startLogOutTimer = function () {
+//   let time = 100;
+//   setInterval(function () {
+// const min = Math.trunc(time / 60).padStart(2, 0);
+// const sec = String(time % 60).padStart(2, 0);
+// labelTimer.textContent = `${min}:${sec}`;
+//   });
+// };
+// const ingredients = ['olives', 'spinach'];
+// const pizzaTimer = setTimeout(
+//   (ing1, ing2) => console.log(`Here is your pizza with ${ing1} and ${ing2}`),
+//   3000,
+//   ...ingredients
+// );
+// console.log('Waiting...');
 
-if (ingredients.includes('spinach')) clearTimeout(pizzaTimer);
-setInterval(function () {
-  const now = new Date();
-  console.log(now);
-}, 3000);
-setTimeout(() => console.log('Here is your pizza'), 3000);
-console.log('Waiting...');
+// if (ingredients.includes('spinach')) clearTimeout(pizzaTimer);
+// setInterval(function () {
+//   const now = new Date();
+//   console.log(now);
+// }, 3000);
+// setTimeout(() => console.log('Here is your pizza'), 3000);
+// console.log('Waiting...');
 
-const num = 2328687.34;
-console.log('US:    ', new Intl.NumberFormat('en-US').format(num));
+// const num = 2328687.34;
+// console.log('US:    ', new Intl.NumberFormat('en-US').format(num));
 
-const options = {
-  style: 'unit', //percent currency
-  unit: 'mile-per-hour', //celsius
-  currency: 'EUR',
-};
+// const options = {
+//   style: 'unit', //percent currency
+//   unit: 'mile-per-hour', //celsius
+//   currency: 'EUR',
+// };
 
 // console.log(
 //   navigator.language,
