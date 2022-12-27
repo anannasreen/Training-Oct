@@ -1,6 +1,36 @@
 'use strict';
 
+const Person = function (firstName, birthYear) {
+  // console.log(this);
+  this.firstName = firstName;
+  this.birthYear = birthYear;
+};
+
+const anan = new Person('Anan', 2001);
+console.log(anan);
+
+const matilda = new Person('Matilda', 2017);
+const jack = new Person('Jack', 1975);
+console.log(matilda, jack);
+Person.prototype.calcAge = function () {
+  console.log(2037 - this.birthYear);
+};
+anan.calcAge();
+console.log(anan.__proto__);
+
+console.log(Person.prototype.isPrototypeOf(anan));
+// let x = 10;
+// for (let i = 1; i <= x; i++) {
+//   x = 3 * i + 1;
+//   console.log(x);
+// }
+
+// if ((x - 1) % 3 === 0) {
+//   console.log(`${x} belongs to the sequence`);
+// }
+
 // const modal = document.querySelector('.modal');
+
 // const overlay = document.querySelector('.overlay');
 // const btnCloseModal = document.querySelector('.btn--close-modal');
 // const btnsOpenModal = document.querySelectorAll('.btn--show-modal');
