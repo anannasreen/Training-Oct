@@ -19,6 +19,15 @@ anan.calcAge();
 console.log(anan.__proto__);
 
 console.log(Person.prototype.isPrototypeOf(anan));
+
+console.dir(Person.prototype.constructor);
+
+const arr = [3, 6, 4, 6, 4];
+console.log(arr.__proto__);
+console.log(arr.__proto__ === Array.prototype);
+
+kjh;
+
 // let x = 10;
 // for (let i = 1; i <= x; i++) {
 //   x = 3 * i + 1;
