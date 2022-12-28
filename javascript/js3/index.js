@@ -1,54 +1,142 @@
 'use strict';
 
-class Account {
-  locale = navigator.language;
-  // _movements = [];
+const months = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
+];
 
-  #movements = [];
-  #pin;
+const form = document.querySelector('.form');
+const containerWorkouts = document.querySelector('.workouts');
+const inputType = document.querySelector('.form__input--type');
+const inputDistance = document.querySelector('.form__input--distance');
+const inputDuration = document.querySelector('.form__input--duration');
+const inputCadence = document.querySelector('.form__input--cadence');
+const inputElevation = document.querySelector('.form__input--elevation');
 
-  constructor(owner, currency, pin) {
-    this.owner = owner;
-    this.currency = currency;
-    this._pin = pin;
-    this.#movements = [];
-    this.locale = navigator.language;
-
-    console.log(`Thanks for opening an account, ${owner}`);
-  }
-  getMovements() {
-    return this.#movements;
-  }
-
-  deposit(val) {
-    this.#movements.push(val);
-  }
-  withdrawal(val) {
-    this.deposit(-val);
-  }
-  _approveLoan(val) {
-    return true;
-  }
-  requestLoan(val) {
-    if (this._approveLoan(val)) {
-      this.deposit(val);
-      console.log(`Loan approved`);
+if (navigator.geolocation)
+  navigator.geolocation.getCurrentPosition(
+    function (position) {
+      // console.log(position);
+      const { latitude } = position.coords;
+      const { longitude } = position.coords;
+      // console.log(latitude, longitude);
+      console.log(`https://www.google.com/maps/@${latitude},${longitude}`);
+    },
+    function () {
+      alert('Could not get your position');
     }
-  }
-}
-const acc1 = new Account('Jonas', 'EUR', 1111);
+  );
+// class CarCl {
+//   constructor(make, speed) {
+//     this.make = make;
+//     this.speed = speed;
+//   }
+//   accelerate() {
+//     this.speed += 10;
+//     console.log(`${this.make} is going at ${this.speed} km/h`);
+//   }
+//   brake() {
+//     this.speed - +5;
+//     console.log(`${this.make} is going at ${this.speed} km/h`);
+//   }
+//   get speedUS() {
+//     return this.speed / 1.6;
+//   }
+//   set speedUS(speed) {
+//     this.speed = speed * 1.6;
+//   }
+// }
+// const EV = function (make, speed, charge) {
+//   Car.call(this, make, speed);
+//   this.charge = charge;
+// };
+// EV.prototype = Object.create(Car.prototype);
 
-// acc1.#movements.push(250);
-// acc1.#movements.push(-140);
+// EV.prototypw.chargeBattery = function (chargeTo) {
+//   this.charge = chargeTo;
+// };
+// EV.prototype.accelerate = function () {
+//   this.speed += 20;
+//   this.charge--;
+//   console.log(
+//     `${this.make} is going at ${this.speed} km/h, with a charge og ${this.charge}`
+//   );
+// };
 
-acc1.deposit(250);
-acc1.withdrawal(140);
-acc1.requestLoan(1000);
-acc1.approveLoan(1000);
-console.log(acc1.getMovements());
+// const rivian = new EVCL('Rivian', 120, 23);
+// console.log(rivian);
+// rivian
+//   .accelerate()
+//   .accelerate()
+//   .accelerate()
+//   .brake()
+//   .chargeBattery()
+//   .accelerate();
 
-console.log(acc1);
-console.log(acc1.#pin);
+// console.log(rivian.speedUS);
+
+// class Account {
+//   locale = navigator.language;
+//   // _movements = [];
+
+//   #movements = [];
+//   #pin;
+
+//   constructor(owner, currency, pin) {
+//     this.owner = owner;
+//     this.currency = currency;
+//     this._pin = pin;
+//     this.#movements = [];
+//     this.locale = navigator.language;
+
+//     console.log(`Thanks for opening an account, ${owner}`);
+//   }
+//   getMovements() {
+//     return this.#movements;
+//   }
+
+//   deposit(val) {
+//     this.#movements.push(val);
+//   }
+//   withdrawal(val) {
+//     this.deposit(-val);
+//   }
+//   _approveLoan(val) {
+//     return true;
+//   }
+//   requestLoan(val) {
+//     if (this._approveLoan(val)) {
+//       this.deposit(val);
+//       console.log(`Loan approved`);
+//     }
+//   }
+// }
+// const acc1 = new Account('Jonas', 'EUR', 1111);
+
+// // acc1.#movements.push(250);
+// // acc1.#movements.push(-140);
+
+// acc1.deposit(250);
+// acc1.withdrawal(140);
+// acc1.requestLoan(1000);
+// acc1.approveLoan(1000);
+// console.log(acc1.getMovements());
+
+// console.log(acc1);
+// console.log(acc1.pin);
+
+// acc1.deposit(300).deposit(500).withdrawal(35).requestLoan(2500).withdrawal(200);
+// console.log(acc1.getMovements());
 
 // console.log(acc1.#movements);
 
@@ -145,7 +233,7 @@ console.log(acc1.#pin);
 //   }
 
 //   static hey() {
-//     console.log('Hey there 👋');
+//     console.log('Hey there');
 //     console.log(this);
 //   }
 // }
