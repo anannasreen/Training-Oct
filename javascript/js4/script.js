@@ -226,6 +226,8 @@ const createImage = function (imgPath) {
   });
 };
 
-createImage('img/img-1.jpg').then(img => {
-  console.log('Image 1 loaded');
-});
+createImage('img/img-1.jpg')
+  .then(img => {
+    console.log('Image 1 loaded');
+  })
+  .catch(err => console.error(err));
