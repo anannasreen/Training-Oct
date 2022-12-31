@@ -1,12 +1,12 @@
 var budget = [
-  { value: 250, description: 'Sold old TV 📺', user: 'jonas' },
-  { value: -45, description: 'Groceries 🥑', user: 'jonas' },
-  { value: 3500, description: 'Monthly salary 👩‍💻', user: 'jonas' },
-  { value: 300, description: 'Freelancing 👩‍💻', user: 'jonas' },
-  { value: -1100, description: 'New iPhone 📱', user: 'jonas' },
-  { value: -20, description: 'Candy 🍭', user: 'matilda' },
-  { value: -125, description: 'Toys 🚂', user: 'matilda' },
-  { value: -1800, description: 'New Laptop 💻', user: 'jonas' },
+  { value: 250, description: 'Sold old TV ', user: 'jonas' },
+  { value: -45, description: 'Groceries ', user: 'jonas' },
+  { value: 3500, description: 'Monthly salary ', user: 'jonas' },
+  { value: 300, description: 'Freelancing ', user: 'jonas' },
+  { value: -1100, description: 'New iPhone ', user: 'jonas' },
+  { value: -20, description: 'Candy ', user: 'matilda' },
+  { value: -125, description: 'Toys ', user: 'matilda' },
+  { value: -1800, description: 'New Laptop ', user: 'jonas' },
 ];
 
 var limits = {
@@ -29,8 +29,8 @@ var add = function (value, description, user) {
     budget.push({ value: -value, description: description, user: user });
   }
 };
-add(10, 'Pizza 🍕');
-add(100, 'Going to movies 🍿', 'Matilda');
+add(10, 'Pizza ');
+add(100, 'Going to movies ', 'Matilda');
 add(200, 'Stuff', 'Jay');
 console.log(budget);
 

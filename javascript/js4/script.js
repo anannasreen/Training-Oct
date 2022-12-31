@@ -383,3 +383,9 @@
 //   }
 // };
 // loadAll(['img/img-1.jpg', 'img/img-2.jpg', 'img/img-3.jpg']);
+
+// import { addToCart } from './shoppingCart.js';
+
+// console.log('Importing module');
+
+addToCart('bread', 5);
