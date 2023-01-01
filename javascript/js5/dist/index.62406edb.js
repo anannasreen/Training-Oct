@@ -8,9 +8,19 @@ const timeout = function(s) {
     });
 };
 // https://forkify-api.herokuapp.com/v2
+const renderSpinner = function(parentEl) {
+    const markup = `
+        <div class="spinner">
+          <svg>
+            <use href="src/img/icons.svg#icon-loader"></use>
+          </svg>
+        </div>
+  `;
+};
 const showRecipe = async function() {
     try {
-        const res = await fetch("https://forkify-api.herokuapp.com/api/v2/recipes/5ed6604591c37cdc054bc958");
+        const res = await fetch(// 'https://forkify-api.herokuapp.com/api/v2/recipes/5ed6604591c37cdc054bc958'
+        "https://forkify-api.herokuapp.com/api/v2/recipes/5ed6604591c37cdc054bc886");
         const data = await res.json();
         if (!res.ok) throw new Error(`${data.message}(${res.status})`);
         // console.log(res, data);
@@ -36,14 +46,14 @@ const showRecipe = async function() {
         <div class="recipe__details">
           <div class="recipe__info">
             <svg class="recipe__info-icon">
-              <use href="src/img/icons.svg#icon-clock"></use>
+              <use href="${icons}#icon-clock"></use>
             </svg>
             <span class="recipe__info-data recipe__info-data--minutes">${recipe.cookingTime}</span>
             <span class="recipe__info-text">minutes</span>
           </div>
           <div class="recipe__info">
             <svg class="recipe__info-icon">
-              <use href="src/img/icons.svg#icon-users"></use>
+              <use href="${icons}#icon-users"></use>
             </svg>
             <span class="recipe__info-data recipe__info-data--people">${recipe.servings}</span>
             <span class="recipe__info-text">servings</span>
@@ -80,14 +90,14 @@ const showRecipe = async function() {
           <svg class="recipe__icon">
             <use href="src/img/icons.svg#icon-check"></use>
           </svg>
-          <div class="recipe__quantity">1000</div>
+          <div class="recipe__quantity">${ing.quantity}</div>
           <div class="recipe__description">
-            <span class="recipe__unit">g</span>
-            pasta
+            <span class="recipe__unit">${ing.unit}</span>
+            ${ing.description}
           </div>
         </li>
-          `;
-        })}
+        `;
+        }).join("")}
            
         </div>
         <div class="recipe__directions">
