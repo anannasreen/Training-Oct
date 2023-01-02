@@ -10,7 +10,7 @@ import addRecipeView from './views/addRecipeView.js';
 
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
-// import { async } from 'regenerator-runtime';
+import { async } from 'regenerator-runtime';
 
 const controlRecipes = async function () {
   try {
@@ -45,6 +45,8 @@ const controlSearchResults = async function () {
 
     paginationView.render(model.state.search);
   } catch (err) {
+    // recipeView.renderError();
+    // console.error(err);
     console.log(err);
   }
 };

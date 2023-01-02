@@ -9,9 +9,10 @@ export default class View {
    * @param {boolean} [render=true] If false, create markup string instead of rendering to the DOM
    * @returns {undefined | string} A markup string is returned if render=false
    * @this {Object} View instance
-   * @author Jonas Schmedtmann
-   * @todo Finish implementation
+   * @author Anan Nasreen
+   * @todo Finish the implementation
    */
+
   render(data, render = true) {
     if (!data || (Array.isArray(data) && data.length === 0))
       return this.renderError();
@@ -37,7 +38,6 @@ export default class View {
       const curEl = curElements[i];
       // console.log(curEl, newEl.isEqualNode(curEl));
 
-      // Updates changed TEXT
       if (
         !newEl.isEqualNode(curEl) &&
         newEl.firstChild?.nodeValue.trim() !== ''
@@ -46,7 +46,6 @@ export default class View {
         curEl.textContent = newEl.textContent;
       }
 
-      // Updates changed ATTRIBUES
       if (!newEl.isEqualNode(curEl))
         Array.from(newEl.attributes).forEach(attr =>
           curEl.setAttribute(attr.name, attr.value)
