@@ -316,6 +316,7 @@ class App {
 }
 
 const app = new App();
+
 // app._getPosition();
 
 // class CarCl {
@@ -3168,3 +3169,8 @@ const app = new App();
 //   console.log(str);
 // };
 // printForCast(data1);
+
+// _getLocalStorage(){
+//   localStorage.getItem('workout')
+//   console.log(data);
+// }

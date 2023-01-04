@@ -104,12 +104,13 @@
 // div.textContent = 'Hello';
 // body.append(div);
 
-// const temparatures = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
+// const arr = [1, 2, 3];
+// const max = arr.reduce((a, b) => Math.max(a, b), -Infinity);
+// console.log(max);
 
-// const calcTempAmplitude=function (temps){
-
+// var x = 7;
+// function getName() {
+//   console.log('Anan');
 // }
-
-const arr = [1, 2, 3];
-const max = arr.reduce((a, b) => Math.max(a, b), -Infinity);
-console.log(max);
+// getName();
+// console.log(x);
