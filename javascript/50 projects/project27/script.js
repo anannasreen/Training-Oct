@@ -1,90 +1,134 @@
-const APIURL = 'https://api.github.com/users/';
+// const loveMe = document.querySelector('.loveMe');
+// const times = document.querySelector('#times');
 
-const main = document.getElementById('main');
-const form = document.getElementById('form');
-const search = document.getElementById('search');
+// let clickTime = 0;
+// let timesClicked = 0;
 
-async function getUser(username) {
-  try {
-    const { data } = await axios(APIURL + username);
+// loveMe.addEventListener('click', e => {
+//   if (clickTime === 0) {
+//     clickTime = new Date().getTime();
+//   } else {
+//     if (new Date().getTime() - clickTime < 800) {
+//       createHeart(e);
+//       clickTime = 0;
+//     } else {
+//       clickTime = new Date().getTime();
+//     }
+//   }
+// });
 
-    createUserCard(data);
-    getRepos(username);
-  } catch (err) {
-    if (err.response.status == 404) {
-      createErrorCard('No profile with this username');
-    }
-  }
-}
+// const createHeart = e => {
+//   const heart = document.createElement('i');
+//   heart.classList.add('fas');
+//   heart.classList.add('fa-heart');
 
-async function getRepos(username) {
-  try {
-    const { data } = await axios(APIURL + username + '/repos?sort=created');
+//   const x = e.clientX;
+//   const y = e.clientY;
 
-    addReposToCard(data);
-  } catch (err) {
-    createErrorCard('Problem fetching repos');
-  }
-}
+//   const leftOffset = e.target.offsetLeft;
+//   const topOffset = e.target.offsetTop;
 
-function createUserCard(user) {
-  const userID = user.name || user.login;
-  const userBio = user.bio ? `<p>${user.bio}</p>` : '';
-  const cardHTML = `
-    <div class="card">
-    <div>
-      <img src="${user.avatar_url}" alt="${user.name}" class="avatar">
-    </div>
-    <div class="user-info">
-      <h2>${userID}</h2>
-      ${userBio}
-      <ul>
-        <li>${user.followers} <strong>Followers</strong></li>
-        <li>${user.following} <strong>Following</strong></li>
-        <li>${user.public_repos} <strong>Repos</strong></li>
-      </ul>
-      <div id="repos"></div>
-    </div>
-  </div>
-    `;
-  main.innerHTML = cardHTML;
-}
+//   const xInside = x - leftOffset;
+//   const yInside = y - topOffset;
 
-function createErrorCard(msg) {
-  const cardHTML = `
-        <div class="card">
-            <h1>${msg}</h1>
-        </div>
-    `;
+//   //   console.log(xInside, yInside);
+//   heart.style.top = `${yInside}px`;
+//   heart.style.left = `${xInside}px`;
 
-  main.innerHTML = cardHTML;
-}
+//   loveMe.appendChild(heart);
 
-function addReposToCard(repos) {
-  const reposEl = document.getElementById('repos');
+//   times.innerHTML = ++timesClicked;
 
-  repos.slice(0, 5).forEach(repo => {
-    const repoEl = document.createElement('a');
-    repoEl.classList.add('repo');
-    repoEl.href = repo.html_url;
-    repoEl.target = '_blank';
-    repoEl.innerText = repo.name;
+//   setTimeout(() => heart.remove(), 1000);
+// };
 
-    reposEl.appendChild(repoEl);
-  });
-}
+// const APIURL = 'https://api.github.com/users/';
 
-form.addEventListener('submit', e => {
-  e.preventDefault();
+// const main = document.getElementById('main');
+// const form = document.getElementById('form');
+// const search = document.getElementById('search');
 
-  const user = search.value;
+// async function getUser(username) {
+//   try {
+//     const { data } = await axios(APIURL + username);
 
-  if (user) {
-    getUser(user);
+//     createUserCard(data);
+//     getRepos(username);
+//   } catch (err) {
+//     if (err.response.status == 404) {
+//       createErrorCard('No profile with this username');
+//     }
+//   }
+// }
 
-    search.value = '';
-  }
-});
+// async function getRepos(username) {
+//   try {
+//     const { data } = await axios(APIURL + username + '/repos?sort=created');
+
+//     addReposToCard(data);
+//   } catch (err) {
+//     createErrorCard('Problem fetching repos');
+//   }
+// }
+
+// function createUserCard(user) {
+//   const userID = user.name || user.login;
+//   const userBio = user.bio ? `<p>${user.bio}</p>` : '';
+//   const cardHTML = `
+//     <div class="card">
+//     <div>
+//       <img src="${user.avatar_url}" alt="${user.name}" class="avatar">
+//     </div>
+//     <div class="user-info">
+//       <h2>${userID}</h2>
+//       ${userBio}
+//       <ul>
+//         <li>${user.followers} <strong>Followers</strong></li>
+//         <li>${user.following} <strong>Following</strong></li>
+//         <li>${user.public_repos} <strong>Repos</strong></li>
+//       </ul>
+//       <div id="repos"></div>
+//     </div>
+//   </div>
+//     `;
+//   main.innerHTML = cardHTML;
+// }
+
+// function createErrorCard(msg) {
+//   const cardHTML = `
+//         <div class="card">
+//             <h1>${msg}</h1>
+//         </div>
+//     `;
+
+//   main.innerHTML = cardHTML;
+// }
+
+// function addReposToCard(repos) {
+//   const reposEl = document.getElementById('repos');
+
+//   repos.slice(0, 27).forEach(repo => {
+//     const repoEl = document.createElement('a');
+//     repoEl.classList.add('repo');
+//     repoEl.href = repo.html_url;
+//     repoEl.target = '_blank';
+//     repoEl.innerText = repo.name;
+
+//     reposEl.appendChild(repoEl);
+//   });
+// }
+
+// form.addEventListener('submit', e => {
+//   e.preventDefault();
+
+//   const user = search.value;
+
+//   if (user) {
+//     getUser(user);
+
+//     search.value = '';
+//   }
+// });
 
 // const button = document.getElementById('button');
 // const toasts = document.getElementById('toasts');
