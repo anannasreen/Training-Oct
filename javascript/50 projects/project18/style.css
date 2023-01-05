@@ -3,7 +3,6 @@
 * {
   box-sizing: border-box;
 }
-
 body {
   font-family: 'Roboto', sans-serif;
   display: flex;
@@ -17,7 +16,6 @@ body {
   background-size: cover;
   transition: 0.4s;
 }
-
 body::before {
   content: '';
   position: absolute;
@@ -28,7 +26,6 @@ body::before {
   background-color: rgba(0, 0, 0, 0.7);
   z-index: -1;
 }
-
 .slider-container {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   height: 70vh;
@@ -36,7 +33,6 @@ body::before {
   position: relative;
   overflow: hidden;
 }
-
 .slide {
   opacity: 0;
   height: 100vh;
@@ -49,11 +45,9 @@ body::before {
   transition: 0.4s ease;
   z-index: 1;
 }
-
 .slide.active {
   opacity: 1;
 }
-
 .arrow {
   position: fixed;
   background-color: transparent;
@@ -65,15 +59,12 @@ body::before {
   transform: translateY(-50%);
   cursor: pointer;
 }
-
 .arrow:focus {
   outline: 0;
 }
-
 .left-arrow {
   left: calc(15vw - 65px);
 }
-
 .right-arrow {
   right: calc(15vw - 65px);
 }
