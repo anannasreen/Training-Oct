@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    /> -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.8.11/tailwind.min.css"
+      integrity="sha512-KO1h5ynYuqsFuEicc7DmOQc+S9m2xiCKYlC3zcZCSEw0RGDsxcMnppRaMZnb0DdzTDPaW22ID/gAGCZ9i+RT/w=="
+      crossorigin="anonymous"
+    /> -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Live User Filter</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h4 class="title">Live User Filter</h4>
+        <small class="subtitle">Search by name and/or location</small>
+        <input type="text" id="filter" placeholder="Search" />
+      </header>
+      <ul id="result" class="user-list">
+        <li>
+          <h3>Loading...</h3>
+        </li>
+      </ul>
+    </div>
+    <!-- <div class="container">
+      <h2>Verify Your Account</h2>
+      <p>
+        We emailed you the six digit code to cool_guy@email.com <br />Enter the
+        code below to confirm your email address
+      </p>
+      <div class="code-container">
+        <input
+          type="number"
+          class="code"
+          placeholder="0"
+          min="0"
+          max="9"
+          required
+        />
+        <input
+          type="number"
+          class="code"
+          placeholder="0"
+          min="0"
+          max="9"
+          required
+        />
+        <input
+          type="number"
+          class="code"
+          placeholder="0"
+          min="0"
+          max="9"
+          required
+        />
+        <input
+          type="number"
+          class="code"
+          placeholder="0"
+          min="0"
+          max="9"
+          required
+        />
+        <input
+          type="number"
+          class="code"
+          placeholder="0"
+          min="0"
+          max="9"
+          required
+        />
+        <input
+          type="number"
+          class="code"
+          placeholder="0"
+          min="0"
+          max="9"
+          required
+        />
+      </div>
+      <small class="info"
+        >This is design only. We didn't actually send you an email as we don't
+        have your email, right?</small
+      >
+    </div> -->
+
+    <!-- <button id="btn" class="magic">Magic 🎩</button>
+    <div id="boxes" class="boxes big"></div> -->
+
+    <!-- <div class="background" id="background"></div>
+    <div class="bg-white rounded p-10 text-center shadow-md">
+      <h1 class="text-3xl">Image Password Strength</h1>
+      <p class="text-sm text-gray-700">Change the password to see the effect</p>
+      <div class="my-4 text-left">
+        <label for="email" class="text-gray-900">Email: </label>
+        <input
+          type="text"
+          class="border block w-full p-2 mt-2 rounded"
+          id="email"
+          placeholder="Enter Email"
+        />
+      </div>
+      <div class="my-4 text-left">
+        <label for="password" class="text-gray-900">Password: </label>
+        <input
+          type="password"
+          class="border block w-full p-2 mt-2 rounded"
+          id="password"
+          placeholder="Enter Password"
+        />
+      </div>
+      <button
+        class="bg-black text-white py-2 mt-4 inline-block w-full rounded"
+        type="submit"
+      >
+        Submit
+      </button>
+    </div> -->
+
+    <!-- <div class="phone">
+      <img
+        src="https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80"
+        alt="home"
+        class="content show"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+        alt="work"
+        class="content"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1266&q=80"
+        alt="blog"
+        class="content"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80"
+        alt="about"
+        class="content"
+      />
+      <nav>
+        <ul>
+          <li class="active">
+            <i class="fas fa-home"></i>
+            <p>Home</p>
+          </li>
+          <li>
+            <i class="fas fa-box"></i>
+            <p>Work</p>
+          </li>
+          <li>
+            <i class="fas fa-book-open"></i>
+            <p>Blog</p>
+          </li>
+          <li>
+            <i class="fas fa-users"></i>
+            <p>About Us</p>
+          </li>
+        </ul>
+      </nav>
+    </div> -->
+
+    <!-- <h1>Pokedex</h1>
+    <div class="poke-container" id="poke-container"></div> -->
+
+    <script src="script.js"></script>
+  </body>
+</html>

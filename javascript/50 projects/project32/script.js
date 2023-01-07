@@ -1,5 +1,76 @@
-const imgs = document.getElementById('imgs');
-const leftBtn = document.getElementById('left');
+const container = document.getElementById('container');
+const colors = ['#e74c3c', '#8e44ad', '#3498db', '#e67e22', '#2ecc71'];
+const SQUARES = 500;
+
+for (let i = 0; i < SQUARES; i++) {
+  const square = document.createElement('div');
+  square.classList.add('square');
+
+  square.addEventListener('mouseover', () => setColor(square));
+
+  square.addEventListener('mouseout', () => removeColor(square));
+
+  container.appendChild(square);
+}
+
+function setColor(element) {
+  const color = getRandomColor();
+  element.style.background = color;
+  element.style.boxShadow = `0 0 2px ${color}, 0 0 10px ${color}`;
+}
+
+function removeColor(element) {
+  element.style.background = '#1d1d1d';
+  element.style.boxShadow = '0 0 2px #000';
+}
+
+function getRandomColor() {
+  return colors[Math.floor(Math.random() * colors.length)];
+}
+
+// const imgs = document.getElementById('imgs');
+// const leftBtn = document.getElementById('left');
+// const rightBtn = document.getElementById('right');
+
+// const img = document.querySelectorAll('#imgs img');
+
+// let idx = 0;
+
+// let interval = setInterval(run, 2000);
+
+// function run() {
+//   idx++;
+//   changeImage();
+// }
+
+// function changeImage() {
+//   if (idx > img.length - 1) {
+//     idx = 0;
+//   } else if (idx < 0) {
+//     idx = img.length - 1;
+//   }
+
+//   imgs.style.transform = `translateX(${-idx * 500}px)`;
+// }
+
+// function resetInterval() {
+//   clearInterval(interval);
+//   interval = setInterval(run, 2000);
+// }
+
+// rightBtn.addEventListener('click', () => {
+//   idx++;
+
+//   changeImage();
+//   resetInterval();
+// });
+
+// leftBtn.addEventListener('click', () => {
+//   idx--;
+
+//   changeImage();
+//   resetInterval();
+// });
 
 // const nums = document.querySelectorAll('.nums span');
 // const counter = document.querySelector('.counter');
