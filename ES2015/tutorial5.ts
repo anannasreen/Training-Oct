@@ -126,23 +126,138 @@
 // let colorArray = ["Orange", "Yellow", "Indigo"];
 // displayColors(message, ...colorArray);
 
-let firstName = "Chandler";
-let lastName = "Bing";
+// let firstName = "Chandler";
+// let lastName = "Bing";
 
-let person = {
-  firstname: firstName,
-  lastname: lastName,
-};
+// let person = {
+//   firstname: firstName,
+//   lastname: lastName,
+// };
 
 // console.log(person.firstname);
 // console.log(person.lastname);
 
-function createPerson(firstname, lastname) {
-  let fullname = firstname + " " + lastname;
-  return { firstname, lastname, fullname };
+// function createPerson(firstname, lastname, age) {
+//   let fullname = firstname + " " + lastname;
+//   return {
+//     firstname,
+//     lastname,
+//     fullname,
+//     isSenior: function () {
+//       return age > 60;
+//     },
+//   };
+// }
+
+// let p = createPerson("Ross", "Geller", 32);
+// console.log(p.firstname);
+// console.log(p.lastname);
+// console.log(p.fullname);
+// console.log(p.isSenior());
+
+// let ln = "last name";
+// let person = {
+//   "first name": "Chandler",
+//   [ln]: "Bing",
+// };
+
+// console.log(person["first name"]);
+// console.log(person);
+
+// let employee = ["Chandler", "Bing", "Male"];
+
+// let [fname, lname, gender] = employee;
+
+// console.log(fname);
+// console.log(lname);
+// console.log(gender);
+
+// let [fname, ...elements] = employee;
+
+// console.log(elements);
+
+// let employee = {
+//   fname: "Chandler",
+//   lname: "Bing",
+//   gender: "Male",
+// };
+
+// let { fname:f, lname:l, gender:g } = employee;
+// // let [fname, lname, gender = "Male"] = employee;
+
+// // console.log(fname);
+// // console.log(lname);
+// // console.log(gender);
+
+// console.log(f);
+// console.log(l);
+// console.log(g);
+
+// let user = "Chandler";
+// // let greet = "Welcome " + user + " to ES2015";
+// let greet = `Welcome ${user} to ES2015
+//              This is the second line.
+//                Third line and so       on.
+// `;
+
+// console.log(greet);
+
+// let colors = ["Red", "Blue", "Green"];
+
+// for (let index in colors) {
+//   console.log(colors[index]);
+// }
+
+// for (let color of colors) {
+//   console.log(color);
+// }
+
+// let letters = "ABC";
+
+// for (let letter of letters) {
+//   console.log(letter);
+// }
+
+// class Person {
+//   greet() {}
+// }
+// let p = new Person();
+
+// console.log(p.greet === Person.prototype.greet);
+
+// function employee() {}
+// employee();
+
+// console.log(typeof Person);
+
+// class Person {
+//   constructor(name) {
+//     this.name = name;
+//     console.log(this.name + " Constructor");
+//   }
+//   static staticMethod() {
+//     console.log("Static Method");
+//   }
+//   greetPerson() {
+//     console.log("Hello" + this.name);
+//   }
+// }
+
+// let p = new Person(" Chandler");
+// Person.staticMethod();
+// p.greetPerson();
+
+class Person {
+  constructor(name) {
+    console.log(name + " Person constructor");
+  }
 }
 
-let p = createPerson("Ross", "Geller");
-console.log(p.firstname);
-console.log(p.lastname);
-console.log(p.fullname);
+class Employee extends Person {
+  constructor(name) {
+    super(name);
+    console.log(name + " Employee constructor");
+  }
+}
+
+let e = new Employee("Chandler");
