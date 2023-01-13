@@ -247,24 +247,40 @@
 // Person.staticMethod();
 // p.greetPerson();
 
-class Person {
-  constructor(name) {
-    console.log(name + " Person constructor");
-  }
-  getID() {
-    return 10;
-  }
+// class Person {
+//   constructor(name) {
+//     console.log(name + " Person constructor");
+//   }
+//   getID() {
+//     return 10;
+//   }
+// }
+
+// class Employee extends Person {
+//   constructor(name) {
+//     super(name);
+//     console.log(name + " Employee constructor");
+//   }
+//   getID() {
+//     return 50;
+//   }
+// }
+
+// let e = new Employee("Chandler");
+// console.log(e.getID());
+
+let mySet = Object.create(null);
+mySet.id = true;
+
+if (mySet.id) {
+  console.log("id exists");
 }
 
-class Employee extends Person {
-  constructor(name) {
-    super(name);
-    console.log(name + " Employee constructor");
-  }
-  getID() {
-    return 50;
-  }
-}
+let myMap = Object.create(null);
+myMap.name = "Chandler";
 
-let e = new Employee("Chandler");
-console.log(e.getID());
+let val = myMap.name;
+console.log(val);
+
+myMap[100] = "Hello";
+console.log(myMap["100"]);
