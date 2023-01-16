@@ -5,6 +5,7 @@
     "typeRoots": ["./node_modules/@types"],
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "experimentalDecorators": true,
     "outDir": "scripts/"
   }
 }

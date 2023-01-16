@@ -107,27 +107,282 @@
 // const fn3=()=>(obj)
 // console.log(fn3())
 
-const obj = {
-  a: 500,
-  b: 100,
-  myFun: function () {
-    return this.a + this.b;
+// const obj = {
+//   a: 500,
+//   b: 100,
+//   myFun: function () {
+//     return this.a + this.b;
+//   },
+// };
+
+// console.log(obj.myFun());
+
+// const myObj = {
+//   a: 4,
+//   b: 8,
+//   c: function () {
+//     // console.log('hello');
+//     console.log(this, a, b);
+//   },
+//   // d: () => {
+//   //   console.log(this);
+//   // },
+// };
+
+// myObj.c = myObj.c.bind(myObj);
+
+// console.log(myObj);
+// myObj.c();
+
+// console.log(this);
+
+// const yourObj = {
+//   k: 12,
+//   j: 22,
+// };
+
+// var aa = myObj.c;
+// // aa();
+// aa.call(myObj)
+
+// var k = myObj.c;
+// k.call(myObj, 1, 2);
+
+// class MyClass {
+//   myFunction() {
+//     console.log(this);
+//   }
+// }
+
+// var obj = new MyClass();
+// var a = obj.myFunction;
+// a();
+
+// function one() {
+//   var a = 100;
+//   two(a);
+//   console.log('one', a);
+// }
+
+// function two(a) {
+//   a = a + 1;
+//   console.log('two', a);
+// }
+
+// one();
+
+// function one() {
+//   var a = {
+//     value: 100,
+//   };
+//   two(a);
+//   console.log('one', a.value);
+// }
+
+// function two(a) {
+//   a.value = a.value + 1;
+//   console.log('two', a.value);
+// }
+
+// one();
+
+// function add(a, b) {
+//   const c = a + b;
+//   return c;
+// }
+
+// function main() {
+//   const res = add(3, 4);
+//   console.log(res);
+// }
+
+// main();
+
+// function main(a){
+//   [1,2,3,4,5].forEach(function(i){
+//     console.log(i,a)
+//   })
+// }
+
+// main(10)
+
+// var objs = [
+//   {
+//     name: 'One',
+//     msg: 'Hello I am one',
+//   },
+//   {
+//     name: 'Two',
+//     msg: 'Hello I am two',
+//   },
+//   {
+//     name: 'Three',
+//     msg: 'Hello I am three',
+//   },
+// ];
+
+// function main() {
+//   objs.forEach(item => {
+//     const bt = document.createElement('button');
+//     bt.innerHTML = item.name;
+//     bt.onclick = getCallBack(item.msg);
+//     document.body.appendChild(bt);
+//   });
+// }
+
+// function getCallBack(arg) {
+//   return function () {
+//     alert(arg);
+//   };
+// }
+
+// main();
+
+// var obj = {
+//   a: 1,
+//   b: 2,
+//   c: 'Hello',
+// };
+
+// var obj2 = {
+//   ...obj,
+// };
+
+// console.log(obj);
+// console.log(obj2);
+
+// var a = [1, 2, 3, 4];
+// var b = [...a];
+
+// console.log(a);
+// console.log(b);
+
+// var obj = {
+//   a: 1,
+//   b: 2,
+//   c: 'Hello',
+// };
+
+// var obj2 = {
+//   ...obj,
+// };
+
+// console.log(obj2 === obj);
+
+// var objA = {
+//   a: 1,
+//   b: 2,
+//   c: 'Hello',
+// };
+
+// var objB = {
+//   a: 1,
+//   b: 2,
+//   c: 'Hello 2',
+// };
+
+// var obj2 = {
+//   ...objA,
+//   ...objB,
+//   z: 32,
+// };
+
+// console.log(obj2);
+
+// var a = [1, 2, 3, 4];
+// var b = [...a];
+
+// console.log(b === a);
+
+// var arr = [1, 2, 3, 454, 5656, 354];
+// var a = Math.max(...arr);
+// console.log(a);
+
+// const obj1 = {
+//   name: 'Vonnue Innovations',
+//   place: 'Wayanad',
+//   rank: 1,
+// };
+
+// const marks = [1, 2, 34, 5, 6, 6];
+
+// function myFunction() {
+//   const { name, place, rank } = obj1;
+//   const [a, b, c, d, e, f] = marks;
+
+//   console.log(name, place, rank, a, b, c, d, e, f);
+// }
+
+// myFunction();
+
+// const marks = [1, 4, 6];
+
+// function myFunction([a, b, c]) {
+//   console.log(a, b, c);
+// }
+// myFunction(marks);
+
+// var obj1 = {
+//   name: 'Vonnue Innovations',
+//   place: 'Wayanad',
+// };
+
+// var obj2 = {
+//   name: 'Bob',
+//   place: 'America',
+// };
+
+// function abc() {
+//   var { name, place } = obj1;
+
+//   var { name: name2, place: place2 } = obj2;
+
+//   console.log(name, place, name2, place2);
+// }
+
+// abc();
+
+const arr = [
+  {
+    name: 'Alice',
+    mark: 35,
+    place: 'Kannur',
   },
-};
-
-console.log(obj.myFun());
-
-const myObj = {
-  a: 4,
-  b: 8,
-  c: function () {
-    // console.log('hello');
-    console.log(this);
+  {
+    name: 'Bob',
+    mark: 28,
+    place: 'Palakkad',
   },
-};
+  {
+    name: 'Catherine',
+    mark: 44,
+    place: 'Trissur',
+  },
+  {
+    name: 'Daniel',
+    mark: 23,
+    place: 'Kollam',
+  },
+];
 
-console.log(myObj);
-myObj.c();
+// console.log(arr);
+// arr.forEach(item => {
+//   console.log(item);
+// });
 
-console.log(this);
+// var found = arr.find(item => {
+//   return item.name === 'Bob';
+// });
+// console.log(found);
 
+// var found = arr.filter(item => {
+//   return item.mark < 30;
+// });
+
+// console.log(found);
+
+var newArr = arr.map(item => {
+  return item.name;
+});
+
+console.log(newArr);

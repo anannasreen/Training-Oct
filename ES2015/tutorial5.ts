@@ -439,3 +439,26 @@
 // console.log(myGen.next());
 // console.log(myGen.next());
 // console.log(myGen.next());
+
+// interface Person {
+//   fname: string;
+//   lname: string;
+//   age?: number;
+// }
+
+// let employee1: Person = {
+//   fname: "Chandler",
+//   lname: "Bing",
+//   age: 30,
+// };
+
+// let employee2: Person = {
+//   fname: "Ross",
+//   lname: "Geller",
+// };
+
+@Component({
+  selector: "my-app",
+  template: `<h1>Codeevolution Tutorials</h1>`,
+})
+export class AppComponent {}
