@@ -294,3 +294,148 @@
 
 // console.log(ob1.toString());
 // console.log(ob2.toString());
+
+// let mySet = new Set();
+// let ob1 = {};
+// let ob2 = {};
+
+// mySet.add("Hello");
+// mySet.add(1);
+// mySet.add(ob1);
+// mySet.add(ob2);
+
+// console.log(mySet.size);
+
+// let newSet = new Set([1, 2, 3, 4, 5, 5, 5, 7]);
+// console.log(newSet.size);
+
+// let chainSet = new Set().add("hello").add("world");
+// console.log(chainSet.size);
+
+// console.log(newSet.has(1));
+// console.log(newSet.delete(1));
+// console.log(newSet.size);
+
+// let mySet = new Set();
+// let key = {};
+
+// mySet.add(key);
+// console.log(mySet.size);
+
+// key = null;
+// console.log(mySet.size);
+// key = [...mySet][0];
+
+// let set = new WeakSet();
+// let key = {};
+// set.add(key);
+// console.log(set.has(key));
+// key = null;
+
+// let myMap = new Map();
+
+// myMap.set("fname", "Chandler");
+// myMap.set("age", 30);
+
+// console.log(myMap.get("fname"));
+
+// let ob1 = {};
+// let ob2 = {};
+
+// myMap.set(ob1, 10);
+// myMap.set(ob2, 20);
+
+// console.log(myMap.get(ob1));
+// myMap.delete("fname")
+// myMap.clear()
+
+// console.log(myMap.size);
+// console.log(myMap.has("fname"));
+
+// let myMap = new Map([
+//   ["fname", "Chandler"],
+//   ["lname", "Bing"],
+// ]);
+
+// for (let entry of myMap.entries()) {
+//   console.log(`${entry[0]}->${entry[1]}`);
+// }
+
+// for (let value of myMap.values()) {
+//   console.log(value);
+// }
+
+// for (let key of myMap.keys()) {
+//   console.log(key);
+// }
+
+// var numbers = [2, 4, 5, 6];
+// numbers.forEach(arrayFunction);
+
+// function arrayFunction(element, index, array) {
+//   console.log("arr[" + index + "]" + element);
+// }
+
+// let mySet = new Set([1, 2, 3]);
+// mySet.forEach(setFunction);
+
+// function setFunction(value, key, callingSet) {
+//   console.log(key + " " + value);
+//   console.log(mySet === callingSet);
+// }
+
+// let s = Symbol("First Symbol");
+// console.log(typeof s);
+// console.log(s.toString());
+
+// let s2 = Symbol();
+// let s3 = Symbol();
+
+// console.log(s2 === s3);
+
+// let s4 = Symbol.for("RegSymbol");
+// let s5 = Symbol.for("RegSymbol");
+
+// console.log(s4 === s5);
+// console.log(Symbol.keyFor(s4));
+
+// let fname = Symbol();
+// let person = {
+//   [fname]: "Chandler",
+// };
+
+// console.log(Object.getOwnPropertyNames(person));
+// console.log(Object.getOwnPropertySymbols(person));
+
+// let iterable = [1, 2, 3];
+
+// function createIterator(array) {
+//   let count = 0;
+//   return {
+//     next: function () {
+//       return count < array.length
+//         ? { value: array[count++], done: false }
+//         : { value: undefined, done: true };
+//     },
+//   };
+// }
+
+// let myIterator = createIterator(iterable);
+
+// console.log(myIterator.next());
+// console.log(myIterator.next());
+// console.log(myIterator.next());
+// console.log(myIterator.next());
+
+// function* createGenerator() {
+//   yield 1;
+//   console.log("After 1st yield");
+//   yield 2;
+// }
+
+// let myGen = createGenerator();
+
+// console.log(myGen.next());
+// console.log(myGen.next());
+// console.log(myGen.next());
+// console.log(myGen.next());
