@@ -342,28 +342,28 @@
 
 // abc();
 
-const arr = [
-  {
-    name: 'Alice',
-    mark: 35,
-    place: 'Kannur',
-  },
-  {
-    name: 'Bob',
-    mark: 28,
-    place: 'Palakkad',
-  },
-  {
-    name: 'Catherine',
-    mark: 44,
-    place: 'Trissur',
-  },
-  {
-    name: 'Daniel',
-    mark: 23,
-    place: 'Kollam',
-  },
-];
+// const arr = [
+//   {
+//     name: 'Alice',
+//     mark: 35,
+//     place: 'Kannur',
+//   },
+//   {
+//     name: 'Bob',
+//     mark: 28,
+//     place: 'Palakkad',
+//   },
+//   {
+//     name: 'Catherine',
+//     mark: 44,
+//     place: 'Trissur',
+//   },
+//   {
+//     name: 'Daniel',
+//     mark: 23,
+//     place: 'Kollam',
+//   },
+// ];
 
 // console.log(arr);
 // arr.forEach(item => {
@@ -381,8 +381,175 @@ const arr = [
 
 // console.log(found);
 
-var newArr = arr.map(item => {
-  return item.name;
-});
+// var newArr = arr.map(item => {
+//   return {
+//     ...item,
+//     country: 'India',
+//   };
+// });
 
-console.log(newArr);
+// console.log(newArr);
+
+// var value = arr.reduce((total, item) => {
+//   return total + item.mark;
+// }, 0);
+
+// console.log(value);
+
+// var obj = {
+//   name: 'Alice',
+//   mark: 35,
+//   place: 'Kannur',
+//   subject: {
+//     teacher: 'Bob',
+//   },
+// };
+// var arr = [
+//   {
+//     name: 'Alice',
+//     mark: 35,
+//     place: 'Kannur',
+//     subject: {
+//       teacher: 'Bob',
+//     },
+//   },
+//   22,
+//   33,
+// ];
+
+// var [
+//   {
+//     subject: { teacher },
+//   },
+// ] = arr;
+
+// console.log(teacher);
+
+// var student1 = {
+//   name: 'Alen',
+//   yob: 1990,
+//   getAge: function () {
+//     return new Date().getFullYear() - this.yob;
+//   },
+//   getName: function () {
+//     return this.name;
+//   },
+// };
+
+// console.log(student1);
+
+// console.log(student1.getName(), student1.getAge());
+
+// function printMinYob(...args) {
+//   var arr = args.map(item => item.yob);
+//   console.log(Math.min(...arr));
+// }
+
+// class Student {
+//   name;
+//   yob;
+
+//   constructor(name, yob) {
+//     this.name = name;
+//     this.yob = yob;
+//   }
+
+//   getAge() {
+//     return new Date().getFullYear() - this.yob;
+//   }
+//   getName() {
+//     return this.name;
+//   }
+// }
+
+// Student.printMinYob = function (...args) {
+//   var arr = args.map(item => item.yob);
+//   console.log(Math.min(...arr));
+// };
+
+// var student1 = new Student('Alen', 1990);
+// var student2 = new Student('Bob', 1999);
+// var student3 = new Student('Cook', 1980);
+
+// Student.printMinYob(student1, student2, student3);
+
+// console.log(student1, student1.getName(), student1.getAge());
+// console.log(student2, student2.getName(), student2.getAge());
+// console.log(student3, student3.getName(), student3.getAge());
+
+// printMinYob(student1, student2, student3);
+
+// class Button {
+//   constructor(name) {
+//     this.button = document.createElement('button');
+//     this.button.innerHTML = name;
+
+//     document.body.appendChild(this.button);
+//   }
+
+//   set width(width) {
+//     this.button.style.width = width + 'px';
+//   }
+//   set height(height) {
+//     this.button.style.height = height + 'px';
+//   }
+//   get width() {
+//     return this.button.style.width;
+//   }
+//   get height() {
+//     return this.button.style.height;
+//   }
+// }
+
+// var b1 = {
+//   init(name) {
+//     this.button = document.createElement('button');
+//     this.button.innerHTML = name;
+//     document.body.appendChild(this.button);
+//   },
+
+//   set width(width) {
+//     this.button.style.width = width + 'px';
+//   },
+
+//   set height(height) {
+//     this.button.style.height = height + 'px';
+//   },
+
+//   get width() {
+//     return parseInt(this.button.style.width, 10);
+//   },
+
+//   get height() {
+//     return parseInt(this.button.style.height, 10);
+//   },
+// };
+
+// b1.init('click');
+// b1.width = 100;
+// b1.height = 100;
+
+// var b1 = new Button('Click Me!');
+// b1.width = 100;
+// b1.height = 100;
+// console.log(b1.width, b1.height);
+
+// b1.setWidth(100);
+// b1.setHeight(100 );
+
+class Button {
+  constructor(name) {
+    this.button = document.createElement('button');
+    this.button.innerHTML = name;
+
+    document.body.appendChild(this.button);
+  }
+  onClick(fn) {
+    this.button.onclick = fn;
+  }
+}
+
+var b1 = new Button('My button');
+b1.onClick(function () {
+  console.log('Clicked');
+});

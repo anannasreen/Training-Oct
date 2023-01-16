@@ -457,8 +457,8 @@
 //   lname: "Geller",
 // };
 
-@Component({
-  selector: "my-app",
-  template: `<h1>Codeevolution Tutorials</h1>`,
-})
-export class AppComponent {}
+// @Component({
+//   selector: "my-app",
+//   template: `<h1>Codeevolution Tutorials</h1>`,
+// })
+// export class AppComponent {}
