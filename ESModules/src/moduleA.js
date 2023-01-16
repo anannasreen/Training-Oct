@@ -10,8 +10,8 @@
 // import firstName from "./moduleB.js";
 // console.log(firstName);
 
-import { greet, GreetMessage } from "./moduleB.js";
-greet("Hello World");
+// import { greet, GreetMessage } from "./moduleB.js";
+// greet("Hello World");
 
-let gm = new GreetMessage();
-gm.greet();
+// let gm = new GreetMessage();
+// gm.greet();
