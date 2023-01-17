@@ -1,13 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="calculator" id="calcualtor">
+      <div class="num-input" id="num-input">0</div>
+      <div class="elements">
+        <div class="characters" id="characters">
+          <div class="clear" id="clear">
+            <button class="clear-btn" id="clear-btn">AC</button>
+          </div>
+          <div class="sign" id="sign">
+            <button class="sign-btn" id="sign-btn">+/-</button>
+          </div>
+          <div class="modulus" id="modulus">
+            <button class="modulus-btn" id="modulus-btn">%</button>
+          </div>
+          <div class="operation" id="divide">
+            <button class="operation-btn" id="divide-btn">÷</button>
+          </div>
+        </div>
+
+        <div class="characters" id="characters">
+          <button class="number" id="number">7</button>
+          <button class="number" id="number">8</button>
+          <button class="number" id="number">9</button>
+          <button class="operation-btn" id="multiply-btn">×</button>
+        </div>
+
+        <div class="characters" id="characters">
+          <button class="number" id="number">4</button>
+          <button class="number" id="number">5</button>
+          <button class="number" id="number">6</button>
+          <button class="operation-btn" id="subtract-btn">-</button>
+        </div>
+
+        <div class="characters" id="characters">
+          <button class="number" id="number">1</button>
+          <button class="number" id="number">2</button>
+          <button class="number" id="number">3</button>
+          <button class="operation-btn" id="add-btn">+</button>
+        </div>
+
+        <div class="characters" id="characters">
+          <button class="number" id="number">0</button>
+          <button class="number" id="number">.</button>
+          <button class="operation-btn" id="equal-btn">=</button>
+        </div>
+      </div>
+    </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
