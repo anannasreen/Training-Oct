@@ -534,22 +534,136 @@
 // b1.height = 100;
 // console.log(b1.width, b1.height);
 
+/////////////////////////////jan 17//////////////////////////////////
+
 // b1.setWidth(100);
 // b1.setHeight(100 );
 
-class Button {
-  constructor(name) {
-    this.button = document.createElement('button');
-    this.button.innerHTML = name;
+// class Button {
+//   constructor(name) {
+//     this.button = document.createElement('button');
+//     this.button.innerHTML = name;
 
-    document.body.appendChild(this.button);
-  }
-  onClick(fn) {
-    this.button.onclick = fn;
-  }
-}
+//     document.body.appendChild(this.button);
+//   }
 
-var b1 = new Button('My button');
-b1.onClick(function () {
-  console.log('Clicked');
-});
+//   onClick(fn) {
+//     this.button.onclick = fn;
+//   }
+// }
+
+// var b1 = new Button('My button');
+// b1.onClick(function () {
+//   console.log('Clicked');
+// });
+
+// class greenButton extends Button {
+// constructor(name) {
+//   this.button = document.createElement('button');
+//   this.button.innerHTML = name;
+
+//   document.body.appendChild(this.button);
+// }
+
+//   onClick(fn) {
+//     this.button.onclick = function () {
+//       this.button.style.backgroundColor = 'green';
+//       fn();
+//     }.bind(this);
+//   }
+// }
+
+// var b1 = new greenButton('Gbutton');
+// b1.onClick(function () {
+//   console.log('Clicked');
+// });
+
+// class Button {
+//   constructor(name) {
+//     this.button = document.createElement('button');
+//     this.button.innerHTML = name;
+
+//     document.body.appendChild(this.button);
+//   }
+
+//   onclick(fn) {
+//     this.button.onclick = fn;
+//   }
+// }
+
+// var b1 = new Button('Hello');
+// console.log(b1);
+
+// function MyButton(name) {
+//   this.button = document.createElement('button');
+//   this.button.innerHTML = name;
+
+//   document.body.appendChild(this.button);
+// }
+
+// MyButton.prototype.onclick = function (fn) {
+//   this.button.onclick = fn;
+// };
+
+// function myGreenButton(name) {
+//   MyButton.call(this, name);
+// }
+
+// console.log(Object.create(MyButton.prototype));
+
+// myGreenButton.prototype = Object.create(MyButton.prototype);
+// myGreenButton.prototype.onclick = function (fn) {
+//   MyButton.prototype.onclick.call(this, () => {
+//     this.button.style.backgroundColor = 'green';
+//     fn();
+//   });
+// };
+
+// myGreenButton.prototype.printme = () => {
+//   console.log('hello');
+// };
+
+// var b2 = new myGreenButton('Yo!');
+// b2.onclick(function () {
+//   console.log('clicked');
+// });
+// // console.log(b2);
+
+// console.dir(myGreenButton);
+// console.dir(b2);
+// b2.printme();
+
+var button = document.getElementById('mybutton');
+
+button.onclick = () => {
+  // console.log('hello');
+  console.log('started event');
+  var arr = [];
+  $.ajax({
+    url: 'https://jsonplaceholder.typicode.com/todos/1',
+    success: data => {
+      console.log('ajax1 started');
+      arr.push(data.title);
+      console.log('ajax1 ended');
+    },
+    async: false,
+  });
+
+  $.ajax({
+    url: 'https://jsonplaceholder.typicode.com/todos/1',
+    succes: data => {
+      console.log('ajax1 started');
+      arr.push(data.title);
+      console.log('ajax1 ended');
+    },
+    async: false,
+  });
+
+  var arr = [1, 2, 3, 4, 5];
+  arr.forEach(item => {
+    console.log(item);
+  });
+
+  document.getElementById('mytext').value = arr.join('\n');
+  console.log('event ended');
+};
