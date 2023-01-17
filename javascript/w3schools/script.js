@@ -25,3 +25,11 @@
 // document.getElementById('content').innerHTML =
 //   person.firstName + ' is ' + person.age + ' years old.';
 
+// let hello = '';
+
+// hello = () => {
+//   document.getElementById('content').innerHTML += this;
+// };
+
+// window.addEventListener('load', hello);
+// document.getElementById('btn').addEventListener('click', hello);
