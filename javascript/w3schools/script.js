@@ -33,3 +33,10 @@
 
 // window.addEventListener('load', hello);
 // document.getElementById('btn').addEventListener('click', hello);
+
+/////////////////////////////////////////////////////
+
+// let text = 'Visit w3schools!';
+// let n = text.search('w3school');
+// document.getElementById('content').innerHTML = n;
+

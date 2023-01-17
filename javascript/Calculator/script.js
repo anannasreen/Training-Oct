@@ -27,17 +27,15 @@ const numbers = document.querySelectorAll('.number');
 const operators = document.querySelectorAll('.operation-btn');
 const clear = document.getElementById('clear-btn');
 const input = document.getElementById('num-input');
-
-let str = '';
+input.innerHTML=''
 
 numbers.forEach(number => {
   number.addEventListener('click', () => {
     console.log(`A number was clicked and the number is ${number.innerText}`);
-
-    str += `${number.innerText}`;
+   
+    input.innerHTML += `${number.innerText}`;
 
     // str = str.split('');
-    input.innerHTML += `${number.innerText}`;
     // input.innerHTML = `${str.splice(0, 1)}`;
     // console.log(str);
   });
@@ -55,6 +53,8 @@ operators.forEach(operator => {
 clear.addEventListener('click', () => {
   input.innerHTML = '0';
 });
+
+
 
 var x=add(4,4)
 document.getElementById('')
