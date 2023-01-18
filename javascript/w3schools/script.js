@@ -342,7 +342,7 @@
 //   return total + value;
 // }
 
-const numbers = [45, 4, 9, 16, 25];
+// const numbers = [45, 4, 9, 16, 25];
 
 // let txt = '';
 // numbers.forEach(myFunction);
@@ -411,7 +411,7 @@ const numbers = [45, 4, 9, 16, 25];
 //   return value > 18;
 // }
 
-const fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
+// const fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
 
 // const keys = fruits.keys();
 
@@ -421,10 +421,94 @@ const fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
 // }
 // document.getElementById('content').innerHTML = text;
 
-const f = fruits.entries();
+// const f = fruits.entries();
 
-for (let x of f) {
-  document.getElementById('content').innerHTML += x + '<br>';
-}
+// for (let x of f) {
+//   document.getElementById('content').innerHTML += x + '<br>';
+// }
 
-document.getElementById('content').innerHTML = fruits.includes('Mango');
+// document.getElementById('content').innerHTML = fruits.includes('Mango');
+
+// const d = new Date(2023, 01, 18, 16, 39, 24);
+// document.getElementById('content').innerHTML = d;
+
+// const d = new Date(874000000);
+// document.getElementById('content').innerHTML = d;
+
+// const d = new Date();
+// document.getElementById('content').innerHTML = d.toString();
+
+// document.getElementById('content').innerHTML = d.toDateString();
+// document.getElementById('content').innerHTML = d.toUTCString();
+// document.getElementById('content').innerHTML = d.toISOString();
+
+// let msec = Date.parse('March 21,2012');
+// const d = new Date(msec);
+
+// document.getElementById('content').innerHTML = d;
+
+// const months = [
+//   'January',
+//   'February',
+//   'March',
+//   'April',
+//   'May',
+//   'June',
+//   'July',
+//   'August',
+//   'September',
+//   'October',
+//   'November',
+//   'December',
+// ];
+
+// const d = new Date();
+// let month = months[d.getMonth()];
+
+// document.getElementById('content').innerHTML = month;
+
+// const d = new Date('2021-03-25');
+// let month = months[d.getMonth()];
+
+// document.getElementById('content').innerHTML = month;
+
+// const d = new Date();
+// document.getElementById('content').innerHTML = d.getHours();
+
+// const days = [
+//   'Sunday',
+//   'Monday',
+//   'Tuesday',
+//   'Wednesday',
+//   'Thursday',
+//   'Friday',
+//   'Saturday',
+// ];
+
+// const d = new Date('2021-03-25');
+// let day = days[d.getDay()];
+
+// document.getElementById('content').innerHTML = day;
+
+// const days = [
+//   'Sunday',
+//   'Monday',
+//   'Tuesday',
+//   'Wednesday',
+//   'Thursday',
+//   'Friday',
+//   'Saturday',
+// ];
+
+// const d = new Date('2021-03-25');
+// let day = days[d.getDay()];
+
+// document.getElementById('content').innerHTML = day;
+
+// const minute = 1000 * 60;
+// const hour = minute * 60;
+// const day = hour * 24;
+// const year = day * 365;
+
+// let years = Math.round(Date.now() / year);
+// document.getElementById('content').innerHTML = years;
