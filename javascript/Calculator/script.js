@@ -55,6 +55,3 @@ clear.addEventListener('click', () => {
 });
 
 
-
-var x=add(4,4)
-document.getElementById('')
