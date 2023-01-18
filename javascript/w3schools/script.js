@@ -174,7 +174,7 @@
 //   text += '<li>' + value + '</li>' + '<br>';
 // }
 
-const fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
+// const fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
 
 // const btn = document.getElementById('btn');
 // const content = (document.getElementById('content').innerHTML = fruits);
@@ -229,3 +229,44 @@ const fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
 // fruits.splice(0, 1);
 // document.getElementById('content').innerHTML = fruits;
 
+// const x = fruits.reverse();
+// const y = fruits.sort();
+
+// document.getElementById('content').innerHTML = x;
+// document.getElementById('content').innerHTML = y;
+
+const points = [40, 100, 1, 5, 25, 10];
+document.getElementById('content').innerHTML = points;
+
+// points.sort(function (a, b) {
+//   return a - b;
+// });
+
+// document.getElementById('content2').innerHTML = points;
+
+// document.getElementById('content').innerHTML = points;
+
+// points.sort(function (a, b) {
+//   return b - a;
+// });
+
+// document.getElementById('content2').innerHTML = points;
+
+const btn = document.getElementById('btn');
+const btn2 = document.getElementById('btn2');
+
+btn.addEventListener('click', myFunction);
+
+btn2.addEventListener('click', myFunction2);
+
+function myFunction() {
+  points.sort();
+  document.getElementById('content').innerHTML = points;
+}
+
+function myFunction2() {
+  points.sort(function (a, b) {
+    return a - b;
+  });
+  document.getElementById('content').innerHTML = points;
+}
