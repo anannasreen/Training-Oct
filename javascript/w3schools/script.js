@@ -650,3 +650,61 @@
 // }
 // document.getElementById('content').innerHTML = text;
 
+// const cars = ['BMW', 'Volvo', 'Saab', 'Ford', 'Fiat', 'Audi'];
+
+// let text = '';
+// for (let i = 0; i < cars.length; i++) {
+//   text += cars[i] + '<br>';
+// }
+
+// document.getElementById('content').innerHTML = text;
+
+// let text = '';
+
+// for (let i = 0; i < 5; i++) {
+//   text += 'The number is ' + i + '<br>';
+// }
+
+// document.getElementById('content').innerHTML = text;
+
+// const person = {
+//   fname: 'John',
+//   lname: 'Doe',
+//   age: 25,
+// };
+
+// let txt = '';
+// for (let x in person) {
+//   txt += person[x] + ' ';
+// }
+
+// document.getElementById('content').innerHTML = txt;
+
+// const numbers = [45, 4, 9, 16, 25];
+
+// let txt = '';
+// for (let x in numbers) {
+//   txt += numbers[x] + '<br>';
+// }
+
+// document.getElementById('content').innerHTML = txt;
+
+// let txt = '';
+// numbers.forEach(myFunction);
+// document.getElementById('content').innerHTML = txt;
+
+// function myFunction(value) {
+//   txt += value + '<br>';
+// }
+
+// const cars = ['BMW', 'Volvo', 'Mini'];
+
+// let y =0;
+// let text = '';
+// for (let x of cars) {
+//   text += x + '<br>';
+//   y++
+// }
+
+// console.log(y)
+// document.getElementById('content').innerHTML = text;
