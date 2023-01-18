@@ -709,11 +709,22 @@
 // console.log(y)
 // document.getElementById('content').innerHTML = text;
 
-let language = 'Javascript';
+// let language = 'Javascript';
 
-let text = '';
-for (let x of language) {
-  text += x + '<br>';
-}
+// let text = '';
+// for (let x of language) {
+//   text += x + '<br>';
+// }
 
-document.getElementById('content').innerHTML = text;
+// document.getElementById('content').innerHTML = text;
+
+// let text = '';
+// let i = 0;
+
+// while (i < 10) {
+//   text += '<br>The number is ' + i;
+//   i++;
+// }
+
+// document.getElementById('content').innerHTML = text;
+
