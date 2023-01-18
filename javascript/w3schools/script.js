@@ -512,3 +512,57 @@
 
 // let years = Math.round(Date.now() / year);
 // document.getElementById('content').innerHTML = years;
+/////////////////////////////////////////////////////////////////////
+// let text = '';
+// const today = new Date();
+// const someday = new Date();
+// someday.setFullYear(2100, 0, 14);
+
+// if (someday > today) {
+//   text = 'Today is before January 14, 2100.';
+// } else {
+//   text = 'Today is after January 14, 2100.';
+// }
+
+// document.getElementById('content').innerHTML = text;
+
+// document.getElementById('content').innerHTML =
+//   '<p><b>Math.E:</b> ' +
+//   Math.E +
+//   '</p>' +
+//   '<p><b>Math.PI:</b> ' +
+//   Math.PI +
+//   '</p>' +
+//   '<p><b>Math.SQRT2:</b> ' +
+//   Math.SQRT2 +
+//   '</p>' +
+//   '<p><b>Math.SQRT1_2:</b> ' +
+//   Math.SQRT1_2 +
+//   '</p>' +
+//   '<p><b>Math.LN2:</b> ' +
+//   Math.LN2 +
+//   '</p>' +
+//   '<p><b>Math.LN10:</b> ' +
+//   Math.LN10 +
+//   '</p>' +
+//   '<p><b>Math.LOG2E:</b> ' +
+//   Math.LOG2E +
+//   '</p>' +
+//   '<p><b>Math.Log10E:</b> ' +
+//   Math.LOG10E +
+//   '</p>';
+
+// document.getElementById('content').innerHTML =
+//   '<p><b>Math.round:</b> ' +
+//   Math.round(4.6) +
+//   '</p>'
+
+// document.getElementById('content').innerHTML = Math.log(1);
+// document.getElementById('content').innerHTML = Math.random();
+
+// document.getElementById('content').innerHTML = Math.min(54,56,435,5785);
+// document.getElementById('content').innerHTML = Math.max(15,46,763,45);
+
+// document.getElementById('content').innerHTML = Math.floor(Math.random() * 10);
+// document.getElementById('content').innerHTML =
+//   Math.floor(Math.random() * 10) + 1;
