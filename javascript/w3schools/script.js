@@ -566,3 +566,87 @@
 // document.getElementById('content').innerHTML = Math.floor(Math.random() * 10);
 // document.getElementById('content').innerHTML =
 //   Math.floor(Math.random() * 10) + 1;
+
+// const btn = document.getElementById('btn');
+// btn.addEventListener('click', () => {
+//   getRndInteger(1, 10);
+// });
+// // console.log(getRndInteger)
+
+// function getRndInteger(min, max) {
+//   document.getElementById('content').innerHTML =
+//     Math.floor(Math.random() * (max - min + 1)) + min;
+// }
+
+// if (new Date().getHours() < 18) {
+//   document.getElementById('content').innerHTML = 'Good Day';
+// } else {
+//   document.getElementById('content').innerHTML = 'Good Evening';
+// }
+
+// const content = document.getElementById('content');
+// const time = new Date().getHours();
+
+// let greeting;
+// if (time < 10) {
+//   greeting = 'Good morning';
+// } else if (time < 20) {
+//   greeting = 'Good day';
+// } else {
+//   greeting = 'Good evening';
+// }
+
+// content.innerHTML = greeting;
+
+// let day;
+// switch (new Date().getDay()) {
+//   case 0:
+//     day = 'Sunday';
+//     break;
+//   case 1:
+//     day = 'Monday';
+//     break;
+//   case 2:
+//     day = 'Tuesday';
+//     break;
+//   case 3:
+//     day = 'Wednesday';
+//     break;
+//   case 4:
+//     day = 'Thursday';
+//     break;
+//   case 5:
+//     day = 'Friday';
+//     break;
+//   case 6:
+//     day = 'Saturday';
+//     break;
+// }
+
+// document.getElementById('content').innerHTML = 'Today is ' + day;
+
+// switch (new Date().getDay()) {
+//   default:
+//     text = 'Looking forward to the Weekend';
+//     break;
+//   case 6:
+//     text = 'Today is Saturday';
+//     break;
+//   case 0:
+//     text = 'Today is Sunday';
+// }
+// document.getElementById('content').innerHTML = text;
+
+// let x = 0;
+// switch (x) {
+//   case 0:
+//     text = 'Off';
+//     break;
+//   case 1:
+//     text = 'On';
+//     break;
+//   default:
+//     text = 'No value found';
+// }
+// document.getElementById('content').innerHTML = text;
+
