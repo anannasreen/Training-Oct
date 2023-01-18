@@ -27,12 +27,12 @@ const numbers = document.querySelectorAll('.number');
 const operators = document.querySelectorAll('.operation-btn');
 const clear = document.getElementById('clear-btn');
 const input = document.getElementById('num-input');
-input.innerHTML=''
+input.innerHTML = '';
 
 numbers.forEach(number => {
   number.addEventListener('click', () => {
     console.log(`A number was clicked and the number is ${number.innerText}`);
-   
+
     input.innerHTML += `${number.innerText}`;
 
     // str = str.split('');
@@ -54,4 +54,30 @@ clear.addEventListener('click', () => {
   input.innerHTML = '0';
 });
 
+let x = '99';
 
+function stringToInt(x) {
+  let num = 0;
+
+  for (let i of x) {
+    num = num * 10 + charToDigit(i);
+  }
+  return num;
+}
+
+function charToDigit(x) {
+  if (x === '0') return 0;
+  if (x === '1') return 1;
+  if (x === '2') return 2;
+  if (x === '3') return 3;
+  if (x === '4') return 4;
+  if (x === '5') return 5;
+  if (x === '6') return 6;
+  if (x === '7') return 7;
+  if (x === '8') return 8;
+  if (x === '9') return 9;
+}
+
+let y = stringToInt(x);
+
+console.log('The number is ', y, 'type is ', typeof y);
