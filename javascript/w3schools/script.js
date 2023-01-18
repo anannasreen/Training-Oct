@@ -320,3 +320,111 @@
 //   cars[2].type + " " + cars[2].year;
 // }
 
+// document.getElementById("content").innerHTML = myArrayMax(points);
+
+// function myArrayMax(arr) {
+//   let len = arr.length;
+//   let max = -Infinity;
+//   while (len--) {
+//     if (arr[len] > max) {
+//       max = arr[len];
+//     }
+//   }
+//   return max;
+// }
+
+// const numbers = [45, 4, 9, 16, 25];
+// let sum = numbers.reduceRight(myFunction);
+
+// document.getElementById('content').innerHTML = 'The sum is ' + sum;
+
+// function myFunction(total, value, index, array) {
+//   return total + value;
+// }
+
+const numbers = [45, 4, 9, 16, 25];
+
+// let txt = '';
+// numbers.forEach(myFunction);
+// document.getElementById('content').innerHTML = txt;
+
+// function myFunction(value) {
+//   txt += value + '<br>';
+// }
+
+// const number2 = numbers.map(myFunction);
+
+// document.getElementById('content').innerHTML = number2;
+
+// function myFunction(value) {
+//   return value * 2;
+// }
+
+// const over18 = numbers.filter(myFunction);
+
+// function myFunction(value, index, array) {
+//   return value > 18;
+// }
+
+// document.getElementById('content').innerHTML = over18;
+
+// let sum = numbers.reduce(myFunction);
+
+// document.getElementById('content').innerHTML = 'The sum is ' + sum;
+
+// function myFunction(total, value, index, array) {
+//   return total + value;
+// }
+
+// let allOver18 = numbers.every(myFunction);
+
+// document.getElementById('content').innerHTML = 'All over 18 is ' + allOver18;
+// function myFunction(value) {
+//   return value > 18;
+// }
+
+// let allOver18 = numbers.some(myFunction);
+
+// document.getElementById('content').innerHTML = 'All over 18 is ' + allOver18;
+// function myFunction(value) {
+//   return value > 18;
+// // }
+
+// const fruits = ['Apple', 'Orange', 'Apple', 'Mango'];
+// let position = fruits.indexOf('Apple') + 1;
+
+// document.getElementById('content').innerHTML =
+//   'Apple is found in position ' + position;
+
+//   const fruits = ["Apple", "Orange", "Apple", "Mango"];
+// let position = fruits.lastIndexOf("Apple") + 1;
+
+// document.getElementById("content").innerHTML =
+// "Apple is found in position " + position;
+
+// let first = numbers.find(myFunction);
+
+// document.getElementById('content').innerHTML =
+//   'First number over 18 is ' + first;
+
+// function myFunction(value) {
+//   return value > 18;
+// }
+
+const fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
+
+// const keys = fruits.keys();
+
+// let text = '';
+// for (let x of keys) {
+//   text += x + '<br>';
+// }
+// document.getElementById('content').innerHTML = text;
+
+const f = fruits.entries();
+
+for (let x of f) {
+  document.getElementById('content').innerHTML += x + '<br>';
+}
+
+document.getElementById('content').innerHTML = fruits.includes('Mango');
