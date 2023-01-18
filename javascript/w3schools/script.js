@@ -708,3 +708,12 @@
 
 // console.log(y)
 // document.getElementById('content').innerHTML = text;
+
+let language = 'Javascript';
+
+let text = '';
+for (let x of language) {
+  text += x + '<br>';
+}
+
+document.getElementById('content').innerHTML = text;
