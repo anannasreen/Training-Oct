@@ -235,8 +235,8 @@
 // document.getElementById('content').innerHTML = x;
 // document.getElementById('content').innerHTML = y;
 
-const points = [40, 100, 1, 5, 25, 10];
-document.getElementById('content').innerHTML = points;
+// const points = [40, 100, 1, 5, 25, 10];
+// document.getElementById('content').innerHTML = points;
 
 // points.sort(function (a, b) {
 //   return a - b;
@@ -252,21 +252,71 @@ document.getElementById('content').innerHTML = points;
 
 // document.getElementById('content2').innerHTML = points;
 
-const btn = document.getElementById('btn');
-const btn2 = document.getElementById('btn2');
+// const btn = document.getElementById('btn');
+// const btn2 = document.getElementById('btn2');
 
-btn.addEventListener('click', myFunction);
+// btn.addEventListener('click', myFunction);
 
-btn2.addEventListener('click', myFunction2);
+// btn2.addEventListener('click', myFunction2);
 
-function myFunction() {
-  points.sort();
-  document.getElementById('content').innerHTML = points;
-}
+// function myFunction() {
+//   points.sort();
+//   document.getElementById('content').innerHTML = points;
+// }
 
-function myFunction2() {
-  points.sort(function (a, b) {
-    return a - b;
-  });
-  document.getElementById('content').innerHTML = points;
-}
+// function myFunction2() {
+//   points.sort(function (a, b) {
+//     return a - b;
+//   });
+//   document.getElementById('content').innerHTML = points;
+// }
+
+// const points = [40, 100, 1, 5, 25, 10];
+// document.getElementById('content').innerHTML = `
+// The highest number is ${myArrayMax(points)}
+// `;
+
+// function myArrayMax(arr) {
+//   return Math.max.apply(null, arr);
+// }
+
+// const points = [40, 100, 1, 5, 25, 10];
+// document.getElementById("content").innerHTML = myArrayMin(points);
+
+// function myArrayMin(arr) {
+//   let len = arr.length;
+//   let min = Infinity;
+//   while (len--) {
+//     if (arr[len] < min) {
+//       min = arr[len];
+//     }
+//   }
+//   return min;
+// }
+
+// const cars = [
+//   {type:"Volvo", year:2016},
+//   {type:"Saab", year:2001},
+//   {type:"BMW", year:2010}
+// ];
+
+// displayCars();
+
+// function myFunction() {
+//   cars.sort(function(a, b){
+//     let x = a.type.toLowerCase();
+//     let y = b.type.toLowerCase();
+//     if (x < y) {return -1;}
+//     if (x > y) {return 1;}
+//     return 0;
+//   });
+//   displayCars();
+// }
+
+// function displayCars() {
+//   document.getElementById("content").innerHTML =
+//   cars[0].type + " " + cars[0].year + "<br>" +
+//   cars[1].type + " " + cars[1].year + "<br>" +
+//   cars[2].type + " " + cars[2].year;
+// }
+
