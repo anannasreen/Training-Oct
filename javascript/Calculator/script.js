@@ -16,11 +16,13 @@ input.innerHTML = '';
 
 numbers.forEach(number => {
   number.addEventListener('click', () => {
-    if (readingNumber === 0) {//when the first operation takes place
+    if (readingNumber === 0) {
+      //when the first operation takes place
       console.log(`A number was clicked and the number is ${number.innerText}`);
       input.innerHTML += `${number.innerText}`;
       console.log(input.innerHTML, 'helloo');
-    } else {//after first operation, when we click an operator again, the input value shouldn't append the current value, which is the result of first operation
+    } else {
+      //after first operation, when we click an operator again, the input value shouldn't append the current value, which is the result of first operation
       input.innerHTML = number.innerHTML;
       console.log(input.innerHTML);
       readingNumber = 0; //so that when the next number is clicked, it enters to the if statement and appends
@@ -39,10 +41,8 @@ operators.forEach(operator => {
 
     if (state === 0) {
       //this means we are starting fresh
-      //we need to just save the input value
-      //to the accumulator
-      //save the operator to the global previous
-      //operator
+      //we need to just save the input value to the accumulator
+      //save the operator to the global previous operator
       accumulator = inputValue;
       previousOperator = opr;
       state = 1;
@@ -51,8 +51,7 @@ operators.forEach(operator => {
     } else {
       switch (previousOperator) {
         case '+':
-          //call the function to add accumulator
-          //and the current input value
+          //call the function to add accumulator and the current input value
           accumulator += inputValue;
           break;
         case '-':
@@ -67,7 +66,7 @@ operators.forEach(operator => {
           //means some operators we don't understand
           console.log('something went wrong');
       }
-      input.innerHTML = accumulator.toString();//since number wont be updated into string automatically in typescript-
+      input.innerHTML = accumulator.toString(); //since number wont be updated into string automatically in typescript-
       previousOperator = opr;
       readingNumber = 1;
     }

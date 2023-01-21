@@ -25,3 +25,9 @@ numbers.forEach(number => {
     }
   });
 });
+
+operators.forEach(operator => {
+  operator.addEventListener('click', () => {
+    console.log(`You clicked ${operator.innerHTML} operator`);
+  });
+});
