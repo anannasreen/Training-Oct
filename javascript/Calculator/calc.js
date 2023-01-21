@@ -28,6 +28,74 @@ numbers.forEach(number => {
 
 operators.forEach(operator => {
   operator.addEventListener('click', () => {
+    const opr = operator.innerHTML;
     console.log(`You clicked ${operator.innerHTML} operator`);
+    inputValue = strToInt(input.innerHTML);
+
+    if (state === 0) {
+      accumulator=inputValue
+      previousOperator = opr;
+      state = 1;
+      input.innerHTML = '';
+      console.log(inputValue);
+    } else {
+      switch (previousOperator) {
+        case '+':
+          accumulator += inputValue;
+          break;
+        case '-':
+          accumulator -= inputValue;
+          break;
+        case '*':
+          accumulator *= inputValue;
+        case '/':
+          accumulator /= inputValue;
+        default:
+          console.log('Something went wrong');
+      }
+      input.innerHTML = accumulator.toString();
+      previousOperator = opr;
+      readingNumber = 1;
+    }
   });
 });
+clear.addEventListener('click', () => {
+  input.innerHTML = '';
+});
+equal_btn.addEventListener('click', () => {
+  input.innerHTML = accumulator;
+});
+
+let x;
+
+function strToInt(x) {
+  let num = 0;
+  for (let i of x) {
+    num = num * 10 + charToDigit(i);
+  }
+  return num;
+}
+function charToDigit(x) {
+  switch (x) {
+    case '0':
+      return 0;
+    case '1':
+      return 1;
+    case '2':
+      return 2;
+    case '3':
+      return 3;
+    case '4':
+      return 4;
+    case '5':
+      return 5;
+    case '6':
+      return 6;
+    case '7':
+      return 7;
+    case '8':
+      return 8;
+    case '9':
+      return 9;
+  }
+}
