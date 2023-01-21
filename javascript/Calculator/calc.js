@@ -33,7 +33,7 @@ operators.forEach(operator => {
     inputValue = strToInt(input.innerHTML);
 
     if (state === 0) {
-      accumulator=inputValue
+      accumulator = inputValue;
       previousOperator = opr;
       state = 1;
       input.innerHTML = '';
@@ -54,8 +54,7 @@ operators.forEach(operator => {
           console.log('Something went wrong');
       }
       input.innerHTML = accumulator.toString();
-      previousOperator = opr;
-      readingNumber = 1;
+  
     }
   });
 });
@@ -64,6 +63,8 @@ clear.addEventListener('click', () => {
 });
 equal_btn.addEventListener('click', () => {
   input.innerHTML = accumulator;
+  previousOperator = opr;
+  readingNumber = 1;
 });
 
 let x;
