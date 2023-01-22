@@ -29,7 +29,10 @@ numbers.forEach(number => {
 operators.forEach(operator => {
   operator.addEventListener('click', () => {
     const opr = operator.innerHTML;
-    console.log(`You clicked ${operator.innerHTML} operator`);
+    console.log(`
+    You clicked ${operator.innerHTML} operator
+    `);
+
     inputValue = strToInt(input.innerHTML);
 
     if (state === 0) {
@@ -54,7 +57,6 @@ operators.forEach(operator => {
           console.log('Something went wrong');
       }
       input.innerHTML = accumulator.toString();
-  
     }
   });
 });
