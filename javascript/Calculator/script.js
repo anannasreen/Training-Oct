@@ -118,3 +118,11 @@ function charToDigit(x) {
       return 9;
   }
 }
+
+
+// equal_btn.addEventListener('click', () => {
+//   console.log('You clicked equal button');
+//   accumulator += previousOperator;
+//   readingNumber = 0;
+//   input.innerHTML = accumulator;
+// });

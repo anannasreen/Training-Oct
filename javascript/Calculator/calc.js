@@ -73,13 +73,6 @@ clear.addEventListener('click', () => {
   accumulator = 0;
 });
 
-// equal_btn.addEventListener('click', () => {
-//   console.log('You clicked equal button');
-//   accumulator += previousOperator;
-//   readingNumber = 0;
-//   input.innerHTML = accumulator;
-// });
-
 let x;
 
 function strToInt(x) {
