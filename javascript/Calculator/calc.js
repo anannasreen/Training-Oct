@@ -53,21 +53,32 @@ operators.forEach(operator => {
           accumulator *= inputValue;
         case '/':
           accumulator /= inputValue;
+        case '=':
+          accumulator == inputValue;
         default:
           console.log('Something went wrong');
       }
       input.innerHTML = accumulator.toString();
+      previousOperator = opr;
+      readingNumber = 1;
     }
   });
 });
+
 clear.addEventListener('click', () => {
   input.innerHTML = '';
+  readingNumber = 0;
+  state = 0;
+  inputValue = 0;
+  accumulator = 0;
 });
-equal_btn.addEventListener('click', () => {
-  input.innerHTML = accumulator;
-  previousOperator = opr;
-  readingNumber = 1;
-});
+
+// equal_btn.addEventListener('click', () => {
+//   console.log('You clicked equal button');
+//   accumulator += previousOperator;
+//   readingNumber = 0;
+//   input.innerHTML = accumulator;
+// });
 
 let x;
 
