@@ -51,10 +51,13 @@ operators.forEach(operator => {
           break;
         case '*':
           accumulator *= inputValue;
+          break;
         case '/':
           accumulator /= inputValue;
+          break;
         case '=':
           accumulator == inputValue;
+          break;
         default:
           console.log('Something went wrong');
       }
