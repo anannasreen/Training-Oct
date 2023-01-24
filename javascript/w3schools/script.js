@@ -727,4 +727,39 @@
 // }
 
 // document.getElementById('content').innerHTML = text;
-w3
+
+//////////////////////////////////////////////////////////////////////////////////
+
+// let text='{"employees":['+'{"firstName":"John","lastName":"Smith"},]}'
+
+// function addUp(num) {
+//   return (num * (num + 1)) / 2;
+// }
+// addUp();
+// console.log(addUp(4));
+
+// const arr = [1, 2, 3, 4, 5];
+// function minMax() {
+//   return [Math.min(...arr), Math.max(...arr)];
+// }
+
+// function numSqr(x) {
+//   if (x === 1) {
+//     return 1;
+//   }
+//   let y = x ** 2 + numSqr(x - 1);
+//   return y
+// }
+// console.log(numSqr(5))
+
+// const arr = [1, 5, 6, 3];
+// let sum = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     sum += arr[i];
+//   }
+
+function series(arr) {
+  const total = arr.reduce((a, x) => a + x);
+  return `${total} ohm ${'s'.repeat(total > 1)}`;
+}
+console.log(series([1, 5, 6, 3]));
