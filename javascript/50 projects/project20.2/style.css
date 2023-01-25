@@ -1,19 +1,36 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
-body{
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    overflow: hidden;
-    margin: 0;
+body {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
 }
-button{
-    background-color: rgba(205, 32, 153, 0.663);
-    padding: 20px 30px;
-    color: white;
-    font-size: 16px;
-    border: none;
+button {
+  background-color: rgba(205, 32, 153, 0.663);
+  padding: 20px 30px;
+  color: white;
+  font-size: 16px;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+button .circle {
+  position: absolute;
+  background-color: #fff;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: scale 0.5s ease-out;
+}
+@keyframes scale {
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
 }

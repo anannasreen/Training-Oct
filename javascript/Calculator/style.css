@@ -3,12 +3,15 @@
   padding: 0;
   margin: 0;
 }
+
 body {
-  height: 100vh;
+  font-family: 'Ubuntu', sans-serif;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
   overflow: hidden;
-  font-size: 125px;
-  font-family: sans-serif;
+  margin: 0;
 }
 .calculator {
   display: flex;
@@ -21,7 +24,7 @@ body {
   background-color: #858694;
   text-align: right;
   color: #fff;
-  height: 25%;
+  height: 150px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
