@@ -758,8 +758,9 @@
 //     sum += arr[i];
 //   }
 
-function series(arr) {
-  const total = arr.reduce((a, x) => a + x);
-  return `${total} ohm ${'s'.repeat(total > 1)}`;
-}
-console.log(series([1, 5, 6, 3]));
+// function series(arr) {
+//   const total = arr.reduce((a, x) => a + x);
+//   return `${total} ohm ${'s'.repeat(total > 1)}`;
+// }
+// console.log(series([1, 5, 6, 3]));
+

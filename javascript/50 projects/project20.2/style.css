@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+button{
+    background-color: rgba(205, 32, 153, 0.663);
+    padding: 20px 30px;
+    color: white;
+    font-size: 16px;
+    border: none;
+}
