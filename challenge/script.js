@@ -7,7 +7,7 @@ let j = 99;
 for (let i = LINES; i >= 0; i--) {
   const line = document.createElement("p");
   lyrics.appendChild(line);
-  line.classList.add("lines");
+  // line.classList.add("lines");
   if (i > 1) {
     line.innerHTML = `${i} bottles of beer on the wall, ${i} bottles of beer.<br> Take ine down and pass it around, ${
       i - 1
