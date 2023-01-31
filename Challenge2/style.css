@@ -1,0 +1,28 @@
+body{
+    display: flex;
+    height: 100vh;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+}
+input{
+    width: 100px;
+    height: 100px;
+    border: 3px solid #000;
+    font-size: 75px;
+}
+input:focus{
+    outline: none;
+}
+button{
+    height: 70px;
+    width: 100px;
+    margin-top: 30px;
+    background-color: rgb(0, 179, 255);
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+}
