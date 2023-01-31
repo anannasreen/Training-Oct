@@ -428,5 +428,221 @@ multiplyBythree(10);*/
 // }
 
 // if (true) true;
+/////////////////////////////////////////////////////////
+// var a=100
+// {
+//   var a = 20;
+//   let b = 10;
+//   const c = 30;
+//   console.log(a);
+//   console.log(b);
+//   console.log(c);
+// }
+// console.log(a);
+// console.log(b);
+// console.log(c);
 
+// const a = 20;
+// {
+//   const a = 100;
+//   {
+//     const a = 200;
+//     console.log(a);
+//   }
+// }
 
+// function x() {
+//   var a = 7;
+//   function y() {
+//     console.log(a);
+//   }
+//   y();
+// }
+// x();
+
+// var z = x();
+// console.log(z);
+
+// function z() {
+//   var b = 900;
+//   function x() {
+//     var a = 7;
+//     function y() {
+//       console.log(a, b);
+//     }
+//     y();
+//   }
+//   x();
+// }
+// z();
+
+// function x() {
+//   var i = 1;
+//   setTimeout(function () {
+//     console.log(i);
+//   }, 3000);
+// }
+// x();
+
+// function c() {
+//   for (let i = 1; i <= 5; i++) {
+//     setTimeout(function () {
+//       console.log(i);
+//     }, i * 1000);
+//   }
+// }
+// c();
+
+// function outer() {
+//   var a = 10;
+//   function inner() {
+//     console.log(a);
+//   }
+//   return inner;
+// }
+// outer()();
+
+//data hiding or encapsulation
+// function counter(){
+// var counter=0
+// function incrementCounter(){
+//   counter++
+// }
+// }
+
+// function counter() {
+//   var count = 0;
+//   return function incrementCounter() {
+//     count++;
+//     console.log(count);
+//   };
+// }
+// var counter1 = counter();
+// counter1();
+// counter();
+// var counter2 = counter();
+// counter2();
+// counter2();
+// counter2();
+// counter2();
+
+// setTimeout(function () {
+//   console.log("timer");
+// }, 5000);
+// function x(y) {
+//   console.log("x");
+// }
+// x(function y() {
+//   console.log("y");
+// });
+
+// function attachEventListener() {
+//   let count = 0;
+//   document.getElementById("btn").addEventListener("click", function xyz() {
+//     console.log("button clicked", ++count);
+//   });
+// }
+// attachEventListener()
+
+// console.log("start");
+// setTimeout(function cb() {
+//   console.log("callback");
+// }, 5000);
+// console.log("end");
+
+// let startDate = new Date().getTime();
+// let endDate = startDate;
+// while (endDate < startDate + 10000) {
+//   endDate = new Date().getTime();
+// }
+// console.log("while expires");
+
+// function cb() {
+// console.log("callback");
+// }
+// cb();
+
+// function x() {
+//   console.log("hello");
+// }
+// function y(x) {
+//   x();
+// }
+// y(x)
+
+// const radius = [3, 1, 2, 4];
+
+// const calculateArea = function (radius) {
+//   const output = [];
+//   for (let i = 0; i < radius.length; i++) {
+//     output.push(Math.PI * radius[i] * radius[i]);
+//   }
+//   return output;
+// };
+// calculateArea(radius);
+// console.log(calculateArea(radius));
+
+// const calculateCircumference = function (radius) {
+//   const output = [];
+//   for (let i = 0; i < radius.length; i++) {
+//     output.push(2 * Math.PI * radius[i]);
+//   }
+//   return output;
+// };
+// calculateCircumference(radius);
+// console.log(calculateCircumference(radius));
+
+// const calculateDiameter = function (radius) {
+//   const output = [];
+//   for (let i = 0; i < radius.length; i++) {
+//     output.push(2 * radius[i]);
+//   }
+//   return output;
+// };
+// calculateDiameter(radius);
+// console.log(calculateDiameter(radius));
+
+// const radius = [3, 1, 2, 4];
+// const area = function (radius) {
+//   return Math.PI * radius * radius;
+// };
+
+// const circumference = function (radius) {
+//   return 2 * Math.PI * radius;
+// };
+
+// const diameter = function (radius) {
+//   return 2 * radius;
+// };
+// const calculate = function (radius, logic) {
+//   const output = [];
+//   for (let i = 0; i < radius.length; i++) {
+//     output.push(logic(radius[i]));
+//   }
+//   return output;
+// };
+// console.log(radius.map(area))
+// console.log(calculate(radius, area));
+// console.log(calculate(radius, circumference));
+// console.log(calculate(radius, diameter));
+
+const arr = [5, 1, 3, 2, 6];
+console.log(arr);
+
+// function double(x) {
+//   return x * 2;
+// }
+
+// function triple(x) {
+//   return x * 3;
+// }
+
+// const output3 = arr.map(function binary(x) {
+//   return x.toString(2);
+// });
+// const output = arr.map(double);
+// const output2 = arr.map(triple);
+
+// console.log(output);
+// console.log(output2);
+// console.log(output3);
