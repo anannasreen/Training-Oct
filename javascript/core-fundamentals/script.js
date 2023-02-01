@@ -626,8 +626,8 @@ multiplyBythree(10);*/
 // console.log(calculate(radius, circumference));
 // console.log(calculate(radius, diameter));
 
-const arr = [5, 1, 3, 2, 6];
-console.log(arr);
+// const arr = [5, 1, 3, 2, 6];
+// console.log(arr);
 
 // function double(x) {
 //   return x * 2;
@@ -646,3 +646,29 @@ console.log(arr);
 // console.log(output);
 // console.log(output2);
 // console.log(output3);
+
+// function isOdd(x) {
+//   return x % 2;
+// }
+// const output = arr.filter(isOdd);
+// console.log(output);
+
+// const output = arr.filter((x) => x > 4);
+// console.log(output);
+////////////////////////////////////////////
+const arr = [5, 1, 3, 2, 6];
+// const output = arr.filter((x) => x < 3);
+// console.log(output);
+
+function findSum(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum = sum + arr[i];
+  }
+  return sum;
+}
+console.log(findSum(arr));
+
+const output=arr.reduce(function(acc,curr){
+  
+})

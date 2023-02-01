@@ -57,19 +57,17 @@ let items = [];
 
 boxes.forEach((box, idx) => {
   box.addEventListener("keydown", (e) => {
+    const boxes = document.querySelectorAll(".box");
     if (e.key === "Enter") {
       function getNum() {
         val = box.value;
         return val;
-        // items.push(val);
       }
-      const boxes = document.querySelectorAll(".box");
       if (idx < boxes.length - 1) {
         boxes[idx + 1].focus();
       } else if ((idx = boxes.length - 1)) {
         boxes[idx].focus();
       }
-
       console.log(getNum());
       items.push(+getNum());
       console.log(items);
@@ -79,7 +77,6 @@ boxes.forEach((box, idx) => {
 
 btn.addEventListener("click", () => {
   const boxes = document.querySelectorAll(".box");
-
   let max = items[0];
 
   function greatestNumber() {
@@ -92,12 +89,11 @@ btn.addEventListener("click", () => {
     return items.indexOf(max);
   }
   console.log(greatestNumber(), max);
-  console.log(
-    "The greatest number is",
-    max,
-    "at the position",
-    greatestNumber()
-  );
-
+  // console.log(
+  //   "The greatest number is",
+  //   max,
+  //   "at the position",
+  //   greatestNumber()
+  // );
   answer.innerHTML = `The greatest number is, ${max}, at the position, ${greatestNumber()}`;
 });
