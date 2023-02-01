@@ -34,8 +34,6 @@
 // window.addEventListener('load', hello);
 // document.getElementById('btn').addEventListener('click', hello);
 
-/////////////////////////////////////////////////////
-
 // let text = 'Visit w3schools!';
 // let n = text.search('w3school');
 // document.getElementById('content').innerHTML = n;
@@ -512,7 +510,7 @@
 
 // let years = Math.round(Date.now() / year);
 // document.getElementById('content').innerHTML = years;
-/////////////////////////////////////////////////////////////////////
+
 // let text = '';
 // const today = new Date();
 // const someday = new Date();
@@ -728,8 +726,6 @@
 
 // document.getElementById('content').innerHTML = text;
 
-//////////////////////////////////////////////////////////////////////////////////
-
 // let text='{"employees":['+'{"firstName":"John","lastName":"Smith"},]}'
 
 // function addUp(num) {
@@ -764,3 +760,65 @@
 // }
 // console.log(series([1, 5, 6, 3]));
 
+//---------feb 1-------------
+// const arr = [1, 2, 3, 4];
+
+// const initialValue = 0;
+// const sum = arr.reduce((acc, curr) => acc + curr, initialValue);
+
+// console.log(sum);
+
+// const array = [15, 16, 17, 18, 19];
+
+// function reducer(acc, curr, idx) {
+//   const returns = acc + curr;
+//   console.log(
+//     `accumulator:${acc},currentValue:${curr},index:${idx},returns:${returns}`
+//   );
+//   return returns;
+// }
+
+// array.reduce(reducer);
+
+// const numbers = [-5, 6, 2, 0];
+// const doubledPositiveNumbers = numbers.reduce((acc, curr) => {
+//   if (curr > 0) {
+//     const doubled = curr * 2;
+//     return [acc, doubled];
+//   }
+//   return acc;
+// }, []);
+// console.log(doubledPositiveNumbers);
+
+// const y = 10;
+// function x() {
+//   const y = 15;
+//   console.log(y);
+// }
+// x();
+
+// const person = [
+//   {
+//     firstname: 'Malcom',
+//     lastname: 'Reynolds',
+//   },
+//   {
+//     firstname: 'Kaylee',
+//     lastname: 'Frye',
+//   },
+//   {
+//     firstname: 'Jayne',
+//     lastname: 'Cobb',
+//   },
+// ];
+
+// console.log(person.map(getFullName));
+// function getFullName(item){
+//   return [item.firstname,item.lastname].join(" ")
+// }
+
+// const numbers = [15.5, 2.3, 1.1, 4.7];
+// console.log(numbers.reduce(getSum, 0));
+// function getSum(total, num) {
+//   return total + Math.round(num);
+// }

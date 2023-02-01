@@ -656,19 +656,90 @@ multiplyBythree(10);*/
 // const output = arr.filter((x) => x > 4);
 // console.log(output);
 ////////////////////////////////////////////
-const arr = [5, 1, 3, 2, 6];
+// const arr = [5, 1, 3, 2, 6];
 // const output = arr.filter((x) => x < 3);
 // console.log(output);
 
-function findSum(arr) {
-  let sum = 0;
-  for (let i = 0; i < arr.length; i++) {
-    sum = sum + arr[i];
-  }
-  return sum;
-}
-console.log(findSum(arr));
+// function findSum(arr) {
+//   let sum = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     sum = sum + arr[i];
+//   }
+//   return sum;
+// }
+// console.log(findSum(arr));
 
-const output=arr.reduce(function(acc,curr){
-  
-})
+// const output = arr.reduce(function (acc, curr) {
+//   acc = acc + curr;
+//   return acc;
+// }, 0);
+// console.log(output);
+
+// function findMax(arr) {
+//   let max = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > max) {
+//       max = arr[i];
+//     }
+//   }
+//   return max;
+// }
+// console.log(findMax(arr));
+
+// const output = arr.reduce(function (acc, curr) {
+//   if (curr > acc) {
+//     acc = curr;
+//   }
+//   return acc;
+// }, 0);
+
+// console.log(output);
+
+//MAP, REDUCE AND FILTER FUNCTIONS USED IN OBJECTS
+
+const users = [
+  {
+    firstname: "Anan",
+    lastname: "Nasreen",
+    age: 21,
+  },
+  {
+    firstname: "Donald",
+    lastname: "Trump",
+    age: 75,
+  },
+  {
+    firstname: "Elon",
+    lastname: "Musk",
+    age: 50,
+  },
+  {
+    firstname: "Deepika",
+    lastname: "Padukone",
+    age: 40,
+  },
+];
+
+//MAP
+
+const outputMap = users.map((x) => x.firstname + " " + x.lastname);
+console.log(outputMap);
+
+//REDUCE
+
+const outputReduce = users.reduce(function (acc, curr) {
+  if (acc[curr.age]) {
+    acc[curr.age] = ++acc[curr.age];
+  } else {
+    acc[curr.age] = 1;
+  }
+  return acc;
+}, {});
+
+console.log(outputReduce);
+
+//FILTER
+//To display first name of all the people whose age is less than 30
+
+const outputFilter = users.filter((x) => x.age < 30).map((x) => x.firstname);
+console.log(outputFilter);
