@@ -761,6 +761,7 @@
 // console.log(series([1, 5, 6, 3]));
 
 //---------feb 1-------------
+
 // const arr = [1, 2, 3, 4];
 
 // const initialValue = 0;
@@ -822,3 +823,80 @@
 // function getSum(total, num) {
 //   return total + Math.round(num);
 // }
+
+// let arr1 = [1, 10];
+// let arr2 = [2, 3, 4, 5, 6, 7, 8, 9];
+
+// function tuckIn(arr1,arr2){
+//    return [arr1[0],...arr2,arr2[1]]
+// }
+// console.log(tuckIn(arr1,arr2))
+
+// let arr = [1, 2, 3];
+// console.log(arr[0]);
+
+// const words = [
+//   'spray',
+//   'limit',
+//   'elite',
+//   'exuberant',
+//   'destruction',
+//   'present',
+// ];
+// const result = words.filter(word => word.length > 6);
+// console.log(result);
+
+// function isBigEnough(value) {
+//   return value >= 10;
+// }
+// const filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
+// console.log(filtered);
+
+// const array = [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// function isPrime(num) {
+//   for (let i = 2; num > i; i++) {
+//     if (num % i === 0) {
+//       return false;
+//     }
+//   }
+//   return num > 1;
+// }
+// console.log(array.filter(isPrime));
+
+// const fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
+
+// function filterItems(arr, query) {
+//   return arr.filter(el => el.toLowerCase().includes(query.toLowerCase()));
+// }
+
+// console.log(filterItems(fruits, 'ap'));
+// console.log(filterItems(fruits, 'an'));
+
+// const arrayLike = {
+//   length: 3,
+//   0: 'a',
+//   1: 'b',
+//   2: 'c',
+// };
+// console.log(Array.prototype.filter.call(arrayLike, x => x <= 'b'));
+
+// let words = ['spray', 'limit', 'exuberant', 'destruction', 'elite', 'present'];
+
+// const modifiedWords = words.filter((word, index, arr) => {
+//   arr[index + 1] += 'extra';
+//   return word.length < 6;
+// });
+// console.log(modifiedWords);
+
+// const appendedWords = words.filter((word, index, arr) => {
+//   arr.push('new');
+//   return word.length < 6;
+// });
+// console.log(appendedWords);
+
+// const deleteWords = words.filter((word, index, arr) => {
+//   arr.pop();
+//   return word.length < 6;
+// });
+// console.log(deleteWords);
