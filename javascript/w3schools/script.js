@@ -1060,3 +1060,207 @@
 // }
 // console.log(new ChildClass());
 
+// class Person {
+//   constructor(name = 'Anan') {
+//     this.name = name;
+//   }
+//   introduce() {
+//     console.log(`Hello, my name is ${this.name}`);
+//   }
+// }
+// const person = new Person();
+// person.introduce();
+
+// class Square extends Polygon {
+//   constructor(length) {
+//     super(length, length);
+//     this.name = 'Square';
+//   }
+//   get area() {
+//     return this.height * this.width;
+//   }
+//   set area(value) {
+//     this.height = value ** 0.5;
+//     this.width = value ** 0.5;
+//   }
+// }
+
+// class Polygon {
+//   constructor() {
+//     this.name = 'Polygon';
+//   }
+// }
+// class Rectangle {
+//   constructor() {
+//     this.name = 'Rectangle';
+//   }
+// }
+// class Square extends Polygon {
+//   constructor() {
+//     super();
+//   }
+// }
+// Object.setPrototypeOf(Square, Rectangle);
+// const newInstance = new Square();
+// console.log(newInstance instanceof Polygon);
+// console.log(newInstance instanceof Rectangle);
+// console.log(newInstance.name);
+
+// class DateFormatter extends Date {
+//   getFormattedDate() {
+//     const months = [
+//       'Jan',
+//       'Feb',
+//       'Mar',
+//       'Apr',
+//       'May',
+//       'Jun',
+//       'Jul',
+//       'Aug',
+//       'Sep',
+//       'Oct',
+//       'Nov',
+//       'Dec',
+//     ];
+//     return `${this.getDate()}-${months[this.getMonth()]}-${this.getFullYear()}`;
+//   }
+// }
+// console.log(new DateFormatter('February 1,2023 17:49:40').getFormattedDate());
+
+// class Circle {
+//   constructor(radius) {
+//     this.radius = radius;
+//   }
+//   getArea() {
+//     return Math.PI * Math.pow(this.radius, 2);
+//   }
+//   getPerimeter() {
+//     return 2 * Math.PI * this.radius;
+//   }
+// }
+// console.log(new Circle(7).getArea());
+// console.log(new Circle(7).getPerimeter());
+
+// class Rectangle {
+//   constructor(length, breadth) {
+//     this.length = length;
+//     this.breadth = breadth;
+//   }
+//   getArea() {
+//     return length * this.breadth;
+//   }
+// }
+// new Rectangle(5,6)
+// console.log(new Rectangle(5,6).getArea())
+
+// class Square {
+//   constructor(length) {
+//     this.length = length;
+//   }
+//   getArea(){
+//     return length*length
+//   }
+// }
+// console.log(new Square(4).getArea())
+
+// let array = [];
+// function arrayOfMultiple(arr, i) {
+//   for (i = 1; i < 6; i++) {
+//     array.push(arr * i);
+//   }
+//   return array;
+// }
+// console.log(arrayOfMultiple(7, 5));
+
+// function arrayMultiples(num, length) {
+//   return [...Array(length)].map((_, i) => num * (i + 1));
+// }
+// console.log(arrayMultiples(7,5))
+
+// function add_sufix(prefix, sufix) {
+//   return prefix + sufix;
+// }
+// console.log(add_sufix('fear', 'less'));
+// const array1 = [1, 2, 3, 4];
+// const initialValue = 0;
+// const sumWithInitial = array1.reduce(
+//   (accumulator, currentvalue) => accumulator + currentvalue,
+//   initialValue
+// );
+// console.log(sumWithInitial);
+
+// const array = [15, 16, 17, 18, 19];
+// function reducer(accumulator, currentValue, index) {
+//   const returns = accumulator + currentValue;
+//   console.log(
+//     `accumulator:${accumulator},currentValue:${currentValue},index:${index},returns:${returns}`
+//   );
+//   return returns;
+// }
+// array.reduce(reducer);
+
+// const flattened = [
+//   [0, 1],
+//   [2, 3],
+//   [4, 5],
+// ].reduce((accumulator, currentValue) => accumulator.concat(currentValue));
+// console.log(flattened);
+
+// const names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice'];
+// const countedNames = names.reduce((allNames, name) => {
+//   const currCount = allNames[name] ?? 0;
+//   return {
+//     ...allNames,
+//     [name]: currCount + 1,
+//   };
+// }, {});
+// console.log(countedNames);
+
+// const people = [
+//   { name: 'Alice', age: 21 },
+//   { name: 'Max', age: 20 },
+//   { name: 'Jane', age: 20 },
+// ];
+// function groupBy(objectArray, property) {
+//   return objectArray.reduce((acc, obj) => {
+//     const key = obj[property];
+//     const curGroup = acc[key] ?? [];
+//     return { ...acc, [key]: [...curGroup, obj] };
+//   }, {});
+// }
+// const groupedPeople = groupBy(people, 'age');
+// console.log(groupedPeople);
+
+// const friends = [
+//   {
+//     name: 'Anna',
+//     books: ['Bible', 'Harry Potter'],
+//     age: 21,
+//   },
+//   {
+//     name: 'Bob',
+//     books: ['War and peace', 'Romeo and Juliet'],
+//     age: 26,
+//   },
+//   {
+//     name: 'Alice',
+//     books: ['The Lord of the Rings', 'The Shining'],
+//     age: 18,
+//   },
+// ];
+// const allbooks = friends.reduce(
+//   (accumulator, currentValue) => [...accumulator, ...currentValue.books],
+//   ['Alphabet']
+// );
+// console.log(allbooks);
+
+// const myArray = ['a', 'b', 'a', 'b', 'c', 'e', 'e', 'c', 'd', 'd', 'd', 'd'];
+// const myArrayWithNoDuplicates = myArray.reduce((accumulator, currentValue) => {
+//   if (!accumulator.includes(currentValue)) {
+//     return [...accumulator, currentValue];
+//   }
+//   return accumulator;
+// }, []);
+// console.log(myArrayWithNoDuplicates);
+
+const number=[-5,6,2,0]
