@@ -993,3 +993,70 @@
 //   return this.firstName + ' ' + this.lastName;
 // };
 // console.log('Person1 is ' + person1.name());
+
+// class Polygon {
+//   constructor() {
+//     this.name = 'Polygon';
+//   }
+// }
+// const poly1 = new Polygon();
+// console.log(poly1.name);
+// class Person {
+//   constructor(name) {
+//     this.name = name;
+//   }
+//   introduce() {
+//     console.log(`Hello, my name is ${this.name}`);
+//   }
+// }
+// const anan = new Person('Anan');
+// anan.introduce();
+
+// function createCircle(radius) {
+//   return {
+//     radius,
+//     draw() {
+//       console.log('draw');
+//     },
+//   };
+// }
+// const myCircle=createCircle(1)
+
+// function Circle(radius) {
+//   this.radius = radius;
+//   this.draw = function () {
+//     console.log('draw');
+//   };
+// }
+// const circle = new Circle(1);
+// console.log(circle)
+// class ValidationError extends Error {
+//   printCustomerMessage() {
+//     return `Validation failed (details:${this.message})`;
+//   }
+// }
+// try {
+//   throw new ValidationError('Not a valid phone number');
+// } catch (error) {
+//   if (error instanceof ValidationError) {
+//     console.log(error.name);
+//     console.log(error.printCustomerMessage());
+//   } else {
+//     console.log('Unknown error', error);
+//     throw error;
+//   }
+// }
+
+// class ParentClass {
+//   constructor() {
+//     return 1;
+//   }
+// }
+// console.log(new ParentClass());
+// class ChildClass extends ParentClass {
+//   constructor() {
+//     return 1;
+//   }
+// }
+// console.log(new ChildClass());
+
