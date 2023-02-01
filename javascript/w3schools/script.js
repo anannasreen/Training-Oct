@@ -919,3 +919,77 @@
 //   [Symbol.isConcatSpreadeable]: true,
 // };
 // console.log([0].concat(obj1, obj2));
+
+// const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+// console.log(animals.slice(2));
+// console.log(animals.slice(2, 4));
+// console.log(animals.slice(1, 5));
+// console.log(animals.slice(-2));
+// console.log(animals.slice(2, -1));
+// console.log(animals.slice());
+// const months = ['Jan', 'March', 'April', 'June'];
+// months.splice(1, 0, 'Feb');
+// console.log(months);
+// months.splice(4, 1, 'May');
+// console.log(months);
+
+// const fruits = new Map([
+//   ['apples', 500],
+//   ['bananas', 300],
+//   ['oranges', 200],
+// ]);
+// let text = '';
+// fruits.forEach(function (value, key) {
+//   text += key + ' = ' + value + '\n';
+// });
+// console.log(text);
+
+// let num = 1000;
+// function num_of_digits(num) {
+//   if(num < 0){
+//       num = num * -1;
+//   }
+//   return num.toString().length;
+// }
+// console.log(num_of_digits())
+
+// function circuitPower(volt, curr) {
+//   let power = volt * curr;
+//   return power;
+// }
+// console.log(circuitPower(230,10));
+// let arr1 = [1, 2, 3];
+// let arr2 = [4, 5];
+// let arr3 = [6, 7];
+// function concatenate(...arr) {
+//   return arr1.concat(arr2).concat(arr3);
+// }
+// console.log(concatenate());
+
+// let radius = 5;
+// class Circle {
+//   constructor(radius) {
+//     this.radius = radius;
+//   }
+//   getArea() {
+//     return Math.PI * Math.pow(this.radius, 2);
+//   }
+//   getPerimeter() {
+//     return 2 * Math.PI * this.radius;
+//   }
+// }
+
+// function Person(first, last, age, eye) {
+//   this.firstName = first;
+//   this.lastName = last;
+//   this.age = age;
+//   this.eyeColor = eye;
+// }
+
+// const person1 = new Person('John', 'Doe', 50, 'blue');
+// const person2 = new Person('Sally', 'Rally', 48, 'green');
+
+// person1.name = function () {
+//   return this.firstName + ' ' + this.lastName;
+// };
+// console.log('Person1 is ' + person1.name());
