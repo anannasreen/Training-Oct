@@ -900,3 +900,22 @@
 //   return word.length < 6;
 // });
 // console.log(deleteWords);
+
+// const arr1 = ['a', 'b', 'c'];
+// const arr2 = ['d', 'e', 'f'];
+// console.log(arr1.concat(arr2));
+
+// const obj1 = {
+//   0: 1,
+//   1: 2,
+//   2: 3,
+//   length: 3,
+// };
+// const obj2 = {
+//   0: 1,
+//   1: 2,
+//   2: 3,
+//   length: 3,
+//   [Symbol.isConcatSpreadeable]: true,
+// };
+// console.log([0].concat(obj1, obj2));
