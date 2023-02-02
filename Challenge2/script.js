@@ -4,79 +4,51 @@ const answer = document.getElementById("answer");
 const add = document.getElementById("add");
 const container = document.getElementById("container");
 
-// let listOfNum = [610, 201, 211, 408, 840];
-// let max = listOfNum[0];
-
-// function greatestNumber() {
-//   for (i = 1; i < listOfNum.length; i++) {
-//     if (listOfNum[i] > max) {
-//       max = listOfNum[i];
-//     }
-//   }
-//   return listOfNum.indexOf(max);
-// }
-// console.log(greatestNumber(), max);
-// console.log("The greatest number is", max, "at the position", greatestNumber());
-
-// btn.addEventListener("click", () => {
-//   answer.innerHTML = `The greatest number is, ${max}, at the position, ${greatestNumber()}`;
-// });
-
-// let items = [];
-
-// function getNum() {
-//   let x = boxes.value;
-//   boxes.forEach((box) => {
-//     box.addEventListener("input", () => {
-//       items.push(x);
-//     });
-//   });
-//   return items;
-// }
-// console.log(getNum());
-
-// boxes.addEventListener("keydown", function (e) {
-//   if (e.key === "Enter") {
-//     function getNum() {
-//       val = boxes.value;
-//       return val;
-//       // boxes.forEach((box))
-//     }
-//     console.log(getNum());
-//   }
-// });
-
 add.addEventListener("click", () => {
   const inputBox = document.createElement("input");
   container.appendChild(inputBox);
   inputBox.classList.add("box");
+  const boxes = document.querySelectorAll(".box");
+  boxes.forEach((box, idx) => {
+    box.addEventListener("keydown", (e) => {
+      const boxes = document.querySelectorAll(".box");
+      if (e.key === "Enter") {
+        val = box.value;
+        if (idx < boxes.length - 1) {
+          boxes[idx + 1].focus();
+        } else if ((idx = boxes.length - 1)) {
+          boxes[idx].focus();
+        }
+      }
+    });
+  });
 });
 
 boxes[0].focus();
-let items = [];
 
 boxes.forEach((box, idx) => {
   box.addEventListener("keydown", (e) => {
     const boxes = document.querySelectorAll(".box");
     if (e.key === "Enter") {
-      function getNum() {
-        val = box.value;
-        return val;
-      }
+      val = box.value;
       if (idx < boxes.length - 1) {
         boxes[idx + 1].focus();
       } else if ((idx = boxes.length - 1)) {
         boxes[idx].focus();
       }
-      console.log(getNum());
-      items.push(+getNum());
-      console.log(items);
+      console.log(val);
     }
   });
 });
 
 btn.addEventListener("click", () => {
   const boxes = document.querySelectorAll(".box");
+  let items = [];
+  boxes.forEach((box) => {
+    val = box.value;
+    items.push(+val);
+    console.log(items);
+  });
   let max = items[0];
 
   function greatestNumber() {
@@ -89,11 +61,9 @@ btn.addEventListener("click", () => {
     return items.indexOf(max);
   }
   console.log(greatestNumber(), max);
-  // console.log(
-  //   "The greatest number is",
-  //   max,
-  //   "at the position",
-  //   greatestNumber()
-  // );
-  answer.innerHTML = `The greatest number is, ${max}, at the position, ${greatestNumber()}`;
+  if (max === 0) {
+    answer.innerHTML = "Enter a valid number";
+  } else {
+    answer.innerHTML = `The greatest number is, ${max}, at the position, ${greatestNumber()}`;
+  }
 });

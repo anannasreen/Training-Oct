@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+@font-face {
+  font-family: font-regular;
+  src: url(https://www.etsy.com/assets/type/Graphik-Regular-Web.woff2?v=220104);
+}
+@font-face {
+  font-family: font-medium;
+  src: url(https://www.etsy.com/assets/type/Graphik-Medium-Web.woff2?v=220104);
+}
+@font-face {
+  font-family: font-light;
+  src: url(https://www.etsy.com/assets/type/Guardian-EgypTT-Light.woff2?v=220104);
+}
+body {
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+}
+header {
+  width: 100%;
+}
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  max-width: 1400px;
+  margin-inline: auto;
+  /* box-shadow: 0 4px 20px rgb(34 34 34/15%); */
+  padding: 12px 38px 12px 36px;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+.search-bar input {
+  border: none;
+  background-color: transparent;
+  padding: 12px 42px 9px 18px;
+  font-family: font-regular;
+}
+.search-bar input::placeholder {
+  font-size: 16px;
+}
+.search-bar {
+  width: 100%;
+  background-color: rgba(34, 34, 34, 0.05);
+  border-radius: 96px;
+  border: 2px solid #222;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 18px;
+}
+.search-bar button {
+  background-color: transparent;
+  border: none;
+  padding: 9px 22px 8px 15px;
+}
+.signin {
+  white-space: nowrap;
+  padding: 9px 15px;
+  margin-right: 6px;
+  font-size: 13px;
+  font-family: font-medium;
+  color: #222222;
+}
+.logo {
+  padding-right: 8px;
+  display: flex;
+  align-items: flex-end;
+}
+.basket {
+  padding: 12px;
+  display: flex;
+  align-items: flex-end;
+}
+.like-btn {
+  padding: 12px;
+  display: flex;
+  align-items: flex-end;
+}
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  padding: 0 36px;
+}
+.nav-bar ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1328px;
+  margin-inline: auto;
+}
+.nav-bar ul li {
+  font-family: font-regular;
+  font-size: 13px;
+  color: #222222;
+  margin: 4px 12px 0 0;
+  padding-bottom: 12px;
+}
+.overview-heading {
+  text-align: center;
+  font-family: font-light;
+  color: #222222;
+  font-size: 33px;
+  font-weight: 300;
+  line-height: 36px;
+  padding:18px 18px 0 18px;
+  background-color: #d7e6f5;
+}
+.background {
+  background-color: #d7e6f5;
+  height: 115px;
+}
+.overview-items{
+    position: relative;
+}
+.overview-items ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  font-family: font-medium;
+  position: absolute;
+  width: 100%;
+  top: 0px;
+}
+.overview-items ul li img {
+  width: 114px;
+  height: 114px;
+}
+.overview img {
+  border-radius: 50%;
+  margin: 12px 0;
+}
+.overview-items ul li p {
+  margin-bottom: 6px;
+  width: 114px;
+  text-align: center;
+}
+.overview-items ul li {
+  display: flex;
+  flex-direction: column;
+  padding: 9px 30px;
+  align-items: center;
+}

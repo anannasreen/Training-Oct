@@ -1263,4 +1263,14 @@
 // }, []);
 // console.log(myArrayWithNoDuplicates);
 
-const number=[-5,6,2,0]
+// const number = [-5, 6, 2, 0];
+// const doubledPositiveNumbers = number.reduce((accumulator, currentValue) => {
+//   if (currentValue > 0) {
+//     const doubled = currentValue * 2;
+//     return [...accumulator, doubled];
+//   }
+//   return accumulator;
+// }, []);
+// console.log(doubledPositiveNumbers);
+
+let arr = [true, false, false, true, false];
