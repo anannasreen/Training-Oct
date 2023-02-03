@@ -50,13 +50,13 @@ overview = [
   },
 ];
 
-// console.log(Object.entries(overview))
+console.log(Object.entries(overview))
 
-// for(const key in overview){
-//     for(const key2 in overview[key]){
-//         console.log(overview[key][key2])
-//     }
-// }
+for(const key in overview){
+    for(const key2 in overview[key]){
+        console.log(overview[key][key2])
+    }
+}
 
 for (const [key, value] of Object.entries(overview)){
     console.log(value.url)
