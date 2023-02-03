@@ -1,6 +1,8 @@
 const nav_bar = document.getElementById('nav_bar');
 const elements = document.querySelector('.elements');
-const 
+const overview_list = document.querySelector('.overview-list');
+const deals_list = document.querySelector('.deals-items');
+// const overview_img = document.querySelectorAll('.overview-img');
 
 list = {
   seller: "Sellers' Sales Hub",
@@ -16,7 +18,7 @@ list = {
 };
 
 for (const [key, value] of Object.entries(list)) {
-//   console.log(value);
+  // console.log(value);
   const items = document.createElement('li');
   items.classList.add('list');
   elements.appendChild(items);
@@ -50,15 +52,59 @@ overview = [
   },
 ];
 
-console.log(Object.entries(overview))
-
-for(const key in overview){
-    for(const key2 in overview[key]){
-        console.log(overview[key][key2])
-    }
+for (const key in Object.entries(overview)) {
+  console.log(overview[key].url);
+  const overviewEl = document.createElement('li');
+  overview_list.appendChild(overviewEl);
+  overviewEl.innerHTML = `<div class="overview-img"><img src=${overview[key].url}></div>
+  <p>${overview[key].name}</p>`;
 }
 
-for (const [key, value] of Object.entries(overview)){
-    console.log(value.url)
-
+deals = [
+  {
+    url: 'https://i.etsystatic.com/22368382/r/il/006d21/4245808662/il_300x300.4245808662_a3x4.jpg',
+    discount: 'Up to 40% off on',
+    category: "Women's Ethnic Clothing",
+  },
+  {
+    url: 'https://i.etsystatic.com/32501528/c/1488/1488/0/0/…/23a5b4/3700725057/il_300x300.3700725057_szgj.jpg',
+    discount: 'Up to 40% off on',
+    category: "Women's Western Clothing",
+  },
+  {
+    url: 'https://i.etsystatic.com/25566015/c/2003/2003/0/27…/5b71e2/3196479462/il_300x300.3196479462_20xh.jpg',
+    discount: 'Up to 40% off on',
+    category: "Men's Clothing",
+  },
+  {
+    url: '	https://i.etsystatic.com/38026977/r/il/f2c1ad/4277525816/il_300x300.4277525816_f4wp.jpg',
+    discount: 'Up to 40% off on',
+    category: 'Fashion Jewellery',
+  },
+  {
+    url: 'https://i.etsystatic.com/32501528/c/1757/1757/247/…/67dc01/4248212322/il_300x300.4248212322_psvv.jpg',
+    discount: 'Up to 40% off on',
+    category: 'Winter Clothing',
+  },
+  {
+    url: 'https://i.etsystatic.com/23528878/r/il/625e23/2589827894/il_300x300.2589827894_bi5a.jpg',
+    discount: 'Up to 40% off on',
+    category: 'Wedding Clothing',
+  },
+];
+for (const key in Object.entries(deals)) {
+  console.log(deals[key].url);
+  const dealsEl = document.createElement('li');
+  deals_list.appendChild(dealsEl);
+  dealsEl.innerHTML = `
+            <div class="deals-img">
+            <img
+            src="${deals[key].url}"
+            alt=""
+            />
+            </div>
+            <div class="deals-txt">
+              <span>${deals[key].discount}</span>
+              <p>${deals[key].category}</p>
+            </div>`;
 }
