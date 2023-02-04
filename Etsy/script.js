@@ -2,7 +2,7 @@ const nav_bar = document.getElementById('nav_bar');
 const elements = document.querySelector('.elements');
 const overview_list = document.querySelector('.overview-list');
 const deals_list = document.querySelector('.deals-items');
-// const overview_img = document.querySelectorAll('.overview-img');
+const star = document.querySelector('.star');
 
 list = {
   seller: "Sellers' Sales Hub",
@@ -18,7 +18,6 @@ list = {
 };
 
 for (const [key, value] of Object.entries(list)) {
-  // console.log(value);
   const items = document.createElement('li');
   items.classList.add('list');
   elements.appendChild(items);
@@ -35,7 +34,7 @@ overview = [
     name: 'Jewellery',
   },
   {
-    url: 'https://i.etsystatic.com/32501528/c/1518/1518/253/…/4bdfa0/3702738409/il_300x300.3702738409_qfmi.jpg',
+    url: 'https://i.etsystatic.com/32501528/c/1518/1518/253/562/il/4bdfa0/3702738409/il_300x300.3702738409_qfmi.jpg',
     name: 'clothing',
   },
   {
@@ -52,15 +51,14 @@ overview = [
   },
 ];
 
-for (const key in Object.entries(overview)) {
-  console.log(overview[key].url);
+  for(let key = 0; key < overview.length; key++){
   const overviewEl = document.createElement('li');
   overview_list.appendChild(overviewEl);
   overviewEl.innerHTML = `<div class="overview-img"><img src=${overview[key].url}></div>
   <p>${overview[key].name}</p>`;
 }
 
-deals = [
+let deals = [
   {
     url: 'https://i.etsystatic.com/22368382/r/il/006d21/4245808662/il_300x300.4245808662_a3x4.jpg',
     discount: 'Up to 40% off on',
@@ -92,8 +90,8 @@ deals = [
     category: 'Wedding Clothing',
   },
 ];
-for (const key in Object.entries(deals)) {
-  console.log(deals[key].url);
+
+for (let key = 0; key < deals.length; key++) {
   const dealsEl = document.createElement('li');
   deals_list.appendChild(dealsEl);
   dealsEl.innerHTML = `
@@ -108,3 +106,59 @@ for (const key in Object.entries(deals)) {
               <p>${deals[key].category}</p>
             </div>`;
 }
+
+gifts = [
+  {
+    url: 'https://i.etsystatic.com/35966576/c/1614/1283/669/…/e1510f/4033777789/il_340x270.4033777789_dqlw.jpg',
+    name: 'Birth Flower Jewelry Travel Case, Birth Month Flower Gift,...',
+    rating: '(9,393)',
+    price: '₹847',
+    actualprice: '₹1,694',
+    discount: '(50%)',
+  },
+  {
+    url: 'https://i.etsystatic.com/32477306/c/2000/1589/0/25…/0bcd64/3491080620/il_340x270.3491080620_oh18.jpg',
+    name: 'Dainty Name Necklace with Birth Flower, Personalized Na...',
+    rating: '(13,452)',
+    actualprice: 3500,
+    discount: 50,
+    currencySymbol: "$",
+    delivery: 'FREE delivery',
+  },
+  {
+    url: 'https://i.etsystatic.com/28045281/r/il/3f41fa/3897994052/il_340x270.3897994052_l8xd.jpg',
+    name: 'Sun catcher/Crystal suncatcher/ Crystal Rainbow...',
+    rating: '(6,762)',
+    price: '₹2,364',
+    actualprice: '₹2,627',
+    discount: '(10%)',
+    delivery: 'FREE delivery',
+  },
+  {
+    url: 'https://i.etsystatic.com/25168585/c/2500/1987/0/18…/214e7e/4589233930/il_340x270.4589233930_dg79.jpg',
+    name: 'Custom Pet Portraits Using Pet Photo Personalized Digital Dog...',
+    rating: '(10,962)',
+    price: '₹762',
+    actualprice: '₹1,270',
+    discount: '(40%)',
+  },
+  {
+    url: 'https://i.etsystatic.com/27890741/c/2343/1862/320/…/31a0dd/4028709894/il_340x270.4028709894_i6tr.jpg',
+    name: 'Heart Keychain Set-Made with Authentic LEGO® Bricks,...',
+    rating: '(12,228)',
+    price: '₹719',
+    actualprice: '₹1,438',
+    discount: '(50%)',
+  },
+];
+
+function starrating() {
+  for (i = 1; i <= 5; i++) {
+    const starEl = document.createElement('div');
+    star.appendChild(starEl);
+    starEl.classList.add('star-rating');
+    starEl.innerHTML = `<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="3 3 18 18" aria-hidden="true" focusable="false" width="16" height="16"><path d="M19.985,10.36a0.5,0.5,0,0,0-.477-0.352H14.157L12.488,4.366a0.5,0.5,0,0,0-.962,0l-1.67,5.642H4.5a0.5,0.5,0,0,0-.279.911L8.53,13.991l-1.5,5.328a0.5,0.5,0,0,0,.741.6l4.231-2.935,4.215,2.935a0.5,0.5,0,0,0,.743-0.6l-1.484-5.328,4.306-3.074A0.5,0.5,0,0,0,19.985,10.36Z" fill="#222222"></path></svg>`;
+  }
+  return i;
+}
+console.log(starrating());

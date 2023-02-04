@@ -20,47 +20,21 @@ body {
   margin: 0;
   flex-direction: column;
 }
+.search-bar {
+  display: none;
+}
 header {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 12px;
 }
 .header {
-  width: 100%;
   display: flex;
-  flex-direction: row;
-  max-width: 1400px;
-  margin-inline: auto;
-  /* box-shadow: 0 4px 20px rgb(34 34 34/15%); */
-  padding: 12px 38px 12px 36px;
-  align-items: center;
   justify-content: space-between;
 }
 .header-nav {
   display: flex;
   align-items: center;
-}
-.search-bar input {
-  border: none;
-  background-color: transparent;
-  padding: 12px 42px 9px 18px;
-  font-family: font-regular;
-}
-.search-bar input::placeholder {
-  font-size: 16px;
-}
-.search-bar {
-  width: 100%;
-  background-color: rgba(34, 34, 34, 0.05);
-  border-radius: 96px;
-  border: 2px solid #222;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-right: 18px;
-}
-.search-bar button {
-  background-color: transparent;
-  border: none;
-  padding: 9px 22px 8px 15px;
 }
 .signin {
   white-space: nowrap;
@@ -85,150 +59,321 @@ header {
   display: flex;
   align-items: flex-end;
 }
-.nav-bar {
-  display: flex;
-  flex-direction: row;
-  padding: 0 36px;
-}
-.nav-bar ul {
-  display: flex;
-  flex-direction: row;
-  list-style-type: none;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1328px;
-  margin-inline: auto;
-}
-.nav-bar ul li {
-  font-family: font-regular;
-  font-size: 13px;
-  color: #222222;
-  margin: 4px 12px 0 0;
-  padding-bottom: 12px;
-}
-.overview-heading {
-  text-align: center;
-  font-family: font-light;
-  color: #222222;
-  font-size: 33px;
-  font-weight: 300;
-  line-height: 36px;
-  padding: 18px 18px 0 18px;
-  background-color: #d7e6f5;
-}
-.background {
-  background-color: #d7e6f5;
-  height: 115px;
-}
-.overview {
-  padding-bottom: 115px;
-}
-.overview-items {
-  position: relative;
-}
-.overview-items ul {
+.search-mobile {
   display: flex;
   align-items: center;
-  justify-content: center;
-  list-style-type: none;
-  font-family: font-medium;
-  position: absolute;
-  width: 100%;
-  top: 0px;
 }
-.overview-items ul li img {
-  width: 114px;
-  height: 114px;
-}
-.overview img {
-  border-radius: 50%;
-  margin: 12px 0;
-}
-.overview-items ul li p {
-  margin-bottom: 6px;
-  width: 114px;
-  text-align: center;
-}
-.overview-items ul li {
-  display: flex;
-  flex-direction: column;
-  padding: 9px 30px;
-  align-items: center;
-}
-.deals {
-  margin-bottom: 60px;
-  max-width: 1380px;
-  margin-inline: auto;
-  padding: 0 30px;
-}
-.deals-heading {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: space-between;
-  margin-bottom: 12px;
-}
-.deals-heading h2 {
+.search-bar-mobile input {
+  border: none;
+  background-color: transparent;
+  padding: 12px 42px 9px 18px;
   font-family: font-regular;
-  font-size: 28px;
-  font-family: 700;
-  line-height: 36px;
-  color: #222222;
 }
-.deals-heading a {
-  text-decoration: none;
-  color: #222222;
-  font-size: 13px;
-  font-family: font-medium;
-}
-.deals-heading a i {
-  margin-left: 6px;
-}
-.deals ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.deals ul li {
-  margin: 9px;
-  border: 1px solid rgba(34, 34, 34, 0.15);
-  border-radius: 10px;
-  list-style-type: none;
-}
-.deals-img {
-  width: 208px;
-  height: 208px;
-}
-.deals-img img {
-  width: 100%;
-  height: 100%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-.deals li span{
-  line-height: 16px;
-  font-size: 13px;
-  font-weight: 400;
-  font-family: font-regular;
-  color: #222;
-}
-.deals-txt{
-  display: flex;
-  flex-direction: column;
-   padding: 12px;
-}
-.deals-txt p{
-  padding-block: 6px;
-  margin-bottom: 6px;
-  font-weight: 700px;
+.search-bar-mobile input::placeholder {
   font-size: 16px;
-  line-height: 20px;
-  font-family: font-medium;
 }
-.gift h2{
-  font-family: font-regular;
-  font-size: 28px;
-  font-family: 700;
-  line-height: 36px;
-  color: #222222;
+.search-bar-mobile {
+  width: 100%;
+  background-color: rgba(34, 34, 34, 0.05);
+  border-radius: 96px;
+  border: 2px solid #222;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.search-bar-mobile button {
+  background-color: transparent;
+  border: none;
+  padding: 9px 22px 8px 15px;
+}
+@media screen and (min-width: 1440px) {
+  header {
+    width: 100%;
+  }
+  .header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    max-width: 1400px;
+    margin-inline: auto;
+    /* box-shadow: 0 4px 20px rgb(34 34 34/15%); */
+    padding: 12px 38px 12px 36px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header-nav {
+    display: flex;
+    align-items: center;
+  }
+  .search-bar-mobile {
+    display: none;
+  }
+  .search-bar input {
+    border: none;
+    background-color: transparent;
+    padding: 12px 42px 9px 18px;
+    font-family: font-regular;
+  }
+  .search-bar input::placeholder {
+    font-size: 16px;
+  }
+  .search-bar {
+    width: 100%;
+    background-color: rgba(34, 34, 34, 0.05);
+    border-radius: 96px;
+    border: 2px solid #222;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 18px;
+  }
+  .search-bar button {
+    background-color: transparent;
+    border: none;
+    padding: 9px 22px 8px 15px;
+  }
+  .signin {
+    white-space: nowrap;
+    padding: 9px 15px;
+    margin-right: 6px;
+    font-size: 13px;
+    font-family: font-medium;
+    color: #222222;
+  }
+  .logo {
+    padding-right: 8px;
+    display: flex;
+    align-items: flex-end;
+  }
+  .basket {
+    padding: 12px;
+    display: flex;
+    align-items: flex-end;
+  }
+  .like-btn {
+    padding: 12px;
+    display: flex;
+    align-items: flex-end;
+  }
+  .nav-bar {
+    display: flex;
+    flex-direction: row;
+    padding: 0 36px;
+  }
+  .nav-bar ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1328px;
+    margin-inline: auto;
+  }
+  .nav-bar ul li {
+    font-family: font-regular;
+    font-size: 13px;
+    color: #222222;
+    margin: 4px 12px 0 0;
+    padding-bottom: 12px;
+  }
+  .overview-heading {
+    text-align: center;
+    font-family: font-light;
+    color: #222222;
+    font-size: 33px;
+    font-weight: 300;
+    line-height: 36px;
+    padding: 18px 18px 0 18px;
+    background-color: #d7e6f5;
+  }
+  .background {
+    background-color: #d7e6f5;
+    height: 115px;
+  }
+  .overview {
+    padding-bottom: 115px;
+  }
+  .overview-items {
+    position: relative;
+  }
+  .overview-items ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    font-family: font-medium;
+    position: absolute;
+    width: 100%;
+    top: 0px;
+  }
+  .overview-items ul li img {
+    width: 114px;
+    height: 114px;
+  }
+  .overview img {
+    border-radius: 50%;
+    margin: 12px 0;
+  }
+  .overview-items ul li p {
+    margin-bottom: 6px;
+    width: 114px;
+    text-align: center;
+  }
+  .overview-items ul li {
+    display: flex;
+    flex-direction: column;
+    padding: 9px 30px;
+    align-items: center;
+  }
+  .deals {
+    margin-bottom: 60px;
+    max-width: 1380px;
+    margin-inline: auto;
+    padding: 0 20px;
+  }
+  .deals-heading {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+  .deals-heading h2 {
+    font-family: font-regular;
+    font-size: 28px;
+    font-family: 700;
+    line-height: 36px;
+    color: #222222;
+  }
+  .deals-heading a {
+    text-decoration: none;
+    color: #222222;
+    font-size: 13px;
+    font-family: font-medium;
+  }
+  .deals-heading a i {
+    margin-left: 6px;
+  }
+  .deals ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .deals ul li {
+    margin: 9px;
+    border: 1px solid rgba(34, 34, 34, 0.15);
+    border-radius: 10px;
+    list-style-type: none;
+  }
+  .deals-img {
+    width: 208px;
+    height: 208px;
+  }
+  .deals-img img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .deals li span {
+    line-height: 16px;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: font-regular;
+    color: #222;
+  }
+  .deals-txt {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+  }
+  .deals-txt p {
+    padding-block: 6px;
+    margin-bottom: 6px;
+    font-weight: 700px;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: font-medium;
+  }
+  .gift {
+    max-width: 1380px;
+    margin-inline: auto;
+  }
+  .gift h2 {
+    font-family: font-regular;
+    font-size: 28px;
+    font-family: 700;
+    line-height: 36px;
+    color: #222222;
+    padding-bottom: 18px;
+    padding-left: 30px;
+  }
+  .gift-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .gift-items {
+    border-radius: 10px;
+    padding: 9px;
+  }
+  .gift-img img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .gift-img {
+    width: 253px;
+    height: 200px;
+  }
+  .gift-txt {
+    max-width: 253px;
+    padding-bottom: 40px;
+  }
+  .rating {
+    display: flex;
+  }
+  .price {
+    display: flex;
+    font-family: font-regular;
+  }
+  .gift-txt h3 {
+    font-family: font-medium;
+    font-size: 16px;
+    color: #222222;
+    line-height: 20px;
+    font-weight: 500;
+  }
+  .rating p {
+    color: #595959;
+  }
+  .price p {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #222222;
+  }
+  .price span {
+    font-size: 13px;
+    color: #258635;
+    text-decoration: line-through;
+  }
+  .price a {
+    text-decoration: none;
+    color: #258635;
+    font-size: 13px;
+    font-weight: 400;
+  }
+  .delivery {
+    padding: 3px 6px;
+    font-size: 11px;
+    background-color: #d4e9d7;
+    font-family: font-medium;
+    border-radius: 15px;
+    width: 87px;
+  }
+  .star {
+    display: flex;
+  }
 }
