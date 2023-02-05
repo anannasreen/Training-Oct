@@ -122,7 +122,7 @@ gifts = [
     actualprice: 3500,
     discount: 50,
     // currencySymbol: '$',
-    delivery: 'FREE delivery',
+    // delivery: 'FREE delivery',
   },
   {
     url: 'https://i.etsystatic.com/28045281/r/il/3f41fa/3897994052/il_340x270.3897994052_l8xd.jpg',
@@ -130,7 +130,7 @@ gifts = [
     rating: '(6,762)',
     actualprice: 2627,
     discount: 10,
-    delivery: 'FREE delivery',
+    // delivery: 'FREE delivery',
   },
   {
     url: 'https://i.etsystatic.com/25168585/c/2500/1987/0/18…/214e7e/4589233930/il_340x270.4589233930_dg79.jpg',
@@ -146,11 +146,13 @@ gifts = [
     actualprice: 1438,
     discount: 50,
   },
-  // {
-  //   url:'https://i.etsystatic.com/26694795/c/2445/1943/282/…/035b01/3254592822/il_340x270.3254592822_5dss.jpg',
-  //   name:'Handmade Damascus Pocket Knife Rose Wood Handle Birthday Gift...'
-
-  // }
+  {
+    url: 'https://i.etsystatic.com/26694795/c/2445/1943/282/…/035b01/3254592822/il_340x270.3254592822_5dss.jpg',
+    name: 'Handmade Damascus Pocket Knife Rose Wood Handle Birthday Gift...',
+    rating: '(6,172)',
+    actualprice: 8538,
+    discount: 70,
+  },
 ];
 for (let key = 0; key < gifts.length; key++) {
   const giftElement = document.createElement('div');
@@ -179,7 +181,6 @@ for (let key = 0; key < gifts.length; key++) {
     <span>₹${gifts[key].actualprice}</span>
     <a href="">(${gifts[key].discount}% off)</a>
   </div>
-  <div class="delivery">${gifts[key].delivery}</div>
 </div>`;
 }
 
@@ -226,6 +227,5 @@ for (let key = 0; key < gifts.length; key++) {
 // }
 
 function discountPercentage(actualPrice, discounts) {
-  return (discountPrice = Math.round(actualPrice * ((100-discounts) / 100)));
+  return (discountPrice = Math.round(actualPrice * ((100 - discounts) / 100)));
 }
-

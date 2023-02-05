@@ -222,17 +222,16 @@ header {
 }
 .gift h2 {
   font-family: font-regular;
-  font-size: 28px;
+  font-size: 18px;
   font-family: 700;
   line-height: 36px;
   color: #222222;
   padding-bottom: 18px;
-  padding-left: 30px;
+  text-align: center;
 }
 .gift-list {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 .gift-items {
   border-radius: 10px;
@@ -245,12 +244,13 @@ header {
   border-top-right-radius: 10px;
 }
 .gift-img {
-  width: 253px;
-  height: 200px;
+  width: 170px;
+  height: 135px;
 }
 .gift-txt {
   max-width: 253px;
   padding-bottom: 40px;
+  font-family: font-regular;
 }
 .rating {
   display: flex;
@@ -261,7 +261,7 @@ header {
 }
 .gift-txt h3 {
   font-family: font-medium;
-  font-size: 16px;
+  font-size: 13px;
   color: #222222;
   line-height: 20px;
   font-weight: 500;
@@ -297,8 +297,8 @@ header {
 .star {
   display: flex;
 }
-@media screen and (min-width:480px) {
-  .deals ul{
+@media screen and (min-width: 480px) {
+  .deals ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -465,9 +465,12 @@ header {
     line-height: 20px;
     font-family: font-medium;
   }
-  .deals-heading{
+  .deals-heading {
     max-width: 1198px;
     margin-inline: auto;
+  }
+  .gift-list:last-child{
+    display:none
   }
 }
 @media screen and (min-width: 1200px) {
