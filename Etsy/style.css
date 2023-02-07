@@ -243,7 +243,7 @@ header {
 }
 .gift-items {
   border-radius: 10px;
-  padding: 9px;
+  padding: 8px;
   /* padding-bottom: 40px; */
 }
 .gift-img img {
@@ -350,7 +350,7 @@ header {
   font-size: 14px;
 }
 .about-container {
-  padding: 36px;
+  padding: 36px 0;
 }
 .editors-section {
   display: flex;
@@ -398,7 +398,6 @@ header {
 }
 .featured-txt {
   display: none;
-  margin-bottom: 24px;
 }
 .seemore {
   display: flex;
@@ -406,13 +405,222 @@ header {
   margin: 18px 100px 0;
   font-family: font-medium;
 }
-.tablet{
+.editors-heading-tablet {
   display: none;
+}
+.about-content {
+  margin-bottom: 30px;
+}
+.about-content p span {
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-underline-position: under;
+}
+.about-content h3 {
+  margin-bottom: 18px;
+  font-size: 24px;
+}
+.about-content p {
+  font-weight: 400;
+  line-height: 28px;
+}
+.help-center h4 {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  padding-bottom: 40px;
+}
+.help-center a {
+  padding: 12px 18px;
+  color: #222222;
+  border: 3px solid #222222;
+  border-radius: 50px;
+  text-decoration: none;
+}
+.subscription {
+  background-color: #d7e6f5;
+  padding: 18px 24px 36px 24px;
+}
+.subscription-content p {
+  margin-bottom: 12px;
+  color: #222222;
+  font-family: font-medium;
+  line-height: 20px;
+  text-align: center;
+}
+.footer-section {
+  margin-bottom: -3px;
+}
+.email-input-tag {
+  background-color: white;
+  border-radius: 100px;
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.subscription-content input {
+  border: none;
+  padding: 9px 12px 9px 18px;
+  margin-left: 15px;
+}
+.subscription-content button {
+  padding: 12px 21px 12px 15px;
+  color: #222222;
+  background-color: white;
+  border: none;
+  font-family: font-medium;
+  margin-right: 15px;
+  border-radius: 100px;
+}
+.footer-tag-section {
+  background-color: #4d6bc6;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.footer-tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 12px 0;
+  gap: 6px;
+}
+.footer-tag p {
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-underline-position: under;
+  font-family: font-regular;
+  max-width: 90%;
+  text-align: center;
+  margin-inline: auto;
+  line-height: 28px;
+}
+.footer-list-section {
+  background-color: #2f466c;
+}
+.footer-list-items {
+  display: none;
+}
+.footer-nav {
+  color: white;
+  padding: 12px 24px;
+  font-family: font-regular;
+}
+.footer-list h3 {
+  padding: 12px 0;
+  margin-bottom: 6px;
+}
+.footer-list h3 i {
+  font-size: 12px;
+}
+.footer-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.apps {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+}
+.apps svg {
+  margin: 6px;
+}
+.footer-list-items-tablet {
+  display: flex;
+  flex-direction: column;
+}
+.footer-list-items-tablet button {
+  margin-top: 36px;
+  background-color: transparent;
+  border: none;
+  border: 3px solid white;
+  border-radius: 100px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 13px;
+  line-height: 1.4;
+  min-height: 36px;
+  min-width: 36px;
+  padding: 0 15px;
+  max-width: 206px;
+  margin-inline: auto;
+}
+.footer-help {
+  display: flex;
+  flex-direction: column;
+}
+.footer-help span {
+  padding: 6px 6px 12px 6px;
+}
+.footer-site {
+  background-color: #232347;
+}
+.footer-site-section {
+  color: white;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1440px;
+  margin-inline: auto;
+}
+.country {
+  display: flex;
+  font-family: font-medium;
+  font-size: 13px;
+  padding: 9px 15px;
+  margin-bottom: 12px;
+}
+.copyright {
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+}
+.terms {
+  text-align: center;
+  line-height: 18px;
+  font-size: 13px;
+}
+.terms a {
+  color: white;
+  margin-right: 12px;
+  font-family: font-regular;
+}
+.footer-tag-section svg {
+  margin-top: -1px;
+}
+.copyright span {
+  font-family: font-regular;
+}
+.about-etsy {
+  max-width: 1440px;
+  margin-inline: auto;
+}
+.footer-nav {
+  max-width: 1440px;
+  margin-inline: auto;
 }
 @media screen and (min-width: 480px) {
   .deals ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (min-width: 505px) {
+  .footer-terms {
+    display: flex;
+    flex-direction: row;
+  }
+  .copyright {
+    margin-bottom: 0;
+    margin-right: 12px;
   }
 }
 @media screen and (min-width: 640px) {
@@ -448,14 +656,47 @@ header {
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
-  .editors-section{
+  .editors-section {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .editors-item{
+  .editors-item {
     width: 9.78vw;
     height: 9.98vw;
+  }
+  .seemore {
+    display: none;
+  }
+  .editors-heading {
+    display: none;
+  }
+  .editors-heading-tablet {
+    display: flex;
+    flex-direction: column;
+  }
+  .featured-txt {
+    display: flex;
+  }
+  .footer-list-items {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-list i {
+    display: none;
+  }
+  .footer-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .footer-list span {
+    padding: 6px 0;
+  }
+  .footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
   }
 }
 @media screen and (min-width: 900px) {
@@ -623,6 +864,45 @@ header {
   .gift-img {
     width: 16.2vw;
     height: 13.7vw;
+  }
+  .editors-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .editors-heading-tablet,
+  .four {
+    flex-grow: 1;
+    flex-basis: 33.33%;
+    max-width: 33.33%;
+  }
+  .one {
+    flex-grow: 1;
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+  .two {
+    flex-grow: 1;
+    flex-basis: 16.67%;
+    max-width: 16.67%;
+  }
+  .three,
+  .featured-txt {
+    flex-grow: 1;
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+  .about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: left;
+    gap: 5vw;
+  }
+  .footer-site-section {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .country {
+    margin: 0;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -830,5 +1110,10 @@ header {
   .deals-txt {
     max-width: 205px;
     height: 100px;
+  }
+  .about-etsy {
+    padding: 36px 54px 72px;
+    max-width: 1400px;
+    margin-inline: auto;
   }
 }
