@@ -226,6 +226,7 @@ header {
 .gift {
   max-width: 1380px;
   margin-inline: auto;
+  margin-bottom: 30px;
 }
 .gift h2 {
   font-family: font-regular;
@@ -272,6 +273,7 @@ header {
   color: #222222;
   line-height: 20px;
   font-weight: 500;
+  margin-bottom: 3px;
 }
 .rating p {
   color: #595959;
@@ -305,10 +307,10 @@ header {
 .star {
   display: flex;
 }
-.gift-img{
+.gift-img {
   position: relative;
 }
-.play-btn{
+.play-btn {
   position: absolute;
   bottom: 10px;
   right: 10px;
@@ -321,6 +323,92 @@ header {
   align-items: center;
   justify-content: center;
 }
+.footer-section {
+  background-color: #fdebd2;
+  font-family: font-regular;
+}
+.footer-section svg {
+  width: 100%;
+}
+.about-etsy {
+  padding: 36px 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.about-heading h2 {
+  font-size: 32px;
+  margin-bottom: 6px;
+  color: #222222;
+  font-family: font-light;
+  font-weight: 300;
+  line-height: 36px;
+}
+.about-heading a {
+  color: #222222;
+  font-size: 14px;
+}
+.about-container {
+  padding: 36px;
+}
+.editors-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+  padding: 0 12px;
+}
+.editors-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.editors-heading h1 {
+  font-size: 18px;
+  padding-bottom: 18px;
+  color: #222222;
+  font-family: font-regular;
+  line-height: 24px;
+}
+.editors-heading p {
+  color: #595959;
+  font-size: 13px;
+  font-family: font-regular;
+  line-height: 18px;
+}
+.editors-item {
+  width: 28vw;
+  height: 26.3vw;
+  border-radius: 10px;
+}
+.editors-item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.editors-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+}
+.shop {
+  display: none;
+}
+.featured-txt {
+  display: none;
+  margin-bottom: 24px;
+}
+.seemore {
+  display: flex;
+  align-items: center;
+  margin: 18px 100px 0;
+  font-family: font-medium;
+}
+.tablet{
+  display: none;
+}
 @media screen and (min-width: 480px) {
   .deals ul {
     display: grid;
@@ -328,6 +416,10 @@ header {
   }
 }
 @media screen and (min-width: 640px) {
+  .logo svg {
+    width: 80px;
+    height: 40px;
+  }
   .overview-items ul {
     display: flex;
     align-items: center;
@@ -339,12 +431,31 @@ header {
   .background {
     height: 85px;
   }
+  .gift {
+    margin-bottom: 60px;
+  }
   .gift-list {
     grid-template-columns: 1fr 1fr 1fr;
   }
   .gift-img {
     width: 27.5vw;
     height: 21.7vw;
+  }
+  .gift-txt h3 {
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    white-space: normal;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .editors-section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .editors-item{
+    width: 9.78vw;
+    height: 9.98vw;
   }
 }
 @media screen and (min-width: 900px) {
@@ -446,7 +557,7 @@ header {
   .deals-heading h2 {
     font-family: font-regular;
     font-size: 28px;
-    font-family: 700;
+    font-weight: 700;
     line-height: 36px;
     color: #222222;
   }
@@ -461,8 +572,9 @@ header {
   }
   .deals ul {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    gap: 18px;
   }
   .deals ul li {
     /* margin: 9px; */
@@ -497,7 +609,7 @@ header {
     font-family: font-medium;
   }
   .deals-heading {
-    max-width: 1198px;
+    max-width: 1340px;
     margin-inline: auto;
   }
   .gift-items:last-child {
@@ -589,6 +701,7 @@ header {
   }
   .overview {
     padding-bottom: 115px;
+    margin-bottom: 30px;
   }
   .overview-items {
     position: relative;
@@ -634,16 +747,19 @@ header {
     line-height: 36px;
     color: #222222;
     padding-bottom: 18px;
-    padding-left: 30px;
+    padding-left: 20px;
+    text-align: left;
   }
   .gift-list {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    /* justify-content: space-between; */
   }
   .gift-items {
     border-radius: 10px;
     padding: 13px;
+    max-width: 1380px;
+    margin-inline: auto;
   }
   .gift-img img {
     width: 100%;
@@ -652,8 +768,10 @@ header {
     border-top-right-radius: 10px;
   }
   .gift-img {
-    width: 14.5vw;
-    height: 11.7vw;
+    width: 17.2vw;
+    height: 13.7vw;
+    max-width: 252px;
+    max-height: 199px;
   }
   .gift-txt {
     max-width: 211px;
@@ -702,5 +820,15 @@ header {
   }
   .star {
     display: flex;
+  }
+  .deals-img {
+    width: 17.2vw;
+    height: 13.7vw;
+    max-width: 205px;
+    max-height: 205px;
+  }
+  .deals-txt {
+    max-width: 205px;
+    height: 100px;
   }
 }

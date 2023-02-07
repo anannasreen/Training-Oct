@@ -2,26 +2,61 @@ const elements = document.querySelector('.elements');
 const overviewList = document.querySelector('.overview-list');
 const dealsList = document.querySelector('.deals-items');
 const giftList = document.querySelector('.gift-list');
+const giftSVG = `<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 5 22 12" width="16" height="12" aria-hidden="true" focusable="false"><path d="M5,6A1,1,0,0,0,4,7v3H5v9a1,1,0,0,0,1,1h5V6H5Z"></path><path d="M19,6H13.007A4.245,4.245,0,0,0,14.97,3.744a1.614,1.614,0,0,0-2.65-1.375,1.757,1.757,0,0,0-.315.324,1.753,1.753,0,0,0-.315-0.324A1.615,1.615,0,0,0,9.042,3.746,4.257,4.257,0,0,0,11.006,6H13V20h5a1,1,0,0,0,1-1V10h1V7A1,1,0,0,0,19,6Z"></path></svg>`;
 
-list = {
-  seller: "Sellers' Sales Hub",
-  jewel: 'Jewellery & Accessories',
-  clothing: 'Clothing & Shoes',
-  home: 'Home & Living',
-  party: 'Wedding & Party',
-  toys: 'Toys & Entertainment',
-  art: 'Art & Collectibles',
-  craft: 'Craft Supplies',
-  gifts:
-    '<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 5 22 12" width="16" height="12" aria-hidden="true" focusable="false"><path d="M5,6A1,1,0,0,0,4,7v3H5v9a1,1,0,0,0,1,1h5V6H5Z"></path><path d="M19,6H13.007A4.245,4.245,0,0,0,14.97,3.744a1.614,1.614,0,0,0-2.65-1.375,1.757,1.757,0,0,0-.315.324,1.753,1.753,0,0,0-.315-0.324A1.615,1.615,0,0,0,9.042,3.746,4.257,4.257,0,0,0,11.006,6H13V20h5a1,1,0,0,0,1-1V10h1V7A1,1,0,0,0,19,6Z"></path></svg> Gifts',
+list = [
+  {
+    title: "Sellers' Sales Hub",
+    img: '',
+  },
+  {
+    title: 'Jewellery & Accessories',
+    img: '',
+  },
+  {
+    title: 'Clothing & Shoes',
+    img: '',
+  },
+  {
+    title: 'Home & Living',
+    img: '',
+  },
+  {
+    title: 'Wedding & Party',
+    img: '',
+  },
+  {
+    title: 'Toys & Entertainment',
+    img: '',
+  },
+  {
+    title: 'Art & Collectibles',
+    img: '',
+  },
+  {
+    title: 'Craft Supplies',
+    img: '',
+  },
+  {
+    title: 'Gifts',
+    img: giftSVG,
+  },
+];
+
+const navBarFn = (divClass, objectList, elmType, itemClassName) => {
+  for (let i = 0; i < objectList.length; i++) {
+    const items = document.createElement(elmType);
+    items.classList.add(itemClassName);
+    divClass.appendChild(items);
+    if (objectList[i].img === '' && objectList[i].img !== giftSVG) {
+      items.innerHTML = `${objectList[i].title}`;
+    } else {
+      items.innerHTML = `${objectList[i].img}${objectList[i].title}`;
+    }
+  }
 };
 
-for (const [key, value] of Object.entries(list)) {
-  const items = document.createElement('li');
-  items.classList.add('list');
-  elements.appendChild(items);
-  items.innerHTML = `${value}`;
-}
+navBarFn(elements, list, 'li', 'list');
 
 overview = [
   {
@@ -50,12 +85,15 @@ overview = [
   },
 ];
 
-for (let key = 0; key < overview.length; key++) {
-  const overviewEl = document.createElement('li');
-  overviewList.appendChild(overviewEl);
-  overviewEl.innerHTML = `<div class="overview-img"><img src=${overview[key].url}></div>
-  <p>${overview[key].name}</p>`;
-}
+const overviewFn = (objectList, elmType) => {
+  for (let key = 0; key < objectList.length; key++) {
+    const overviewEl = document.createElement(elmType);
+    overviewList.appendChild(overviewEl);
+    overviewEl.innerHTML = `<div class="overview-img"><img src=${objectList[key].url}></div>
+    <p>${objectList[key].name}</p>`;
+  }
+};
+overviewFn(overview, 'li');
 
 let deals = [
   {
@@ -69,7 +107,7 @@ let deals = [
     category: "Women's Western Clothing",
   },
   {
-    url: 'https://i.etsystatic.com/25566015/c/2003/2003/0/27…/5b71e2/3196479462/il_300x300.3196479462_20xh.jpg',
+    url: 'https://i.etsystatic.com/25566015/c/2003/2003/0/274/il/5b71e2/3196479462/il_300x300.3196479462_20xh.jpg',
     discount: 'Up to 40% off on',
     category: "Men's Clothing",
   },
@@ -79,7 +117,7 @@ let deals = [
     category: 'Fashion Jewellery',
   },
   {
-    url: 'https://i.etsystatic.com/32501528/c/1757/1757/247/…/67dc01/4248212322/il_300x300.4248212322_psvv.jpg',
+    url: 'https://i.etsystatic.com/32501528/c/1757/1757/247/180/il/67dc01/4248212322/il_300x300.4248212322_psvv.jpg',
     discount: 'Up to 40% off on',
     category: 'Winter Clothing',
   },
@@ -93,12 +131,15 @@ let deals = [
 for (let key = 0; key < deals.length; key++) {
   const dealsEl = document.createElement('li');
   dealsList.appendChild(dealsEl);
-  dealsEl.innerHTML = `
-            <div class="deals-img">
-            <img
-            src="${deals[key].url}"
-            alt=""
-            />
+  const dealsImg = document.createElement('div');
+  dealsEl.appendChild(dealsImg);
+  dealsImg.classList.add('deals-img');
+  dealsImg.innerHTML = `<img
+  src="${deals[key].url}"
+  alt=""
+  />`;
+
+  dealsEl.innerHTML += `
             </div>
             <div class="deals-txt">
               <span>${deals[key].discount}</span>
@@ -114,6 +155,7 @@ gifts = [
     actualprice: 1694,
     discount: 50,
     currencySymbol: '₹',
+    urlType: 'Photo',
   },
   {
     url: 'https://i.etsystatic.com/32477306/c/2000/1589/0/25…/0bcd64/3491080620/il_340x270.3491080620_oh18.jpg',
@@ -122,6 +164,7 @@ gifts = [
     actualprice: 3500,
     discount: 50,
     currencySymbol: '₹',
+    urlType: 'Photo',
   },
   {
     url: 'https://i.etsystatic.com/28045281/r/il/3f41fa/3897994052/il_340x270.3897994052_l8xd.jpg',
@@ -130,6 +173,7 @@ gifts = [
     actualprice: 2627,
     discount: 10,
     currencySymbol: '₹',
+    urlType: 'Video',
   },
   {
     url: 'https://i.etsystatic.com/25168585/c/2500/1987/0/18…/214e7e/4589233930/il_340x270.4589233930_dg79.jpg',
@@ -138,6 +182,7 @@ gifts = [
     actualprice: 1270,
     discount: 40,
     currencySymbol: '₹',
+    urlType: 'Video',
   },
   {
     url: 'https://i.etsystatic.com/27890741/c/2343/1862/320/…/31a0dd/4028709894/il_340x270.4028709894_i6tr.jpg',
@@ -146,6 +191,7 @@ gifts = [
     actualprice: 1438,
     discount: 50,
     currencySymbol: '₹',
+    urlType: 'Video',
   },
   {
     url: 'https://i.etsystatic.com/26694795/c/2445/1943/282/…/035b01/3254592822/il_340x270.3254592822_5dss.jpg',
@@ -154,20 +200,25 @@ gifts = [
     actualprice: 8538,
     discount: 70,
     currencySymbol: '₹',
+    urlType: 'Photo',
   },
 ];
 for (let key = 0; key < gifts.length; key++) {
   const giftElement = document.createElement('div');
   giftList.appendChild(giftElement);
   giftElement.classList.add('gift-items');
-  giftElement.innerHTML = `<div class="gift-img">
+  const giftImg = document.createElement('div');
+  giftElement.appendChild(giftImg);
+  giftImg.classList.add('gift-img');
+  giftImg.innerHTML = `
   <img
     src="${gifts[key].url}"
     alt=""
-  />
- 
-</div>
-<div class="gift-txt">
+  />`;
+  if (gifts[key].urlType === 'Video') {
+    giftImg.innerHTML += `<div class="play-btn"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="18" height="18"><polygon points="4 4 4 20 20 12 4 4" fill="#222222"></polygon></svg></div>`;
+  }
+  giftElement.innerHTML += `<div class="gift-txt">
   <h3>
    ${gifts[key].name}
   </h3>
@@ -186,20 +237,12 @@ for (let key = 0; key < gifts.length; key++) {
   </div>
 </div>`;
   if (gifts[key].actualprice > 2000) {
-    giftElement.innerHTML += `<div class=delivery>FREE Delivery</div>`;
+    giftElement.innerHTML += `<div class="delivery">FREE Delivery</div>`;
   }
-  // for (let j = 2; j < gifts.length - 1; j++) {
-  //   console.log(gifts[j]);
-  //   const playButton = document.createElement('div');
-  //   playButton.classList.add('play-btn');
-  //   const giftImg = document.querySelector('.gift-img');
-  //   giftImg.appendChild(playButton);
-  //   playButton.innerHTML = `<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="18" height="18"><polygon points="4 4 4 20 20 12 4 4" fill="#222222"></polygon></svg>`;
-  // }  
 }
 
 function starRating() {
-  let x;
+  let x = '';
   for (let i = 1; i < gifts.length; i++) {
     x +=
       '<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="3 3 18 18" aria-hidden="true" focusable="false" width="14" height="14"><path d="M19.985,10.36a0.5,0.5,0,0,0-.477-0.352H14.157L12.488,4.366a0.5,0.5,0,0,0-.962,0l-1.67,5.642H4.5a0.5,0.5,0,0,0-.279.911L8.53,13.991l-1.5,5.328a0.5,0.5,0,0,0,.741.6l4.231-2.935,4.215,2.935a0.5,0.5,0,0,0,.743-0.6l-1.484-5.328,4.306-3.074A0.5,0.5,0,0,0,19.985,10.36Z" fill="#222222"></path></svg>';
@@ -220,9 +263,6 @@ function discountPercentage(actualPrice, discounts) {
   return (discountPrice = Math.round(actualPrice * ((100 - discounts) / 100)));
 }
 
-for (let key = 0; key < gifts.length; key++) {
-  let ratingNum = gifts[key].rating;
-}
-
-// console.log(gifts[2]);
-
+// for (let key = 0; key < gifts.length; key++) {
+//   let ratingNum = gifts[key].rating;
+// }
