@@ -3,6 +3,7 @@ const overviewList = document.querySelector('.overview-list');
 const dealsList = document.querySelector('.deals-items');
 const giftList = document.querySelector('.gift-list');
 const giftSVG = `<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 5 22 12" width="16" height="12" aria-hidden="true" focusable="false"><path d="M5,6A1,1,0,0,0,4,7v3H5v9a1,1,0,0,0,1,1h5V6H5Z"></path><path d="M19,6H13.007A4.245,4.245,0,0,0,14.97,3.744a1.614,1.614,0,0,0-2.65-1.375,1.757,1.757,0,0,0-.315.324,1.753,1.753,0,0,0-.315-0.324A1.615,1.615,0,0,0,9.042,3.746,4.257,4.257,0,0,0,11.006,6H13V20h5a1,1,0,0,0,1-1V10h1V7A1,1,0,0,0,19,6Z"></path></svg>`;
+const dealsSVG = `<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="18" height="18"><path d="M12,21C10.349,21,2,14.688,2,9,2,5.579,4.364,3,7.5,3A6.912,6.912,0,0,1,12,5.051,6.953,6.953,0,0,1,16.5,3C19.636,3,22,5.579,22,9,22,14.688,13.651,21,12,21ZM7.5,5C5.472,5,4,6.683,4,9c0,4.108,6.432,9.325,8,10,1.564-.657,8-5.832,8-10,0-2.317-1.472-4-3.5-4-1.979,0-3.7,2.105-3.721,2.127L11.991,8.1,11.216,7.12C11.186,7.083,9.5,5,7.5,5Z" fill="#222222"></path></svg>`;
 
 pageData = [
   (list = [
@@ -112,6 +113,7 @@ pageData = [
       urlType: 'Photo',
       video: '',
       ratingStar: 4.5,
+      likeBtn: dealsSVG,
     },
     {
       url: 'https://i.etsystatic.com/32477306/c/2000/1589/0/25…/0bcd64/3491080620/il_340x270.3491080620_oh18.jpg',
@@ -123,6 +125,7 @@ pageData = [
       urlType: 'Photo',
       video: '',
       ratingStar: 5,
+      likeBtn: dealsSVG,
     },
     {
       url: 'https://i.etsystatic.com/28045281/r/il/3f41fa/3897994052/il_340x270.3897994052_l8xd.jpg',
@@ -135,6 +138,7 @@ pageData = [
       video:
         'https://v-cg.etsystatic.com/video/upload/ac_none,du_15,q_auto:good/Purple1_aal8ie.mp4',
       ratingStar: 5,
+      likeBtn: dealsSVG,
     },
     {
       url: 'https://i.etsystatic.com/25168585/c/2500/1987/0/18…/214e7e/4589233930/il_340x270.4589233930_dg79.jpg',
@@ -147,6 +151,7 @@ pageData = [
       video:
         'https://v-cg.etsystatic.com/video/upload/ac_none,du_15,q_auto:good/PAINT_PORTRAIT_ETSY_VIDEO_vo9waf.mp4',
       ratingStar: 5,
+      likeBtn: dealsSVG,
     },
     {
       url: 'https://i.etsystatic.com/27890741/c/2343/1862/320/…/31a0dd/4028709894/il_340x270.4028709894_i6tr.jpg',
@@ -159,6 +164,7 @@ pageData = [
       video:
         'https://v-cg.etsystatic.com/video/upload/ac_none,du_15,q_auto:good/HFF_Hearts_Video_m6nj4t.mp4',
       ratingStar: 5,
+      likeBtn: dealsSVG,
     },
     {
       url: 'https://i.etsystatic.com/26694795/c/2445/1943/282/…/035b01/3254592822/il_340x270.3254592822_5dss.jpg',
@@ -170,11 +176,12 @@ pageData = [
       urlType: 'Photo',
       video: '',
       ratingStar: 4.5,
+      likeBtn: dealsSVG,
     },
   ]),
 ];
 
-const navBarFn = (divClass, objectList, elmType, itemClassName) => {
+const createNavBar = (divClass, objectList, elmType, itemClassName) => {
   for (let i = 0; i < objectList.length; i++) {
     const items = document.createElement(elmType);
     items.classList.add(itemClassName);
@@ -187,7 +194,7 @@ const navBarFn = (divClass, objectList, elmType, itemClassName) => {
   }
 };
 
-const overviewFn = (objectList, elmType) => {
+const createOverviewSection = (objectList, elmType) => {
   for (let key = 0; key < objectList.length; key++) {
     const overviewEl = document.createElement(elmType);
     overviewList.appendChild(overviewEl);
@@ -220,15 +227,22 @@ const createGiftElm = objectList => {
   for (let key = 0; key < objectList.length; key++) {
     const giftElement = document.createElement('div');
     giftList.appendChild(giftElement);
+
     giftElement.classList.add('gift-items');
     const giftImg = document.createElement('div');
     giftElement.appendChild(giftImg);
+
     giftImg.classList.add('gift-img');
     giftImg.innerHTML = `
   <img
     src="${objectList[key].url}"
     alt=""
   />`;
+    const likeGift = document.createElement('div');
+    giftImg.appendChild(likeGift);
+    likeGift.classList.add('like-gift');
+    likeGift.innerHTML = `${objectList[key].likeBtn}`;
+
     if (objectList[key].urlType === 'Video') {
       giftImg.innerHTML += `<div class="play-btn"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="18" height="18"><polygon points="4 4 4 20 20 12 4 4" fill="#222222"></polygon></svg></div>`;
     }
@@ -255,13 +269,18 @@ const createGiftElm = objectList => {
     }
     // giftElement.addEventListener('mouseover', () => {
     //   const giftImg = document.querySelectorAll('gift-img');
-    //   console.log('hello');
-    //   giftImg.innerHTML = `<video
-    //   src="${objectList[key].video}"
-    //   muted
-    // ></video>`;
-    //   giftImg.onmouseover = () => video.play();
-    //   giftImg.onmouseout = () => video.pause();
+    //   if (`${objectList[key].video}` === '') {
+    //     giftImg.innerHTML = `<img
+    //     src="${objectList[key].url}"
+    //     alt=""
+    //   />`;
+    //   } else {
+    //     giftImg.innerHTML = `<video
+    //   source="${objectList[key].video}"
+    //   muted></video>`;
+    //     // giftImg.onmouseover = () => video.play();
+    //     // giftImg.onmouseout = () => video.pause();
+    //   }
     // });
   }
 };
@@ -291,7 +310,6 @@ function discountPercentage(actualPrice, discounts) {
 const footer = document.querySelectorAll('.footer-list');
 const footerItems = document.querySelectorAll('.footer-list-mobile');
 const footerList = document.querySelectorAll('.footer-list-items');
-// console.log(footer)
 
 footer.forEach(element => {
   element.addEventListener('click', () => {
@@ -309,8 +327,8 @@ footer.forEach(element => {
 // });
 
 function generateEtsyHomePage(pageData) {
-  navBarFn(elements, list, 'li', 'list');
-  overviewFn(overview, 'li');
+  createNavBar(elements, list, 'li', 'list');
+  createOverviewSection(overview, 'li');
   createDealsElm(deals, 'li');
   createGiftElm(gifts);
 }

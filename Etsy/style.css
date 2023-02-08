@@ -352,6 +352,9 @@ header {
 .about-container {
   padding: 36px 0;
 }
+.like-gift{
+  display: none;
+}
 .editors-section {
   display: flex;
   flex-direction: column;
@@ -504,7 +507,7 @@ header {
 .footer-list-items {
   display: none;
 }
-.footer-list-items.show{
+.footer-list-items.show {
   display: flex;
   flex-direction: column;
 }
@@ -513,12 +516,15 @@ header {
   padding: 12px;
   font-family: font-regular;
 }
-.footer-list-mobile{
+.footer-list-mobile {
   padding: 12px 0;
   margin-bottom: 6px;
 }
-.footer-list h3 i {
-  font-size: 12px;
+.footer-list h3 {
+  font-size: 16px;
+}
+.footer-list i {
+  font-size: 13px;
 }
 .footer-list {
   display: flex;
@@ -556,6 +562,9 @@ header {
   max-width: 206px;
   margin-inline: auto;
 }
+.footer-list-items-tablet button:hover {
+  padding: 3px 17px;
+}
 .footer-help {
   display: flex;
   flex-direction: column;
@@ -588,6 +597,7 @@ header {
   margin-bottom: 12px;
   display: flex;
   justify-content: center;
+  font-size: 13px;
 }
 .terms {
   text-align: center;
@@ -619,16 +629,22 @@ header {
 .footer-list-mobile.active {
   border: 2px solid white;
   border-radius: 100px;
-  background-color: rgb(255,255,255,0.075);
+  background-color: rgb(255, 255, 255, 0.075);
   padding-inline: 12px;
 }
-.footer-list-mobile{
+.footer-list-mobile:focus {
+  background-color: rgb(255, 255, 255, 0.075);
+}
+.footer-list-mobile {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.footer-list-items span{
-  padding: 6px 0 12px;
+.footer-list-items span {
+  padding: 6px 24px 12px;
+}
+.country svg {
+  margin-right: 4px;
 }
 @media screen and (min-width: 480px) {
   .deals ul {
@@ -736,13 +752,19 @@ header {
   .footer-tag p {
     margin: 0;
   }
-  .footer-list-mobile{
+  .footer-list-mobile {
     padding: 0;
   }
   .footer-list h3 {
     font-size: 16px;
     line-height: 20px;
     margin: 12px 0;
+  }
+  .overview-items ul li p {
+    width: 106px;
+  }
+  .apps {
+    flex-wrap: wrap;
   }
 }
 @media screen and (min-width: 900px) {
@@ -808,7 +830,8 @@ header {
     font-size: 13px;
     color: #222222;
     margin: 4px 12px 0 0;
-    padding-bottom: 12px;
+    /* padding-bottom: 12px; */
+    line-height: 24px;
   }
   header {
     width: 100%;
@@ -1098,7 +1121,7 @@ header {
     max-height: 199px;
   }
   .gift-txt {
-    max-width: 211px;
+    max-width: 250px;
   }
   .rating {
     display: flex;
@@ -1159,5 +1182,78 @@ header {
     padding: 36px 54px 72px;
     max-width: 1400px;
     margin-inline: auto;
+  }
+  .footer-list-items span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .app-img:hover {
+    background-color: rgb(255, 255, 255, 0.075);
+    border-radius: 50%;
+  }
+  .country:hover {
+    background-color: rgb(255, 255, 255, 0.075);
+    border-radius: 100px;
+  }
+  .like-btn:hover {
+    background-color: rgba(238, 233, 233, 0.882);
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  .basket:hover {
+    background-color: rgba(238, 233, 233, 0.882);
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  .signin:hover {
+    background-color: rgba(238, 233, 233, 0.882);
+    cursor: pointer;
+    border-radius: 100px;
+  }
+  /* .list:hover {
+    border-bottom: 2px solid #000;
+    padding-bottom: 4px;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+    transform: scaleX(1);
+  } */
+  .list:after {
+    display: block;
+    content: '';
+    border-bottom: solid 2px #000;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+  }
+  .list:hover:after {
+    transform: scaleX(1);
+  }
+  .overview-items ul li:hover {
+    border-bottom: 2px solid black;
+    margin-bottom: -2px;
+  }
+  .overview-items ul li:hover p {
+    opacity: 0.8;
+  }
+  .overview-items ul li:hover img {
+    width: 120px;
+    height: 120px;
+  }
+  .deals ul li:hover {
+    box-shadow: 5px 5px 5px rgb(0, 0, 0, 7%);
+  }
+  .gift-items:hover {
+    box-shadow: 5px 5px 5px rgb(0, 0, 0, 7%);
+  }
+  .gift-items:hover .play-btn{
+    display: none;
+  }
+  .gift-img:hover .like-gift{
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
   }
 }
