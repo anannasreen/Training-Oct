@@ -4,43 +4,174 @@ const dealsList = document.querySelector('.deals-items');
 const giftList = document.querySelector('.gift-list');
 const giftSVG = `<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 5 22 12" width="16" height="12" aria-hidden="true" focusable="false"><path d="M5,6A1,1,0,0,0,4,7v3H5v9a1,1,0,0,0,1,1h5V6H5Z"></path><path d="M19,6H13.007A4.245,4.245,0,0,0,14.97,3.744a1.614,1.614,0,0,0-2.65-1.375,1.757,1.757,0,0,0-.315.324,1.753,1.753,0,0,0-.315-0.324A1.615,1.615,0,0,0,9.042,3.746,4.257,4.257,0,0,0,11.006,6H13V20h5a1,1,0,0,0,1-1V10h1V7A1,1,0,0,0,19,6Z"></path></svg>`;
 
-list = [
-  {
-    title: "Sellers' Sales Hub",
-    img: '',
-  },
-  {
-    title: 'Jewellery & Accessories',
-    img: '',
-  },
-  {
-    title: 'Clothing & Shoes',
-    img: '',
-  },
-  {
-    title: 'Home & Living',
-    img: '',
-  },
-  {
-    title: 'Wedding & Party',
-    img: '',
-  },
-  {
-    title: 'Toys & Entertainment',
-    img: '',
-  },
-  {
-    title: 'Art & Collectibles',
-    img: '',
-  },
-  {
-    title: 'Craft Supplies',
-    img: '',
-  },
-  {
-    title: 'Gifts',
-    img: giftSVG,
-  },
+pageData = [
+  (list = [
+    {
+      title: "Sellers' Sales Hub",
+      img: '',
+    },
+    {
+      title: 'Jewellery & Accessories',
+      img: '',
+    },
+    {
+      title: 'Clothing & Shoes',
+      img: '',
+    },
+    {
+      title: 'Home & Living',
+      img: '',
+    },
+    {
+      title: 'Wedding & Party',
+      img: '',
+    },
+    {
+      title: 'Toys & Entertainment',
+      img: '',
+    },
+    {
+      title: 'Art & Collectibles',
+      img: '',
+    },
+    {
+      title: 'Craft Supplies',
+      img: '',
+    },
+    {
+      title: 'Gifts',
+      img: giftSVG,
+    },
+  ]),
+  (overview = [
+    {
+      url: 'https://i.etsystatic.com/17600118/c/1000/1000/0/11…/d077de/2325460652/il_300x300.2325460652_lhfz.jpg',
+      name: 'Wedding',
+    },
+    {
+      url: 'https://i.etsystatic.com/18077312/r/il/b10e09/2350226444/il_300x300.2350226444_odar.jpg',
+      name: 'Jewellery',
+    },
+    {
+      url: 'https://i.etsystatic.com/32501528/c/1518/1518/253/562/il/4bdfa0/3702738409/il_300x300.3702738409_qfmi.jpg',
+      name: 'Clothing',
+    },
+    {
+      url: 'https://i.etsystatic.com/16676438/c/2002/2002/449/…/89ea5d/1467855817/il_300x300.1467855817_ksv4.jpg',
+      name: 'Home & Living',
+    },
+    {
+      url: 'https://i.etsystatic.com/30725321/r/il/a22d35/4016941798/il_300x300.4016941798_bruv.jpg',
+      name: 'Wall Art',
+    },
+    {
+      url: 'https://i.etsystatic.com/19220794/r/il/28ced3/2951466885/il_300x300.2951466885_1ly4.jpg',
+      name: 'Kitchen & Dining',
+    },
+  ]),
+  (deals = [
+    {
+      url: 'https://i.etsystatic.com/22368382/r/il/006d21/4245808662/il_300x300.4245808662_a3x4.jpg',
+      discount: 'Up to 40% off on',
+      category: "Women's Ethnic Clothing",
+    },
+    {
+      url: 'https://i.etsystatic.com/32501528/c/1488/1488/0/0/…/23a5b4/3700725057/il_300x300.3700725057_szgj.jpg',
+      discount: 'Up to 40% off on',
+      category: "Women's Western Clothing",
+    },
+    {
+      url: 'https://i.etsystatic.com/25566015/c/2003/2003/0/274/il/5b71e2/3196479462/il_300x300.3196479462_20xh.jpg',
+      discount: 'Up to 40% off on',
+      category: "Men's Clothing",
+    },
+    {
+      url: '	https://i.etsystatic.com/38026977/r/il/f2c1ad/4277525816/il_300x300.4277525816_f4wp.jpg',
+      discount: 'Up to 40% off on',
+      category: 'Fashion Jewellery',
+    },
+    {
+      url: 'https://i.etsystatic.com/32501528/c/1757/1757/247/180/il/67dc01/4248212322/il_300x300.4248212322_psvv.jpg',
+      discount: 'Up to 40% off on',
+      category: 'Winter Clothing',
+    },
+    {
+      url: 'https://i.etsystatic.com/23528878/r/il/625e23/2589827894/il_300x300.2589827894_bi5a.jpg',
+      discount: 'Up to 40% off on',
+      category: 'Wedding Clothing',
+    },
+  ]),
+  (gifts = [
+    {
+      url: 'https://i.etsystatic.com/35966576/c/1614/1283/669/351/il/e1510f/4033777789/il_340x270.4033777789_dqlw.jpg',
+      name: 'Birth Flower Jewelry Travel Case, Birth Month Flower Gift,...',
+      rating: 9393,
+      actualprice: 1694,
+      discount: 50,
+      currencySymbol: '₹',
+      urlType: 'Photo',
+      video: '',
+      ratingStar: 4.5,
+    },
+    {
+      url: 'https://i.etsystatic.com/32477306/c/2000/1589/0/25…/0bcd64/3491080620/il_340x270.3491080620_oh18.jpg',
+      name: 'Dainty Name Necklace with Birth Flower, Personalized Na...',
+      rating: 13452,
+      actualprice: 3500,
+      discount: 50,
+      currencySymbol: '₹',
+      urlType: 'Photo',
+      video: '',
+      ratingStar: 5,
+    },
+    {
+      url: 'https://i.etsystatic.com/28045281/r/il/3f41fa/3897994052/il_340x270.3897994052_l8xd.jpg',
+      name: 'Sun catcher/Crystal suncatcher/ Crystal Rainbow...',
+      rating: 6762,
+      actualprice: 2627,
+      discount: 10,
+      currencySymbol: '₹',
+      urlType: 'Video',
+      video:
+        'https://v-cg.etsystatic.com/video/upload/ac_none,du_15,q_auto:good/Purple1_aal8ie.mp4',
+      ratingStar: 5,
+    },
+    {
+      url: 'https://i.etsystatic.com/25168585/c/2500/1987/0/18…/214e7e/4589233930/il_340x270.4589233930_dg79.jpg',
+      name: 'Custom Pet Portraits Using Pet Photo Personalized Digital Dog...',
+      rating: 10962,
+      actualprice: 1270,
+      discount: 40,
+      currencySymbol: '₹',
+      urlType: 'Video',
+      video:
+        'https://v-cg.etsystatic.com/video/upload/ac_none,du_15,q_auto:good/PAINT_PORTRAIT_ETSY_VIDEO_vo9waf.mp4',
+      ratingStar: 5,
+    },
+    {
+      url: 'https://i.etsystatic.com/27890741/c/2343/1862/320/…/31a0dd/4028709894/il_340x270.4028709894_i6tr.jpg',
+      name: 'Heart Keychain Set-Made with Authentic LEGO® Bricks,...',
+      rating: 12228,
+      actualprice: 1438,
+      discount: 50,
+      currencySymbol: '₹',
+      urlType: 'Video',
+      video:
+        'https://v-cg.etsystatic.com/video/upload/ac_none,du_15,q_auto:good/HFF_Hearts_Video_m6nj4t.mp4',
+      ratingStar: 5,
+    },
+    {
+      url: 'https://i.etsystatic.com/26694795/c/2445/1943/282/…/035b01/3254592822/il_340x270.3254592822_5dss.jpg',
+      name: 'Handmade Damascus Pocket Knife Rose Wood Handle Birthday Gift...',
+      rating: 6172,
+      actualprice: 8538,
+      discount: 70,
+      currencySymbol: '₹',
+      urlType: 'Photo',
+      video: '',
+      ratingStar: 4.5,
+    },
+  ]),
 ];
 
 const navBarFn = (divClass, objectList, elmType, itemClassName) => {
@@ -56,35 +187,6 @@ const navBarFn = (divClass, objectList, elmType, itemClassName) => {
   }
 };
 
-navBarFn(elements, list, 'li', 'list');
-
-overview = [
-  {
-    url: 'https://i.etsystatic.com/17600118/c/1000/1000/0/11…/d077de/2325460652/il_300x300.2325460652_lhfz.jpg',
-    name: 'Wedding',
-  },
-  {
-    url: 'https://i.etsystatic.com/18077312/r/il/b10e09/2350226444/il_300x300.2350226444_odar.jpg',
-    name: 'Jewellery',
-  },
-  {
-    url: 'https://i.etsystatic.com/32501528/c/1518/1518/253/562/il/4bdfa0/3702738409/il_300x300.3702738409_qfmi.jpg',
-    name: 'Clothing',
-  },
-  {
-    url: 'https://i.etsystatic.com/16676438/c/2002/2002/449/…/89ea5d/1467855817/il_300x300.1467855817_ksv4.jpg',
-    name: 'Home & Living',
-  },
-  {
-    url: 'https://i.etsystatic.com/30725321/r/il/a22d35/4016941798/il_300x300.4016941798_bruv.jpg',
-    name: 'Wall Art',
-  },
-  {
-    url: 'https://i.etsystatic.com/19220794/r/il/28ced3/2951466885/il_300x300.2951466885_1ly4.jpg',
-    name: 'Kitchen & Dining',
-  },
-];
-
 const overviewFn = (objectList, elmType) => {
   for (let key = 0; key < objectList.length; key++) {
     const overviewEl = document.createElement(elmType);
@@ -93,153 +195,76 @@ const overviewFn = (objectList, elmType) => {
     <p>${objectList[key].name}</p>`;
   }
 };
-overviewFn(overview, 'li');
 
-let deals = [
-  {
-    url: 'https://i.etsystatic.com/22368382/r/il/006d21/4245808662/il_300x300.4245808662_a3x4.jpg',
-    discount: 'Up to 40% off on',
-    category: "Women's Ethnic Clothing",
-  },
-  {
-    url: 'https://i.etsystatic.com/32501528/c/1488/1488/0/0/…/23a5b4/3700725057/il_300x300.3700725057_szgj.jpg',
-    discount: 'Up to 40% off on',
-    category: "Women's Western Clothing",
-  },
-  {
-    url: 'https://i.etsystatic.com/25566015/c/2003/2003/0/274/il/5b71e2/3196479462/il_300x300.3196479462_20xh.jpg',
-    discount: 'Up to 40% off on',
-    category: "Men's Clothing",
-  },
-  {
-    url: '	https://i.etsystatic.com/38026977/r/il/f2c1ad/4277525816/il_300x300.4277525816_f4wp.jpg',
-    discount: 'Up to 40% off on',
-    category: 'Fashion Jewellery',
-  },
-  {
-    url: 'https://i.etsystatic.com/32501528/c/1757/1757/247/180/il/67dc01/4248212322/il_300x300.4248212322_psvv.jpg',
-    discount: 'Up to 40% off on',
-    category: 'Winter Clothing',
-  },
-  {
-    url: 'https://i.etsystatic.com/23528878/r/il/625e23/2589827894/il_300x300.2589827894_bi5a.jpg',
-    discount: 'Up to 40% off on',
-    category: 'Wedding Clothing',
-  },
-];
-
-for (let key = 0; key < deals.length; key++) {
-  const dealsEl = document.createElement('li');
-  dealsList.appendChild(dealsEl);
-  const dealsImg = document.createElement('div');
-  dealsEl.appendChild(dealsImg);
-  dealsImg.classList.add('deals-img');
-  dealsImg.innerHTML = `<img
-  src="${deals[key].url}"
+const createDealsElm = (objectList, elmType) => {
+  for (let key = 0; key < objectList.length; key++) {
+    const dealsEl = document.createElement(elmType);
+    dealsList.appendChild(dealsEl);
+    const dealsImg = document.createElement('div');
+    dealsEl.appendChild(dealsImg);
+    dealsImg.classList.add('deals-img');
+    dealsImg.innerHTML = `<img
+  src="${objectList[key].url}"
   alt=""
   />`;
 
-  dealsEl.innerHTML += `
-            </div>
+    dealsEl.innerHTML += `
             <div class="deals-txt">
-              <span>${deals[key].discount}</span>
-              <p>${deals[key].category}</p>
+              <span>${objectList[key].discount}</span>
+              <p>${objectList[key].category}</p>
             </div>`;
-}
+  }
+};
 
-gifts = [
-  {
-    url: 'https://i.etsystatic.com/35966576/c/1614/1283/669/351/il/e1510f/4033777789/il_340x270.4033777789_dqlw.jpg',
-    name: 'Birth Flower Jewelry Travel Case, Birth Month Flower Gift,...',
-    rating: 9393,
-    actualprice: 1694,
-    discount: 50,
-    currencySymbol: '₹',
-    urlType: 'Photo',
-  },
-  {
-    url: 'https://i.etsystatic.com/32477306/c/2000/1589/0/25…/0bcd64/3491080620/il_340x270.3491080620_oh18.jpg',
-    name: 'Dainty Name Necklace with Birth Flower, Personalized Na...',
-    rating: 13452,
-    actualprice: 3500,
-    discount: 50,
-    currencySymbol: '₹',
-    urlType: 'Photo',
-  },
-  {
-    url: 'https://i.etsystatic.com/28045281/r/il/3f41fa/3897994052/il_340x270.3897994052_l8xd.jpg',
-    name: 'Sun catcher/Crystal suncatcher/ Crystal Rainbow...',
-    rating: 6762,
-    actualprice: 2627,
-    discount: 10,
-    currencySymbol: '₹',
-    urlType: 'Video',
-  },
-  {
-    url: 'https://i.etsystatic.com/25168585/c/2500/1987/0/18…/214e7e/4589233930/il_340x270.4589233930_dg79.jpg',
-    name: 'Custom Pet Portraits Using Pet Photo Personalized Digital Dog...',
-    rating: 10962,
-    actualprice: 1270,
-    discount: 40,
-    currencySymbol: '₹',
-    urlType: 'Video',
-  },
-  {
-    url: 'https://i.etsystatic.com/27890741/c/2343/1862/320/…/31a0dd/4028709894/il_340x270.4028709894_i6tr.jpg',
-    name: 'Heart Keychain Set-Made with Authentic LEGO® Bricks,...',
-    rating: 12228,
-    actualprice: 1438,
-    discount: 50,
-    currencySymbol: '₹',
-    urlType: 'Video',
-  },
-  {
-    url: 'https://i.etsystatic.com/26694795/c/2445/1943/282/…/035b01/3254592822/il_340x270.3254592822_5dss.jpg',
-    name: 'Handmade Damascus Pocket Knife Rose Wood Handle Birthday Gift...',
-    rating: 6172,
-    actualprice: 8538,
-    discount: 70,
-    currencySymbol: '₹',
-    urlType: 'Photo',
-  },
-];
-for (let key = 0; key < gifts.length; key++) {
-  const giftElement = document.createElement('div');
-  giftList.appendChild(giftElement);
-  giftElement.classList.add('gift-items');
-  const giftImg = document.createElement('div');
-  giftElement.appendChild(giftImg);
-  giftImg.classList.add('gift-img');
-  giftImg.innerHTML = `
+const createGiftElm = objectList => {
+  for (let key = 0; key < objectList.length; key++) {
+    const giftElement = document.createElement('div');
+    giftList.appendChild(giftElement);
+    giftElement.classList.add('gift-items');
+    const giftImg = document.createElement('div');
+    giftElement.appendChild(giftImg);
+    giftImg.classList.add('gift-img');
+    giftImg.innerHTML = `
   <img
-    src="${gifts[key].url}"
+    src="${objectList[key].url}"
     alt=""
   />`;
-  if (gifts[key].urlType === 'Video') {
-    giftImg.innerHTML += `<div class="play-btn"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="18" height="18"><polygon points="4 4 4 20 20 12 4 4" fill="#222222"></polygon></svg></div>`;
-  }
-  giftElement.innerHTML += `<div class="gift-txt">
+    if (objectList[key].urlType === 'Video') {
+      giftImg.innerHTML += `<div class="play-btn"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="18" height="18"><polygon points="4 4 4 20 20 12 4 4" fill="#222222"></polygon></svg></div>`;
+    }
+    giftElement.innerHTML += `<div class="gift-txt">
   <h3>
-   ${gifts[key].name}
+   ${objectList[key].name}
   </h3>
   <div class="rating">
     <div class="star-rating">${starRating()}</div>
     <span></span>
-    <p>(${gifts[key].rating})</p>
+    <p>(${objectList[key].rating})</p>
   </div>
   <div class="price">
-    <p class=priceActual>${gifts[key].currencySymbol}${discountPercentage(
-    gifts[key].actualprice,
-    gifts[key].discount
-  )}</p>
-    <span>${gifts[key].currencySymbol}${gifts[key].actualprice}</span>
-    <a href="">(${gifts[key].discount}% off)</a>
+    <p class=priceActual>${objectList[key].currencySymbol}${discountPercentage(
+      objectList[key].actualprice,
+      objectList[key].discount
+    )}</p>
+    <span>${objectList[key].currencySymbol}${objectList[key].actualprice}</span>
+    <a href="">(${objectList[key].discount}% off)</a>
   </div>
 </div>`;
-  if (gifts[key].actualprice > 2000) {
-    giftElement.innerHTML += `<div class="delivery">FREE Delivery</div>`;
+    if (objectList[key].actualprice > 2000) {
+      giftElement.innerHTML += `<div class="delivery">FREE Delivery</div>`;
+    }
+    // giftElement.addEventListener('mouseover', () => {
+    //   const giftImg = document.querySelectorAll('gift-img');
+    //   console.log('hello');
+    //   giftImg.innerHTML = `<video
+    //   src="${objectList[key].video}"
+    //   muted
+    // ></video>`;
+    //   giftImg.onmouseover = () => video.play();
+    //   giftImg.onmouseout = () => video.pause();
+    // });
   }
-}
+};
 
 function starRating() {
   let x = '';
@@ -263,6 +288,39 @@ function discountPercentage(actualPrice, discounts) {
   return (discountPrice = Math.round(actualPrice * ((100 - discounts) / 100)));
 }
 
-// for (let key = 0; key < gifts.length; key++) {
-//   let ratingNum = gifts[key].rating;
+const footer = document.querySelectorAll('.footer-list');
+const footerItems = document.querySelectorAll('.footer-list-mobile');
+const footerList = document.querySelectorAll('.footer-list-items');
+// console.log(footer)
+
+footer.forEach(element => {
+  element.addEventListener('click', () => {
+    element.children[0].classList.toggle('active');
+    element.children[1].classList.toggle('show');
+    element.children[0].children[1].classList.toggle('active');
+  });
+});
+
+// footer.forEach(element => {
+//   element.addEventListener('click', () => {
+//     const footerList = document.querySelectorAll('.footer-list-items');
+//     footerList.classList.add('show');
+//   });
+// });
+
+function generateEtsyHomePage(pageData) {
+  navBarFn(elements, list, 'li', 'list');
+  overviewFn(overview, 'li');
+  createDealsElm(deals, 'li');
+  createGiftElm(gifts);
+}
+generateEtsyHomePage();
+
+// generateEtsyHomePage(pageData) {
+
+// navBarFn(elements, pageData.Navlist, 'li', 'list');
+// overviewFn(pageData.overview, 'li');
+
+//   // call all function that will generate appropriate pages
+
 // }

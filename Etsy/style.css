@@ -458,6 +458,7 @@ header {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  box-shadow: 1px 2px 4px rgb(34 34 34/10%);
 }
 .subscription-content input {
   border: none;
@@ -503,12 +504,16 @@ header {
 .footer-list-items {
   display: none;
 }
+.footer-list-items.show{
+  display: flex;
+  flex-direction: column;
+}
 .footer-nav {
   color: white;
-  padding: 12px 24px;
+  padding: 12px;
   font-family: font-regular;
 }
-.footer-list h3 {
+.footer-list-mobile{
   padding: 12px 0;
   margin-bottom: 6px;
 }
@@ -517,8 +522,8 @@ header {
 }
 .footer-list {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  padding: 0 12px;
 }
 .apps {
   display: flex;
@@ -554,9 +559,10 @@ header {
 .footer-help {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 .footer-help span {
-  padding: 6px 6px 12px 6px;
+  padding: 12px 24px;
 }
 .footer-site {
   background-color: #232347;
@@ -606,6 +612,23 @@ header {
 .footer-nav {
   max-width: 1440px;
   margin-inline: auto;
+}
+.footer-list-mobile i.active {
+  transform: rotate(180deg);
+}
+.footer-list-mobile.active {
+  border: 2px solid white;
+  border-radius: 100px;
+  background-color: rgb(255,255,255,0.075);
+  padding-inline: 12px;
+}
+.footer-list-mobile{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-list-items span{
+  padding: 6px 0 12px;
 }
 @media screen and (min-width: 480px) {
   .deals ul {
@@ -689,14 +712,37 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: flex-start;
   }
   .footer-list span {
     padding: 6px 0;
+    font-size: 13px;
   }
   .footer-nav {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+  }
+  .footer-list-mobile.active {
+    border: none;
+    background-color: transparent;
+    padding-inline: 0;
+  }
+  .footer-tag {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .footer-tag p {
+    margin: 0;
+  }
+  .footer-list-mobile{
+    padding: 0;
+  }
+  .footer-list h3 {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 12px 0;
   }
 }
 @media screen and (min-width: 900px) {
@@ -1037,9 +1083,7 @@ header {
   }
   .gift-items {
     border-radius: 10px;
-    padding: 13px;
-    max-width: 1380px;
-    margin-inline: auto;
+    padding: 13px 10px;
   }
   .gift-img img {
     width: 100%;
