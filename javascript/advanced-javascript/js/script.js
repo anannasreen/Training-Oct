@@ -633,37 +633,49 @@
 // console.dir(b2);
 // b2.printme();
 
+// var button = document.getElementById('mybutton');
+
+// button.onclick = () => {
+//   // console.log('hello');
+//   console.log('started event');
+//   var arr = [];
+//   $.ajax({
+//     url: 'https://jsonplaceholder.typicode.com/todos/1',
+//     success: data => {
+//       console.log('ajax1 started');
+//       arr.push(data.title);
+//       console.log('ajax1 ended');
+//     },
+//     async: false,
+//   });
+
+//   $.ajax({
+//     url: 'https://jsonplaceholder.typicode.com/todos/1',
+//     succes: data => {
+//       console.log('ajax1 started');
+//       arr.push(data.title);
+//       console.log('ajax1 ended');
+//     },
+//     async: false,
+//   });
+
+//   var arr = [1, 2, 3, 4, 5];
+//   arr.forEach(item => {
+//     console.log(item);
+//   });
+
+//   document.getElementById('mytext').value = arr.join('\n');
+//   console.log('event ended');
+// };
+
+// --------------------feb 9-------------------
+
 var button = document.getElementById('mybutton');
-
 button.onclick = () => {
-  // console.log('hello');
-  console.log('started event');
-  var arr = [];
-  $.ajax({
-    url: 'https://jsonplaceholder.typicode.com/todos/1',
-    success: data => {
-      console.log('ajax1 started');
-      arr.push(data.title);
-      console.log('ajax1 ended');
-    },
-    async: false,
-  });
-
-  $.ajax({
-    url: 'https://jsonplaceholder.typicode.com/todos/1',
-    succes: data => {
-      console.log('ajax1 started');
-      arr.push(data.title);
-      console.log('ajax1 ended');
-    },
-    async: false,
-  });
-
-  var arr = [1, 2, 3, 4, 5];
-  arr.forEach(item => {
-    console.log(item);
-  });
-
-  document.getElementById('mytext').value = arr.join('\n');
-  console.log('event ended');
-};
+  console.log('started click event')
+  var arr=[1,2,3,4,5]
+  arr.forEach((item)=>{
+    console.log(item)
+  })
+  console.log('ended click event')
+}
