@@ -237,6 +237,11 @@ header {
   padding-bottom: 18px;
   text-align: center;
 }
+.video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .gift-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -352,7 +357,7 @@ header {
 .about-container {
   padding: 36px 0;
 }
-.like-gift{
+.like-gift {
   display: none;
 }
 .editors-section {
@@ -564,6 +569,7 @@ header {
 }
 .footer-list-items-tablet button:hover {
   padding: 3px 17px;
+  cursor: pointer;
 }
 .footer-help {
   display: flex;
@@ -832,6 +838,7 @@ header {
     margin: 4px 12px 0 0;
     /* padding-bottom: 12px; */
     line-height: 24px;
+    cursor: pointer;
   }
   header {
     width: 100%;
@@ -891,6 +898,7 @@ header {
     border: 1px solid rgba(34, 34, 34, 0.15);
     border-radius: 10px;
     list-style-type: none;
+    cursor: pointer;
   }
   .deals-img img {
     width: 100%;
@@ -972,6 +980,101 @@ header {
   }
   .country {
     margin: 0;
+  }
+  .footer-list-items span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .app-img:hover {
+    background-color: rgb(255, 255, 255, 0.075);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .country:hover {
+    background-color: rgb(255, 255, 255, 0.075);
+    border-radius: 100px;
+    cursor: pointer;
+  }
+  .like-btn:hover {
+    background-color: rgba(238, 233, 233, 0.882);
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  .basket:hover {
+    background-color: rgba(238, 233, 233, 0.882);
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  .signin:hover {
+    background-color: rgba(238, 233, 233, 0.882);
+    cursor: pointer;
+    border-radius: 100px;
+  }
+  .list:after {
+    display: block;
+    content: '';
+    border-bottom: solid 2px #000;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+  }
+  .list:hover:after {
+    transform: scaleX(1);
+    cursor: pointer;
+  }
+  .overview-items ul li:hover {
+    border-bottom: 2px solid black;
+    margin-bottom: -2px;
+    cursor: pointer;
+  }
+  .overview-items ul li:hover p {
+    opacity: 0.8;
+  }
+  .overview-items ul li:hover img {
+    width: 120px;
+    height: 120px;
+  }
+  .deals ul li:hover {
+    box-shadow: 5px 5px 5px rgb(0, 0, 0, 7%);
+    cursor: pointer;
+  }
+  .gift-items:hover {
+    box-shadow: 5px 5px 5px rgb(0, 0, 0, 7%);
+    cursor: pointer;
+  }
+  .gift-items:hover .play-btn {
+    display: none;
+  }
+  .gift-img:hover .like-gift {
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+  }
+  .email-input-tag:hover {
+    border: 1px solid #222222;
+    margin-bottom: -2px;
+    cursor: pointer;
+  }
+  .deals-heading a:hover i {
+    margin-left: 12px;
+  }
+  .deals-heading a:hover {
+    width: 110px;
+    cursor: pointer;
+  }
+  .gift-name{
+    display: none;
+  }
+  .gift-items:hover .gift-name{
+    display: flex;
+    max-width: 30vw;
+    border: 1px solid black;
+    position: absolute;
+    background-color: #fdf7ee;
+    font-family: font-regular;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1182,78 +1285,5 @@ header {
     padding: 36px 54px 72px;
     max-width: 1400px;
     margin-inline: auto;
-  }
-  .footer-list-items span:hover {
-    text-decoration: underline;
-    cursor: pointer;
-  }
-  .app-img:hover {
-    background-color: rgb(255, 255, 255, 0.075);
-    border-radius: 50%;
-  }
-  .country:hover {
-    background-color: rgb(255, 255, 255, 0.075);
-    border-radius: 100px;
-  }
-  .like-btn:hover {
-    background-color: rgba(238, 233, 233, 0.882);
-    cursor: pointer;
-    border-radius: 50%;
-  }
-  .basket:hover {
-    background-color: rgba(238, 233, 233, 0.882);
-    cursor: pointer;
-    border-radius: 50%;
-  }
-  .signin:hover {
-    background-color: rgba(238, 233, 233, 0.882);
-    cursor: pointer;
-    border-radius: 100px;
-  }
-  /* .list:hover {
-    border-bottom: 2px solid #000;
-    padding-bottom: 4px;
-    transform: scaleX(0);
-    transition: transform 250ms ease-in-out;
-    transform: scaleX(1);
-  } */
-  .list:after {
-    display: block;
-    content: '';
-    border-bottom: solid 2px #000;
-    transform: scaleX(0);
-    transition: transform 250ms ease-in-out;
-  }
-  .list:hover:after {
-    transform: scaleX(1);
-  }
-  .overview-items ul li:hover {
-    border-bottom: 2px solid black;
-    margin-bottom: -2px;
-  }
-  .overview-items ul li:hover p {
-    opacity: 0.8;
-  }
-  .overview-items ul li:hover img {
-    width: 120px;
-    height: 120px;
-  }
-  .deals ul li:hover {
-    box-shadow: 5px 5px 5px rgb(0, 0, 0, 7%);
-  }
-  .gift-items:hover {
-    box-shadow: 5px 5px 5px rgb(0, 0, 0, 7%);
-  }
-  .gift-items:hover .play-btn{
-    display: none;
-  }
-  .gift-img:hover .like-gift{
-    display: flex;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: white;
-    border-radius: 50%;
-    padding: 5px;
   }
 }
