@@ -237,7 +237,7 @@ header {
   padding-bottom: 18px;
   text-align: center;
 }
-.video{
+.video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -652,6 +652,9 @@ header {
 .country svg {
   margin-right: 4px;
 }
+.gift-name{
+  display: none;
+}
 @media screen and (min-width: 480px) {
   .deals ul {
     display: grid;
@@ -771,6 +774,29 @@ header {
   }
   .apps {
     flex-wrap: wrap;
+  }
+  .editors-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .editors-heading-tablet {
+    flex-grow: 1;
+    flex-basis: 24.5%;
+    max-width: 37.5%;
+  }
+  .editors-item {
+    flex-grow: 1;
+    flex-basis: 25%;
+    max-width: 25%;
+    padding-right: 18px;
+    margin-bottom: 18px;
+  }
+  .featured-tablet {
+    flex-grow: 1;
+    flex-basis: 24.5%;
+    max-width: 37.5%;
   }
 }
 @media screen and (min-width: 900px) {
@@ -945,6 +971,8 @@ header {
   .editors-list {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
   }
   .editors-heading-tablet,
   .four {
@@ -966,7 +994,7 @@ header {
   .featured-txt {
     flex-grow: 1;
     flex-basis: 25%;
-    max-width: 25%;
+    /* max-width: 25%; */
   }
   .about-container {
     display: grid;
@@ -1065,10 +1093,10 @@ header {
     width: 110px;
     cursor: pointer;
   }
-  .gift-name{
+  .gift-name {
     display: none;
   }
-  .gift-items:hover .gift-name{
+  .gift-items:hover .gift-name {
     display: flex;
     max-width: 30vw;
     border: 1px solid black;

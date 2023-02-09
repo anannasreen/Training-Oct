@@ -192,8 +192,11 @@ const createOverviewSection = (objectList, elmType) => {
   for (let key = 0; key < objectList.length; key++) {
     const overviewEl = document.createElement(elmType);
     overviewList.appendChild(overviewEl);
-    overviewEl.innerHTML = `<div class="overview-img"><img src=${objectList[key].url}></div>
-    <p>${objectList[key].name}</p>`;
+    const overviewImg = document.createElement('div');
+    overviewEl.appendChild(overviewImg);
+    overviewImg.classList.add('overview-img');
+    overviewImg.innerHTML = `<img src=${objectList[key].url}>`;
+    overviewEl.innerHTML += `<p>${objectList[key].name}</p>`;
   }
 };
 
@@ -204,10 +207,7 @@ const createDealsElm = (objectList, elmType) => {
     const dealsImg = document.createElement('div');
     dealsEl.appendChild(dealsImg);
     dealsImg.classList.add('deals-img');
-    dealsImg.innerHTML = `<img
-  src="${objectList[key].url}"
-  alt=""
-  />`;
+    dealsImg.innerHTML = `<img src="${objectList[key].url}" alt=""/>`;
 
     dealsEl.innerHTML += `
             <div class="deals-txt">
@@ -257,15 +257,20 @@ const createGiftElm = objectList => {
     likeGift.innerHTML = `<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="18" height="18"><path d="M12,21C10.349,21,2,14.688,2,9,2,5.579,4.364,3,7.5,3A6.912,6.912,0,0,1,12,5.051,6.953,6.953,0,0,1,16.5,3C19.636,3,22,5.579,22,9,22,14.688,13.651,21,12,21ZM7.5,5C5.472,5,4,6.683,4,9c0,4.108,6.432,9.325,8,10,1.564-.657,8-5.832,8-10,0-2.317-1.472-4-3.5-4-1.979,0-3.7,2.105-3.721,2.127L11.991,8.1,11.216,7.12C11.186,7.083,9.5,5,7.5,5Z" fill="#222222"></path></svg>`;
 
     const likeGiftElm = document.querySelectorAll('.like-gift');
-    likeGiftElm.forEach(element => {
-      element.addEventListener('click', () => {
-        element.innerHTML = `<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="18" height="18"><path d="M16.5,3A6.953,6.953,0,0,0,12,5.051,6.912,6.912,0,0,0,7.5,3C4.364,3,2,5.579,2,9c0,5.688,8.349,12,10,12S22,14.688,22,9C22,5.579,19.636,3,16.5,3Z" fill="#A61A2E"></path></svg>`;
+
+    function likeImage() {
+      likeGiftElm.forEach(element => {
+        element.addEventListener('click', () => {
+          element.innerHTML = `<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="18" height="18"><path d="M16.5,3A6.953,6.953,0,0,0,12,5.051,6.912,6.912,0,0,0,7.5,3C4.364,3,2,5.579,2,9c0,5.688,8.349,12,10,12S22,14.688,22,9C22,5.579,19.636,3,16.5,3Z" fill="#A61A2E"></path></svg>`;
+        });
       });
-    });
+    }
+    likeImage();
 
     if (objectList[key].urlType === 'Video') {
       giftImg.innerHTML += `<div class="play-btn"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="18" height="18"><polygon points="4 4 4 20 20 12 4 4" fill="#222222"></polygon></svg></div>`;
     }
+
     giftElement.innerHTML += `<div class="gift-txt">
   <h3>
    ${objectList[key].name}
@@ -283,19 +288,13 @@ const createGiftElm = objectList => {
     <span>${objectList[key].currencySymbol}${objectList[key].actualprice}</span>
     <a href="">(${objectList[key].discount}% off)</a>
   </div>
-</div>
-<div class="gift-name">${objectList[key].name}</div>`;
+</div>`;
 
-    // console.log(giftList);
-    // const giftItems = document.querySelectorAll('.gift-items');
-    // console.log(giftItems);
+    const textElement = document.createElement('div');
+    textElement.classList.add('gift-name');
+    giftElement.appendChild(textElement);
 
-    // giftItems.forEach(elm => {
-    //   elm.addEventListener('mouseover', () => {
-    //     console.log('hello');
-    //     elm.innerHTML += `<div class="gift-name">${objectList[key].name}</div>`;
-    //   });
-    // });
+    textElement.innerHTML = `${objectList[key].name}`;
 
     if (objectList[key].actualprice > 2000) {
       giftElement.innerHTML += `<div class="delivery">FREE Delivery</div>`;
@@ -336,7 +335,6 @@ footer.forEach(element => {
     element.children[0].children[1].classList.toggle('active');
   });
 });
-
 
 function generateEtsyHomePage(pageData) {
   createNavBar(elements, list, 'li', 'list');
