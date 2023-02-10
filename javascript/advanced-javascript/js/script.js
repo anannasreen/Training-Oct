@@ -670,12 +670,30 @@
 
 // --------------------feb 9-------------------
 
-var button = document.getElementById('mybutton');
-button.onclick = () => {
-  console.log('started click event')
-  var arr=[1,2,3,4,5]
-  arr.forEach((item)=>{
-    console.log(item)
-  })
-  console.log('ended click event')
-}
+// var button = document.getElementById('mybutton');
+// button.onclick = () => {
+//   console.log('started click event')
+//   var arr=[1,2,3,4,5]
+//   arr.forEach((item)=>{
+//     console.log(item)
+//   })
+//   console.log('ended click event')
+// }
+
+// console.log('started');
+// const pr = 'https://jsonplaceholder.typicode.com/todos/1';
+// // console.log(pr)
+
+// function buttonClick() {
+//   console.log('Clicked');
+//   pr.then(
+//     data => {
+//       console.log(data);
+//     },
+//     err => {
+//       console.log(err);
+//     }
+//   );
+// }
+
+// console.log('ended');
