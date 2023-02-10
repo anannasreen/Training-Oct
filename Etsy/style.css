@@ -652,7 +652,7 @@ header {
 .country svg {
   margin-right: 4px;
 }
-.gift-name{
+.gift-name {
   display: none;
 }
 @media screen and (min-width: 480px) {
@@ -1097,12 +1097,13 @@ header {
     display: none;
   }
   .gift-items:hover .gift-name {
-    display: flex;
-    max-width: 30vw;
+    display: block;
     border: 1px solid black;
     position: absolute;
     background-color: #fdf7ee;
     font-family: font-regular;
+    z-index: 50;
+    width: 500px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1238,6 +1239,7 @@ header {
   .gift-items {
     border-radius: 10px;
     padding: 13px 10px;
+    position: relative;
   }
   .gift-img img {
     width: 100%;
