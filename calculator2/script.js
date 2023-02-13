@@ -4,6 +4,7 @@ const input = document.querySelector('.input-bar');
 const numbers = document.querySelectorAll('.number');
 const operators = document.querySelectorAll('.operator');
 const clearButton = document.querySelector('.clear-btn');
+const equalButton = document.querySelector('.equal-btn');
 
 let readingNumber = 0;
 let state = 0;
@@ -75,6 +76,7 @@ clearButton.addEventListener('click', () => {
   state = 0;
   inputValue = 0;
   accumulator = 0;
+  console.clear();
 });
 
 let x;

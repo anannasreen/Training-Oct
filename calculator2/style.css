@@ -13,10 +13,10 @@ body {
   align-items: center;
 }
 .container {
-  border: 3px solid black;
+  border: 5px solid #07222a;
   display: flex;
   flex-direction: column;
-  width: 75%;
+  width: 90%;
   max-width: 600px;
 }
 .input-bar {
@@ -25,8 +25,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  border-bottom: 1px solid black;
-  height: 80px;
+  border-bottom: 3px solid #232121;
+  height: 120px;
 }
 .numbers {
   display: flex;
@@ -46,15 +46,16 @@ body {
 button {
   font-size: 30px;
   width: 33.334%;
-  padding: 10px;
-  background-color: rgb(242, 237, 183);
+  padding: 25px 10px;
+  background-color: rgb(248, 220, 220);
   border: 1px solid black;
+  font-weight: 500;
 }
 .equal-btn {
   background: green;
   border: 1px solid black;
   color: white;
 }
-.clear-btn{
+.clear-btn {
   color: red;
 }
