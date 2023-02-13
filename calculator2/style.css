@@ -4,6 +4,7 @@
   padding: 0;
 }
 body {
+  font-family: sans-serif;
   height: 100vh;
   margin: 0;
   max-width: 100%;
@@ -19,12 +20,13 @@ body {
   max-width: 600px;
 }
 .input-bar {
-    padding: 10px;
+  padding: 10px;
   font-size: 50px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   border-bottom: 1px solid black;
+  height: 80px;
 }
 .numbers {
   display: flex;
@@ -33,7 +35,7 @@ body {
 }
 .number {
   font-size: 30px;
-  width: 33.33%;
+  width: 33.334%;
 }
 .operators {
   font-size: 30px;
@@ -41,14 +43,18 @@ body {
   align-items: center;
   justify-content: center;
 }
-.btn {
-  display: flex;
-}
 button {
   font-size: 30px;
-  width: 33.33%;
+  width: 33.334%;
   padding: 10px;
+  background-color: rgb(209, 242, 245);
+  border: 1px solid black;
 }
-.equal-btn{
-    background: green;
+.equal-btn {
+  background: green;
+  border: 1px solid black;
+  color: white;
+}
+.clear-btn{
+  color: red;
 }
