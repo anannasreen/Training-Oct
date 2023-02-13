@@ -111,4 +111,3 @@ function charToDigit(x) {
       return 9;
   }
 }
-
