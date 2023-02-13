@@ -1030,7 +1030,7 @@ header {
   .editors-item {
     height: 20vw;
   }
-  .images{
+  .images {
     height: 16vw;
   }
   .about-container {
@@ -1164,7 +1164,6 @@ header {
     flex-direction: row;
     max-width: 1405px;
     margin-inline: auto;
-    /* box-shadow: 0 4px 20px rgb(34 34 34/15%); */
     padding: 12px 38px 12px 36px;
     align-items: center;
     justify-content: space-between;
@@ -1357,3 +1356,5 @@ header {
     margin-inline: auto;
   }
 }
+
+/* transition: transform 200ms cubic-bezier(0.345, 0.115, 0.135, 1.42),background 150ms ease-out,box-shadow 200ms ease-out; */

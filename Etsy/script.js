@@ -179,6 +179,36 @@ pageData = [
       ratingStar: 4.5,
     },
   ]),
+  (editorsChoice = [
+    {
+      url: 'https://i.etsystatic.com/17501005/r/il/aa8aff/3518501728/il_680x540.3518501728_5krv.jpg',
+      videoURL:
+        'https://v-cg.etsystatic.com/video/upload/ac_none,du_15,q_auto:good/InShot_20211206_095812059_nvtird.mp4',
+    },
+    {
+      url: 'https://i.etsystatic.com/32501528/c/1190/946/76/37…/5841d1/4551382339/il_680x540.4551382339_jh29.jpg',
+      videoURL:
+        'https://v-cg.etsystatic.com/video/upload/ac_none,c_crop,du_15,h_1080,q_auto:good,w_720,x_0,y_99/IMG_2223_krvkzs',
+    },
+    {
+      url: 'https://i.etsystatic.com/20814531/c/736/585/0/150/…/ad5deb/4185811790/il_680x540.4185811790_9lh9.jpg',
+      videoURL: '',
+    },
+    {
+      url: 'https://i.etsystatic.com/32501528/c/1488/1488/0/0/…/23a5b4/3700725057/il_680x540.3700725057_szgj.jpg',
+      videoURL:
+        'https://v-cg.etsystatic.com/video/upload/ac_none,du_15,q_auto:good/InShot_20211125_132024897_in6joq.mp4',
+    },
+    {
+      url: 'https://i.etsystatic.com/30767997/c/1080/858/0/364…/ea7151/4109914487/il_680x540.4109914487_j9v5.jpg',
+      videoURL: '',
+    },
+    {
+      url: 'https://i.etsystatic.com/18077312/r/il/789e61/3035597254/il_680x540.3035597254_t26f.jpg',
+      videoURL:
+        'https://v-cg.etsystatic.com/video/upload/ac_none,du_15,q_auto:good/20211229_141715_jkhaty.mp4',
+    },
+  ]),
 ];
 
 const createNavBar = (divClass, objectList, elmType, itemClassName) => {
