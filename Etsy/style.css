@@ -656,6 +656,13 @@ header {
 .gift-name {
   display: none;
 }
+.gift-txt h3 {
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  white-space: normal;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 @media screen and (min-width: 480px) {
   .deals ul {
     display: grid;
@@ -1356,5 +1363,3 @@ header {
     margin-inline: auto;
   }
 }
-
-/* transition: transform 200ms cubic-bezier(0.345, 0.115, 0.135, 1.42),background 150ms ease-out,box-shadow 200ms ease-out; */

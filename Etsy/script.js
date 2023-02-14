@@ -10,6 +10,9 @@ const playButtonSVG =
   '<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="18" height="18"><polygon points="4 4 4 20 20 12 4 4" fill="#222222"></polygon></svg>';
 const starSVG =
   '<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="3 3 18 18" aria-hidden="true" focusable="false" width="14" height="14"><path d="M19.985,10.36a0.5,0.5,0,0,0-.477-0.352H14.157L12.488,4.366a0.5,0.5,0,0,0-.962,0l-1.67,5.642H4.5a0.5,0.5,0,0,0-.279.911L8.53,13.991l-1.5,5.328a0.5,0.5,0,0,0,.741.6l4.231-2.935,4.215,2.935a0.5,0.5,0,0,0,.743-0.6l-1.484-5.328,4.306-3.074A0.5,0.5,0,0,0,19.985,10.36Z" fill="#222222"></path></svg>';
+const halfStar =
+  '<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="3 3 18 18" aria-hidden="true" focusable="false" width="18" height="18"><path class="background" d="M12.007 16.97l4.21 2.95c.182.12.422.11.592-.027.17-.138.23-.37.15-.574l-1.484-5.33 4.306-3.073c.182-.12.265-.347.203-.557-.065-.21-.258-.352-.477-.352h-5.35l-1.67-5.642c-.06-.215-.257-.363-.48-.363-.225 0-.42.148-.482.363v12.94l.48-.335z" fill="#E1E3DF"></path><path class="foreground" d="M12 4c-.224 0-.42.15-.48.366l-1.67 5.642H4.5c-.218.002-.41.145-.472.354-.064.208.014.433.193.557l4.307 3.07-1.5 5.33c-.08.202-.02.433.15.57.17.14.41.15.59.03L12 16.98V4z" fill="#222222"></path></svg>';
+const editorsList = document.querySelectorAll('.editors');
 
 pageData = [
   (list = [
@@ -169,7 +172,7 @@ pageData = [
     },
     {
       url: 'https://i.etsystatic.com/26694795/c/2445/1943/282/…/035b01/3254592822/il_340x270.3254592822_5dss.jpg',
-      name: 'Handmade Damascus Pocket Knife Rose Wood Handle Birthday Gift...',
+      name: 'Handmade Damascus Pocket Knife Rose Wood Handle Birthday Gift Folding Knife Groomsmen Gift Anniversary Wedding Personalized Gift for Men',
       rating: 6172,
       actualprice: 8538,
       discount: 70,
@@ -184,32 +187,45 @@ pageData = [
       url: 'https://i.etsystatic.com/17501005/r/il/aa8aff/3518501728/il_680x540.3518501728_5krv.jpg',
       videoURL:
         'https://v-cg.etsystatic.com/video/upload/ac_none,du_15,q_auto:good/InShot_20211206_095812059_nvtird.mp4',
+      className: 'editors-item one images',
     },
     {
       url: 'https://i.etsystatic.com/32501528/c/1190/946/76/37…/5841d1/4551382339/il_680x540.4551382339_jh29.jpg',
       videoURL:
         'https://v-cg.etsystatic.com/video/upload/ac_none,c_crop,du_15,h_1080,q_auto:good,w_720,x_0,y_99/IMG_2223_krvkzs',
+      className: 'editors-item two images',
     },
     {
       url: 'https://i.etsystatic.com/20814531/c/736/585/0/150/…/ad5deb/4185811790/il_680x540.4185811790_9lh9.jpg',
       videoURL: '',
+      className: 'editors-item three images',
     },
     {
       url: 'https://i.etsystatic.com/32501528/c/1488/1488/0/0/…/23a5b4/3700725057/il_680x540.3700725057_szgj.jpg',
       videoURL:
         'https://v-cg.etsystatic.com/video/upload/ac_none,du_15,q_auto:good/InShot_20211125_132024897_in6joq.mp4',
+      className: 'editors-item four',
     },
     {
       url: 'https://i.etsystatic.com/30767997/c/1080/858/0/364…/ea7151/4109914487/il_680x540.4109914487_j9v5.jpg',
       videoURL: '',
+      className: 'editors-item one',
     },
     {
       url: 'https://i.etsystatic.com/18077312/r/il/789e61/3035597254/il_680x540.3035597254_t26f.jpg',
       videoURL:
         'https://v-cg.etsystatic.com/video/upload/ac_none,du_15,q_auto:good/20211229_141715_jkhaty.mp4',
+      className: 'editors-item two',
     },
   ]),
 ];
+
+// const createEditorsSection=()=>{
+//   for (let i = 0; i < editorsChoice; i++) {
+  
+//   }
+// }
+// createEditorsSection()
 
 const createNavBar = (divClass, objectList, elmType, itemClassName) => {
   for (let i = 0; i < objectList.length; i++) {
@@ -233,8 +249,13 @@ const createOverviewSection = (objectList, elmType) => {
     overviewEl.appendChild(overviewImg);
     overviewImg.classList.add('overview-img');
 
-    overviewImg.innerHTML = `<img src=${objectList[key].url}>`;
-    overviewEl.innerHTML += `<p>${objectList[key].name}</p>`;
+    const overviewImage = document.createElement('img');
+    overviewImage.src = `${objectList[key].url}`;
+    overviewImg.appendChild(overviewImage);
+
+    const overviewText = document.createElement('p');
+    overviewEl.appendChild(overviewText);
+    overviewText.innerHTML = `${objectList[key].name}`;
   }
 };
 
@@ -242,10 +263,14 @@ const createDealsElm = (objectList, elmType) => {
   for (let key = 0; key < objectList.length; key++) {
     const dealsEl = document.createElement(elmType);
     dealsList.appendChild(dealsEl);
+
     const dealsImg = document.createElement('div');
     dealsEl.appendChild(dealsImg);
+
     dealsImg.classList.add('deals-img');
-    dealsImg.innerHTML = `<img src="${objectList[key].url}" alt=""/>`;
+    const dealsImage = document.createElement('img');
+    dealsImg.appendChild(dealsImage);
+    dealsImage.src = `${objectList[key].url}`;
 
     const dealsText = document.createElement('div');
     dealsText.classList.add('deals-txt');
@@ -273,15 +298,16 @@ const createGiftElm = objectList => {
     giftImg.classList.add('gift-img');
 
     if (objectList[key].urlType === 'Photo') {
-      giftImg.innerHTML = `
-    <img
-      src="${objectList[key].url}"
-      alt=""
-    />`;
+      const giftImage = document.createElement('img');
+      giftImg.appendChild(giftImage);
+      giftImage.src = `${objectList[key].url}`;
     } else {
-      giftImg.innerHTML = `<video class="video" poster="${objectList[key].url}">
-    <source control src="${objectList[key].video}">
-    </video>`;
+      const giftVideo = document.createElement('video');
+      giftImg.appendChild(giftVideo);
+      giftVideo.classList.add('video');
+      giftVideo.poster = `${objectList[key].url}`;
+      giftVideo.loop = 'true';
+      giftVideo.src = `${objectList[key].video}`;
     }
 
     const videos = document.querySelectorAll('.video');
