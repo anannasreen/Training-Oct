@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+// import { useDispatch, useSelector } from "react-redux";
 import Tools from "../components/Tools";
-import SimpleList from "../list/SimpleList";
+import SimpleList from "../list/simpleList";
 // import { deleteAndUpdate, getDataInfo } from "../redux-toolkit/dataInfoReducer";
 
 import "./HomePage.css";
@@ -57,7 +57,7 @@ function HomePage() {
     <div>
       {loading && <div className="loading"> Loading ... </div>}
       {error && <div className="error"> {error} </div>}
-      <MyNewContext.Provider value={100}>
+      {/* <MyNewContext.Provider value={100}>
         <Tools
           onAdd={handleAdd}
           labelValue={activeState}
@@ -71,7 +71,7 @@ function HomePage() {
             onAction={handleDelete}
           />
         </Tools>
-      </MyNewContext.Provider>
+      </MyNewContext.Provider> */}
     </div>
   );
 }

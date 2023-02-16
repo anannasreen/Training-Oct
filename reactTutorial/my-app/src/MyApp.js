@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Header from './components/header';
+import Footer from './components/footer';
 import HomePage from './pages/HomePage';
-import DummyPage from './pages/DummyPage';
-import Settings from './pages/Settings';
-import Usage from './pages/Usage';
-import { Provider } from 'react-redux'
-import store from './redux-toolkit/store';
+// import DummyPage from './pages/DummyPage';
+// import Settings from './pages/Settings';
+// import Usage from './pages/Usage';
+// import { Provider } from 'react-redux'
+// import store from './redux-toolkit/store';
 
 
 class MyApp extends Component {
