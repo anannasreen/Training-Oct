@@ -1,5 +1,5 @@
 import React from 'react';
-import Label from './Label';
+import Label2 from './Label';
 import './ListItem.css'
 // import { useTooltip } from '../hooks/ourHooks';
 // import Tooltip from './Tooltip';
@@ -37,7 +37,7 @@ function ListItem(props) {
                 {descr}
             </div>
             <div className="list-label">
-                <Label isActive={isActive} onAction={onLabelClick}/>
+                <Label2 isActive={isActive} onAction={onLabelClick}/>
             </div>
         </div>
     );
