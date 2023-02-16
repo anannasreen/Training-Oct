@@ -1,25 +1,25 @@
 import React from "react";
 import ListItem from "./ListItem";
-import Tools from "../components/Tools";
+import Tools from "../../my-app/src/components/Tools";
 import { unstable_renderSubtreeIntoContainer } from "react-dom";
 
-let arr = [
-  {
-    title: "Appointment for October",
-    descr: "The patient is rescheduled to October",
-    isActive: false,
-  },
-  {
-    title: "Appointment for November",
-    descr: "The patient is rescheduled to November",
-    isActive: true,
-  },
-  {
-    title: "Appointment for December",
-    descr: "The patient is rescheduled to December",
-    isActive: false,
-  },
-];
+// let arr = [
+//   {
+//     title: "Appointment for October",
+//     descr: "The patient is rescheduled to October",
+//     isActive: false,
+//   },
+//   {
+//     title: "Appointment for November",
+//     descr: "The patient is rescheduled to November",
+//     isActive: true,
+//   },
+//   {
+//     title: "Appointment for December",
+//     descr: "The patient is rescheduled to December",
+//     isActive: false,
+//   },
+// ];
 
 // const obj = {
 //   title: "Appointment for October",
@@ -33,12 +33,27 @@ class List extends React.Component {
 
     this.state = {
       data: arr,
-      activeState:'all'
+      activeState: "all",
     };
   }
 
-  componentDidMount(){
-    console.log('component')
+  componentDidUpdate(){
+    console.log('componentDidUpdate')
+  }
+
+  
+
+  componentDidMount() {
+    console.log("component");
+    fetch("/data.json")
+      .then((data) => {
+        return data.json();
+      })
+      .then((data) => {
+        this.setState({
+          data: data,
+        });
+      });
   }
 
   onListChange(evt) {
@@ -85,4 +100,4 @@ class List extends React.Component {
     );
   }
 }
-export default List; 
+export default List;

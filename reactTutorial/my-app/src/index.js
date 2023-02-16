@@ -1,8 +1,16 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import ListItem from "./list/ListItem";
-import Header from "./components/header";
-import Footer from "./components/footer";
+import ReactDOM from 'react-dom';
+import MyApp from './MyApp';
+
+
+ReactDOM.render(
+  <MyApp />,
+  document.getElementById('root')
+);
+
+// import ListItem from "./list/ListItem";
+// import Header from "./components/header";
+// import Footer from "./components/footer";
 
 // import "./index.css";
 // import App from "./App";
@@ -87,15 +95,15 @@ import Footer from "./components/footer";
 //   document.getElementById("root")
 // );
 
-ReactDOM.render(
-  <div className="app">
-    <Header />
-    <div className="app-body">
-      <div className="app-list">
-        <ListItem />
-        <ListItem />
-        <ListItem />
-        <ListItem />
+// ReactDOM.render(
+//   <div className="app">
+//     <Header />
+//     <div className="app-body">
+//       <div className="app-list">
+//         <ListItem />
+//         <ListItem />
+//         <ListItem />
+//         <ListItem />
 
         {/* {ListItem()}
         {ListItem()}
@@ -155,10 +163,10 @@ ReactDOM.render(
           </div>
           <hr />
         </div> */}
-      </div>
-    </div>
-    <Footer />
-  </div>,
-  document.getElementById("root")
-);
+//       </div>
+//     </div>
+//     <Footer />
+//   </div>,
+//   document.getElementById("root")
+// );
 
