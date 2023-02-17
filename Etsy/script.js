@@ -242,7 +242,7 @@ const createNavBar = (divClass, objectList, elmType, itemClassName) => {
 
 const createOverviewSection = (objectList, elmType) => {
   for (let key = 0; key < objectList.length; key++) {
-    const overviewEl = document.createElement(elmType);
+    const overviewEl = document.createElement('li');
     overviewList.appendChild(overviewEl);
 
     const overviewImg = document.createElement('div');
