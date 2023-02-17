@@ -37,11 +37,9 @@ class List extends React.Component {
     };
   }
 
-  componentDidUpdate(){
-    console.log('componentDidUpdate')
+  componentDidUpdate() {
+    console.log("componentDidUpdate");
   }
-
-  
 
   componentDidMount() {
     console.log("component");
