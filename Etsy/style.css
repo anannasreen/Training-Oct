@@ -497,6 +497,10 @@ header {
   padding: 12px 0;
   gap: 6px;
 }
+.overview-img {
+  width: 120px;
+  height: 140px;
+}
 .footer-tag p {
   text-decoration: underline;
   text-decoration-style: dashed;
