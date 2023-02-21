@@ -24,12 +24,27 @@ import Table from "./components/Table";
 import PureComp from "./components/PureComp";
 import ParentComp from "./components/ParentComp";
 import RefsDemo from "./components/RefsDemo";
+import FocusInput from "./components/FocusInput";
+import FRParentInput from "./components/FRParentInput";
+import Hero from "./components/Hero";
+import ErrorBoundary from "./components/ErrorBoundary";
+import ClickCounter from "./components/clickCounter";
+import HoverCounter from "./components/HoverCounter";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <RefsDemo />
+        <ClickCounter name='Anan'/>
+        <HoverCounter />
+        {/* <ErrorBoundary>
+          <Hero heroName="Batman"></Hero>
+          <Hero heroName="Superman"></Hero>
+          <Hero heroName="Joker"></Hero>
+        </ErrorBoundary> */}
+        {/* <FRParentInput/> */}
+        {/* <FocusInput/> */}
+        {/* <RefsDemo /> */}
         {/* <ParentComp/> */}
         {/* <Table /> */}
         {/* <FragmentDemo /> */}
