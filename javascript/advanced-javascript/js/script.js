@@ -697,3 +697,28 @@
 // }
 
 // console.log('ended');
+
+// -------------------------feb 21---------------------
+// console.log('one')
+// const a=[2,3,6,7,5,4,3]
+// a.forEach(myFunction)
+// function myFunction(arg) {
+//   console.log(arg);
+// }
+// // myFunction(10);
+// // document.getElementById('button').onclick = myFunction;
+// console.log('two')
+
+// function submit() {
+//   const items = document.getElementsByClassName('data');
+//   const data = {};
+//   for (let item of items) {
+//     data[item.name] = item.value;
+//   }
+//   console.log(data);
+// }
+
+// const values = [1, 2, 3, 4, 5, 6, 7, 8];
+// values.forEach(val => {
+//   console.log('Hello World = ', val);
+// });
