@@ -497,10 +497,6 @@ header {
   padding: 12px 0;
   gap: 6px;
 }
-.overview-img {
-  width: 120px;
-  height: 140px;
-}
 .footer-tag p {
   text-decoration: underline;
   text-decoration-style: dashed;
@@ -510,6 +506,10 @@ header {
   text-align: center;
   margin-inline: auto;
   line-height: 28px;
+  cursor: help;
+}
+.footer-tag svg {
+  cursor: help;
 }
 .footer-list-section {
   background-color: #2f466c;
@@ -1319,6 +1319,10 @@ header {
     color: #222222;
     line-height: 20px;
     font-weight: 500;
+  }
+  .overview-img {
+    width: 120px;
+    height: 140px;
   }
   .rating p {
     color: #595959;

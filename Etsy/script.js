@@ -222,7 +222,7 @@ pageData = [
 
 // const createEditorsSection=()=>{
 //   for (let i = 0; i < editorsChoice; i++) {
-  
+
 //   }
 // }
 // createEditorsSection()
