@@ -792,4 +792,135 @@
 // var arr = [1, 2, 33, 48, 54, 5];
 // var a = Math.max(...arr);
 // console.log(a);
+// ----------------------------------------feb 22-----------------------------------------
+// const obj1 = {
+//   name: 'Code Malayalam',
+//   place: 'Kerala',
+//   rank: 100,
+// };
+// function myFunction() {
+//   // const name = obj1.name;
+//   // const place = obj1.place;
+//   // const rank = obj1.rank;
+//   const { name, place, rank } = obj1;
+//   console.log(name, place, rank);
+// }
+// myFunction();
 
+// const marks = [1, 4, 6];
+// function myFunction() {
+//   const [a, b, c, d = false] = marks;
+//   console.log(a, b, c, d);
+// }
+// myFunction();
+// function myFunction({ name, place }) {
+//   console.log(name, place);
+// }
+// myFunction(obj1);
+// const marks=[1,4,6]
+// function myFunction(){
+//   var [a,b,c]=getValue()
+//   console.log(a,b,c)
+// }
+// function getValue(){
+//   return marks
+// }
+// myFunction()
+// var obj1 = {
+//   name: 'Code Malayalam',
+//   place: 'Kerala',
+// };
+// var obj2 = {
+//   name: 'Bob',
+//   place: 'America',
+// };
+// function abc() {
+//   var { name, place } = obj1;
+//   var { name, place } = obj2;
+//   console.log(name, place);
+// }
+// abc();
+
+// const arr = [
+//   {
+//     name: 'Alice',
+//     mark: 35,
+//     place: 'Kannur',
+//   },
+//   {
+//     name: 'Bob',
+//     mark: 28,
+//     place: 'Palakkad',
+//   },
+//   {
+//     name: 'Catherine',
+//     mark: 44,
+//     place: 'Trissur',
+//   },
+//   {
+//     name: 'Daniel',
+//     mark: 23,
+//     place: 'Kollam',
+//   },
+// ];
+
+// console.log(arr);
+// arr.forEach(item => {
+//   console.log(item);
+//   console.log(item.name);
+// });
+
+// let sum = 0;
+// arr.forEach((item, index) => {
+//   sum = sum + item.mark;
+//   console.log(index);
+// });
+
+// console.log(sum);
+// var found = arr.find(item => {
+//   return item.name === 'Bob';
+// });
+
+// console.log(found);
+// var filtered = arr.filter(item => {
+//   return item.mark < 30;
+// });
+
+// console.log(found);
+// var newArr = arr.map(item => {
+//   return {
+//     ...item,
+//     country: 'India',
+//   };
+// });
+
+// console.log(newArr);
+// var value = arr.reduce((total, item) => {
+//     total.push(item.name)
+//     return total;
+// }, []);
+
+// console.log(value);
+
+// var obj = {
+//   name: 'Alice',
+//   mark: 35,
+//   place: 'Kannur',
+// };
+// var { name } = obj;
+// console.log(name);
+
+// console.log('started');
+// fetch('https://jsonplaceholder.typicode.com/todos/1')
+//   .then(response => response.json())
+//   .then(data => {
+//     console.log(data);
+//   });
+// console.log('ended');
+
+console.log('started');
+const pr = myFetch('https://jsonplaceholder.typicode.com/todos/1');
+pr.then(data => {
+  console.log(data);
+});
+console.log('ended');

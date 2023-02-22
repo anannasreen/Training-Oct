@@ -57,7 +57,7 @@ fruits.set("oranges", 200);
 // console.log(fruits.get("apples"));
 // console.log(fruits.has('apples'));
 
-let x = [1, 2, 3, 4, 5, 6, 7, 2, 3, 4, 5, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7];
+// let x = [1, 2, 3, 4, 5, 6, 7, 2, 3, 4, 5, 7, 7, 7, 7, 7, 7, 7, 7, 7];
 let y = [
   "hello",
   "hello",
@@ -78,7 +78,7 @@ function countNumber(numbers, x) {
       count++;
     }
   }
-  return count;
+  return count.toString();
 }
 
 function countAll(numbers) {
@@ -101,16 +101,23 @@ function maxValue(array) {
       max = array[i];
     }
   }
-  return max;
+  return max.toString().length;
 }
+console.log(maxValue([1, 2, 3, 4, 5, 6, 7, 2, 3, 4, 5, 7, 7, 7, 7, 7, 7, 7, 7, 7]))
 
 function printHist(elementMap) {
   elementMap.forEach((val, key) => {
     let str = " ";
-    for (let i = 0; i < maxValue(y).length - key.length; i++) {
+    for (let i = 0; i < (maxValue(y) - key.length); i++) {
       str += " ";
     }
-    console.log(key, str, val);
+    let r = " ";
+    for (x = 0; x < val; x++) {
+      r += "#";
+    }
+    console.log(`${key} ${str} ${r}`);
   });
 }
-printHist(countAll(y));
+printHist(countAll([1, 2, 3, 4, 5, 6, 7, 2, 3, 4, 5, 7, 7, 7, 7, 7, 7, 7, 7, 7]));
+printHist(countAll(y))
+
