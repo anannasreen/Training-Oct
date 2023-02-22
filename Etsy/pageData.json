@@ -1,5 +1,5 @@
-[
-  [
+{
+  "list": [
     {
       "title": "Sellers' Sales Hub",
       "img": ""
@@ -8,18 +8,37 @@
       "title": "Jewellery & Accessories",
       "img": ""
     },
-    { "title": "Clothing & Shoes", "img": "" },
-    { "title": "Home & Living", "img": "" },
-    { "title": "Wedding & Party", "img": "" },
-    { "title": "Toys & Entertainment", "img": "" },
-    { "title": "Art & Collectibles", "img": "" },
-    { "title": "Craft Supplies", "img": "" },
+    {
+      "title": "Clothing & Shoes",
+      "img": ""
+    },
+    {
+      "title": "Home & Living",
+      "img": ""
+    },
+    {
+      "title": "Wedding & Party",
+      "img": ""
+    },
+    {
+      "title": "Toys & Entertainment",
+      "img": ""
+    },
+    {
+      "title": "Art & Collectibles",
+      "img": ""
+    },
+    {
+      "title": "Craft Supplies",
+      "img": ""
+    },
     {
       "title": "Gifts",
       "img": "<svg xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 5 22 12\" width=\"16\" height=\"12\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M5,6A1,1,0,0,0,4,7v3H5v9a1,1,0,0,0,1,1h5V6H5Z\"></path><path d=\"M19,6H13.007A4.245,4.245,0,0,0,14.97,3.744a1.614,1.614,0,0,0-2.65-1.375,1.757,1.757,0,0,0-.315.324,1.753,1.753,0,0,0-.315-0.324A1.615,1.615,0,0,0,9.042,3.746,4.257,4.257,0,0,0,11.006,6H13V20h5a1,1,0,0,0,1-1V10h1V7A1,1,0,0,0,19,6Z\"></path></svg> "
     }
   ],
-  [
+
+  "overview": [
     {
       "url": "https://i.etsystatic.com/17600118/c/1000/1000/0/11…/d077de/2325460652/il_300x300.2325460652_lhfz.jpg",
       "name": "Wedding"
@@ -45,7 +64,8 @@
       "name": "Kitchen & Dining"
     }
   ],
-  [
+
+  "deals": [
     {
       "url": "https://i.etsystatic.com/22368382/r/il/006d21/4245808662/il_300x300.4245808662_a3x4.jpg",
       "discount": "Up to 40% off on",
@@ -77,7 +97,7 @@
       "category": "Wedding Clothing"
     }
   ],
-  [
+  "gifts": [
     {
       "url": "https://i.etsystatic.com/35966576/c/1614/1283/669/351/il/e1510f/4033777789/il_340x270.4033777789_dqlw.jpg",
       "name": "Birth Flower Jewelry Travel Case, Birth Month Flower Gift,Personalized Birthday Gift, Leather Jewelry Travel Case, Custom Jewelry Case",
@@ -145,7 +165,8 @@
       "ratingStar": 4.5
     }
   ],
-  [
+
+  "editorsChoice": [
     {
       "url": "https://i.etsystatic.com/17501005/r/il/aa8aff/3518501728/il_680x540.3518501728_5krv.jpg",
       "videoURL": "https://v-cg.etsystatic.com/video/upload/ac_none,du_15,q_auto:good/InShot_20211206_095812059_nvtird.mp4",
@@ -177,4 +198,4 @@
       "className": "editors-item two"
     }
   ]
-]
+}
