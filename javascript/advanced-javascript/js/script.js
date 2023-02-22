@@ -722,3 +722,74 @@
 // values.forEach(val => {
 //   console.log('Hello World = ', val);
 // });
+
+// class MyClass {
+//   myFunction() {
+//     console.log(this);
+//   }
+// }
+// const myc = new MyClass();
+// const k = myc.myFunction;
+// k();
+
+// function one() {
+//   var a = 100;
+//   two(a);
+//   console.log(a);
+// }
+// function two(a) {
+//   a = a + 1;
+//   console.log(a);
+// }
+// one();
+// var objs = [
+//   {
+//     name: 'One',
+//     msg: 'Hello I am One',
+//   },
+//   {
+//     name: 'Two',
+//     msg: 'Hello I am Two',
+//   },
+//   {
+//     name: 'Three',
+//     msg: 'Hello I am Three',
+//   },
+// ];
+// function main() {
+//   objs.forEach(item => {
+//     const bt = document.createElement('button');
+//     bt.innerHTML = item.name;
+//     bt.onclick = getCallBack(item.msg);
+//     document.body.appendChild(bt);
+//   });
+// }
+// function getCallBack(arg) {
+//   return function myCallback() {
+//     alert(arg);
+//   };
+// }
+// main();
+
+// var obj = {
+//   a: 1,
+//   b: 2,
+//   c: 'Hello',
+// };
+// console.log({...obj});
+// var a = [1, 2, 3, 4, 5];
+// var b = [6, 7, 8, 9];
+// var c = [...a, ...b];
+// console.log(c);
+
+// var obj1 = {
+//   a: 1,
+//   b: 2,
+// };
+// var obj2 = { ...obj1 };
+// obj2.c = 33;
+// console.log(obj1, obj2);
+// var arr = [1, 2, 33, 48, 54, 5];
+// var a = Math.max(...arr);
+// console.log(a);
+
