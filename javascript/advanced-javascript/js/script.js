@@ -919,7 +919,7 @@
 // console.log('ended');
 
 // console.log('started');
-// const pr = myFetch('https://jsonplaceholder.typicode.com/todos/1');
+// const pr = fetch('https://jsonplaceholder.typicode.com/todos/1');
 
 // function buttonClick() {
 //   pr.then(
@@ -934,22 +934,277 @@
 // console.log('ended');
 
 // --------------------------------feb 23-------------------------------
-console.log('Requesting 1');
-const pr = myFetch('https://jsonplaceholder.typicode.com/todos/1');
+// console.log('Requesting 1');
+// const pr = fetch('https://jsonplaceholder.typicode.com/todos/1');
 
-pr.then(data => {
-  console.log(data);
-  console.log('Requesting 2');
-  const pr = myFetch('https://jsonplaceholder.typicode.com/todos/2');
+// pr.then(data => {
+//   console.log(data);
+//   console.log('Requesting 2');
+//   const pr = fetch('https://jsonplaceholder.typicode.com/todos/2');
 
-  pr.then(data => {
-    console.log(data);
+//   pr.then(data => {
+//     console.log(data);
 
-    console.log('Requesting 3');
-    const pr = myFetch('https://jsonplaceholder.typicode.com/todos/3');
+//     console.log('Requesting 3');
+//     const pr = fetch('https://jsonplaceholder.typicode.com/todos/3');
 
-    pr.then(data => {
-      console.log(data);
-    });
-  });
-});
+//     pr.then(data => {
+//       console.log(data);
+//     });
+//   });
+// });
+
+// console.log('Requesting 1');
+// const pr = fetch('https://jsonplaceholder.typicode.com/todos/1');
+
+// const pr2 = pr.then(data => {
+//   console.log(data);
+//   // return 'hello';
+//   console.log('Requesting 2');
+//   return fetch('https://jsonplaceholder.typicode.com/todos/1');
+// });
+
+// // pr2.then(data => {
+// //   console.log(data);
+// // });
+
+// const pr3 = pr2.then(data => {
+//   console.log(data);
+//   console.log('Requesting 3');
+//   return fetch('https://jsonplaceholder.typicode.com/todos/1');
+// });
+
+// pr3.then(data => {
+//   console.log(data);
+// });
+
+// console.log('Requesting 1');
+// fetch('https://jsonplaceholder.typicode.com/todos/1')
+//   .then(data => {
+//     console.log(data);
+//     console.log('Requesting 2');
+//     return fetch('https://jsonplaceholder.typicode.com/todos/2');
+//   })
+//   .then(data => {
+//     console.log(data);
+//     console.log('Requesting 3');
+//     return fetch('https://jsonplaceholder.typicode.com/todos/3');
+//   })
+//   .then(data => {
+//     console.log(data);
+//   });
+
+// console.log('===Requesting 1');
+// getJson('https://jsonplaceholdefgsdfgr.typicode.com/todos/1')
+//   .then(
+//     data => {
+//       console.log(data);
+//       console.log('===Requesting 2');
+//       return getJson('https://jsonplaceholder.typicode.com/todos/2');
+//     }
+//     // err => {
+//     //   console.log('ERROR:', err);
+//     // }
+//   )
+//   .then(data => {
+//     console.log(data);
+//     console.log('===Requesting 3');
+//     return getJson('https://jsonplaceholder.typicode.com/todos/3');
+//   })
+//   .then(data => {
+//     console.log(data);
+//   })
+//   .catch(err => {
+//     console.log('ERROR:', err);
+//   });
+
+// getJson('https://jsonplaceholdefgsdfgr.typicode.com/todos/1')
+//   .then(data => {
+//     console.log(data);
+//   })
+//   .catch(data => {
+//     console.log(data);
+//   });
+
+// Promise.race([
+//   getJson('https://jsonplaceholder.typicode.com/todos/1'),
+//   getJson('https://jsonplaceholder.typicode.com/todos/2'),
+//   getJson('https://jsonplaceholder.typicode.com/todos/3'),
+// ])
+// .then((data)=>{
+//   console.log(data)
+// })
+
+// async function getValue() {
+//   // return 12;
+//   return fetch('https://jsonplaceholder.typicode.com/todos/1');
+// }
+
+// const result = getValue();
+// result.then(data => {
+//   console.log(data);
+// });
+// console.log(result);
+
+// console.log('Started');
+// var aa = getValue();
+// aa.then(data => {
+//   console.log(data);
+// }).catch(() => {
+//   console.log('Handled');
+// });
+// console.log('Ended');
+// async function getValue() {
+//   // fetch('https://jsonplaceholder.typicode.com/todos/1').then(data => {
+//   //   console.log(data);
+//   // });
+//   try {
+//     const data = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+//     const jsonData = await data.json();
+//     console.log(jsonData);
+//     return jsonData;
+//   } catch (e) {
+//     console.log('Handled');
+//     return {};
+//   }
+// }
+
+// const get = require('./api.js');
+// const axios = require('axios');
+// const BASE_URL = 'https://code-malayalam.github.io.school-test-api';
+
+// async function getTotalStudentsAs(className) {
+//   const data = await axios(`${BASE_URL}/class/${className}.json`);
+//   const classTeacher = data.data.classTeacher;
+//   const data2 = await axios(`${BASE_URL}/staff/${classTeacher}.json`);
+//   const classes = data2.data.classes;
+//   const promiseArr = classes.map(element => {
+//     return axios(`${BASE_URL}/class/${element}.json`);
+//   });
+//   const data3 = await Promise.all(promiseArr);
+//   const result = data3.reduce((total, item) => {
+//     return total + item.data.numberOfStudents;
+//   }, 0);
+
+//   return result;
+// }
+
+// function getTotalStudentsPr(className) {
+//   return axios(`${BASE_URL}/class/${className}.json`)
+//     .then(data => {
+//       const classTeacher = data.data.classTeacher;
+//       return axios(`${BASE_URL}/staff/${classTeacher}.json`);
+//     })
+//     .then(data => {
+//       const classes = data.data.classes;
+//       const promiseArr = classes.map(element => {
+//         return axios(`${BASE_URL}/class/${element}.json`);
+//       });
+//       return Promise.all(promiseArr);
+//     })
+//     .then(data => {
+//       return data.reduce((total, item) => {
+//         return total + item.data.numberOfStudents;
+//       }, 0);
+//     })
+//     .catch(err => {
+//       console.log(err);
+//       return 0;
+//     });
+//   // .then(data => {
+//   //   console.log(data);
+//   //   return data
+//   // });
+// }
+
+// function getTotalStudents(className, success, failure) {
+//   get(
+//     `${BASE_URL}/class/${className}.json`,
+//     data => {
+//       console.log(data);
+//       const classTeacher = data.classTeacher;
+//       get(
+//         `${BASE_URL}/staff/${classTeacher}.json`,
+//         data => {
+//           console.log(data);
+//           let count = 0;
+//           let error = false;
+//           let sum = 0;
+//           const classes = data.classes;
+//           for (let index = 0; index < classes.length; index++) {
+//             const element = classes[index];
+//             get(
+//               `${BASE_URL}/class/${element}.json`,
+//               data => {
+//                 count++;
+//                 sum = sum + data.numberOfStudents;
+//                 if (count === classes.length && error === false) {
+//                   console.log(sum);
+//                   success(sum);
+//                 }
+//               },
+//               err => {
+//                 if (error === false) {
+//                   error = true;
+//                   error(err);
+//                 }
+//               }
+//             );
+//           }
+//         },
+//         failure
+//       );
+//     },
+//     failure
+//   );
+// }
+
+// getTotalStudentsAs('10c')
+//   .then(data => {
+//     console.log('***', data);
+//   })
+//   .catch(err => {
+//     console.log('ERROR');
+//   });
+
+// getTotalStudents(
+//   '10c',
+//   data => {},
+//   err => {}
+// );
+
+// getTotalStudentsPr('10c').then(data => {
+//   console.log('***', data);
+// });
+
+// console.log('started');
+
+// const a = getVal1();
+// let a;
+
+// try {
+//   a = getVal1();
+// } catch (e) {
+//   a = 0;
+// }
+// const b = getVal2();
+// const result = processValues(a, b);
+// console.log(result);
+
+// console.log('ended');
+
+// function getVal1() {
+//   console.log('inside getVal1');
+//   var obj = undefined;
+//   // return 12;
+//   return obj.value;
+// }
+
+// function getVal2() {
+//   console.log('inside getVal2');
+//   return 22;
+// }
+
+// function processValues(a, b) {
+//   return a + b;
+// }
