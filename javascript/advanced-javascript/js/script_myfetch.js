@@ -1,15 +1,15 @@
 function myFetch(url) {
-  return new Promise((res,rej) => {
+  return new Promise((res, rej) => {
     $.ajax({
-      type: "GET",
-      url: "https://jsonplaceholder.typicode.com/todos/1",
+      type: 'GET',
+      url: url,
       success: function (msg) {
         // console.log(msg);
-        res(msg)
+        res(msg);
       },
       error: function (xhr, statusText) {
         // console.log(statusText);
-        rej(statusText)
+        rej(statusText);
       },
     });
   });
