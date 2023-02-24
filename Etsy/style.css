@@ -56,6 +56,9 @@ header {
   width: 60px;
   height: 30px;
 }
+.filterbox {
+  display: none;
+}
 .basket {
   padding: 12px;
   display: flex;
@@ -1369,5 +1372,20 @@ header {
     padding: 36px 54px 72px;
     max-width: 1400px;
     margin-inline: auto;
+  }
+  .filterbox {
+    display: flex;
+    height: 40px;
+  }
+  .filterbox input{
+    font-size: 25px;
+  }
+  .header-gift {
+    display: flex;
+    justify-content: space-between;
+  }
+  .filterbox input::-webkit-inner-spin-button,
+  .filterbox input::-webkit-outer-spin-button {
+    display: none;
   }
 }

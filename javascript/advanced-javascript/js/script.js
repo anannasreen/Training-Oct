@@ -1208,3 +1208,97 @@
 // function processValues(a, b) {
 //   return a + b;
 // }
+
+// console.log('started');
+// let a, b, result;
+// try {
+//   console.log('on try');
+//   a = getVal1();
+//   b = getVal2();
+//   result = processValues(a, b);
+// } catch (e) {
+//   console.log('on catch');
+//   result = 0;
+// } finally {
+//   console.log('in finally');
+// }
+
+// console.log(result);
+// console.log('ended');
+
+// function getVal1() {
+//   return 12;
+// }
+
+// function getVal2() {
+//   console.log('inside getVal2');
+//   return 22;
+// }
+
+// function processValues(a, b) {
+//   return a + b;
+// }
+
+// var student1 = {
+//   name: 'Alen',
+//   yob: 1990,
+//   getAge: function () {
+//     return new Date().getFullYear() - this.yob;
+//   },
+//   getName: function () {
+//     return this.name;
+//   },
+// };
+// console.log(student1.getName(), student1.getAge());
+
+const userArray = [
+  {
+    userName: 'user1',
+    userAddress: 'addr1',
+    userMark: 10,
+  },
+  {
+    userName: 'user2',
+    userAddress: 'addr2',
+    userMark: 40,
+  },
+  {
+    userName: 'user3',
+    userAddress: 'addr3',
+    userMark: 30,
+  },
+  {
+    userName: 'user4',
+    userAddress: 'addr4',
+    userMark: 20,
+  },
+];
+
+function myIterator(item, arg) {
+  console.log(`My mark = ${item.userMark}`);
+  console.log(arg);
+}
+
+userArray.forEach(myIterator);
+console.log(userArray.length);
+
+const value = userArray.find(function (item, arg) {
+  return item.userMark === 20;
+});
+
+const value1 = userArray.filter(function (item, arg) {
+  return item.userMark < 30;
+});
+
+const value2 = userArray.map(function (item, arg) {
+  return `<li>${item.userName}=${item.userMark}</li>`;
+});
+
+const value3 = userArray.reduce(function (total, item) {
+  return total + item.userMark;
+}, 0);
+
+console.log(value);
+console.log(value1);
+console.log(value2);
+console.log(value3);
