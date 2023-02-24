@@ -1251,54 +1251,162 @@
 // };
 // console.log(student1.getName(), student1.getAge());
 
-const userArray = [
-  {
-    userName: 'user1',
-    userAddress: 'addr1',
-    userMark: 10,
-  },
-  {
-    userName: 'user2',
-    userAddress: 'addr2',
-    userMark: 40,
-  },
-  {
-    userName: 'user3',
-    userAddress: 'addr3',
-    userMark: 30,
-  },
-  {
-    userName: 'user4',
-    userAddress: 'addr4',
-    userMark: 20,
-  },
-];
+// const userArray = [
+//   {
+//     userName: 'user1',
+//     userAddress: 'addr1',
+//     userMark: 10,
+//   },
+//   {
+//     userName: 'user2',
+//     userAddress: 'addr2',
+//     userMark: 40,
+//   },
+//   {
+//     userName: 'user3',
+//     userAddress: 'addr3',
+//     userMark: 30,
+//   },
+//   {
+//     userName: 'user4',
+//     userAddress: 'addr4',
+//     userMark: 20,
+//   },
+// ];
 
-function myIterator(item, arg) {
-  console.log(`My mark = ${item.userMark}`);
-  console.log(arg);
+// function myIterator(item, arg) {
+//   console.log(`My mark = ${item.userMark}`);
+//   console.log(arg);
+// }
+
+// userArray.forEach(myIterator);
+// console.log(userArray.length);
+
+// const value = userArray.find(function (item, arg) {
+//   return item.userMark === 20;
+// });
+
+// const value1 = userArray.filter(function (item, arg) {
+//   return item.userMark < 30;
+// });
+
+// const value2 = userArray.map(function (item, arg) {
+//   return `<li>${item.userName}=${item.userMark}</li>`;
+// });
+
+// const value3 = userArray.reduce(function (total, item) {
+//   return total + item.userMark;
+// }, 0);
+
+// console.log(value);
+// console.log(value1);
+// console.log(value2);
+// console.log(value3);
+
+// -------------------------feb 24---------------------------
+// console.log('self invoking function');
+// var number = 12;
+// function fn1() {
+//   console.log(number);
+// }
+// function fn2() {
+//   console.log(number);
+// }
+// console.log(number)
+// fn1();
+// fn2();
+
+// var button = document.getElementById('hello');
+// button.onclick = () => {
+//   button.style.background = 'green';
+//   console.log(button.innerHTML);
+// };
+
+// var button2 = document.getElementById('bye');
+// button2.onclick = () => {
+//   button2.style.background = 'red';
+//   console.log(button2.innerHTML);
+// };
+
+// function main() {
+//   var button = document.getElementById('hello');
+//   button.style.background = 'green';
+//   button.onclick = () => {
+//     console.log(button.innerHTML);
+//   };
+// }
+// main();
+
+// (function () {
+//   var button2 = document.getElementById('bye');
+//   button2.style.background = 'red';
+//   button2.onclick = () => {
+//     console.log(button2.innerHTML);
+//   };
+// })();
+
+// (function (a, b) {
+//   console.log(a + b);
+// })(12, 3);
+
+// console.log('Script 1');
+// function addArray(arr) {
+//   return arr.reduce((total, item) => total + item, 0);
+// }
+
+// const value = addArray([3, 5, 5]);
+// console.log(value);
+
+// function addArray(arr1, arr2) {
+//   return arr1.concat(arr2);
+// }
+
+// console.log(addArray([1,2,3],[1,2,3]))
+
+// console.log('modules')
+
+// const value=addArray([1,2,3])
+// console.log(value)
+
+
+
+
+// -------------------------------------------------------------------------------
+let callbackList = [];
+
+function register(cbfn, cbarg, cbtime) {
+  let x = {
+    fn: cbfn,
+    arg: cbarg,
+    time: cbtime,
+  };
+  callbackList.push(x);
+}
+function sayHello(name) {
+  console.log('Hello ', name);
+}
+function sayBye(name) {
+  console.log('Bye ', name);
+}
+function sayTime(tm) {
+  console.log('Registered at ', tm, ' now it is ', Date.now());
+}
+register(sayHello, 'Anusha', 2000);
+// register(sayHello, 'Hisham');
+// register(sayHello, 'Anan');
+// register(sayHello, 'Aneesh');
+// register(sayHello, 'Aiswarya');
+// register(sayHello, 'Nivya');
+// register(sayHello, 'Aparna');
+// register(sayBye, 'Jack');
+
+function controller() {
+  console.log('Inside Controller...');
+  for (let i = 0; i < callbackList.length; i++) {
+    console.log(callbackList[i].fn(callbackList[i].arg));
+  }
 }
 
-userArray.forEach(myIterator);
-console.log(userArray.length);
+// setInterval(controller, 3000);
 
-const value = userArray.find(function (item, arg) {
-  return item.userMark === 20;
-});
-
-const value1 = userArray.filter(function (item, arg) {
-  return item.userMark < 30;
-});
-
-const value2 = userArray.map(function (item, arg) {
-  return `<li>${item.userName}=${item.userMark}</li>`;
-});
-
-const value3 = userArray.reduce(function (total, item) {
-  return total + item.userMark;
-}, 0);
-
-console.log(value);
-console.log(value1);
-console.log(value2);
-console.log(value3);
+// controller();
