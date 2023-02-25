@@ -1368,8 +1368,125 @@
 // const value=addArray([1,2,3])
 // console.log(value)
 
+// const productName = 'Pen';
+// const price = 12;
 
+// const value = `The ${productName} is ${price} Rs`;
+// const msg = `The product is ${price > 10 ? 'Costly' : 'Cheap'}`;
+// console.log(value)
+// console.log(msg)
 
+// const products = [
+//   {
+//     productName: 'Pen',
+//     price: 10,
+//   },
+//   {
+//     productName: 'Book',
+//     price: 20,
+//   },
+// ];
+
+// document.body.innerHTML = products.map(item => {
+//   return `
+//   <div className="item">
+//      <h4>${item.productName}</h4>
+//      <div>Price: ${item.price}</div>
+//   </div>
+// `;
+// });
+
+// function average(a, b) {
+//   console.log(a, b);
+//   const avg = (a + b) / 2;
+//   return avg;
+// }
+
+// const avg = average(5, 6);
+// console.log(avg);
+
+// function test() {
+//   const arr = [11, 33, 43, 22];
+//   const [a, b, ...rest] = arr;
+//   console.log(a, b, rest);
+// }
+
+// test();
+
+// function test(a, b) {
+//   console.log(a, b);
+// }
+// test(11, 22, 3, 5, 654);
+
+// function test(...total) {
+//   const a = total.reduce((sum, current) => sum + current);
+//   console.log(a);
+// }
+
+// test(11, 34, 66, 78, 34);
+
+// function test(a) {
+//   console.log(a);
+// }
+
+// const obj = {
+//   name: 'Code Malayalam',
+//   age: 1,
+// };
+
+// test(obj);
+
+// const a = 'Code Malayalam';
+// console.log(a);
+
+// let a = 'hello';
+// function test() {
+//   console.log(testVar);
+//   var testVar;
+// }
+// test();
+
+// function test() {
+//   if (true) {
+//     var a = 200;
+//   }
+//   console.log(a);
+// }
+// test();
+
+// function test() {
+//   let a = 10;
+//   if (true) {
+//     let a = 100;
+//     console.log(a);
+//   }
+//   console.log(a);
+// }
+
+// test();
+
+// function test() {
+//   const a = 10;
+//   const b = [];
+//   b.push(12);
+//   console.log(a);
+//   console.log(b);
+// }
+// test();
+
+function textOnChange(arg) {
+  const label = document.getElementById('validation-label');
+  const error = validate(arg.value);
+  if (error) {
+    label.innerText = error;
+  } else {
+    label.innerText = '';
+  }
+}
+
+function validate(value) {
+  return false;
+}
 
 // -------------------------------------------------------------------------------
 let callbackList = [];

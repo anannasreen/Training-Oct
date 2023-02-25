@@ -220,21 +220,23 @@ fetch(
         function priceRange() {
           const filterBtn = document.getElementById('filter-btn');
           const filterInput = document.getElementById('filter');
-          // const giftItems = document.querySelectorAll('.gift-items');
-          console.log(giftItems);
+          const giftItems = document.querySelectorAll('.gift-items');
+          // console.log(giftItems);
           filterBtn.addEventListener('click', () => {
             // console.log(filterInput.value);
             const prices = document.querySelectorAll('.priceCalculated');
-            prices.forEach(price => {
-              const giftItems = document.querySelectorAll('.gift-items');
-              
-              // console.log(+price.innerHTML);
-              let accumulator = +price.innerHTML;
-              console.log(accumulator >= filterInput.value);
-              if (accumulator <= filterInput.value) {
-                giftItems.style.display = 'none';
-              }
-            });
+            const priceelm= +prices.innerHTML
+            console.log(priceelm)
+            // prices.forEach(price => {
+              let accumulator = +prices.innerHTML;
+              console.log(+prices.innerHTML);
+              const acc = accumulator >= filterInput.value;
+              // console.log(acc)
+              // if (acc === false) {
+              //   giftItems.style.display = "";
+                // console.log(giftItems)
+              // }
+            // });
           });
         }
         priceRange();
