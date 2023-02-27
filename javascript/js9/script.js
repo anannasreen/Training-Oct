@@ -49,11 +49,11 @@ let classObj = {
   ],
 };
 
-function changeName(index) {
+function changeNameByIndex(index) {
   classObj.students[index].name = "Ravikumar";
   console.log(classObj.students[index]);
 }
-changeName(0);
+changeNameByIndex(0);
 
 const obj = {
   name: "Thomas",
@@ -69,9 +69,15 @@ console.log(addStudent(obj));
 
 function printMarks(id) {
   for (i = 0; i < classObj.students.length; i++) {
-    let ids = classObj.students[i].id;
-    console.log(ids)
+    if (id === classObj.students[i].id) {
+      let marksTotal = 0;
+      let studentsMark=classObj.students[i].marks
+      for (i = 0; i < studentsMark.length; i++) {
+        marksTotal = marksTotal + studentsMark[i].mark;
+      }
+      console.log(marksTotal);
+    }
   }
 }
 
-console.log(printMarks(102));
+printMarks("102");
