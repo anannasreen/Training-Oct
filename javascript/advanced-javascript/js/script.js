@@ -1484,13 +1484,6 @@
 //   }
 // }
 
-// function validate(value) {
-//   return false;
-// }
-
-
-
-// -------------------------------------------------------------------------------
 let callbackList = [];
 
 function register(cbfn, cbarg, cbtime) {

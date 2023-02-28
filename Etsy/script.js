@@ -223,20 +223,19 @@ fetch(
           const giftItems = document.querySelectorAll('.gift-items');
           // console.log(giftItems);
           filterBtn.addEventListener('click', () => {
+            const giftItems = document.querySelectorAll('.gift-items');
             // console.log(filterInput.value);
             const prices = document.querySelectorAll('.priceCalculated');
-            const priceelm= +prices.innerHTML
-            console.log(priceelm)
-            // prices.forEach(price => {
-              let accumulator = +prices.innerHTML;
-              console.log(+prices.innerHTML);
-              const acc = accumulator >= filterInput.value;
-              // console.log(acc)
-              // if (acc === false) {
-              //   giftItems.style.display = "";
-                // console.log(giftItems)
-              // }
-            // });
+            prices.forEach(price => {
+              let accumulator = +price.innerHTML;
+              console.log(+price.innerHTML);
+              const acc = accumulator <= filterInput.value;
+              console.log(acc)
+              if (acc) {
+                giftItems.innerHTML = "";
+                console.log(giftItems)
+              }
+            });
           });
         }
         priceRange();
