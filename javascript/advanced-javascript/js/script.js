@@ -1474,19 +1474,21 @@
 // }
 // test();
 
-function textOnChange(arg) {
-  const label = document.getElementById('validation-label');
-  const error = validate(arg.value);
-  if (error) {
-    label.innerText = error;
-  } else {
-    label.innerText = '';
-  }
-}
+// function textOnChange(arg) {
+//   const label = document.getElementById('validation-label');
+//   const error = validate(arg.value);
+//   if (error) {
+//     label.innerText = error;
+//   } else {
+//     label.innerText = '';
+//   }
+// }
 
-function validate(value) {
-  return false;
-}
+// function validate(value) {
+//   return false;
+// }
+
+
 
 // -------------------------------------------------------------------------------
 let callbackList = [];
