@@ -1484,28 +1484,6 @@
 //   }
 // }
 
-// function validate(value) {
-//   return false;
-// }
-
-// --------------------------------feb 27--------------------------
-// let text = 'Apple, Banana, Kiwi';
-// let part = text.slice(7, 13);
-
-// console.log(part);
-// console.log(text.slice(7));
-// console.log(text.slice(-12));
-// console.log(text.slice(-12, -6));
-
-// let str = 'Apple, Banana, Kiwi';
-// let part = str.substring(7, 13);
-
-// console.log(part);
-// console.log(str.substr(7, 6));
-// console.log(str.substr(7));
-// console.log(str.substr(-4));
-
-// -------------------------------------------------------------------------------
 let callbackList = [];
 
 function register(cbfn, cbarg, cbtime) {
