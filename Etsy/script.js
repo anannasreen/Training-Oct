@@ -206,25 +206,12 @@ fetch(
           giftElement.appendChild(deliveryElement);
         }
 
-        // const priceTag = discountPercentage(
-        //   objectList[key].actualprice,
-        //   objectList[key].discount
-        // );
-
-        // console.log(priceTag);
-        // if (+priceTag <priceRange(+priceTag)) {
-        //   giftElement.style.display = 'none';
-        // }
-        // console.log(priceRange(+priceTag))
-        // const giftItems = document.querySelectorAll('.gift-items');
         function priceRange() {
           const filterBtn = document.getElementById('filter-btn');
           const filterInput = document.getElementById('filter');
           const giftItems = document.querySelectorAll('.gift-items');
-          // console.log(giftItems);
           filterBtn.addEventListener('click', () => {
             const giftItems = document.querySelectorAll('.gift-items');
-            // console.log(filterInput.value);
             const prices = document.querySelectorAll('.priceCalculated');
             prices.forEach(price => {
               let accumulator = +price.innerHTML;
@@ -241,26 +228,6 @@ fetch(
         priceRange();
       }
     };
-
-    // function filterContent() {
-    //   const filterInput = document.getElementById('filter');
-    //   filterInput.addEventListener('keydown', () => {
-    //     accumulator = filterInput.value;
-    //   });
-    // }
-    // filterContent();
-
-    // function priceRange(price) {
-    //   const filterBtn = document.getElementById('filter-btn');
-    //   const filterInput = document.getElementById('filter');
-    //   filterBtn.addEventListener('click', () => {
-    //     const accumulator = +filterInput.value;
-    //     // console.log(accumulator)
-    //     if (price > accumulator) {
-    //       return price;
-    //     }
-    //   });
-    // }
 
     function starRating() {
       let x = '';
@@ -289,28 +256,6 @@ fetch(
       });
     });
 
-    // function clearContent(){
-    //   const giftItems=document.querySelectorAll('.gift-items')
-    //   console.log(giftItems)
-    // }
-    // clearContent()
-
-    // function priceRange(price) {
-    //   const filterBtn = document.getElementById('filter-btn');
-    //   const filterInput = document.getElementById('filter');
-    //   const giftItems = document.querySelectorAll('.gift-items');
-    //   console.log(giftItems);
-    //   filterBtn.addEventListener('click', () => {
-    //     console.log(filterInput.value);
-    //     const prices = document.querySelectorAll('.priceCalculated');
-    //     prices.forEach(price => {
-    //       console.log(+price.innerHTML);
-    //       let accumulator = +price.innerHTML;
-    //       console.log(accumulator >= filterInput.value);
-    //     });
-    //   });
-    // }
-
     function generateEtsyHomePage(pageData) {
       createNavBar(elements, data.list, 'li', 'list');
       createOverviewSection(data.overview, 'li');
@@ -319,61 +264,3 @@ fetch(
     }
     generateEtsyHomePage();
   });
-
-// function filterContent() {
-//   const prices = document.querySelectorAll('.priceCalculated');
-//   return prices;
-// }
-// console.log(filterContent());
-
-// fetch(
-//   'https://raw.githubusercontent.com/anannasreen/Training-Oct/main/Etsy/pageData.json'
-// )
-//   .then(response => response.json())
-//   .then(data => {
-//     console.log(data);
-
-//     console.log(data.gifts);
-
-//     function discountPercentage(actualPrice, discounts) {
-//       return (discountPrice = Math.round(
-//         actualPrice * ((100 - discounts) / 100)
-//       ));
-//     }
-
-//     console.log(data.gifts.actualPrice)
-
-//     for (i = 0; i < data.gifts.length; i++) {
-//       const priceTag = discountPercentage(
-//         data.gifts.actualprice,
-//         data.gifts.discount
-//       );
-//       console.log(priceTag);
-//     }
-//   });
-
-// console.log(priceTag);
-// if (+priceTag <priceRange(+priceTag)) {
-//   giftElement.style.display = 'none';
-// }
-// console.log(priceRange(+priceTag))
-
-// function filterContent() {
-//   const filterInput = document.getElementById('filter');
-//   filterInput.addEventListener('keydown', () => {
-//     accumulator = filterInput.value;
-//   });
-// }
-
-// function priceRange(price) {
-//   const filterBtn = document.getElementById('filter-btn');
-//   const filterInput = document.getElementById('filter');
-//   filterBtn.addEventListener('click', () => {
-//     const accumulator = +filterInput.value;
-//     if (price > accumulator) {
-//       return price;
-//     }
-//   });
-// }
-
-// console.log(priceRange());
