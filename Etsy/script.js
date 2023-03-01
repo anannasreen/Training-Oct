@@ -32,51 +32,40 @@ fetch(
       }
     };
 
-    const createOverviewSection = (objectList, elmType) => {
-      for (let key = 0; key < objectList.length; key++) {
-        const overviewEl = document.createElement('li');
-        overviewList.appendChild(overviewEl);
+    const overview = data.overview.map(function (item) {
+      const html = `
+    <li>
+      <div class="overview-img">
+      <img src="${item.url}"/>
+      </div>
+      <p>${item.name}</p>
+    </li>
+    `;
 
-        const overviewImg = document.createElement('div');
-        overviewEl.appendChild(overviewImg);
-        overviewImg.classList.add('overview-img');
+      return html;
+    });
 
-        const overviewImage = document.createElement('img');
-        overviewImage.src = `${objectList[key].url}`;
-        overviewImg.appendChild(overviewImage);
+    // console.log(overview);
 
-        const overviewText = document.createElement('p');
-        overviewEl.appendChild(overviewText);
-        overviewText.innerHTML = `${objectList[key].name}`;
-      }
-    };
+    overviewList.innerHTML = overview.join('');
 
-    const createDealsElm = (objectList, elmType) => {
-      for (let key = 0; key < objectList.length; key++) {
-        const dealsEl = document.createElement(elmType);
-        dealsList.appendChild(dealsEl);
+    const deals = data.deals.map(function (item) {
+      const html = `
+       <li>
+         <div class="deals-img"><img src="${item.url}"</div>
+         <div class="deals-txt">
+           <span>${item.discount}</span>
+           <p>${item.category}</p>
+         </div>
+       </li>
+    `;
 
-        const dealsImg = document.createElement('div');
-        dealsEl.appendChild(dealsImg);
+      return html;
+    });
 
-        dealsImg.classList.add('deals-img');
-        const dealsImage = document.createElement('img');
-        dealsImg.appendChild(dealsImage);
-        dealsImage.src = `${objectList[key].url}`;
+    // console.log(deals);
 
-        const dealsText = document.createElement('div');
-        dealsText.classList.add('deals-txt');
-        dealsEl.appendChild(dealsText);
-
-        const discountDeals = document.createElement('span');
-        dealsText.appendChild(discountDeals);
-        discountDeals.innerHTML = `${objectList[key].discount}`;
-
-        const categoryDeals = document.createElement('p');
-        dealsText.appendChild(categoryDeals);
-        categoryDeals.innerHTML = `${objectList[key].category}`;
-      }
-    };
+    dealsList.innerHTML = deals.join('');
 
     const createGiftElm = objectList => {
       for (let key = 0; key < objectList.length; key++) {
@@ -217,10 +206,10 @@ fetch(
               let accumulator = +price.innerHTML;
               console.log(+price.innerHTML);
               const acc = accumulator <= filterInput.value;
-              console.log(acc)
+              console.log(acc);
               if (acc) {
-                giftItems.innerHTML = "";
-                console.log(giftItems)
+                giftItems.innerHTML = '';
+                console.log(giftItems);
               }
             });
           });
@@ -258,8 +247,8 @@ fetch(
 
     function generateEtsyHomePage(pageData) {
       createNavBar(elements, data.list, 'li', 'list');
-      createOverviewSection(data.overview, 'li');
-      createDealsElm(data.deals, 'li');
+      // createOverviewSection(data.overview, 'li');
+      // createDealsElm(data.deals, 'li');
       createGiftElm(data.gifts);
     }
     generateEtsyHomePage();
