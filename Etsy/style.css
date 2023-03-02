@@ -1377,7 +1377,7 @@ header {
     display: flex;
     height: 40px;
   }
-  .filterbox input{
+  .filterbox input {
     font-size: 25px;
   }
   .header-gift {
@@ -1387,5 +1387,8 @@ header {
   .filterbox input::-webkit-inner-spin-button,
   .filterbox input::-webkit-outer-spin-button {
     display: none;
+  }
+  .header-gift {
+    padding-top: 40px;
   }
 }

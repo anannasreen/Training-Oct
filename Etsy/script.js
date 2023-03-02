@@ -45,8 +45,6 @@ fetch(
       return html;
     });
 
-    // console.log(overview);
-
     overviewList.innerHTML = overview.join('');
 
     const deals = data.deals.map(function (item) {
@@ -63,160 +61,194 @@ fetch(
       return html;
     });
 
-    // console.log(deals);
-
     dealsList.innerHTML = deals.join('');
 
-    const createGiftElm = objectList => {
-      for (let key = 0; key < objectList.length; key++) {
-        const giftElement = document.createElement('div');
-        giftList.appendChild(giftElement);
+    const gifts = data.gifts.map(function (item) {
+      const html = `
+      <div class="gift-items">
+      <div class="gift-img">
+        <img src="${item.url}" />
+        <div class="like-gift">${likedImageSVG}</div>
+      </div>
+      <div class="gift-txt">
+        <h3>${item.name}</h3>
+        <div class="rating">
+          <div class="star-rating">${starRating()}</div>
+          <p>(${item.rating})</p>
+        </div>
+        <div class="price">
+          <p class="priceActual">${item.currencySymbol}${discountPercentage(
+        item.actualprice,
+        item.discount
+      )}</p>
+          <span>${item.currencySymbol}${item.actualprice}</span>
+          <a href="">(${item.discount}% off)</a>
+        </div>
+      </div>
+      <div class="gift-name">${item.name}</div>
+      </div>
+      `;
 
-        giftElement.classList.add('gift-items');
-        const giftImg = document.createElement('div');
-        giftElement.appendChild(giftImg);
+      return html;
+    });
 
-        giftImg.classList.add('gift-img');
+    giftList.innerHTML = gifts.join('');
 
-        if (objectList[key].urlType === 'Photo') {
-          const giftImage = document.createElement('img');
-          giftImg.appendChild(giftImage);
-          giftImage.src = `${objectList[key].url}`;
-        } else {
-          const giftVideo = document.createElement('video');
-          giftImg.appendChild(giftVideo);
-          giftVideo.classList.add('video');
-          giftVideo.poster = `${objectList[key].url}`;
-          giftVideo.loop = 'true';
-          giftVideo.src = `${objectList[key].video}`;
-        }
+    const giftElement = document.querySelectorAll('.gift-items');
 
-        const videos = document.querySelectorAll('.video');
-        videos.forEach(video => {
-          video.addEventListener('mouseover', () => {
-            video.play();
-          });
-          video.addEventListener('mouseleave', () => {
-            video.pause();
-            video.currentTime = 0;
-          });
-        });
+    giftElement.forEach(item => {
+      item.addEventListener('mousemove', e => {
+        x = e.pageX - item.offsetLeft;
+        y = e.pageY - item.offsetTop + 20;
+        const textElement = document.querySelector('.gift-name');
+        textElement.style.left = `${x}px`;
+        textElement.style.top = `${y}px`;
+      });
+    });
 
-        const likeGift = document.createElement('div');
-        giftImg.appendChild(likeGift);
-        likeGift.classList.add('like-gift');
-        likeGift.innerHTML = likedImageSVG;
+    // if (data.gifts.actualprice > 2000) {
+    //   const deliveryElement = document.createElement('div');
+    //   deliveryElement.classList.add('delivery');
+    //   deliveryElement.innerHTML = 'FREE Delivery';
+    //   giftElement.appendChild(deliveryElement);
+    // }
 
-        const likeGiftElm = document.querySelectorAll('.like-gift');
+    // const createGiftElm = objectList => {
+    //   for (let key = 0; key < objectList.length; key++) {
+    //     const giftElement = document.createElement('div');
+    //     giftList.appendChild(giftElement);
 
-        let state = 0;
-        likeGiftElm.forEach(element => {
-          element.addEventListener('click', () => {
-            if (state === 0) {
-              element.innerHTML = likeSVG;
-              state = 1;
-            } else {
-              element.innerHTML = likedImageSVG;
-              state = 0;
-            }
-          });
-        });
+    //     giftElement.classList.add('gift-items');
+    //     const giftImg = document.createElement('div');
+    //     giftElement.appendChild(giftImg);
 
-        if (objectList[key].urlType === 'Video') {
-          const playButtonTab = document.createElement('div');
-          playButtonTab.classList.add('play-btn');
-          giftImg.appendChild(playButtonTab);
-          playButtonTab.innerHTML = playButtonSVG;
-        }
+    //     giftImg.classList.add('gift-img');
 
-        const giftText = document.createElement('div');
-        giftText.classList.add('gift-txt');
-        giftElement.appendChild(giftText);
+    //     if (objectList[key].urlType === 'Photo') {
+    //       const giftImage = document.createElement('img');
+    //       giftImg.appendChild(giftImage);
+    //       giftImage.src = `${objectList[key].url}`;
+    //     } else {
+    //       const giftVideo = document.createElement('video');
+    //       giftImg.appendChild(giftVideo);
+    //       giftVideo.classList.add('video');
+    //       giftVideo.poster = `${objectList[key].url}`;
+    //       giftVideo.loop = 'true';
+    //       giftVideo.src = `${objectList[key].video}`;
+    //     }
 
-        const giftTextHeading = document.createElement('h3');
-        giftTextHeading.innerHTML = `${objectList[key].name}`;
-        giftText.appendChild(giftTextHeading);
+    //     const videos = document.querySelectorAll('.video');
+    //     videos.forEach(video => {
+    //       video.addEventListener('mouseover', () => {
+    //         video.play();
+    //       });
+    //       video.addEventListener('mouseleave', () => {
+    //         video.pause();
+    //         video.currentTime = 0;
+    //       });
+    //     });
 
-        const ratingElement = document.createElement('div');
-        ratingElement.classList.add('rating');
-        giftText.appendChild(ratingElement);
+    //     const likeGift = document.createElement('div');
+    //     giftImg.appendChild(likeGift);
+    //     likeGift.classList.add('like-gift');
+    //     likeGift.innerHTML = likedImageSVG;
 
-        const starRatingElement = document.createElement('div');
-        starRatingElement.classList.add('star-rating');
-        ratingElement.appendChild(starRatingElement);
-        starRatingElement.innerHTML = `${starRating()}`;
+    //     const likeGiftElm = document.querySelectorAll('.like-gift');
 
-        const ratingText = document.createElement('p');
-        ratingElement.appendChild(ratingText);
-        ratingText.innerHTML = `(${objectList[key].rating})`;
+    //     let state = 0;
+    //     likeGiftElm.forEach(element => {
+    //       element.addEventListener('click', () => {
+    //         if (state === 0) {
+    //           element.innerHTML = likeSVG;
+    //           state = 1;
+    //         } else {
+    //           element.innerHTML = likedImageSVG;
+    //           state = 0;
+    //         }
+    //       });
+    //     });
 
-        const priceElement = document.createElement('div');
-        priceElement.classList.add('price');
-        giftText.appendChild(priceElement);
+    //     if (objectList[key].urlType === 'Video') {
+    //       const playButtonTab = document.createElement('div');
+    //       playButtonTab.classList.add('play-btn');
+    //       giftImg.appendChild(playButtonTab);
+    //       playButtonTab.innerHTML = playButtonSVG;
+    //     }
 
-        const actualPriceTag = document.createElement('p');
-        actualPriceTag.classList.add('priceActual');
-        priceElement.appendChild(actualPriceTag);
-        actualPriceTag.innerHTML = `${objectList[key].currencySymbol}`;
+    //     const giftText = document.createElement('div');
+    //     giftText.classList.add('gift-txt');
+    //     giftElement.appendChild(giftText);
 
-        const priceCalculated = document.createElement('p');
-        priceCalculated.classList.add('priceCalculated');
-        priceCalculated.innerHTML = `${discountPercentage(
-          objectList[key].actualprice,
-          objectList[key].discount
-        )}`;
-        priceElement.appendChild(priceCalculated);
+    //     const giftTextHeading = document.createElement('h3');
+    //     giftTextHeading.innerHTML = `${objectList[key].name}`;
+    //     giftText.appendChild(giftTextHeading);
 
-        const currentPrice = document.createElement('span');
-        priceElement.appendChild(currentPrice);
-        currentPrice.innerHTML = `${objectList[key].currencySymbol}${objectList[key].actualprice}`;
+    //     const ratingElement = document.createElement('div');
+    //     ratingElement.classList.add('rating');
+    //     giftText.appendChild(ratingElement);
 
-        const discountElement = document.createElement('a');
-        priceElement.appendChild(discountElement);
-        discountElement.innerHTML = `(${objectList[key].discount}% off)`;
+    //     const starRatingElement = document.createElement('div');
+    //     starRatingElement.classList.add('star-rating');
+    //     ratingElement.appendChild(starRatingElement);
+    //     starRatingElement.innerHTML = `${starRating()}`;
 
-        const textElement = document.createElement('div');
-        textElement.classList.add('gift-name');
-        giftElement.appendChild(textElement);
+    //     const ratingText = document.createElement('p');
+    //     ratingElement.appendChild(ratingText);
+    //     ratingText.innerHTML = `(${objectList[key].rating})`;
 
-        textElement.innerHTML = objectList[key].name;
+    //     const priceElement = document.createElement('div');
+    //     priceElement.classList.add('price');
+    //     giftText.appendChild(priceElement);
 
-        giftElement.addEventListener('mousemove', e => {
-          x = e.pageX - giftElement.offsetLeft;
-          y = e.pageY - giftElement.offsetTop + 20;
-          textElement.style.top = `${y}px`;
-          textElement.style.left = `${x}px`;
-        });
+    //     const actualPriceTag = document.createElement('p');
+    //     actualPriceTag.classList.add('priceActual');
+    //     priceElement.appendChild(actualPriceTag);
+    //     actualPriceTag.innerHTML = `${objectList[key].currencySymbol}`;
 
-        if (objectList[key].actualprice > 2000) {
-          const deliveryElement = document.createElement('div');
-          deliveryElement.classList.add('delivery');
-          deliveryElement.innerHTML = 'FREE Delivery';
-          giftElement.appendChild(deliveryElement);
-        }
+    //     const priceCalculated = document.createElement('p');
+    //     priceCalculated.classList.add('priceCalculated');
+    //     priceCalculated.innerHTML = `${discountPercentage(
+    //       objectList[key].actualprice,
+    //       objectList[key].discount
+    //     )}`;
+    //     priceElement.appendChild(priceCalculated);
 
-        function priceRange() {
-          const filterBtn = document.getElementById('filter-btn');
-          const filterInput = document.getElementById('filter');
-          const giftItems = document.querySelectorAll('.gift-items');
-          filterBtn.addEventListener('click', () => {
-            const giftItems = document.querySelectorAll('.gift-items');
-            const prices = document.querySelectorAll('.priceCalculated');
-            prices.forEach(price => {
-              let accumulator = +price.innerHTML;
-              console.log(+price.innerHTML);
-              const acc = accumulator <= filterInput.value;
-              console.log(acc);
-              if (acc) {
-                giftItems.innerHTML = '';
-                console.log(giftItems);
-              }
-            });
-          });
-        }
-        priceRange();
-      }
-    };
+    //     const currentPrice = document.createElement('span');
+    //     priceElement.appendChild(currentPrice);
+    //     currentPrice.innerHTML = `${objectList[key].currencySymbol}${objectList[key].actualprice}`;
+
+    //     const discountElement = document.createElement('a');
+    //     priceElement.appendChild(discountElement);
+    //     discountElement.innerHTML = `(${objectList[key].discount}% off)`;
+
+    //     const textElement = document.createElement('div');
+    //     textElement.classList.add('gift-name');
+    //     giftElement.appendChild(textElement);
+
+    //     textElement.innerHTML = objectList[key].name;
+
+    //     function priceRange() {
+    //       const filterBtn = document.getElementById('filter-btn');
+    //       const filterInput = document.getElementById('filter');
+    //       const giftItems = document.querySelectorAll('.gift-items');
+    //       filterBtn.addEventListener('click', () => {
+    //         const giftItems = document.querySelectorAll('.gift-items');
+    //         const prices = document.querySelectorAll('.priceCalculated');
+    //         prices.forEach(price => {
+    //           let accumulator = +price.innerHTML;
+    //           console.log(+price.innerHTML);
+    //           const acc = accumulator <= filterInput.value;
+    //           console.log(acc);
+    //           if (acc) {
+    //             giftItems.innerHTML = '';
+    //             console.log(giftItems);
+    //           }
+    //         });
+    //       });
+    //     }
+    //     priceRange();
+    //   }
+    // };
 
     function starRating() {
       let x = '';
@@ -249,7 +281,7 @@ fetch(
       createNavBar(elements, data.list, 'li', 'list');
       // createOverviewSection(data.overview, 'li');
       // createDealsElm(data.deals, 'li');
-      createGiftElm(data.gifts);
+      // createGiftElm(data.gifts);
     }
     generateEtsyHomePage();
   });
