@@ -643,3 +643,6 @@ function filterContent() {
 }
 
 filterContent();
+
+const brand = document.querySelectorAll(".brand");
+console.log(brand);

@@ -1522,3 +1522,39 @@ function controller() {
 // setInterval(controller, 3000);
 
 // controller();
+// --------------------------------
+// function fnName(a = 'Hello', b = 12, c = 0) {
+//   console.log(a, b, c);
+// }
+
+// function fnName({ name, age, dob }) {
+//   console.log(name, age, dob);
+// }
+
+// const input = {
+//   name: 'HELLO',
+//   age: 12,
+//   dob: '11 / 11 / 2000',
+// };
+
+// fnName(input);
+
+// fn1();
+// function fn1() {
+//   console.log('fn1');
+//   fn3();
+// }
+// function fn2() {
+//   console.log('fn2');
+// }
+// function fn3() {
+//   console.log('fn3');
+// }
+
+const myArrFn = (arg1, arg2) => {
+  console.log('arrow1', arg1, arg2);
+};
+const myArrFn2 = (arg1, arg2) => {
+  console.log('arrow2', arg1, arg2);
+};
+myArrFn(10, 20);

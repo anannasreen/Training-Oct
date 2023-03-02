@@ -63,13 +63,15 @@ fetch(
 
     dealsList.innerHTML = deals.join('');
 
-    const gifts = data.gifts.map(function (item) {
+    const gifts = data.gifts.map(function (item, idx) {
       const html = `
       <div class="gift-items">
       <div class="gift-img">
-        <img src="${item.url}" />
+         <video poster="${item.url}" class="video" loop="true" src="${
+        item.video
+      }"></video>
         <div class="like-gift">${likedImageSVG}</div>
-        ${playButton()}
+        ${playButton(idx)}
       </div>
       <div class="gift-txt">
         <h3>${item.name}</h3>
@@ -87,14 +89,12 @@ fetch(
         </div>
       </div>
       <div class="gift-name">${item.name}</div>
+      ${createDeliveryIcon(idx)}
       </div>
-
-      ${createDeliveryIcon()}
       `;
 
       return html;
     });
-
     console.log(gifts);
     giftList.innerHTML = gifts.join('');
 
@@ -115,176 +115,55 @@ fetch(
 
     createTooltip();
 
-    function createDeliveryIcon() {
-      for (let i = 0; i < data.gifts.length; i++) {
-        if (data.gifts[i].actualprice > 2000) {
-          const deliveryElement = document.createElement('div');
-          deliveryElement.classList.add('delivery');
-          deliveryElement.innerHTML = 'FREE Delivery';
+    function createDeliveryIcon(idx) {
+      if (data.gifts[idx].actualprice > 2000) {
+        const deliveryElement = document.createElement('div');
+        deliveryElement.classList.add('delivery');
+        deliveryElement.innerHTML = 'FREE Delivery';
 
-          return createDeliveryIcon.outerHTML;
-        } else {
-          return '';
-        }
-      }
-    }
-    createDeliveryIcon();
-
-    function playButton() {
-      if (data.gifts.urlType === 'Video') {
-        const playButtonTab = document.createElement('div');
-        playButtonTab.classList.add('play-btn');
-        playButtonTab.innerHTML = playButtonSVG;
-
-        return playButton.outerHTML;
+        return deliveryElement.outerHTML;
       } else {
         return '';
       }
     }
 
-    // if (data.gifts.actualprice > 2000) {
-    //   const deliveryElement = document.createElement('div');
-    //   deliveryElement.classList.add('delivery');
-    //   deliveryElement.innerHTML = 'FREE Delivery';
-    //   giftElement.appendChild(deliveryElement);
-    // }
+    function playButton(idx) {
+      if (data.gifts[idx].urlType === 'Video') {
+        const playButtonTab = document.createElement('div');
+        playButtonTab.classList.add('play-btn');
+        playButtonTab.innerHTML = playButtonSVG;
 
-    // const createGiftElm = objectList => {
-    //   for (let key = 0; key < objectList.length; key++) {
-    //     const giftElement = document.createElement('div');
-    //     giftList.appendChild(giftElement);
+        return playButtonTab.outerHTML;
+      } else {
+        return '';
+      }
+    }
 
-    //     giftElement.classList.add('gift-items');
-    //     const giftImg = document.createElement('div');
-    //     giftElement.appendChild(giftImg);
+    const videos = document.querySelectorAll('.video');
+    videos.forEach(video => {
+      video.addEventListener('mouseover', () => {
+        video.play();
+      });
+      video.addEventListener('mouseleave', () => {
+        video.pause();
+        video.currentTime = 0;
+      });
+    });
 
-    //     giftImg.classList.add('gift-img');
+    const likeGiftElm = document.querySelectorAll('.like-gift');
 
-    //     if (objectList[key].urlType === 'Photo') {
-    //       const giftImage = document.createElement('img');
-    //       giftImg.appendChild(giftImage);
-    //       giftImage.src = `${objectList[key].url}`;
-    //     } else {
-    //       const giftVideo = document.createElement('video');
-    //       giftImg.appendChild(giftVideo);
-    //       giftVideo.classList.add('video');
-    //       giftVideo.poster = `${objectList[key].url}`;
-    //       giftVideo.loop = 'true';
-    //       giftVideo.src = `${objectList[key].video}`;
-    //     }
-
-    //     const videos = document.querySelectorAll('.video');
-    //     videos.forEach(video => {
-    //       video.addEventListener('mouseover', () => {
-    //         video.play();
-    //       });
-    //       video.addEventListener('mouseleave', () => {
-    //         video.pause();
-    //         video.currentTime = 0;
-    //       });
-    //     });
-
-    //     const likeGift = document.createElement('div');
-    //     giftImg.appendChild(likeGift);
-    //     likeGift.classList.add('like-gift');
-    //     likeGift.innerHTML = likedImageSVG;
-
-    //     const likeGiftElm = document.querySelectorAll('.like-gift');
-
-    //     let state = 0;
-    //     likeGiftElm.forEach(element => {
-    //       element.addEventListener('click', () => {
-    //         if (state === 0) {
-    //           element.innerHTML = likeSVG;
-    //           state = 1;
-    //         } else {
-    //           element.innerHTML = likedImageSVG;
-    //           state = 0;
-    //         }
-    //       });
-    //     });
-
-    //     if (objectList[key].urlType === 'Video') {
-    //       const playButtonTab = document.createElement('div');
-    //       playButtonTab.classList.add('play-btn');
-    //       giftImg.appendChild(playButtonTab);
-    //       playButtonTab.innerHTML = playButtonSVG;
-    //     }
-
-    //     const giftText = document.createElement('div');
-    //     giftText.classList.add('gift-txt');
-    //     giftElement.appendChild(giftText);
-
-    //     const giftTextHeading = document.createElement('h3');
-    //     giftTextHeading.innerHTML = `${objectList[key].name}`;
-    //     giftText.appendChild(giftTextHeading);
-
-    //     const ratingElement = document.createElement('div');
-    //     ratingElement.classList.add('rating');
-    //     giftText.appendChild(ratingElement);
-
-    //     const starRatingElement = document.createElement('div');
-    //     starRatingElement.classList.add('star-rating');
-    //     ratingElement.appendChild(starRatingElement);
-    //     starRatingElement.innerHTML = `${starRating()}`;
-
-    //     const ratingText = document.createElement('p');
-    //     ratingElement.appendChild(ratingText);
-    //     ratingText.innerHTML = `(${objectList[key].rating})`;
-
-    //     const priceElement = document.createElement('div');
-    //     priceElement.classList.add('price');
-    //     giftText.appendChild(priceElement);
-
-    //     const actualPriceTag = document.createElement('p');
-    //     actualPriceTag.classList.add('priceActual');
-    //     priceElement.appendChild(actualPriceTag);
-    //     actualPriceTag.innerHTML = `${objectList[key].currencySymbol}`;
-
-    //     const priceCalculated = document.createElement('p');
-    //     priceCalculated.classList.add('priceCalculated');
-    //     priceCalculated.innerHTML = `${discountPercentage(
-    //       objectList[key].actualprice,
-    //       objectList[key].discount
-    //     )}`;
-    //     priceElement.appendChild(priceCalculated);
-
-    //     const currentPrice = document.createElement('span');
-    //     priceElement.appendChild(currentPrice);
-    //     currentPrice.innerHTML = `${objectList[key].currencySymbol}${objectList[key].actualprice}`;
-
-    //     const discountElement = document.createElement('a');
-    //     priceElement.appendChild(discountElement);
-    //     discountElement.innerHTML = `(${objectList[key].discount}% off)`;
-
-    // const textElement = document.createElement('div');
-    // textElement.classList.add('gift-name');
-    // giftElement.appendChild(textElement);
-
-    // textElement.innerHTML = objectList[key].name;
-
-    //     function priceRange() {
-    //       const filterBtn = document.getElementById('filter-btn');
-    //       const filterInput = document.getElementById('filter');
-    //       const giftItems = document.querySelectorAll('.gift-items');
-    //       filterBtn.addEventListener('click', () => {
-    //         const giftItems = document.querySelectorAll('.gift-items');
-    //         const prices = document.querySelectorAll('.priceCalculated');
-    //         prices.forEach(price => {
-    //           let accumulator = +price.innerHTML;
-    //           console.log(+price.innerHTML);
-    //           const acc = accumulator <= filterInput.value;
-    //           console.log(acc);
-    //           if (acc) {
-    //             giftItems.innerHTML = '';
-    //             console.log(giftItems);
-    //           }
-    //         });
-    //       });
-    //     }
-    //     priceRange();
-    //   }
-    // };
+    let state = 0;
+    likeGiftElm.forEach(element => {
+      element.addEventListener('click', () => {
+        if (state === 0) {
+          element.innerHTML = likeSVG;
+          state = 1;
+        } else {
+          element.innerHTML = likedImageSVG;
+          state = 0;
+        }
+      });
+    });
 
     function starRating() {
       let x = '';
@@ -313,11 +192,8 @@ fetch(
       });
     });
 
-    function generateEtsyHomePage(pageData) {
+    function generateEtsyHomePage() {
       createNavBar(elements, data.list, 'li', 'list');
-      // createOverviewSection(data.overview, 'li');
-      // createDealsElm(data.deals, 'li');
-      // createGiftElm(data.gifts);
     }
     generateEtsyHomePage();
   });
