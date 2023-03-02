@@ -69,6 +69,7 @@ fetch(
       <div class="gift-img">
         <img src="${item.url}" />
         <div class="like-gift">${likedImageSVG}</div>
+        ${playButton()}
       </div>
       <div class="gift-txt">
         <h3>${item.name}</h3>
@@ -87,24 +88,59 @@ fetch(
       </div>
       <div class="gift-name">${item.name}</div>
       </div>
+
+      ${createDeliveryIcon()}
       `;
 
       return html;
     });
 
+    console.log(gifts);
     giftList.innerHTML = gifts.join('');
 
-    const giftElement = document.querySelectorAll('.gift-items');
+    const giftElements = document.querySelectorAll('.gift-items');
 
-    giftElement.forEach(item => {
-      item.addEventListener('mousemove', e => {
-        x = e.pageX - item.offsetLeft;
-        y = e.pageY - item.offsetTop + 20;
-        const textElement = document.querySelector('.gift-name');
-        textElement.style.left = `${x}px`;
-        textElement.style.top = `${y}px`;
+    function createTooltip() {
+      giftElements.forEach(item => {
+        item.addEventListener('mousemove', e => {
+          let x = e.pageX - item.offsetLeft;
+          let y = e.pageY - item.offsetTop + 20;
+
+          const textElement = item.querySelector('.gift-name');
+          textElement.style.left = `${x}px`;
+          textElement.style.top = `${y}px`;
+        });
       });
-    });
+    }
+
+    createTooltip();
+
+    function createDeliveryIcon() {
+      for (let i = 0; i < data.gifts.length; i++) {
+        if (data.gifts[i].actualprice > 2000) {
+          const deliveryElement = document.createElement('div');
+          deliveryElement.classList.add('delivery');
+          deliveryElement.innerHTML = 'FREE Delivery';
+
+          return createDeliveryIcon.outerHTML;
+        } else {
+          return '';
+        }
+      }
+    }
+    createDeliveryIcon();
+
+    function playButton() {
+      if (data.gifts.urlType === 'Video') {
+        const playButtonTab = document.createElement('div');
+        playButtonTab.classList.add('play-btn');
+        playButtonTab.innerHTML = playButtonSVG;
+
+        return playButton.outerHTML;
+      } else {
+        return '';
+      }
+    }
 
     // if (data.gifts.actualprice > 2000) {
     //   const deliveryElement = document.createElement('div');
@@ -221,11 +257,11 @@ fetch(
     //     priceElement.appendChild(discountElement);
     //     discountElement.innerHTML = `(${objectList[key].discount}% off)`;
 
-    //     const textElement = document.createElement('div');
-    //     textElement.classList.add('gift-name');
-    //     giftElement.appendChild(textElement);
+    // const textElement = document.createElement('div');
+    // textElement.classList.add('gift-name');
+    // giftElement.appendChild(textElement);
 
-    //     textElement.innerHTML = objectList[key].name;
+    // textElement.innerHTML = objectList[key].name;
 
     //     function priceRange() {
     //       const filterBtn = document.getElementById('filter-btn');

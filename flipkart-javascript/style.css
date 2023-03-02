@@ -254,6 +254,7 @@ main {
   gap: 11px;
   padding: 3px 16px 16px 19px;
   font-family: roboto-regular;
+  cursor: pointer;
 }
 .main-section {
   display: flex;

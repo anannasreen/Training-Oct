@@ -312,10 +312,10 @@ containerObj = [
   },
   {
     img: "https://rukminim1.flixcart.com/image/312/312/k9loccw0/mobile/6/8/g/apple-iphone-se-mxvv2hn-a-original-imafrcqmfh4zznmq.jpeg?q=70",
-    title: "APPLE iPhone SE (Red, 256 GB)",
+    title: "OPPO A15s (Red, 256 GB)",
     rating: 4.5,
     review: "1,53,894 Rating & 12,060 Reviews",
-    type: "APPLE",
+    type: "OPPO",
     data: {
       features: [
         "128 GB ROM",
@@ -336,10 +336,10 @@ containerObj = [
   },
   {
     img: "https://rukminim1.flixcart.com/image/312/312/k9loccw0/mobile/6/b/z/apple-iphone-se-mxd12hn-a-original-imafrcqf9nze6evk.jpeg?q=70",
-    title: "APPLE iPhone SE (White, 128 GB)",
+    title: "OPPO A16s (White, 128 GB)",
     rating: 4.5,
     review: "1,53,894 Rating & 12,060 Reviews",
-    type: "APPLE",
+    type: "OPPO",
     data: {
       features: [
         "128 GB ROM",
@@ -432,10 +432,10 @@ containerObj = [
   },
   {
     img: "https://rukminim1.flixcart.com/image/312/312/k9loccw0/mobile/p/z/q/apple-iphone-se-mxd02hn-a-original-imafrcpjyscxm8fv.jpeg?q=70",
-    title: "APPLE iPhone SE (Black, 64 GB) ) (Includes EarPods, Power Adapter)",
+    title: "SAMSUNG M30 (Black, 64 GB) ) (Includes EarPods, Power Adapter)",
     rating: 4.5,
     review: "1,53,894 Rating & 12,060 Reviews",
-    type: "APPLE",
+    type: "SAMSUNG",
     data: {
       features: [
         "64 GB ROM",
@@ -456,10 +456,10 @@ containerObj = [
   },
   {
     img: "https://rukminim1.flixcart.com/image/312/312/k9loccw0/mobile/6/8/g/apple-iphone-se-mxvv2hn-a-original-imafrcqmfh4zznmq.jpeg?q=70",
-    title: "APPLE iPhone SE (Red, 64 GB)",
+    title: "SAMSUNG Galaxy S58 (Red, 64 GB)",
     rating: 4.5,
     review: "1,53,894 Rating & 12,060 Reviews",
-    type: "APPLE",
+    type: "SAMSUNG",
     data: {
       features: [
         "64 GB ROM",
@@ -480,10 +480,10 @@ containerObj = [
   },
   {
     img: "https://rukminim1.flixcart.com/image/312/312/k9loccw0/mobile/p/z/q/apple-iphone-se-mxd02hn-a-original-imafrcpjyscxm8fv.jpeg?q=70",
-    title: "APPLE iPhone SE (Black, 256 GB) (Includes EarPods, Power Adapter)",
+    title: "OPPO A12 (Black, 256 GB) (Includes EarPods, Power Adapter)",
     rating: 4.5,
     review: "1,53,894 Rating & 12,060 Reviews",
-    type: "APPLE",
+    type: "OPPO",
     data: {
       features: [
         "256 GB ROM",
@@ -586,9 +586,9 @@ function createMobileContainers(objectList) {
     const priceTag = document.createElement("div");
     priceTag.classList.add("price-tag");
     priceSection.appendChild(priceTag);
-    // console.log(discountPrice(element.price, element.discount));
+    // console.log(calculteDiscountPrice(element.price, element.discount));
     priceTag.innerHTML = element.price;
-    // priceTag.innerHTML = `₹${discountPrice(element.price, element.discount)} `;
+    // priceTag.innerHTML = `₹${calculteDiscountPrice(element.price, element.discount)} `;
 
     const fassured = document.createElement("img");
     fassured.src =
@@ -623,7 +623,23 @@ function createMobileContainers(objectList) {
 }
 createMobileContainers(containerObj);
 
-function discountPrice(actualPrice, discounts) {
-  return (discountPrice = Math.round(actualPrice * ((100 - discounts) / 100)));
+function calculteDiscountPrice(actualPrice, discounts) {
+  return (calculteDiscountPrice = Math.round(
+    actualPrice * ((100 - discounts) / 100)
+  ));
 }
 
+function filterContent() {
+  const checkBoxIcon = document.querySelectorAll(".brand input");
+  checkBoxIcon.forEach((checkBox) => {
+    checkBox.addEventListener("change", () => {
+      if (checkBox.checked) {
+        console.log("yes");
+      } else {
+        console.log("no");
+      }
+    });
+  });
+}
+
+filterContent();
