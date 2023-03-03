@@ -363,11 +363,14 @@ main {
   top: 0;
   right: 0;
 }
+.price-tag{
+  display: flex;
+}
 .price-tag img {
   width: 77px;
   height: 21px;
 }
-.price-tag {
+.price-section .price-tag p {
   font-size: 25px;
   font-family: roboto-regular;
   color: #212121;

@@ -280,7 +280,7 @@ containerObj = [
         "Brand Warranty for 1 year",
       ],
     },
-    price: 54900,
+    price: 9999,
     discount: 25,
     exchange: 20000,
     delivery: "Free delivery",
@@ -304,7 +304,7 @@ containerObj = [
         "Brand Warranty for 1 year",
       ],
     },
-    price: 44900,
+    price: 24900,
     discount: 26,
     exchange: 20000,
     delivery: "Free delivery",
@@ -352,7 +352,7 @@ containerObj = [
         "Brand Warranty for 1 year",
       ],
     },
-    price: 44900,
+    price: 14900,
     discount: 26,
     exchange: 20000,
     delivery: "Free delivery",
@@ -424,7 +424,7 @@ containerObj = [
         "Brand Warranty for 1 year",
       ],
     },
-    price: 44900,
+    price: 24900,
     discount: 27,
     exchange: 20000,
     delivery: "Free delivery",
@@ -448,7 +448,7 @@ containerObj = [
         "Brand Warranty for 1 year",
       ],
     },
-    price: 39900,
+    price: 29900,
     discount: 27,
     exchange: 20000,
     delivery: "Free delivery",
@@ -496,7 +496,7 @@ containerObj = [
         "Brand Warranty for 1 year",
       ],
     },
-    price: 54900,
+    price: 5900,
     discount: 25,
     exchange: 20000,
     delivery: "Free delivery",
@@ -586,9 +586,11 @@ function createMobileContainers(objectList) {
     const priceTag = document.createElement("div");
     priceTag.classList.add("price-tag");
     priceSection.appendChild(priceTag);
-    // console.log(calculteDiscountPrice(element.price, element.discount));
-    priceTag.innerHTML = element.price;
-    // priceTag.innerHTML = `₹${calculteDiscountPrice(element.price, element.discount)} `;
+
+    const currentPrice = document.createElement("p");
+    currentPrice.innerHTML = element.price;
+    priceTag.appendChild(currentPrice);
+    currentPrice.innerHTML = `₹${calculateDiscountPrice(element.price, element.discount)} `;
 
     const fassured = document.createElement("img");
     fassured.src =
@@ -619,15 +621,42 @@ function createMobileContainers(objectList) {
     const offer = document.createElement("a");
     offer.innerHTML = element.offer;
     priceSection.appendChild(offer);
+
+    function calculateDiscountPrice(actualPrice, discounts) {
+      return (calculateDiscountPrice = Math.round(
+        actualPrice * ((100 - discounts) / 100)
+      ));
+    }
   });
 }
 createMobileContainers(containerObj);
 
-function calculteDiscountPrice(actualPrice, discounts) {
-  return (calculteDiscountPrice = Math.round(
-    actualPrice * ((100 - discounts) / 100)
-  ));
+const mainContainer = document.querySelectorAll(".main-container");
+
+function filterByPrice() {
+  const mobileContainer = document.querySelectorAll(".mobile-container");
+  const minSelectTags = document.querySelector("#min");
+  minSelectTags.addEventListener("change", () => {
+    const priceTag = document.querySelectorAll(".price-tag p");
+    for (i = 0; i < priceTag.length; i++) {
+      if (minSelectTags.value > +priceTag[i].innerHTML) {
+        mobileContainer[i].style.display = "none";
+      }
+    }
+  });
+
+  const maxSelectTags = document.querySelector("#max");
+  maxSelectTags.addEventListener("change", () => {
+    const priceTag = document.querySelectorAll(".price-tag p");
+    for (i = 0; i < priceTag.length; i++) {
+      if (maxSelectTags.value < +priceTag[i].innerHTML) {
+        mobileContainer[i].style.display = "none";
+      }
+    }
+  });
 }
+
+filterByPrice();
 
 function filterContent() {
   const checkBoxIcon = document.querySelectorAll(".brand input");
@@ -646,13 +675,14 @@ function filterContent() {
 
 filterContent();
 
-const brand = document.querySelectorAll(".brand p");
-const mainContainer = document.querySelectorAll(".main-container");
-const mobileContainer = document.querySelectorAll(".mobile-container");
+const filterContents = document.querySelectorAll(".brand p");
 
-function filterContent() {
-  containerObj.forEach((item) => {
-    console.log(item.type);
-  });
+for (i = 0; i < containerObj.length; i++) {
+  console.log(containerObj[i].type);
+  for (j = 0; j < 3; j++) {
+    console.log(filterContents[j].innerHTML);
+    if (filterContents[j].innerHTML === containerObj[i].type) {
+      console.log("hello");
+    }
+  }
 }
-filterContent();
