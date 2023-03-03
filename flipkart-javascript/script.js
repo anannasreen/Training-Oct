@@ -264,7 +264,7 @@ generateFilterContentList(filterObj);
 containerObj = [
   {
     img: "https://rukminim1.flixcart.com/image/312/312/k9loccw0/mobile/6/b/z/apple-iphone-se-mxd12hn-a-original-imafrcqf9nze6evk.jpeg?q=70",
-    title: "Apple iPhone SE (White, 256 GB)(Includes EarPods, Power Adapter)",
+    title: "APPLE iPhone SE (White, 256 GB)(Includes EarPods, Power Adapter)",
     rating: 4.5,
     review: "1,53,888 Rating & 12,060 Reviews",
     type: "APPLE",
@@ -631,6 +631,8 @@ function calculteDiscountPrice(actualPrice, discounts) {
 
 function filterContent() {
   const checkBoxIcon = document.querySelectorAll(".brand input");
+  const mobileContainer = document.querySelectorAll(".mobile-container");
+
   checkBoxIcon.forEach((checkBox) => {
     checkBox.addEventListener("change", () => {
       if (checkBox.checked) {
@@ -644,5 +646,13 @@ function filterContent() {
 
 filterContent();
 
-const brand = document.querySelectorAll(".brand");
-console.log(brand);
+const brand = document.querySelectorAll(".brand p");
+const mainContainer = document.querySelectorAll(".main-container");
+const mobileContainer = document.querySelectorAll(".mobile-container");
+
+function filterContent() {
+  containerObj.forEach((item) => {
+    console.log(item.type);
+  });
+}
+filterContent();
