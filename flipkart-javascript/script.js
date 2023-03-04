@@ -67,13 +67,13 @@ filterObj = [
   //     value: ["APPLE", "SAMSUNG", "OPPO"],
   //   },
   // },
-  {
-    title: "CUSTOMER RATINGS",
-    id: "1",
-    data: {
-      value: [`4 ${starSVG} & above`, `3 ${starSVG} & above`],
-    },
-  },
+  // {
+  //   title: "CUSTOMER RATINGS",
+  //   id: "1",
+  //   data: {
+  //     value: [`4 ${starSVG} & above`, `3 ${starSVG} & above`],
+  //   },
+  // },
   {
     title: "GST INVOICE AVAILABLE",
     id: "",
@@ -264,8 +264,8 @@ generateFilterContentList(filterObj);
 containerObj = [
   {
     img: "https://rukminim1.flixcart.com/image/312/312/k9loccw0/mobile/6/b/z/apple-iphone-se-mxd12hn-a-original-imafrcqf9nze6evk.jpeg?q=70",
-    title: "APPLE iPhone SE (White, 256 GB)(Includes EarPods, Power Adapter)",
-    rating: 4.5,
+    title: "Apple iPhone SE (White, 256 GB)(Includes EarPods, Power Adapter)",
+    rating: 3.5,
     review: "1,53,888 Rating & 12,060 Reviews",
     type: "APPLE",
     data: {
@@ -337,7 +337,7 @@ containerObj = [
   {
     img: "https://rukminim1.flixcart.com/image/312/312/k9loccw0/mobile/6/b/z/apple-iphone-se-mxd12hn-a-original-imafrcqf9nze6evk.jpeg?q=70",
     title: "OPPO A16s (White, 128 GB)",
-    rating: 4.5,
+    rating: 3.5,
     review: "1,53,894 Rating & 12,060 Reviews",
     type: "OPPO",
     data: {
@@ -361,7 +361,7 @@ containerObj = [
   {
     img: "https://rukminim1.flixcart.com/image/312/312/k9loccw0/mobile/p/z/q/apple-iphone-se-mxd02hn-a-original-imafrcpjyscxm8fv.jpeg?q=70",
     title: "APPLE iPhone SE (Black, 128 GB)",
-    rating: 4.5,
+    rating: 3.0,
     review: "1,53,894 Rating & 12,060 Reviews",
     type: "APPLE",
     data: {
@@ -385,7 +385,7 @@ containerObj = [
   {
     img: "https://rukminim1.flixcart.com/image/312/312/k9loccw0/mobile/6/b/z/apple-iphone-se-mxd12hn-a-original-imafrcqf9nze6evk.jpeg?q=70",
     title: "APPLE iPhone SE (White, 64 GB) (Includes EarPods, Power Adapter)",
-    rating: 4.5,
+    rating: 2.5,
     review: "1,53,894 Rating & 12,060 Reviews",
     type: "APPLE",
     data: {
@@ -433,7 +433,7 @@ containerObj = [
   {
     img: "https://rukminim1.flixcart.com/image/312/312/k9loccw0/mobile/p/z/q/apple-iphone-se-mxd02hn-a-original-imafrcpjyscxm8fv.jpeg?q=70",
     title: "SAMSUNG M30 (Black, 64 GB) ) (Includes EarPods, Power Adapter)",
-    rating: 4.5,
+    rating: 5.0,
     review: "1,53,894 Rating & 12,060 Reviews",
     type: "SAMSUNG",
     data: {
@@ -457,7 +457,7 @@ containerObj = [
   {
     img: "https://rukminim1.flixcart.com/image/312/312/k9loccw0/mobile/6/8/g/apple-iphone-se-mxvv2hn-a-original-imafrcqmfh4zznmq.jpeg?q=70",
     title: "SAMSUNG Galaxy S58 (Red, 64 GB)",
-    rating: 4.5,
+    rating: 3.5,
     review: "1,53,894 Rating & 12,060 Reviews",
     type: "SAMSUNG",
     data: {
@@ -586,14 +586,14 @@ function createMobileContainers(objectList) {
     const priceTag = document.createElement("div");
     priceTag.classList.add("price-tag");
     priceSection.appendChild(priceTag);
+    priceTag.innerHTML = "₹";
 
     const currentPrice = document.createElement("p");
     priceTag.appendChild(currentPrice);
-    currentPrice.innerHTML = "₹" + element.price;
-    // currentPrice.innerHTML = `₹${calculateDiscountPrice(
-    //   element.price,
-    //   element.discount
-    // )} `;
+    currentPrice.innerHTML = `${calculateDiscountPrice(
+      element.price,
+      element.discount
+    )} `;
 
     const fassured = document.createElement("img");
     fassured.src =
@@ -625,11 +625,11 @@ function createMobileContainers(objectList) {
     offer.innerHTML = element.offer;
     priceSection.appendChild(offer);
 
-    // function calculateDiscountPrice(actualPrice, discounts) {
-    //   return (calculateDiscountPrice = Math.round(
-    //     actualPrice * ((100 - discounts) / 100)
-    //   ));
-    // }
+    function calculateDiscountPrice(actualPrice, discounts) {
+      return (calculateDiscountPrice = Math.round(
+        actualPrice * ((100 - discounts) / 100)
+      ));
+    }
   });
 }
 createMobileContainers(containerObj);
@@ -642,12 +642,16 @@ function calculateDiscountPrice(actualPrice, discounts) {
   ));
 }
 
+calculateDiscountPrice();
+
 function filterByPrice() {
   const mobileContainer = document.querySelectorAll(".mobile-container");
   const minSelectTags = document.querySelector("#min");
   minSelectTags.addEventListener("change", () => {
     const priceTag = document.querySelectorAll(".price-tag p");
     for (i = 0; i < priceTag.length; i++) {
+      console.log(priceTag[i].innerHTML);
+      console.log(minSelectTags.value);
       if (+minSelectTags.value > +priceTag[i].innerHTML) {
         mobileContainer[i].style.display = "none";
       }
@@ -668,13 +672,15 @@ function filterByPrice() {
 filterByPrice();
 
 function toggleFilterButton() {
-  const filterTag = document.querySelector(".filter-tag");
-  const filteredContent = document.querySelector(".filter-content");
-  filterTag.addEventListener("click", () => {
-    filteredContent.classList.toggle("show");
-    filterTag.classList.toggle("active");
+  const filterContainer = document.querySelectorAll(".filter-data");
+  filterContainer.forEach((tag) => {
+    tag.children[0].addEventListener("click", () => {
+      tag.children[0].classList.toggle("active");
+      tag.children[1].classList.toggle("show");
+    });
   });
 }
+
 toggleFilterButton();
 
 function filterContent() {

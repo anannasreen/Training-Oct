@@ -122,6 +122,8 @@ main {
 .side-bar {
   max-width: 280px;
   margin-right: 10px;
+}
+.filters {
   background-color: white;
 }
 .filters h1 {
@@ -259,6 +261,7 @@ main {
   padding: 3px 16px 16px 19px;
   font-family: roboto-regular;
   cursor: pointer;
+  align-items: center;
 }
 .main-section {
   display: flex;
@@ -370,12 +373,20 @@ main {
 }
 .price-tag {
   display: flex;
+  align-items: flex-end;
+  gap: 3px;
 }
 .price-tag img {
   width: 77px;
   height: 21px;
 }
 .price-section .price-tag p {
+  font-size: 25px;
+  font-family: roboto-regular;
+  color: #212121;
+  font-weight: 600;
+}
+.price-section .price-tag {
   font-size: 25px;
   font-family: roboto-regular;
   color: #212121;
@@ -478,4 +489,27 @@ main {
 .mobile-container:hover .features-heading {
   color: #2874f0;
   cursor: pointer;
+}
+.help-center {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.help-txt {
+  margin: 5px 0 20px;
+}
+.help-center .help-txt span {
+  font-size: 18px;
+  color: #2874f0;
+  font-family: roboto-regular;
+}
+.help-txt svg {
+  transform: rotate(180deg);
+}
+.help-center span {
+  font-size: 14px;
+  font-family: roboto-regular;
+  color: #212121;
 }
