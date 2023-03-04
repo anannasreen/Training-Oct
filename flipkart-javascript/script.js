@@ -60,13 +60,13 @@ function generateNavbar(objectList) {
 generateNavbar(navObj);
 
 filterObj = [
-  {
-    title: "BRAND",
-    id: "1",
-    data: {
-      value: ["APPLE", "SAMSUNG", "OPPO"],
-    },
-  },
+  // {
+  //   title: "BRAND",
+  //   id: "1",
+  //   data: {
+  //     value: ["APPLE", "SAMSUNG", "OPPO"],
+  //   },
+  // },
   {
     title: "CUSTOMER RATINGS",
     id: "1",
@@ -588,9 +588,12 @@ function createMobileContainers(objectList) {
     priceSection.appendChild(priceTag);
 
     const currentPrice = document.createElement("p");
-    currentPrice.innerHTML = element.price;
     priceTag.appendChild(currentPrice);
-    currentPrice.innerHTML = `₹${calculateDiscountPrice(element.price, element.discount)} `;
+    currentPrice.innerHTML = "₹" + element.price;
+    // currentPrice.innerHTML = `₹${calculateDiscountPrice(
+    //   element.price,
+    //   element.discount
+    // )} `;
 
     const fassured = document.createElement("img");
     fassured.src =
@@ -622,16 +625,22 @@ function createMobileContainers(objectList) {
     offer.innerHTML = element.offer;
     priceSection.appendChild(offer);
 
-    function calculateDiscountPrice(actualPrice, discounts) {
-      return (calculateDiscountPrice = Math.round(
-        actualPrice * ((100 - discounts) / 100)
-      ));
-    }
+    // function calculateDiscountPrice(actualPrice, discounts) {
+    //   return (calculateDiscountPrice = Math.round(
+    //     actualPrice * ((100 - discounts) / 100)
+    //   ));
+    // }
   });
 }
 createMobileContainers(containerObj);
 
 const mainContainer = document.querySelectorAll(".main-container");
+
+function calculateDiscountPrice(actualPrice, discounts) {
+  return (calculateDiscountPrice = Math.round(
+    actualPrice * ((100 - discounts) / 100)
+  ));
+}
 
 function filterByPrice() {
   const mobileContainer = document.querySelectorAll(".mobile-container");
@@ -639,7 +648,7 @@ function filterByPrice() {
   minSelectTags.addEventListener("change", () => {
     const priceTag = document.querySelectorAll(".price-tag p");
     for (i = 0; i < priceTag.length; i++) {
-      if (minSelectTags.value > +priceTag[i].innerHTML) {
+      if (+minSelectTags.value > +priceTag[i].innerHTML) {
         mobileContainer[i].style.display = "none";
       }
     }
@@ -649,7 +658,7 @@ function filterByPrice() {
   maxSelectTags.addEventListener("change", () => {
     const priceTag = document.querySelectorAll(".price-tag p");
     for (i = 0; i < priceTag.length; i++) {
-      if (maxSelectTags.value < +priceTag[i].innerHTML) {
+      if (+maxSelectTags.value < +priceTag[i].innerHTML) {
         mobileContainer[i].style.display = "none";
       }
     }
@@ -658,31 +667,33 @@ function filterByPrice() {
 
 filterByPrice();
 
+function toggleFilterButton() {
+  const filterTag = document.querySelector(".filter-tag");
+  const filteredContent = document.querySelector(".filter-content");
+  filterTag.addEventListener("click", () => {
+    filteredContent.classList.toggle("show");
+    filterTag.classList.toggle("active");
+  });
+}
+toggleFilterButton();
+
 function filterContent() {
-  const checkBoxIcon = document.querySelectorAll(".brand input");
+  const checkBoxIcon = document.querySelectorAll(".mobile input");
   const mobileContainer = document.querySelectorAll(".mobile-container");
 
   checkBoxIcon.forEach((checkBox) => {
-    checkBox.addEventListener("change", () => {
-      if (checkBox.checked) {
-        console.log("yes");
-      } else {
-        console.log("no");
-      }
+    checkBox.addEventListener("change", (event) => {
+      containerObj.forEach((item, idx) => {
+        if (event.target.value !== item.type) {
+          mobileContainer[idx].style.display = "none";
+        } else {
+          mobileContainer[idx].style.display = "flex";
+        }
+      });
     });
   });
 }
 
 filterContent();
 
-const filterContents = document.querySelectorAll(".brand p");
-
-for (i = 0; i < containerObj.length; i++) {
-  console.log(containerObj[i].type);
-  for (j = 0; j < 3; j++) {
-    console.log(filterContents[j].innerHTML);
-    if (filterContents[j].innerHTML === containerObj[i].type) {
-      console.log("hello");
-    }
-  }
-}
+const brands = document.querySelectorAll(".mobile");

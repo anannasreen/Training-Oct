@@ -27,6 +27,9 @@ header {
   margin-inline: auto;
   padding-left: 15px;
 }
+.header-tag div {
+  cursor: pointer;
+}
 .logo {
   width: 75px;
   height: 20px;
@@ -106,6 +109,7 @@ header {
   font-family: inter-semibold;
   font-size: 14px;
   line-height: 1.4;
+  cursor: pointer;
 }
 main {
   background-color: #f1f3f6;
@@ -346,6 +350,7 @@ main {
   display: flex;
   line-height: 1;
   border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
 }
 .mobile-content {
   display: flex;
@@ -363,7 +368,7 @@ main {
   top: 0;
   right: 0;
 }
-.price-tag{
+.price-tag {
   display: flex;
 }
 .price-tag img {
@@ -469,4 +474,8 @@ main {
   font-weight: 600;
   font-family: roboto-regular;
   margin-top: 5px;
+}
+.mobile-container:hover .features-heading {
+  color: #2874f0;
+  cursor: pointer;
 }
