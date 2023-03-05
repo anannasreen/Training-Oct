@@ -265,7 +265,7 @@ containerObj = [
   {
     img: "https://rukminim1.flixcart.com/image/312/312/k9loccw0/mobile/6/b/z/apple-iphone-se-mxd12hn-a-original-imafrcqf9nze6evk.jpeg?q=70",
     title: "Apple iPhone SE (White, 256 GB)(Includes EarPods, Power Adapter)",
-    rating: 3.5,
+    rating: 4.5,
     review: "1,53,888 Rating & 12,060 Reviews",
     type: "APPLE",
     data: {
@@ -313,7 +313,7 @@ containerObj = [
   {
     img: "https://rukminim1.flixcart.com/image/312/312/k9loccw0/mobile/6/8/g/apple-iphone-se-mxvv2hn-a-original-imafrcqmfh4zznmq.jpeg?q=70",
     title: "OPPO A15s (Red, 256 GB)",
-    rating: 4.5,
+    rating: 3.5,
     review: "1,53,894 Rating & 12,060 Reviews",
     type: "OPPO",
     data: {
@@ -337,7 +337,7 @@ containerObj = [
   {
     img: "https://rukminim1.flixcart.com/image/312/312/k9loccw0/mobile/6/b/z/apple-iphone-se-mxd12hn-a-original-imafrcqf9nze6evk.jpeg?q=70",
     title: "OPPO A16s (White, 128 GB)",
-    rating: 3.5,
+    rating: 4.5,
     review: "1,53,894 Rating & 12,060 Reviews",
     type: "OPPO",
     data: {
@@ -385,7 +385,7 @@ containerObj = [
   {
     img: "https://rukminim1.flixcart.com/image/312/312/k9loccw0/mobile/6/b/z/apple-iphone-se-mxd12hn-a-original-imafrcqf9nze6evk.jpeg?q=70",
     title: "APPLE iPhone SE (White, 64 GB) (Includes EarPods, Power Adapter)",
-    rating: 2.5,
+    rating: 4.5,
     review: "1,53,894 Rating & 12,060 Reviews",
     type: "APPLE",
     data: {
@@ -409,7 +409,7 @@ containerObj = [
   {
     img: "https://rukminim1.flixcart.com/image/312/312/k9loccw0/mobile/6/b/z/apple-iphone-se-mxd12hn-a-original-imafrcqf9nze6evk.jpeg?q=70",
     title: "APPLE iPhone SE (White, 64 GB)",
-    rating: 4.5,
+    rating: 2.5,
     review: "1,53,894 Rating & 12,060 Reviews",
     type: "APPLE",
     data: {
@@ -505,7 +505,9 @@ containerObj = [
 ];
 
 function createMobileContainers(objectList) {
-  const mainContainer = document.querySelector(".main-container");
+  // console.log(objectList);
+  const mainContainer = document.querySelector(".main-mobilecontainer");
+  mainContainer.innerHTML = "";
   objectList.forEach((element) => {
     const mobileContainer = document.createElement("div");
     mobileContainer.classList.add("mobile-container");
@@ -560,7 +562,12 @@ function createMobileContainers(objectList) {
     const starRating = document.createElement("div");
     starRating.classList.add("star-rating");
     rating.appendChild(starRating);
-    starRating.innerHTML = `${element.rating} ${ratingstarSVG}`;
+
+    const ratingContent = document.createElement("p");
+    starRating.appendChild(ratingContent);
+    ratingContent.innerHTML = element.rating;
+
+    starRating.innerHTML += ratingstarSVG;
 
     const review = document.createElement("span");
     rating.appendChild(review);
@@ -650,8 +657,8 @@ function filterByPrice() {
   minSelectTags.addEventListener("change", () => {
     const priceTag = document.querySelectorAll(".price-tag p");
     for (i = 0; i < priceTag.length; i++) {
-      console.log(priceTag[i].innerHTML);
-      console.log(minSelectTags.value);
+      // console.log(priceTag[i].innerHTML);
+      // console.log(minSelectTags.value);
       if (+minSelectTags.value > +priceTag[i].innerHTML) {
         mobileContainer[i].style.display = "none";
       }
@@ -683,23 +690,99 @@ function toggleFilterButton() {
 
 toggleFilterButton();
 
+let arr = [];
 function filterContent() {
   const checkBoxIcon = document.querySelectorAll(".mobile input");
   const mobileContainer = document.querySelectorAll(".mobile-container");
 
   checkBoxIcon.forEach((checkBox) => {
     checkBox.addEventListener("change", (event) => {
-      containerObj.forEach((item, idx) => {
-        if (event.target.value !== item.type) {
-          mobileContainer[idx].style.display = "none";
-        } else {
-          mobileContainer[idx].style.display = "flex";
-        }
-      });
+      // containerObj.forEach((item, idx) => {
+      // console.log(event.target);
+      if (checkBox.checked) {
+        let containerArr = containerObj.filter(
+          (item) => item.type === event.target.value
+        );
+
+        arr.push(...containerArr);
+        createMobileContainers(arr);
+      } else {
+        // return "";
+        // arr.pop();
+        // createMobileContainers(arr);
+      }
+
+      // containerArr;
+      // if (event.target.value !== item.type) {
+      //   mobileContainer[idx].style.display = "none";
+      // } else {
+      //   mobileContainer[idx].style.display = "flex";
+      // }
     });
+    // });
   });
 }
 
 filterContent();
 
-const brands = document.querySelectorAll(".mobile");
+const sorts = document.querySelectorAll(".sort p");
+
+function removeClass() {
+  sorts.forEach((sort) => {
+    sort.classList.remove("sorted");
+  });
+}
+
+sorts.forEach((element) => {
+  element.addEventListener("click", () => {
+    removeClass();
+    element.classList.add("sorted");
+    element.focus();
+  });
+});
+
+// const priceActual = document.querySelectorAll(".price-tag p");
+// for (i = 0; i < containerObj.length; i++) {
+//   console.log(priceActual[i].innerHTML);
+//   containerObj.sort((a, b) => {
+//     a > b;
+//   });
+// }
+
+/////to Separate numbers by Commas/////////
+
+// const prices = document.querySelectorAll(".price-tag p");
+// prices.forEach((price) => {
+//   mrp = +price.innerHTML;
+//   console.log(mrp.tolocaleString("en-US"));
+// });
+
+///To change color of rating button according to rating value///////////
+
+const starRatings = document.querySelectorAll(".star-rating p");
+const starButton = document.querySelectorAll(".star-rating");
+
+starRatings.forEach((star, idx) => {
+  if (+star.innerHTML < 3) {
+    starButton[idx].style.backgroundColor = "red";
+  } else if (+star.innerHTML < 4) {
+    starButton[idx].style.backgroundColor = "orangered";
+  }
+});
+
+/////Filter mobile containers on the basis of rating
+
+const price = document.querySelectorAll(".price-tag p");
+const ratingFilters = document.querySelectorAll(".rating-filter input");
+console.log(ratingFilters);
+
+ratingFilters.forEach((filter) => {
+  filter.addEventListener("change", (event) => {
+    console.log(event.target.value);
+    if (filter.checked) {
+      console.log("yes");
+    } else {
+      console.log("no");
+    }
+  });
+});
