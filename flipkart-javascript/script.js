@@ -751,11 +751,11 @@ sorts.forEach((element) => {
 
 /////to Separate numbers by Commas/////////
 
-// const prices = document.querySelectorAll(".price-tag p");
-// prices.forEach((price) => {
-//   mrp = +price.innerHTML;
-//   console.log(mrp.tolocaleString("en-US"));
-// });
+const prices = document.querySelectorAll(".price-tag p");
+prices.forEach((price) => {
+  mrp = +price.innerHTML;
+  console.log(mrp.tolocaleString("en-US"));
+});
 
 ///To change color of rating button according to rating value///////////
 
