@@ -697,8 +697,6 @@ function filterContent() {
 
   checkBoxIcon.forEach((checkBox) => {
     checkBox.addEventListener("change", (event) => {
-      // containerObj.forEach((item, idx) => {
-      // console.log(event.target);
       if (checkBox.checked) {
         let containerArr = containerObj.filter(
           (item) => item.type === event.target.value
@@ -706,20 +704,8 @@ function filterContent() {
 
         arr.push(...containerArr);
         createMobileContainers(arr);
-      } else {
-        // return "";
-        // arr.pop();
-        // createMobileContainers(arr);
-      }
-
-      // containerArr;
-      // if (event.target.value !== item.type) {
-      //   mobileContainer[idx].style.display = "none";
-      // } else {
-      //   mobileContainer[idx].style.display = "flex";
-      // }
+      } 
     });
-    // });
   });
 }
 
@@ -751,11 +737,11 @@ sorts.forEach((element) => {
 
 /////to Separate numbers by Commas/////////
 
-const prices = document.querySelectorAll(".price-tag p");
-prices.forEach((price) => {
-  mrp = +price.innerHTML;
-  console.log(mrp.tolocaleString("en-US"));
-});
+// const prices = document.querySelectorAll(".price-tag p");
+// prices.forEach((price) => {
+//   mrp = +price.innerHTML;
+//   console.log(mrp.tolocaleString("en-US"));
+// });
 
 ///To change color of rating button according to rating value///////////
 
