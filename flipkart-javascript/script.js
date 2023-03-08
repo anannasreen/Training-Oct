@@ -45,35 +45,7 @@ navObj = [
   },
 ];
 
-function generateNavbar(objectList) {
-  for (let key = 0; key < objectList.length; key++) {
-    const navBar = document.querySelector(".nav-section");
-    const navlist = document.createElement("span");
-    if (objectList.img !== "") {
-      navlist.innerHTML = `${objectList[key].title} ${objectList[key].img}`;
-    } else {
-      navlist.innerHTML = `${objectList[key].title}`;
-    }
-    navBar.appendChild(navlist);
-  }
-}
-generateNavbar(navObj);
-
 filterObj = [
-  // {
-  //   title: "BRAND",
-  //   id: "1",
-  //   data: {
-  //     value: ["APPLE", "SAMSUNG", "OPPO"],
-  //   },
-  // },
-  // {
-  //   title: "CUSTOMER RATINGS",
-  //   id: "1",
-  //   data: {
-  //     value: [`4 ${starSVG} & above`, `3 ${starSVG} & above`],
-  //   },
-  // },
   {
     title: "GST INVOICE AVAILABLE",
     id: "",
@@ -214,52 +186,6 @@ filterObj = [
     },
   },
 ];
-
-function generateFilterContentList(objectList) {
-  const filterList = document.querySelector(".filter-list");
-  const filterTag = document.createElement("ul");
-  filterList.appendChild(filterTag);
-
-  for (let key = 0; key < objectList.length; key++) {
-    const filterItems = document.createElement("li");
-    filterTag.appendChild(filterItems);
-
-    const filterTaglist = document.createElement("div");
-    filterTaglist.classList.add("filter-tag");
-    filterItems.appendChild(filterTaglist);
-
-    filterTaglist.innerHTML = `${objectList[key].title}${arrowdownSVG}`;
-
-    const filterContent = document.createElement("div");
-    filterContent.classList.add("filter-content");
-    filterItems.appendChild(filterContent);
-
-    objectList[key].data.value.forEach((item) => {
-      const filterSubcontent = document.createElement("div");
-      filterSubcontent.classList.add("brand");
-      filterContent.appendChild(filterSubcontent);
-
-      const checkBox = document.createElement("input");
-      checkBox.type = "checkbox";
-      filterSubcontent.appendChild(checkBox);
-
-      const filterText = document.createElement("p");
-      filterSubcontent.appendChild(filterText);
-      filterText.innerHTML = item;
-    });
-
-    filterTaglist.addEventListener("click", () => {
-      filterContent.classList.toggle("show");
-      filterTaglist.classList.toggle("active");
-    });
-    if (objectList[key].id !== "") {
-      filterContent.classList.add("show");
-      filterTaglist.classList.add("active");
-    }
-  }
-}
-
-generateFilterContentList(filterObj);
 
 containerObj = [
   {
@@ -504,6 +430,66 @@ containerObj = [
   },
 ];
 
+function generateNavbar(objectList) {
+  for (let key = 0; key < objectList.length; key++) {
+    const navBar = document.querySelector(".nav-section");
+    const navlist = document.createElement("span");
+    if (objectList.img !== "") {
+      navlist.innerHTML = `${objectList[key].title} ${objectList[key].img}`;
+    } else {
+      navlist.innerHTML = `${objectList[key].title}`;
+    }
+    navBar.appendChild(navlist);
+  }
+}
+generateNavbar(navObj);
+
+function generateFilterContentList(objectList) {
+  const filterList = document.querySelector(".filter-list");
+  const filterTag = document.createElement("ul");
+  filterList.appendChild(filterTag);
+
+  for (let key = 0; key < objectList.length; key++) {
+    const filterItems = document.createElement("li");
+    filterTag.appendChild(filterItems);
+
+    const filterTaglist = document.createElement("div");
+    filterTaglist.classList.add("filter-tag");
+    filterItems.appendChild(filterTaglist);
+
+    filterTaglist.innerHTML = `${objectList[key].title}${arrowdownSVG}`;
+
+    const filterContent = document.createElement("div");
+    filterContent.classList.add("filter-content");
+    filterItems.appendChild(filterContent);
+
+    objectList[key].data.value.forEach((item) => {
+      const filterSubcontent = document.createElement("div");
+      filterSubcontent.classList.add("brand");
+      filterContent.appendChild(filterSubcontent);
+
+      const checkBox = document.createElement("input");
+      checkBox.type = "checkbox";
+      filterSubcontent.appendChild(checkBox);
+
+      const filterText = document.createElement("p");
+      filterSubcontent.appendChild(filterText);
+      filterText.innerHTML = item;
+    });
+
+    filterTaglist.addEventListener("click", () => {
+      filterContent.classList.toggle("show");
+      filterTaglist.classList.toggle("active");
+    });
+    if (objectList[key].id !== "") {
+      filterContent.classList.add("show");
+      filterTaglist.classList.add("active");
+    }
+  }
+}
+
+generateFilterContentList(filterObj);
+
 function createMobileContainers(objectList) {
   // console.log(objectList);
   const mainContainer = document.querySelector(".main-mobilecontainer");
@@ -690,10 +676,11 @@ function toggleFilterButton() {
 
 toggleFilterButton();
 
+//filter content by brand
+
 let arr = [];
 function filterContent() {
   const checkBoxIcon = document.querySelectorAll(".mobile input");
-  const mobileContainer = document.querySelectorAll(".mobile-container");
 
   checkBoxIcon.forEach((checkBox) => {
     checkBox.addEventListener("change", (event) => {
@@ -704,12 +691,16 @@ function filterContent() {
 
         arr.push(...containerArr);
         createMobileContainers(arr);
-      } 
+      } else {
+        createMobileContainers(containerObj);
+      }
     });
   });
 }
 
 filterContent();
+
+//sort button onClick
 
 const sorts = document.querySelectorAll(".sort p");
 
@@ -729,10 +720,11 @@ sorts.forEach((element) => {
 
 // const priceActual = document.querySelectorAll(".price-tag p");
 // for (i = 0; i < containerObj.length; i++) {
-//   console.log(priceActual[i].innerHTML);
-//   containerObj.sort((a, b) => {
-//     a > b;
-//   });
+//   console.log(
+//     containerObj.sort(function (a, b) {
+//       return a - b;
+//     })
+//   );
 // }
 
 /////to Separate numbers by Commas/////////
@@ -742,8 +734,6 @@ sorts.forEach((element) => {
 //   mrp = +price.innerHTML;
 //   console.log(mrp.tolocaleString("en-US"));
 // });
-
-///To change color of rating button according to rating value///////////
 
 const starRatings = document.querySelectorAll(".star-rating p");
 const starButton = document.querySelectorAll(".star-rating");
@@ -760,15 +750,50 @@ starRatings.forEach((star, idx) => {
 
 const price = document.querySelectorAll(".price-tag p");
 const ratingFilters = document.querySelectorAll(".rating-filter input");
-console.log(ratingFilters);
+// console.log(ratingFilters);
 
 ratingFilters.forEach((filter) => {
   filter.addEventListener("change", (event) => {
     console.log(event.target.value);
     if (filter.checked) {
       console.log("yes");
+      let containerArr = containerObj.filter(
+        (item) => item.rating >= event.target.value
+      );
+
+      arr.push(...containerArr);
+      createMobileContainers(arr);
     } else {
       console.log("no");
+      arr.pop();
     }
   });
 });
+
+///////filter by brand//////
+
+// let arr = [];
+// function filterContent() {
+//   const checkBoxIcon = document.querySelectorAll(".mobile input");
+
+//   checkBoxIcon.forEach((checkBox) => {
+//     checkBox.addEventListener("change", (event) => {
+//       if (checkBox.checked) {
+//         arr.push(checkBox.checked);
+//         console.log(arr.length);
+        
+//         // let containerArr = containerObj.filter(
+//         //   (item) => item.type === event.target.value
+//         // );
+
+//         // arr.push(...containerArr);
+//         // createMobileContainers(arr);
+//       } else {
+//         arr.pop();
+//         console.log(arr.length);
+//       }
+//     });
+//   });
+// }
+
+// filterContent();
