@@ -637,32 +637,32 @@ function calculateDiscountPrice(actualPrice, discounts) {
 
 calculateDiscountPrice();
 
-function filterByPrice() {
-  const mobileContainer = document.querySelectorAll(".mobile-container");
-  const minSelectTags = document.querySelector("#min");
-  minSelectTags.addEventListener("change", () => {
-    const priceTag = document.querySelectorAll(".price-tag p");
-    for (i = 0; i < priceTag.length; i++) {
-      // console.log(priceTag[i].innerHTML);
-      // console.log(minSelectTags.value);
-      if (+minSelectTags.value > +priceTag[i].innerHTML) {
-        mobileContainer[i].style.display = "none";
-      }
-    }
-  });
+// function filterByPrice() {
+//   const mobileContainer = document.querySelectorAll(".mobile-container");
+//   const minSelectTags = document.querySelector("#min");
+//   minSelectTags.addEventListener("change", () => {
+//     const priceTag = document.querySelectorAll(".price-tag p");
+//     for (i = 0; i < priceTag.length; i++) {
+//       // console.log(priceTag[i].innerHTML);
+//       // console.log(minSelectTags.value);
+//       if (+minSelectTags.value > +priceTag[i].innerHTML) {
+//         mobileContainer[i].style.display = "none";
+//       }
+//     }
+//   });
 
-  const maxSelectTags = document.querySelector("#max");
-  maxSelectTags.addEventListener("change", () => {
-    const priceTag = document.querySelectorAll(".price-tag p");
-    for (i = 0; i < priceTag.length; i++) {
-      if (+maxSelectTags.value < +priceTag[i].innerHTML) {
-        mobileContainer[i].style.display = "none";
-      }
-    }
-  });
-}
+//   const maxSelectTags = document.querySelector("#max");
+//   maxSelectTags.addEventListener("change", () => {
+//     const priceTag = document.querySelectorAll(".price-tag p");
+//     for (i = 0; i < priceTag.length; i++) {
+//       if (+maxSelectTags.value < +priceTag[i].innerHTML) {
+//         mobileContainer[i].style.display = "none";
+//       }
+//     }
+//   });
+// }
 
-filterByPrice();
+// filterByPrice();
 
 function toggleFilterButton() {
   const filterContainer = document.querySelectorAll(".filter-data");
@@ -678,27 +678,27 @@ toggleFilterButton();
 
 //filter content by brand
 
-let arr = [];
-function filterContent() {
-  const checkBoxIcon = document.querySelectorAll(".mobile input");
+// let arr = [];
+// function filterContent() {
+//   const checkBoxIcon = document.querySelectorAll(".mobile input");
 
-  checkBoxIcon.forEach((checkBox) => {
-    checkBox.addEventListener("change", (event) => {
-      if (checkBox.checked) {
-        let containerArr = containerObj.filter(
-          (item) => item.type === event.target.value
-        );
+//   checkBoxIcon.forEach((checkBox) => {
+//     checkBox.addEventListener("change", (event) => {
+//       if (checkBox.checked) {
+//         let containerArr = containerObj.filter(
+//           (item) => item.type === event.target.value
+//         );
 
-        arr.push(...containerArr);
-        createMobileContainers(arr);
-      } else {
-        createMobileContainers(containerObj);
-      }
-    });
-  });
-}
+//         arr.push(...containerArr);
+//         createMobileContainers(arr);
+//       } else {
+//         createMobileContainers(containerObj);
+//       }
+//     });
+//   });
+// }
 
-filterContent();
+// filterContent();
 
 //sort button onClick
 
@@ -748,27 +748,27 @@ starRatings.forEach((star, idx) => {
 
 /////Filter mobile containers on the basis of rating
 
-const price = document.querySelectorAll(".price-tag p");
-const ratingFilters = document.querySelectorAll(".rating-filter input");
+// const price = document.querySelectorAll(".price-tag p");
+// const ratingFilters = document.querySelectorAll(".rating-filter input");
 // console.log(ratingFilters);
 
-ratingFilters.forEach((filter) => {
-  filter.addEventListener("change", (event) => {
-    console.log(event.target.value);
-    if (filter.checked) {
-      console.log("yes");
-      let containerArr = containerObj.filter(
-        (item) => item.rating >= event.target.value
-      );
+// ratingFilters.forEach((filter) => {
+//   filter.addEventListener("change", (event) => {
+//     console.log(event.target.value);
+//     if (filter.checked) {
+//       console.log("yes");
+//       let containerArr = containerObj.filter(
+//         (item) => item.rating >= event.target.value
+//       );
 
-      arr.push(...containerArr);
-      createMobileContainers(arr);
-    } else {
-      console.log("no");
-      arr.pop();
-    }
-  });
-});
+//       arr.push(...containerArr);
+//       createMobileContainers(arr);
+//     } else {
+//       console.log("no");
+//       arr.pop();
+//     }
+//   });
+// });
 
 ///////filter by brand//////
 
@@ -781,7 +781,7 @@ ratingFilters.forEach((filter) => {
 //       if (checkBox.checked) {
 //         arr.push(checkBox.checked);
 //         console.log(arr.length);
-        
+
 //         // let containerArr = containerObj.filter(
 //         //   (item) => item.type === event.target.value
 //         // );
@@ -797,3 +797,153 @@ ratingFilters.forEach((filter) => {
 // }
 
 // filterContent();
+
+// this function applies all the selected
+// filters when a filter event is detected
+
+function applyFilters(data) {
+  let brandFilters = [];
+  let ratingFilters = [];
+  let priceFilters = [];
+
+  // get the brand elements
+
+  const l1 = document.querySelector(".apple");
+  const l2 = document.querySelector(".samsung");
+  const l3 = document.querySelector(".oppo");
+
+  if (l1.checked === true) {
+    brandFilters.push("APPLE");
+  }
+  if (l2.checked === true) {
+    brandFilters.push("SAMSUNG");
+  }
+  if (l3.checked === true) {
+    brandFilters.push("OPPO");
+  }
+
+  //get ratings elements
+
+  const s1 = document.querySelector(".four");
+  const s2 = document.querySelector(".three");
+
+  if (s1.checked === true) {
+    ratingFilters.push(4);
+  }
+  if (s2.checked === true) {
+    ratingFilters.push(3);
+  }
+
+  if (brandFilters.length) {
+    data = brandFilter(data, brandFilters);
+  }
+  if (ratingFilters.length) {
+    data = ratingFilter(data, ratingFilters);
+  }
+  console.log(brandFilters);
+
+  const minTag = document.querySelector("#min");
+  const maxTag = document.querySelector("#max");
+
+  // apply the render of rfData
+
+  createMobileContainers(data);
+}
+
+// This function sets up all the filters
+
+function setupFilters(data) {
+  // setup brand filters
+
+  const l1 = document.querySelector(".apple");
+  const l2 = document.querySelector(".samsung");
+  const l3 = document.querySelector(".oppo");
+
+  let selectedBrand = 0;
+  let check = "no";
+
+  l1.addEventListener("change", () => {
+    applyFilters(data);
+  });
+  l2.addEventListener("change", () => {
+    applyFilters(data);
+  });
+  l3.addEventListener("change", () => {
+    applyFilters(data);
+  });
+
+  // setup rating filters
+
+  const s1 = document.querySelector(".four");
+  const s2 = document.querySelector(".three");
+
+  s1.addEventListener("change", () => {
+    applyFilters(data);
+  });
+  s2.addEventListener("change", () => {
+    applyFilters(data);
+  });
+}
+
+setupFilters(containerObj);
+
+// an unused utility function to remove
+// an element from an array
+
+// function removeElementFromArray(list, value) {
+//   idx = list.findIndex((val) => {
+//     return val === value;
+//   });
+//   if (idx === -1) return;
+//   return list.splice(idx, 1);
+// }
+
+function brandFilter(data, brands) {
+  return data.filter((item) => {
+    return brands.includes(item.type);
+  });
+}
+
+function ratingFilter(data, ratings) {
+  return data.filter((item) => {
+    let match = false;
+    for (let i = 0; i < ratings.length; i++) {
+      if (item.rating >= ratings[i]) {
+        match = true;
+        break;
+      }
+    }
+    return match;
+  });
+}
+
+function priceFilter(data, min, max) {
+  // this function should take the whole data, min and max of the price range
+  // and return all items in data whose price range is between min and max
+  console.log(data);
+}
+
+// function filterByPrice() {
+//   const mobileContainer = document.querySelectorAll(".mobile-container");
+//   const minSelectTags = document.querySelector("#min");
+//   minSelectTags.addEventListener("change", () => {
+//     const priceTag = document.querySelectorAll(".price-tag p");
+//     for (i = 0; i < priceTag.length; i++) {
+//       // console.log(priceTag[i].innerHTML);
+//       // console.log(minSelectTags.value);
+//       if (+minSelectTags.value > +priceTag[i].innerHTML) {
+//         mobileContainer[i].style.display = "none";
+//       }
+//     }
+//   });
+
+//   const maxSelectTags = document.querySelector("#max");
+//   maxSelectTags.addEventListener("change", () => {
+//     const priceTag = document.querySelectorAll(".price-tag p");
+//     for (i = 0; i < priceTag.length; i++) {
+//       if (+maxSelectTags.value < +priceTag[i].innerHTML) {
+//         mobileContainer[i].style.display = "none";
+//       }
+//     }
+//   });
+// }
