@@ -1551,10 +1551,19 @@ function controller() {
 //   console.log('fn3');
 // }
 
-const myArrFn = (arg1, arg2) => {
-  console.log('arrow1', arg1, arg2);
-};
-const myArrFn2 = (arg1, arg2) => {
-  console.log('arrow2', arg1, arg2);
-};
-myArrFn(10, 20);
+// const myArrFn = (arg1, arg2) => {
+//   console.log('arrow1', arg1, arg2);
+// };
+// const myArrFn2 = (arg1, arg2) => {
+//   console.log('arrow2', arg1, arg2);
+// };
+// myArrFn(10, 20);
+
+// promise
+
+// fetch('api')
+// .then((data)=>data.json())
+// .then(()=>{
+//   console.log(data)
+// })
+// .catch(()=>{error})

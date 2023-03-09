@@ -1,4 +1,5 @@
 import { dealsTemplate, giftsTemplate, overviewTemplate } from './template.js';
+import a from './fetch.js'
 
 const elements = document.querySelector('.elements');
 const overviewList = document.querySelector('.overview-list');
@@ -11,10 +12,8 @@ const likedImageSVG = `<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="ht
 
 const editorsList = document.querySelectorAll('.editors');
 
-fetch(
-  'https://raw.githubusercontent.com/anannasreen/Training-Oct/main/Etsy/pageData.json'
-)
-  .then(response => response.json())
+  
+  a().then(response => response.json())
   .then(data => {
     const createNavBar = (divClass, objectList, elmType, itemClassName) => {
       for (let i = 0; i < objectList.length; i++) {
