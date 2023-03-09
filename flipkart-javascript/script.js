@@ -859,7 +859,7 @@ function setupFilters(data) {
   const l2 = document.querySelector(".samsung");
   const l3 = document.querySelector(".oppo");
 
-  let selectedBrand = 0;
+  let selectedBrand;
   let check = "no";
 
   l1.addEventListener("change", () => {
@@ -920,7 +920,7 @@ function ratingFilter(data, ratings) {
 function priceFilter(data, min, max) {
   // this function should take the whole data, min and max of the price range
   // and return all items in data whose price range is between min and max
-  console.log(data);
+  
 }
 
 // function filterByPrice() {
