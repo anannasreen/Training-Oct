@@ -43,7 +43,7 @@ function App() {
         <Hero heroName="Superman" />
       </ErrorBoundary>
       <ErrorBoundary>
-        <Hero heroName="Joker" />
+        <Hero heroName="Joker" /> 
       </ErrorBoundary> */}
       {/* <PortalDemo /> */}
       {/* <FRParentInput /> */}
