@@ -2,12 +2,20 @@ import React from "react";
 import "./App.css";
 import { Button } from "./components/Button";
 import { Container } from "./components/Container";
+import { Box } from "./components/context/Box";
+import { ThemeContextProvider } from "./components/context/ThemeContext";
+import { UserContextProvider } from "./components/context/UserContext";
 import { Greet } from "./components/Greet";
 import { Heading } from "./components/Heading";
 import { Input } from "./components/Input";
 import { Oscar } from "./components/Oscar";
 import { Person } from "./components/Person";
 import { PersonList } from "./components/PersonList";
+import { DomRef } from "./components/ref/DomRef";
+import { MutableRef } from "./components/ref/MutableRef";
+import { Counter } from "./components/state/Counter";
+import { LoggedIn } from "./components/state/LoggedIn";
+import { User } from "./components/state/User";
 import { Status } from "./components/Status";
 
 function App() {
@@ -33,9 +41,21 @@ function App() {
 
   return (
     <div className="App">
-      <Container
+      {/* <Counter message ="The count value is" /> */}
+      {/* <DomRef /> */}
+      {/* <MutableRef /> */}
+      {/* <UserContextProvider>
+        <User />
+      </UserContextProvider> */}
+      {/* <ThemeContextProvider>
+        <Box />
+      </ThemeContextProvider> */}
+      {/* <Counter /> */}
+      {/* <User /> */}
+      {/* <LoggedIn /> */}
+      {/* <Container
         styles={{ border: "1px solid black", padding: "1rem", color: "red" }}
-      />
+      /> */}
       {/* <Button
         handleClick={(event, id) => {
           console.log("Button Clicked", event, id);
