@@ -6,17 +6,19 @@ import Container from "./components/Container";
 import Garage from "./components/Garage";
 import FavColor from "./components/Header";
 import Hello from "./components/Hello";
+import Map from "./componentTwo.js/Map";
 
 function App() {
   return (
     <div className="App">
-      <Hello />
+      {/* <Map /> */}
+      {/* <Hello />
       <Car />
       <Header favcol="yellow" />
       <Garage />
       <FavColor />
       <ChangeColor />
-      <Container />
+      <Container /> */}
     </div>
   );
 }

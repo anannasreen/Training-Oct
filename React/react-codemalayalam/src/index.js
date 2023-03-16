@@ -1,17 +1,114 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import ListItem from "./list/ListItem";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import List from "./list/List";
+// import './index.css';
+// import App from './App';
+// import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  // <React.StrictMode>
+  //   <App />
+  // </React.StrictMode>
+
+  <div className="app">
+    <Header />
+    {/* <div className="app-header">
+      <span className="header-title">Code Malayalam</span>
+      <span>Home</span>
+      <span>Usage</span>
+      <span>Settings</span>
+      <span>Logout</span>
+    </div> */}
+
+    <div className="app-body">
+      <List />
+
+      {/* <div className="app-list">
+        <ListItem />
+        <ListItem />
+        <ListItem />
+        <ListItem />
+      </div> */}
+
+      {/* {ListItem()}
+        {ListItem()}
+        {ListItem()}
+        {ListItem()} */}
+
+      {/* <div className="list-item">
+          <hr />
+          <div className="list-title">
+            <h4>My Title One</h4>
+          </div>
+          <div className="list-decr">This is a very big description</div>
+          <div className="list-label">
+            <span>Label 1</span>
+            <span>Label 2</span>
+            <span>Label 3</span>
+          </div>
+        </div> 
+        <hr /> */}
+
+      {/* <div className="list-item">
+          <hr />
+          <div className="list-title">
+            <h4>My Title One</h4>
+          </div>
+          <div className="list-decr">This is a very big description</div>
+          <div className="list-label">
+            <span>Label 1</span>
+            <span>Label 2</span>
+            <span>Label 3</span>
+          </div>
+        </div>
+        <hr /> */}
+
+      {/* <div className="list-item">
+          <hr />
+          <div className="list-title">
+            <h4>My Title One</h4>
+          </div>
+          <div className="list-decr">This is a very big description</div>
+          <div className="list-label">
+            <span>Label 1</span>
+            <span>Label 2</span>
+            <span>Label 3</span>
+          </div>
+        </div>
+        <hr /> */}
+
+      {/* <div className="list-item">
+          <hr />
+          <div className="list-title">
+            <h4>My Title One</h4>
+          </div>
+          <div className="list-decr">This is a very big description</div>
+          <div className="list-label">
+            <span>Label 1</span>
+            <span>Label 2</span>
+            <span>Label 3</span>
+          </div>
+        </div>
+        <hr /> */}
+    </div>
+
+    {/* <div className="app-footer">
+      Copyright codemalayalam.in. All Right Reserved
+    </div> */}
+    <Footer />
+  </div>,
+  document.getElementById("root")
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// // If you want to start measuring performance in your app, pass a function
+// // to log results (for example: reportWebVitals(console.log))
+// // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+// reportWebVitals();
+
+// ReactDOM.render(
+
+// );
