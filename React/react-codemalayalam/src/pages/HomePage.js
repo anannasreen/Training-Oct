@@ -1,33 +1,55 @@
 import React from "react";
 import Tools from "../components/Tools";
-import ListItem from "./ListItem";
+import SimpleList from "../list/SimpleList";
 
-const arr = [
-  {
-    title: "Appointment for October",
-    descr: "The patient is rescheduled to October",
-    isActive: false,
-  },
-  {
-    title: "Appointment for November",
-    descr: "The patient is rescheduled to November",
-    isActive: true,
-  },
-  {
-    title: "Appointment for December",
-    descr: "The patient is rescheduled to December",
-    isActive: false,
-  },
-];
+// import ListItem from "./ListItem";
 
-class List extends React.Component {
+// const arr = [
+//   {
+//     id: 1,
+//     title: "Appointment for October",
+//     descr: "The patient is rescheduled to October",
+//     isActive: false,
+//   },
+//   {
+//     id: 2,
+//     title: "Appointment for November",
+//     descr: "The patient is rescheduled to November",
+//     isActive: true,
+//   },
+//   {
+//     id: 3,
+//     title: "Appointment for December",
+//     descr: "The patient is rescheduled to December",
+//     isActive: false,
+//   },
+// ];
+
+class HomePage extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      data: arr,
+      data: [],
       activeState: "all",
     };
+  }
+
+  componentDidMount() {
+    console.log("componentDidMount");
+    fetch("/data.json")
+      .then((data) => {
+        return data.json();
+      })
+      .then((data) => {
+        this.setState({
+          data: data,
+        });
+      });
+  }
+
+  componentDidUpdate() {
+    console.log("componentDidUpdate");
   }
 
   //   myAction(){
@@ -74,6 +96,21 @@ class List extends React.Component {
     });
   };
 
+  handleDelete = (item) => {
+    console.log("DELETE", item.id);
+    const newList = this.state.data.filter((element) => element.id !== item.id);
+
+    this.setState({
+      data: newList,
+    });
+  };
+
+  handleLabelClick = (arg) => {
+    this.setState({
+      activeState: arg,
+    });
+  };
+
   render() {
     // console.log("RENDER");
 
@@ -92,8 +129,13 @@ class List extends React.Component {
     });
 
     return (
-      <Tools onAction={this.onListChange.bind(this)}>
-        <div className="app-list">
+      <Tools labelValue={activeState} onAction={this.onListChange.bind(this)}>
+        <SimpleList
+          onLabelClick={this.handleLabelClick}
+          data={newList}
+          onAction={this.handleDelete}
+        />
+        {/* <div className="app-list">
           {newList.map((obj) => {
             return (
               <ListItem
@@ -101,16 +143,19 @@ class List extends React.Component {
                 title={obj.title}
                 descr={obj.descr}
                 isActive={obj.isActive}
+                onDelete={() => {
+                  this.handleDelete(obj);
+                }}
               />
             );
           })}
-          {/* <ListItem />
-              <ListItem />
-              <ListItem /> */}
-        </div>
+          <ListItem />
+          <ListItem />
+          <ListItem />
+        </div> */}
       </Tools>
     );
   }
 }
 
-export default List;
+export default HomePage;
