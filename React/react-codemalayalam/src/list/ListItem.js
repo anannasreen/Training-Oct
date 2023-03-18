@@ -1,36 +1,41 @@
-import React from "react";
-import Label from "./Label";
+import React, { useEffect } from "react";
+// import Label2 from './Label2';
+import LabelCopy from "./LabelCopy";
 import "./ListItem.css";
+import { useTooltip } from "../hooks/ourHooks";
+import Tooltip from "./Tooltip";
 
 function ListItem(props) {
-  // console.log(props);
-
+  console.log("RENDER LIST ITEM");
   const { title, descr, isActive, onDelete, onLabelClick } = props;
+
+  const [showTooltip, setShowTooltip, labelRef, refObj] = useTooltip();
+
+  useEffect(() => {
+    // console.log("Hello" + title);
+  });
 
   return (
     <div className="list-item">
       <div className="list-title">
         <h4>{title}</h4>
-        <label onClick={onDelete}>Delete</label>
+        <label
+          onClick={onDelete}
+          ref={labelRef}
+          onMouseEnter={() => setShowTooltip(true)}
+          onMouseLeave={() => setShowTooltip(false)}
+        >
+          Delete
+          <Tooltip
+            ref={refObj}
+            showTooltip={showTooltip}
+            message="Delete This"
+          />
+        </label>
       </div>
-
-      <div className="list-decr">{descr}</div>
-
+      <div className="list-descr">{descr}</div>
       <div className="list-label">
-        <Label
-          // onAction={() => {
-          //   console.log("Parent Clicked");
-          // }}
-          isActive={isActive}
-          onAction={onLabelClick}
-        />
-        {/* <Label />
-        <Label />
-        <Label /> */}
-
-        {/* <span>Label 1</span>
-        <span>Label 2</span>
-        <span>Label 3</span> */}
+        <LabelCopy isActive={isActive} onAction={onLabelClick} />
       </div>
     </div>
   );

@@ -2,8 +2,9 @@ import React from "react";
 import ListItem from "./ListItem";
 
 function SimpleList(props) {
-  const { data, onAction, onLabelClick } = props;
+  console.log("RENDER SIMPLELIST");
 
+  const { data, onAction, onLabelClick } = props;
   return (
     <div className="app-list">
       {data.map((obj) => {
@@ -23,5 +24,4 @@ function SimpleList(props) {
     </div>
   );
 }
-
 export default SimpleList;

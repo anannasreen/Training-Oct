@@ -3,7 +3,6 @@ import "./Header.css";
 
 function Header(props) {
   const { onMenuSelect } = props;
-
   return (
     <div className="app-header">
       <span className="header-title">Code Malayalam</span>

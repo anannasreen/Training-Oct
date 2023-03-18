@@ -1,14 +1,15 @@
 import React from "react";
-import AddNew from "./AddNew";
 import "./Tools.css";
+import AddNew from "./AddNew";
 
 class Tools extends React.Component {
   render() {
-    const { children, onAction, labelValue, onRefresh } = this.props;
+    console.log("RENDER TOOLS");
+    const { children, onAction, labelValue } = this.props;
 
     const onlyChild = React.Children.only(children);
     const count = React.Children.count(onlyChild.props.children);
-
+    // return children
     return (
       <div className="list-tools">
         <div className="list-header">
@@ -18,15 +19,11 @@ class Tools extends React.Component {
             <option value="non-active">Non Active</option>
           </select>
           <AddNew />
-          <div className="refresh" onClick={onRefresh}>
-            Refresh
-          </div>
         </div>
         {children}
-        <div className="list-footer">Total {count} items</div>
+        <div className="List-footer">Total {count} items</div>
       </div>
     );
   }
 }
-
 export default Tools;

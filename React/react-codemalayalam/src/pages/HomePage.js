@@ -1,32 +1,9 @@
 import React from "react";
 import Tools from "../components/Tools";
 import SimpleList from "../list/SimpleList";
+import JustInfo from "./JustInfo";
 
-const MyContext = React.createContext();
-const MyNewContext = React.createContext();
-
-// import ListItem from "./ListItem";
-
-// const arr = [
-//   {
-//     id: 1,
-//     title: "Appointment for October",
-//     descr: "The patient is rescheduled to October",
-//     isActive: false,
-//   },
-//   {
-//     id: 2,
-//     title: "Appointment for November",
-//     descr: "The patient is rescheduled to November",
-//     isActive: true,
-//   },
-//   {
-//     id: 3,
-//     title: "Appointment for December",
-//     descr: "The patient is rescheduled to December",
-//     isActive: false,
-//   },
-// ];
+import { MyContext, MyNewContext } from "./mycontexts";
 
 class HomePage extends React.Component {
   constructor(props) {
@@ -41,21 +18,7 @@ class HomePage extends React.Component {
   }
 
   componentDidMount() {
-    console.log("componentDidMount");
-    fetch("/data.json")
-      .then((data) => {
-        return data.json();
-      })
-      .then((data) => {
-        this.setState({
-          data: data,
-        });
-      });
-  }
-
-  handleRefresh() {
-    console.log("Refresh");
-    fetch("./data2.json")
+    fetch("/data2.json")
       .then((data) => {
         return data.json();
       })
@@ -67,7 +30,6 @@ class HomePage extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    // console.log("componentDidUpdate");
     if (prevState.message !== this.state.message) {
       this.setState({
         message: "Message",
@@ -75,48 +37,12 @@ class HomePage extends React.Component {
     }
   }
 
-  componentWillUnmout() {
+  componentWillUnmount() {
     console.log("componentWillUnmount");
   }
 
-  //   myAction(){
-  //     console.log('ON LIST CLICKED')
-  //   }
-
-  onListChange = (evt) => {
-    console.log(evt.target.value);
-    const value = evt.target.value;
-
-    // const newList = arr.filter((item) => {
-    //   if (value === "all") {
-    //     return true;
-    //   }
-    //   if (value === "active") {
-    //     return item.isActive === true;
-    //   }
-    //   if (value === "non-active") {
-    //     return item.isActive === false;
-    //   }
-    //   return false;
-    // });
-
-    // console.log(newList);
-    // // arr = newList;
-
-    // this.setState(
-    //   {
-    //     data: newList,
-    //   },
-    //   () => {
-    //     console.log("AFTER SETSTATE");
-    //   }
-    // );
-
-    // this.setState(() => {
-    //   return {
-    //     data: newList,
-    //   };
-    // });
+  onListChange = (e) => {
+    const value = e.target.value;
 
     this.setState({
       activeState: value,
@@ -124,7 +50,7 @@ class HomePage extends React.Component {
   };
 
   handleDelete = (item) => {
-    console.log("DELETE", item.id);
+    console.log("Delete", item);
     const newList = this.state.data.filter((element) => element.id !== item.id);
 
     this.setState({
@@ -144,16 +70,16 @@ class HomePage extends React.Component {
     });
   };
 
-  handleShowLabel = (evt) => {
+  handleShowLabel = (e) => {
     this.setState({
-      showLabel: evt.target.checked,
+      showLabel: e.target.checked,
     });
   };
 
   render() {
-    // console.log("RENDER");
+    console.log("RENDER HOME");
 
-    const { data, activeState } = this.state;
+    const { data, activeState, showLabel } = this.state;
 
     const newList = data.filter((item) => {
       if (activeState === "all") {
@@ -168,56 +94,39 @@ class HomePage extends React.Component {
       return false;
     });
 
+    const value = {
+      key: "value1",
+    };
+
     return (
       <div>
         <div>
           <input
-            checked={this.state.showLabel}
-            onChange={this.handleShowLabel}
+            defaultChecked={this.state.showLabel}
             type="checkbox"
-          />
+            onChange={this.handleShowLabel}
+          ></input>
           Show Label
         </div>
-
         <MyNewContext.Provider value={100}>
           <MyContext.Provider value={this.state.showLabel}>
             <Tools
               onAdd={this.handleAdd}
               labelValue={activeState}
-              onAction={this.onListChange.bind(this)}
+              onAction={this.onListChange}
               count={data.length}
-              onRefresh={this.handleRefresh}
             >
               <SimpleList
                 onLabelClick={this.handleLabelClick}
                 data={newList}
                 onAction={this.handleDelete}
               />
-              {/* <div className="app-list">
-          {newList.map((obj) => {
-            return (
-              <ListItem
-              key={obj.title}
-              title={obj.title}
-              descr={obj.descr}
-              isActive={obj.isActive}
-              onDelete={() => {
-                this.handleDelete(obj);
-              }}
-              />
-              );
-            })}
-            <ListItem />
-            <ListItem />
-            <ListItem />
-          </div> */}
             </Tools>
+            <JustInfo testValue={value} showLabel={showLabel} />
           </MyContext.Provider>
         </MyNewContext.Provider>
       </div>
     );
   }
 }
-
 export default HomePage;
-export { MyContext, MyNewContext };

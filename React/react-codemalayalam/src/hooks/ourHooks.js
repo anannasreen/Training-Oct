@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, useState } from "react";
+import { useRef, useState, useLayoutEffect, useDebugValue } from "react";
 
 function useTest() {
   const labelRef = useRef();
@@ -9,11 +9,15 @@ function useTooltip() {
   const [showTooltip, setShowTooltip] = useState(false);
 
   const labelRef = useRef();
-  //   return labelRef;
   const refObj = useRef();
+
+  useDebugValue("Tooltip showing " + showTooltip, (val) => {
+    return val;
+  });
 
   useLayoutEffect(() => {
     if (showTooltip) {
+      // console.log(labelRef.current);
       const width1 = labelRef.current.getBoundingClientRect().width;
       const width2 = refObj.current.getBoundingClientRect().width;
 

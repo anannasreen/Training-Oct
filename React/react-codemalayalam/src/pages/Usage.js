@@ -1,73 +1,59 @@
-import React, { useEffect, useState } from "react";
+import React, { useReducer } from "react";
 import "./Usage.css";
+import usageReducer, { TYPE } from "../reducers/usageReducers";
+
+const initialState = {
+  value: 0,
+};
 
 function Usage() {
-  const [value, setValue] = useState(0);
-  const [color, setColor] = useState("white");
-  const [boom, setBoom] = useState(false);
-  //   const [value,setValue] = arr;
-  //   const setValue = arr[1];
-
-  useEffect(() => {
-    setBoom(false);
-    const id = setTimeout(() => {
-      setBoom(true);
-    }, value * 1000);
-    return () => {
-      clearTimeout(id);
-    };
-    // console.log('Inside Use Effect' + value)
-    // return () => {
-    //   console.log("Clean up" + value);
-    // };
-  }, [value]);
+  const [state, dispatch] = useReducer(usageReducer, initialState);
 
   return (
-    <div>
-      <div className="usage">
-        <div className="usage-item" style={{ background: color }}>
-          <button
-            onClick={() => {
-              setValue((state) => {
-                return state + 1;
-              });
-            }}
-          >
-            Increment
-          </button>
-          <label>{value}</label>
-          <button
-            onClick={() => {
-              setValue((state) => {
-                return state - 1;
-              });
-            }}
-          >
-            Decrement
-          </button>
-        </div>
-
+    <div className="usage">
+      <div className="usage-item" style={{ background: state.color }}>
         <button
           onClick={() => {
-            setColor("green");
+            dispatch({
+              type: TYPE.CHANGE_VALUE,
+              payload: 1,
+            });
           }}
         >
-          Green
+          Increment
         </button>
-
+        <label>{state.value}</label>
         <button
           onClick={() => {
-            setColor("blue");
+            dispatch({
+              type: TYPE.CHANGE_VALUE,
+              payload: -1,
+            });
           }}
         >
-          Blue
+          Decrement
         </button>
       </div>
-      {boom && value ? (
-        <div className="boom">
-          <span>BOOM</span>
-        </div>
-      ) : null}
+      <button
+        onClick={() => {
+          dispatch({
+            type: TYPE.CHANGE_COLOR,
+            payload: "green",
+          });
+        }}
+      >
+        Green
+      </button>
+      <button
+        onClick={() => {
+          dispatch({
+            type: TYPE.CHANGE_COLOR,
+            payload: "orange",
+          });
+        }}
+      >
+        Orange
+      </button>
     </div>
   );
 }

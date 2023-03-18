@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import Footer from "./components/Footer";
 import Header from "./components/Header";
-import HomePage from "./pages/HomePage";
-import DummyPage from "./pages/DummyPage";
+import Footer from "./components/Footer";
+import HomePageFn from "./pages/HomePageFn";
 import Usage from "./pages/Usage";
+import DummyPage from "./pages/DummyPage";
 
 class MyApp extends Component {
   constructor(props) {
@@ -25,9 +25,9 @@ class MyApp extends Component {
 
     switch (currentSelected) {
       case "home":
-        return <HomePage />;
+        return <HomePageFn />;
       case "usage":
-        return <Usage key="usage" name="Usage" />;
+        return <Usage />;
       case "settings":
         return <DummyPage key="settings" name="Settings" />;
       case "logout":
@@ -41,14 +41,10 @@ class MyApp extends Component {
     return (
       <div className="app">
         <Header onMenuSelect={this.handleMenuSelect} />
-        <div className="app-body">
-          {/* <HomePage /> */}
-          {this.getPage()}
-        </div>
+        <div className="app-body">{this.getPage()}</div>
         <Footer />
       </div>
     );
   }
 }
-
 export default MyApp;

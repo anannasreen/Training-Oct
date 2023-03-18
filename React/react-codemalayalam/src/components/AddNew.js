@@ -10,8 +10,8 @@ class AddNew extends React.Component {
     };
   }
 
-  handleChange = (evt) => {
-    const value = evt.target.value;
+  handleChange = (event) => {
+    const value = event.target.value;
     this.setState({
       titleInput: value,
     });
