@@ -2,6 +2,9 @@ import React from "react";
 import Tools from "../components/Tools";
 import SimpleList from "../list/SimpleList";
 
+const MyContext = React.createContext();
+const MyNewContext = React.createContext();
+
 // import ListItem from "./ListItem";
 
 // const arr = [
@@ -32,6 +35,8 @@ class HomePage extends React.Component {
     this.state = {
       data: [],
       activeState: "all",
+      message: "",
+      showLabel: true,
     };
   }
 
@@ -48,8 +53,30 @@ class HomePage extends React.Component {
       });
   }
 
-  componentDidUpdate() {
-    console.log("componentDidUpdate");
+  handleRefresh() {
+    console.log("Refresh");
+    fetch("./data2.json")
+      .then((data) => {
+        return data.json();
+      })
+      .then((data) => {
+        this.setState({
+          data: data,
+        });
+      });
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    // console.log("componentDidUpdate");
+    if (prevState.message !== this.state.message) {
+      this.setState({
+        message: "Message",
+      });
+    }
+  }
+
+  componentWillUnmout() {
+    console.log("componentWillUnmount");
   }
 
   //   myAction(){
@@ -111,6 +138,18 @@ class HomePage extends React.Component {
     });
   };
 
+  handleAdd = (item) => {
+    this.setState({
+      data: [item, ...this.state.data],
+    });
+  };
+
+  handleShowLabel = (evt) => {
+    this.setState({
+      showLabel: evt.target.checked,
+    });
+  };
+
   render() {
     // console.log("RENDER");
 
@@ -126,36 +165,59 @@ class HomePage extends React.Component {
       if (activeState === "non-active") {
         return item.isActive === false;
       }
+      return false;
     });
 
     return (
-      <Tools labelValue={activeState} onAction={this.onListChange.bind(this)}>
-        <SimpleList
-          onLabelClick={this.handleLabelClick}
-          data={newList}
-          onAction={this.handleDelete}
-        />
-        {/* <div className="app-list">
+      <div>
+        <div>
+          <input
+            checked={this.state.showLabel}
+            onChange={this.handleShowLabel}
+            type="checkbox"
+          />
+          Show Label
+        </div>
+
+        <MyNewContext.Provider value={100}>
+          <MyContext.Provider value={this.state.showLabel}>
+            <Tools
+              onAdd={this.handleAdd}
+              labelValue={activeState}
+              onAction={this.onListChange.bind(this)}
+              count={data.length}
+              onRefresh={this.handleRefresh}
+            >
+              <SimpleList
+                onLabelClick={this.handleLabelClick}
+                data={newList}
+                onAction={this.handleDelete}
+              />
+              {/* <div className="app-list">
           {newList.map((obj) => {
             return (
               <ListItem
-                key={obj.title}
-                title={obj.title}
-                descr={obj.descr}
-                isActive={obj.isActive}
-                onDelete={() => {
-                  this.handleDelete(obj);
-                }}
+              key={obj.title}
+              title={obj.title}
+              descr={obj.descr}
+              isActive={obj.isActive}
+              onDelete={() => {
+                this.handleDelete(obj);
+              }}
               />
-            );
-          })}
-          <ListItem />
-          <ListItem />
-          <ListItem />
-        </div> */}
-      </Tools>
+              );
+            })}
+            <ListItem />
+            <ListItem />
+            <ListItem />
+          </div> */}
+            </Tools>
+          </MyContext.Provider>
+        </MyNewContext.Provider>
+      </div>
     );
   }
 }
 
 export default HomePage;
+export { MyContext, MyNewContext };

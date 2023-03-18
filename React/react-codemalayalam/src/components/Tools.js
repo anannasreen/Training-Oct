@@ -4,7 +4,7 @@ import "./Tools.css";
 
 class Tools extends React.Component {
   render() {
-    const { children, onAction, labelValue } = this.props;
+    const { children, onAction, labelValue, onRefresh } = this.props;
 
     const onlyChild = React.Children.only(children);
     const count = React.Children.count(onlyChild.props.children);
@@ -18,6 +18,9 @@ class Tools extends React.Component {
             <option value="non-active">Non Active</option>
           </select>
           <AddNew />
+          <div className="refresh" onClick={onRefresh}>
+            Refresh
+          </div>
         </div>
         {children}
         <div className="list-footer">Total {count} items</div>
