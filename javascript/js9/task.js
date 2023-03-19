@@ -6,6 +6,9 @@ let f = function () {
   sayHello("Anan, your time is " + Date.now());
 };
 
+function fn() {
+  setTimeout(f, 1000);
+}
 console.log("Current time now is " + Date.now());
 
-setTimeout(f, 1000);
+fn();
