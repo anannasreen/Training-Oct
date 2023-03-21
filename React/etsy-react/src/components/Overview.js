@@ -22,12 +22,13 @@ const OverviewSection = () => {
         <div className="background"></div>
         <ul className="overview-list">
           {overview.map((item) => {
+            const { name, url } = item;
             return (
-              <li key={item.name}>
-                <div className="overview-img" key={item.name}>
-                  <img src={item.img} />
+              <li key={name}>
+                <div className="overview-img" key={name}>
+                  <img src={url} />
                 </div>
-                <p>{item.name}</p>
+                <p>{name}</p>
               </li>
             );
           })}
