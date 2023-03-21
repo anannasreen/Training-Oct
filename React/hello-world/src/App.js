@@ -36,14 +36,28 @@ import User from "./components/User";
 import CounterTwo from "./components/CounterTwo";
 import ComponentC from "./components/ComponentC";
 import { UserProvider } from "./components/UserContext";
+import MyDiv from './components/MyDiv'
 
 function App() {
   return (
     <div className="App">
-      <UserProvider value='Vishwas'>
+      <MyDiv title="hello" subtitle="wonderful" />
+      <MyDiv title="bye" subtitle="not wonderful" />
+      <MyDiv title="this" subtitle="not" />
+      <MyDiv title="somany" subtitle="something" />
+    </div>
+  );
+}
+
+export default App;
+
+{
+  /* <UserProvider value='Vishwas'>
         <ComponentC />
-      </UserProvider>
-      {/* <CounterTwo
+      </UserProvider> */
+}
+{
+  /* <CounterTwo
         render={(count, incrementCount) => (
           <ClickCounterTwo count={count} incrementCount={incrementCount} />
         )}
@@ -52,13 +66,19 @@ function App() {
         render={(count, incrementCount) => (
           <HoverCounterTwo count={count} incrementCount={incrementCount} />
         )}
-      /> */}
-      {/* <ClickCounterTwo />
+      /> */
+}
+{
+  /* <ClickCounterTwo />
       <HoverCounterTwo />
-      <User render={(isLoggedIn) => (isLoggedIn ? "Vishwas" : "Guest")} /> */}
-      {/* <ClickCounter name='Vishwas' />
-      <HoverCounter /> */}
-      {/* <ErrorBoundary>
+      <User render={(isLoggedIn) => (isLoggedIn ? "Vishwas" : "Guest")} /> */
+}
+{
+  /* <ClickCounter name='Vishwas' />
+      <HoverCounter /> */
+}
+{
+  /* <ErrorBoundary>
         <Hero heroName="Batman" />
       </ErrorBoundary>
       <ErrorBoundary>
@@ -66,33 +86,77 @@ function App() {
       </ErrorBoundary>
       <ErrorBoundary>
         <Hero heroName="Joker" /> 
-      </ErrorBoundary> */}
-      {/* <PortalDemo /> */}
-      {/* <FRParentInput /> */}
-      {/* <FocusInput /> */}
-      {/* <RefsDemo /> */}
-      {/* <ParentComp /> */}
-      {/* <RegComp />
-      <PureComp /> */}
-      {/* <Table /> */}
-      {/* <FragmentDemo /> */}
-      {/* <LifecycleA /> */}
-      {/* <Form /> */}
-      {/* <h1 className="error">Error</h1>
-      <h1 className={styles.success}>Success</h1> */}
-      {/* <Inline /> */}
-      {/* <StyleSheet /> */}
-      {/* <NameList /> */}
-      {/* <UserGreeting /> */}
-      {/* <ParentComponent /> */}
-      {/* <EventBind /> */}
-      {/* <FunctionClick />
-      <ClassClick /> */}
-      {/* <Greet name="Diana" heroName="Wonder Woman" />
-      <Welcome name="Clark" heroName="Superman" /> */}
-      {/* <Counter /> */}
-      {/* <Message /> */}
-      {/* <Greet name="Clark" heroName="Superman">
+      </ErrorBoundary> */
+}
+{
+  /* <PortalDemo /> */
+}
+{
+  /* <FRParentInput /> */
+}
+{
+  /* <FocusInput /> */
+}
+{
+  /* <RefsDemo /> */
+}
+{
+  /* <ParentComp /> */
+}
+{
+  /* <RegComp />
+      <PureComp /> */
+}
+{
+  /* <Table /> */
+}
+{
+  /* <FragmentDemo /> */
+}
+{
+  /* <LifecycleA /> */
+}
+{
+  /* <Form /> */
+}
+{
+  /* <h1 className="error">Error</h1>
+      <h1 className={styles.success}>Success</h1> */
+}
+{
+  /* <Inline /> */
+}
+{
+  /* <StyleSheet /> */
+}
+{
+  /* <NameList /> */
+}
+{
+  /* <UserGreeting /> */
+}
+{
+  /* <ParentComponent /> */
+}
+{
+  /* <EventBind /> */
+}
+{
+  /* <FunctionClick />
+      <ClassClick /> */
+}
+{
+  /* <Greet name="Diana" heroName="Wonder Woman" />
+      <Welcome name="Clark" heroName="Superman" /> */
+}
+{
+  /* <Counter /> */
+}
+{
+  /* <Message /> */
+}
+{
+  /* <Greet name="Clark" heroName="Superman">
         <p>This is children props</p>
       </Greet>
       <Greet name="Bruce" heroName="Batman">
@@ -101,10 +165,8 @@ function App() {
       <Greet name="Diana" heroName="Wonder Woman" />
       <Welcome name="Clark" heroName="Superman" />
       <Welcome name="Bruce" heroName="Batman" />
-      <Welcome name="Diana" heroName="Wonder Woman" /> */}
-      {/* <Hello /> */}
-    </div>
-  );
+      <Welcome name="Diana" heroName="Wonder Woman" /> */
 }
-
-export default App;
+{
+  /* <Hello /> */
+}
