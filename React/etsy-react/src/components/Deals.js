@@ -9,7 +9,7 @@ const DealsSection = () => {
         return data.json();
       })
       .then((data) => {
-        console.log(data.deals);
+        // console.log(data.deals);
         setDeals(data.deals);
       });
   }, []);

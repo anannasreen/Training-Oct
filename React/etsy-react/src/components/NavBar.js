@@ -23,7 +23,7 @@ const NavBar = () => {
         return data.json();
       })
       .then((data) => {
-        console.log(data.list);
+        // console.log(data.list);
         setNav(data.list);
       });
   }, []);
@@ -33,11 +33,20 @@ const NavBar = () => {
       <ul className="elements">
         {nav.map((item) => {
           const { title, img } = item;
-          return (
-            <li className="list" key={title}>
-              {img === "" && img !== giftSVG ? title : giftSVG + title}
-            </li>
-          );
+          if (img === "" && img !== giftSVG) {
+            return (
+              <li className="list" key={title}>
+                {title}
+              </li>
+            );
+          } else {
+            return (
+              <li className="list" key={title}>
+                {giftSVG}
+                {title}
+              </li>
+            );
+          }
         })}
       </ul>
     </div>
