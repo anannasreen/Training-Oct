@@ -5,6 +5,7 @@ import GiftSection from "./giftElements/Gift";
 import Header from "./Header";
 import NavBar from "./NavBar";
 import OverviewSection from "./Overview";
+import SelectionList from "./SelectionList";
 
 function HomePage() {
   return (
@@ -14,6 +15,7 @@ function HomePage() {
       <OverviewSection />
       <DealsSection />
       <GiftSection />
+      {/* <SelectionList/> */}
       <Footer />
     </>
   );

@@ -457,6 +457,10 @@ header svg {
   border-radius: 50px;
   text-decoration: none;
 }
+.star-rating svg {
+  width: 14px;
+  height: 14px;
+}
 .subscription {
   background-color: #d7e6f5;
   padding: 18px 24px 36px 24px;

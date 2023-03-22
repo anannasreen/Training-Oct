@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-function SelctionList() {
+function SelectionList() {
   const [select, setSelect] = useState([]);
 
   useEffect(() => {
@@ -15,22 +15,22 @@ function SelctionList() {
   }, []);
 
   return (
-    <div className="deals">
-      <div className="deals-heading">
+    <div className="selection">
+      <div className="selection-heading">
         <h2>
-          Shop our selections<i class="fa-solid fa-arrow-right"></i>
+          Shop our selections <i className="fa-solid fa-arrow-right"></i>
         </h2>
         <p>Curated collections hand-picked by Etsy editors</p>
       </div>
 
-      <ul className="deals-items">
-        {deals.map((item) => {
+      <ul className="selection-items">
+        {select.map((item) => {
           return (
             <li key={item.name}>
-              <div className="deals-img">
+              <div className="selection-img">
                 <img src={item.img} />
               </div>
-              <div className="deals-txt">
+              <div className="selection-txt">
                 <p>{item.name}</p>
               </div>
             </li>
@@ -41,4 +41,4 @@ function SelctionList() {
   );
 }
 
-export default SelctionList;
+export default SelectionList;

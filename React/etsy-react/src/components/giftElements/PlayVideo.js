@@ -1,5 +1,7 @@
 import React from "react";
 
-function PlayVideo(){}
+function PlayVideo(e) {
+  e.target.play();
+}
 
-export default PlayVideo
+export default PlayVideo;

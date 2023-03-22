@@ -11,12 +11,12 @@ const playButtonSVG = (
   </svg>
 );
 
-function playButton(data, idx) {
-  if (data.urlType === "Video") {
+function PlayButton(props) {
+  if (props.value === "Video") {
     return <div className="play-btn">{playButtonSVG}</div>;
   } else {
     return "";
   }
 }
 
-export default playButton;
+export default PlayButton;
