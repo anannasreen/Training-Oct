@@ -7,6 +7,7 @@ import PauseVideo from "./PauseVideo";
 import PlayButton from "./PlayButton";
 import PlayVideo from "./PlayVideo";
 import LoopStar from "./Star";
+import CreateTooltip from "./ToolTip";
 
 const GiftSection = () => {
   const [gift, setGift] = useState([]);
@@ -35,17 +36,7 @@ const GiftSection = () => {
   );
 };
 
-// function starRating(data) {
-//   let x = "";
-
-//   for (let i = 0; i < data.ratingStar; i++) {
-//     x += "★";
-//   }
-//   return x;
-// }
-
 export function CreateGiftCards(props) {
-  // console.log(props);
   const {
     url,
     name,
@@ -71,7 +62,6 @@ export function CreateGiftCards(props) {
         <div className="price">
           <p className="priceActual">
             {currencySymbol}
-            {/* {discountPercentage(actualprice, discount)} */}
             <DiscountPercentage
               actualPrice={actualprice}
               discounts={discount}
@@ -84,8 +74,7 @@ export function CreateGiftCards(props) {
           <a href="">({discount}% off)</a>
         </div>
       </div>
-      <div className="gift-name">{name}</div>
-      {/* {createDeliveryIcon(props, id)} */}
+      {/* <CreateTooltip name={name}/> */}
       <CreateDeliveryIcon value={actualprice} />
     </div>
   );
@@ -118,15 +107,5 @@ function Video(props) {
     );
   }
 }
-
-// videos.forEach((video) => {
-//   video.addEventListener("mouseover", () => {
-//     video.play();
-//   });
-//   video.addEventListener("mouseleave", () => {
-//     video.pause();
-//     video.currentTime = 0;
-//   });
-// });
 
 export default GiftSection;

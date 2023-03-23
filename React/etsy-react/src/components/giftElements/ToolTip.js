@@ -1,4 +1,5 @@
-import React from "react";
+import { toBePartiallyChecked } from "@testing-library/jest-dom/dist/matchers";
+import React, { Component } from "react";
 
 // export const Tooltip = setTimeout(createTooltip, 1000);
 
@@ -12,3 +13,14 @@ import React from "react";
 // }
 
 // export default createTooltip
+
+// function CreateTooltip(props){
+//   const [hover,setHover]=useState(false)
+
+//   return(
+//     <div className="gift-name">{props.name}</div>
+//   )
+// }
+
+// export default CreateTooltip
+
