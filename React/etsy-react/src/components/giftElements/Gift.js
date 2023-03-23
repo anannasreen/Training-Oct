@@ -4,10 +4,9 @@ import DiscountPercentage from "./Discount";
 import HalfStar from "./HalfStar";
 import LikeTheImage from "./LikeImage";
 import PauseVideo from "./PauseVideo";
-import PlayButton from "./PlayButton";
 import PlayVideo from "./PlayVideo";
 import LoopStar from "./Star";
-import CreateTooltip from "./ToolTip";
+import PlayButton from "./PlayButton";
 
 const GiftSection = () => {
   const [gift, setGift] = useState([]);
@@ -81,6 +80,7 @@ export function CreateGiftCards(props) {
 }
 
 function Video(props) {
+  // console.log(props);
   if (props.value === "Photo") {
     return (
       <div className="gift-img">
@@ -101,8 +101,8 @@ function Video(props) {
           onMouseOver={PlayVideo}
           onMouseLeave={PauseVideo}
         ></video>
-        <PlayButton />
         <LikeTheImage />
+        <PlayButton value={props.value} />
       </div>
     );
   }

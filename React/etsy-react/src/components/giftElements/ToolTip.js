@@ -1,4 +1,3 @@
-import { toBePartiallyChecked } from "@testing-library/jest-dom/dist/matchers";
 import React, { Component } from "react";
 
 // export const Tooltip = setTimeout(createTooltip, 1000);
@@ -24,3 +23,8 @@ import React, { Component } from "react";
 
 // export default CreateTooltip
 
+function CreateTooltip() {
+    
+}
+
+export default CreateTooltip;

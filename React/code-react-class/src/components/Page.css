@@ -1,0 +1,15 @@
+.list{
+    background-color: blueviolet;
+    margin: 34px 30px;
+    padding: 30px;
+    color: white;
+    font-size: 19px;
+}
+
+button{
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}

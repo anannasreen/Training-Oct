@@ -23,62 +23,6 @@ const likedSVG = (
   </svg>
 );
 
-// class LikeTheImage extends Component {
-//   constructor() {
-//     super();
-
-//     this.state = {
-//       likeSVG: true,
-//     };
-//   }
-
-//   changeColor() {
-//     this.setState({ likeSVG: !this.state.likeSVG });
-//   }
-
-//   render() {
-//     return (
-//       <div className="like-gift" onClick={this.setState.bind(this.changeColor)}>
-//         {likeSVG}
-//       </div>
-//     );
-//   }
-// }
-
-// export function ChangeColor() {
-//   if (likeSVG) {
-//     return likedSVG;
-//   } else{
-//     return likedSVG
-//   }
-// }
-
-// function LikeTheImage() {
-//   const [like, setLike] = useState(false);
-
-//   return <div className="like-gift" onClick={ChangeColor}>{}</div>;
-// }
-
-// class LikeTheImage extends Component {
-//   state = {
-//     image: likeSVG,
-//   };
-
-//   onChange = () => {
-//     this.setState({
-//       image: likedSVG,
-//     });
-//   };
-
-//   render() {
-//     return (
-//       <div className="like-gift" onClick={this.onChange}>
-//         {this.state.image}
-//       </div>
-//     );
-//   }
-// }
-
 function LikeTheImage() {
   const [likeButton, setLikeButton] = useState(true);
 
