@@ -80,7 +80,7 @@ export function CreateGiftCards(props) {
 }
 
 function Video(props) {
-  // console.log(props);
+  console.log(props);
   if (props.value === "Photo") {
     return (
       <div className="gift-img">
