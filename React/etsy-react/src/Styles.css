@@ -60,7 +60,7 @@ header svg {
   width: 60px;
   height: 30px;
 }
-.filterbox {
+.filter-button {
   display: none;
 }
 .basket {
@@ -106,6 +106,9 @@ header svg {
 }
 .nav-bar {
   display: none;
+}
+input:focus {
+  outline: none;
 }
 .overview-heading {
   text-align: center;
@@ -254,6 +257,7 @@ header svg {
   grid-template-columns: 1fr 1fr;
 }
 .gift-items {
+  position: relative;
   border-radius: 10px;
   padding: 8px;
   /* padding-bottom: 40px; */
@@ -505,12 +509,18 @@ header svg {
   flex-direction: column;
 }
 .footer-tag {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 12px 0;
+  padding: 12px;
   gap: 6px;
+  max-width: 460px;
+  margin-inline: auto;
+}
+.footer-tag:hover .footer-tooltip-section {
+  display: flex;
 }
 .footer-tag p {
   text-decoration: underline;
@@ -650,7 +660,7 @@ footer svg {
   width: 100%;
   fill: #d7e6f5;
 }
-.footer-tag svg{
+.footer-tag svg {
   width: 36px;
 }
 .copyright span {
@@ -1404,19 +1414,29 @@ footer svg {
     max-width: 1400px;
     margin-inline: auto;
   }
-  .filterbox {
+  .filter-button {
     display: flex;
     height: 40px;
+    border: 1px solid black;
   }
-  .filterbox input {
-    font-size: 25px;
+  .filter-button input {
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+  }
+  .filter {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
   }
   .header-gift {
     display: flex;
     justify-content: space-between;
   }
-  .filterbox input::-webkit-inner-spin-button,
-  .filterbox input::-webkit-outer-spin-button {
+  .filter-button input::-webkit-inner-spin-button,
+  .filter-button input::-webkit-outer-spin-button {
     display: none;
   }
   .header-gift {

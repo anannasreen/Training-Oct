@@ -1,15 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import CreateDeliveryIcon from "./DeliveryIcon";
 import DiscountPercentage from "./Discount";
 import HalfStar from "./HalfStar";
-import LikeTheImage from "./LikeImage";
-import PauseVideo from "./PauseVideo";
-import PlayVideo from "./PlayVideo";
 import LoopStar from "./Star";
-import PlayButton from "./PlayButton";
+import CreateTooltip from "./ToolTip";
+import Video from "./Video";
 
 const GiftSection = () => {
   const [gift, setGift] = useState([]);
+  const priceValue = useRef();
 
   useEffect(() => {
     fetch("./data.json")
@@ -21,10 +20,27 @@ const GiftSection = () => {
       });
   }, []);
 
+  const listChange = () => {
+    const filterPrice = +priceValue.current.value;
+    const filterArr = gift.filter((element) => {
+      return DiscountPercentage(element) >= filterPrice;
+    });
+    setGift(filterArr);
+  };
+
+  // createTooltip();
+
   return (
     <section className="gift">
       <div className="header-gift">
         <h2>Popular gifts right now</h2>
+        {/* <CreateFilterButton /> */}
+        <div className="filter-button">
+          <input type="number" placeholder="Enter price..." ref={priceValue} />
+          <button className="filter" onClick={listChange}>
+            Filter
+          </button>
+        </div>
       </div>
       <div className="gift-list">
         {gift.map((item, idx) => {
@@ -36,6 +52,19 @@ const GiftSection = () => {
 };
 
 export function CreateGiftCards(props) {
+  const textElement = useRef();
+  const giftCard = useRef();
+
+  function CreateTooltip(e) {
+    let x = e.pageX - giftCard.current.offsetLeft + 20;
+    let y = e.pageY - giftCard.current.offsetTop + 20;
+
+    // console.log(x, y);
+
+    textElement.current.style.left = `${x}px`;
+    textElement.current.style.top = `${y}px`;
+  }
+
   const {
     url,
     name,
@@ -49,7 +78,12 @@ export function CreateGiftCards(props) {
     id,
   } = props.item;
   return (
-    <div className="gift-items" key={id}>
+    <div
+      className="gift-items"
+      key={id}
+      onMouseOver={CreateTooltip}
+      ref={giftCard}
+    >
       <Video value={urlType} url={url} video={video} />
       <div className="gift-txt">
         <h3>{name}</h3>
@@ -61,10 +95,7 @@ export function CreateGiftCards(props) {
         <div className="price">
           <p className="priceActual">
             {currencySymbol}
-            <DiscountPercentage
-              actualPrice={actualprice}
-              discounts={discount}
-            />
+            <DiscountPercentage actualprice={actualprice} discount={discount} />
           </p>
           <span>
             {currencySymbol}
@@ -73,39 +104,41 @@ export function CreateGiftCards(props) {
           <a href="">({discount}% off)</a>
         </div>
       </div>
-      {/* <CreateTooltip name={name}/> */}
       <CreateDeliveryIcon value={actualprice} />
+      <div className="gift-name" ref={textElement}>
+        {name}
+      </div>
     </div>
   );
 }
 
-function Video(props) {
-  console.log(props);
-  if (props.value === "Photo") {
-    return (
-      <div className="gift-img">
-        <img src={props.url} />;
-        <LikeTheImage />
-      </div>
-    );
-  } else if (props.value === "Video") {
-    return (
-      <div className="gift-img">
-        <video
-          poster={props.url}
-          className="video"
-          loop={true}
-          muted={true}
-          type="video/mp4"
-          src={props.video}
-          onMouseOver={PlayVideo}
-          onMouseLeave={PauseVideo}
-        ></video>
-        <LikeTheImage />
-        <PlayButton value={props.value} />
-      </div>
-    );
-  }
-}
+// function Video(props) {
+//   console.log(props);
+//   if (props.value === "Photo") {
+//     return (
+//       <div className="gift-img">
+//         <img src={props.url} />;
+//         <LikeTheImage />
+//       </div>
+//     );
+//   } else if (props.value === "Video") {
+//     return (
+//       <div className="gift-img">
+//         <video
+//           poster={props.url}
+//           className="video"
+//           loop={true}
+//           muted={true}
+//           type="video/mp4"
+//           src={props.video}
+//           onMouseOver={PlayVideo}
+//           onMouseLeave={PauseVideo}
+//         ></video>
+//         <LikeTheImage />
+//         <PlayButton value={props.value} />
+//       </div>
+//     );
+//   }
+// }
 
 export default GiftSection;
