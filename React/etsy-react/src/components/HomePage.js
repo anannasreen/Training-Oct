@@ -1,11 +1,11 @@
 import React from "react";
-import DealsSection from "./Deals";
-import GiftSection from "./giftElements/Gift";
-import Header from "./Header";
-import NavBar from "./NavBar";
-import OverviewSection from "./Overview";
-import SelectionList from "./SelectionList";
+import DealsSection from "./elements/Deals";
+import Header from "./elements/Header";
+import NavBar from "./elements/NavBar";
+import OverviewSection from "./elements/Overview";
+import SelectionList from "./elements/SelectionList";
 import Footer from "./footerElements/Footer";
+import GiftSection from "./giftElements/Gift";
 
 function HomePage() {
   return (
@@ -15,7 +15,7 @@ function HomePage() {
       <OverviewSection />
       <DealsSection />
       <GiftSection />
-      {/* <SelectionList/> */}
+      <SelectionList/>
       <Footer />
     </>
   );
