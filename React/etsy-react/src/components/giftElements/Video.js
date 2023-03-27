@@ -9,7 +9,7 @@ function Video(props) {
   if (props.value === "Photo") {
     return (
       <div className="gift-img">
-        <img src={props.url} />;
+        <img src={props.url} />
         <LikeTheImage />
       </div>
     );
