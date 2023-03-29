@@ -1,15 +1,30 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-body{
-    display: flex;
-    height: 100vh;
+body {
+  display: flex;
+  height: 100vh;
 }
-.word-box{
-    border: 1px solid #222;
-    margin: 10vh;
-    height: 80vh;
-    width: 90vw;
+.word-box {
+  /* border: 1px solid #222;
+  margin: 10vh;
+  height: 80vh; */
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  padding: 80px;
+}
+.word-list {
+  display: flex;
+  flex-direction: column;
+}
+.word-list button {
+  padding: 5px;
+  background-color: #6aaa64;
+  border: none;
+  color: white;
+  font-weight: 600;
+  margin: 3px;
 }

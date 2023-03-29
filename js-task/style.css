@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  flex-direction: column;
+}
+.school-name {
+  display: flex;
+  padding: 50px;
+  font-size: 75px;
+  justify-content: center;
+}
+.nav-bar {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  background-color: black;
+}
+.nav {
+  padding: 20px;
+  color: white;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+.show {
+  background-color: white;
+  color: black;
+}
+.about-school {
+  display: flex;
+  max-width: 80%;
+  margin-inline: auto;
+  gap: 20px;
+}
+.about {
+  line-height: 2;
+  font-size: 18px;
+  padding: 20px 0;
+}
+.notification {
+  text-decoration: none;
+  font-family: sans-serif;
+  padding: 10px;
+  letter-spacing: 1px;
+  color: rgb(5, 5, 101);
+  font-size: 20px;
+  font-style: italic;
+  position: relative;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  animation-name: notification;
+}
+@keyframes notification {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  100% {
+    top: 100%;
+    left: 100%;
+  }
+}
+.home-page.active,
+.about-page.active,
+.contact-page.active,
+.login-page.active {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-page,
+.about-page,
+.contact-page,
+.login-page {
+  display: none;
+}
