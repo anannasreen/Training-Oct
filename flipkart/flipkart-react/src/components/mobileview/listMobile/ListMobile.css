@@ -1,0 +1,7 @@
+.list-mobile {
+  display: flex;
+}
+.list-img img {
+  width: 33.334vw;
+  margin-top: -5px;
+}

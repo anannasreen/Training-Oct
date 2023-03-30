@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.nav-mobile {
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+}
+.nav-img {
+  display: flex;
+}
+.nav-img img {
+  width: 18.32vw;
+  object-fit: contain;
+}
+.nav-mobile::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,25 @@
+/* .carousel{
+    overflow: hidden;
+}
+.inner{
+    white-space: nowrap;
+    transition: transform 0.3s;
+}
+.carousel-item{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+} */
+.carousel-mobile {
+  display: flex;
+  overflow: hidden;
+}
+.carousel-img {
+  transform: translate(0);
+}
+.carousel-img img {
+  width: 100vw;
+  /* height: 15.926vh; */
+  object-fit: contain;
+}

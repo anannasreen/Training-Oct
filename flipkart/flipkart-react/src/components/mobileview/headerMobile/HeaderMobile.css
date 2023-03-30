@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: Roboto-regular;
+  src: url("https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/fonts/roboto-regular.woff2");
+}
+@font-face {
+  font-family: Roboto-medium;
+  src: url("https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/fonts/roboto-medium.woff2");
+}
+body {
+  font-family: Roboto-regular;
+}
+header {
+  background-color: rgba(40, 116, 240, 1);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.header-mobile {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.header-elements-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hamburger {
+  width: 42px;
+  padding-top: 4px;
+}
+.hamburger img {
+  width: 20px;
+  height: 20px;
+}
+.header-nav-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo-mobile {
+  width: 85px;
+  height: 32px;
+  padding-top: 2px;
+}
+.logo-mobile img {
+  width: 100%;
+  height: 100%;
+}
+.login-mobile {
+  color: #eaeaea;
+  width: 90px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2px;
+}
+.cart-mobile,
+.wishlist-mobile {
+  width: 42px;
+  padding-top: 3px;
+}
+.wishlist-mobile img {
+  height: 16px;
+  width: 17px;
+}
+.header-searchbar {
+  display: flex;
+  background-color: #fff;
+  width: 96%;
+  margin: 7px auto;
+  border-radius: 2px;
+}
+.searchbar input {
+  border: none;
+  width: 100%;
+}
+.searchbar {
+  width: 100%;
+  display: flex;
+}
+.search-button img {
+  width: 14px;
+  height: 14px;
+  margin: 12px 10px;
+  display: flex;
+}
+.searchbar input::placeholder {
+  font-size: 14px;
+  color: #878787;
+  font-family: Roboto-regular;
+}
