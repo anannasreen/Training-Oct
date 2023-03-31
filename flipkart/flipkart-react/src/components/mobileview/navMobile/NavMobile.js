@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import fetchData from "../../../fetchData";
-import './NavMobile.css'
+import "./NavMobile.css";
 
 function CreateNavMobile() {
   const [nav, setNav] = useState([]);
@@ -19,7 +19,7 @@ function CreateNavMobile() {
       {nav?.navData?.map((item) => {
         return (
           <div className="nav-img" key={item}>
-            <img src={item} />
+            <img src={item} alt="offers" />
           </div>
         );
       })}
