@@ -12,7 +12,7 @@ function CreateOffersList() {
     }
     offersData();
   }, []);
-  console.log(offers.offersData);
+  // console.log(offers.offersData);
 
   return (
     <div className="offer-mobile">

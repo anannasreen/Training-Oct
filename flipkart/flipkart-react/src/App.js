@@ -1,18 +1,10 @@
 import "./App.css";
-import CreateCarousel from "./components/mobileview/carousel/Carousel";
-import CreateHeader from "./components/mobileview/headerMobile/HeaderMobile";
-import CreateList from "./components/mobileview/listMobile/ListMobile";
-import CreateNavMobile from "./components/mobileview/navMobile/NavMobile";
-import CreateOffersList from "./components/mobileview/offers/Offers";
+import GenerateHomepageMobile from "./components/HomePage/HomePageMobile";
 
 function App() {
   return (
     <div className="App">
-      <CreateHeader />
-      <CreateNavMobile />
-      <CreateCarousel />
-      <CreateList />
-      <CreateOffersList />
+      <GenerateHomepageMobile />
     </div>
   );
 }

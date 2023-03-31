@@ -1,0 +1,9 @@
+.homepage-mobile {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1030px) {
+  .homepage-mobile {
+    display: none;
+  }
+}
