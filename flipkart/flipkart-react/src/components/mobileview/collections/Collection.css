@@ -97,7 +97,7 @@
   display: flex;
   align-items: center;
 }
-button {
+.button button {
   background-color: #0084ff;
   border-radius: 4px;
   padding: 8px 12px;
@@ -106,7 +106,7 @@ button {
   color: white;
   font-family: none;
 }
-button img {
+.button button img {
   width: 10px;
   height: 10px;
 }

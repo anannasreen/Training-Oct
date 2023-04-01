@@ -2,8 +2,14 @@
   display: flex;
   flex-direction: column;
 }
+.homepage-desktop{
+  display: none;
+}
 @media screen and (min-width: 1030px) {
   .homepage-mobile {
     display: none;
+  }
+  .homepage-desktop {
+    display: flex;
   }
 }

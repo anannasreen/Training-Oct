@@ -1,0 +1,141 @@
+.header-desktop {
+  display: flex;
+  max-width: 1248px;
+  margin-inline: auto;
+  justify-content: space-between;
+  width: 100%;
+}
+.header-list {
+  display: flex;
+  align-items: center;
+  width: 58%;
+}
+.header-elements {
+  display: flex;
+  align-items: center;
+  /* width: 100%; */
+  white-space: nowrap;
+}
+.logo {
+  min-width: 137px;
+  text-align: right;
+  height: 56px;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: center;
+}
+.logo img {
+  width: 75px;
+  height: 20.11px;
+}
+.logo-text a {
+  text-decoration: none;
+  font-size: 11px;
+  font-style: italic;
+  color: #f0f0f0;
+}
+.logo-text a img {
+  width: 10px;
+  height: 10px;
+}
+.logo-text a span {
+  color: #ffe500;
+  font-weight: 600;
+}
+.search-box {
+  display: flex;
+  background-color: white;
+  height: 36px;
+  min-width: 304px;
+  /* width: calc(100%-540px); */
+  width: 100%;
+  margin: 0 auto 0 12px;
+}
+.search-box input {
+  border: none;
+  width: 100%;
+  padding: 0 16px;
+}
+.header-nav-desktop {
+  color: white;
+  line-height: 20px;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+  margin: 0 20px;
+  max-width: 150px;
+}
+.header-elements button {
+  border: none;
+  color: #2874f0;
+  padding: 5px 40px;
+  background-color: white;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 2px;
+  height: 32px;
+  max-width: 150px;
+  margin-inline: auto;
+}
+.search-button-desktop {
+  padding: 4px 12px 0 8px;
+  display: flex;
+  align-items: center;
+}
+.search-button-desktop img {
+  width: 20px;
+  height: 20px;
+}
+.more img {
+  transform: rotate(-90deg);
+}
+.more {
+  position: relative;
+  cursor: pointer;
+  white-space: nowrap;
+  display: flex;
+  gap: 10px;
+}
+.dropdown {
+  position: absolute;
+  border: #f0f0f0;
+  border-radius: 3px;
+  top: 28px;
+  right: -100px;
+}
+.dropdown-list {
+  background-color: white;
+  border: 1px solid #f0f0f0;
+}
+.dropdown-item img {
+  transform: rotate(360deg);
+}
+.dropdown-item {
+  color: #202020;
+  font-weight: 400;
+  text-align: left;
+  list-style-type: none;
+  padding: 16px 12px;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  gap: 5px;
+}
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid white;
+  position: relative;
+  left: 80px;
+}
+.dropdown {
+  display: none;
+}
+.more:hover .dropdown {
+  display: flex;
+  flex-direction: column;
+}
+.more:hover .arrow {
+  transform: rotate(90deg);
+}
