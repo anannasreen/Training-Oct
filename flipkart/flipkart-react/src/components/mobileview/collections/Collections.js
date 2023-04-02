@@ -36,14 +36,16 @@ function CreateCollectionList() {
       </div>
       <div className="collections">
         {collection?.collectionData?.map((item) => {
+          const { title, url, discount } = item;
+
           return (
-            <div className="collection-list" key={item.title}>
+            <div className="collection-list" key={title}>
               <div className="collection-img">
-                <img src={item.url} alt="collection" />
+                <img src={url} alt="collection" />
               </div>
               <div className="collection-title">
-                <span>{item.title}</span>
-                <p>{item.discount}</p>
+                <span>{title}</span>
+                <p>{discount}</p>
               </div>
             </div>
           );

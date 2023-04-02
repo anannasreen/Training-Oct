@@ -1,0 +1,42 @@
+.carousel-desktop {
+  display: flex;
+  transform: translate(0);
+  max-width: 1680px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+}
+.carousel-desktop-img {
+  width: 100vw;
+  height: 280px;
+  object-fit: contain;
+  left: -50%;
+  transform: translate(-50%);
+}
+.arrow-left,
+.arrow-right {
+  position: absolute;
+  background-color: white;
+  z-index: 2;
+  width: 47px;
+  height: 104px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.arrow-left {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.arrow-left img,
+.arrow-right img {
+  height: 27px;
+  width: 15px;
+}
+.arrow-right {
+  right: 0;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  transform: rotate(180deg);
+}

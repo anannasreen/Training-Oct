@@ -80,46 +80,188 @@
       "discount": "Min. 50% Off"
     }
   ],
-  "navDateDesktop": [
+  "navDataDesktop": [
     {
       "url": "https://rukminim1.flixcart.com/flap/128/128/image/29327f40e9c4d26b.png?q=100",
-      "title": "Grocery"
+      "title": "Grocery",
+      "list": ""
     },
     {
       "url": "https://rukminim1.flixcart.com/flap/128/128/image/22fddf3c7da4c4f4.png?q=100",
-      "title": "Mobiles"
+      "title": "Mobiles",
+      "list": ""
     },
     {
       "url": "https://rukminim1.flixcart.com/fk-p-flap/128/128/image/d34810848b2895c9.png?q=100",
-      "title": "Fashion"
+      "title": "Fashion",
+      "list": [
+        {
+          "title": "Men's Top Wear",
+          "features": [
+            "All",
+            "Men's T-Shirts",
+            "Men's Casual Shirts",
+            "Men's Formal Shirts",
+            "Men's Kurtas",
+            "Men's Ethnic Sets",
+            "Men's Blazers",
+            "Men's Raincoat",
+            "Men's Windcheaters",
+            "Men's Suit",
+            "Men's Fabrics"
+          ]
+        },
+        {
+          "title": "Men's Bottom Wear",
+          "features": [
+            "All",
+            "Men's Jeans",
+            "Men's Trousers",
+            "Men's Trackpants",
+            "Men's Shorts",
+            "Men's Cargos",
+            "Men's Threefourths",
+            "Men's Pyjamas & Loungepants",
+            "Men's Dhoti",
+            "Men's Ethnic Pyjama"
+          ]
+        },
+        {
+          "title": "Women Ethnic",
+          "features": [
+            "All",
+            "Women Saree",
+            "Women Kurtas & Kurtis",
+            "Women Kurta Sets & Salwar Suits",
+            "Ethnic Dresses",
+            "Women Dress Materials",
+            "Women Dress Materials",
+            "Women Gowns",
+            "Women Lehenga Cholis",
+            "Women Leggings & Patialas",
+            "Women Palazzos & Shararas",
+            "Women Blouse",
+            "Women Dupatta"
+          ]
+        },
+        {
+          "title": "Women Western",
+          "features": []
+        },
+        {
+          "title": "Men Footwear",
+          "features": []
+        },
+        {
+          "title": "Women Footwear",
+          "features": []
+        },
+        {
+          "title": "Watches and Accessories",
+          "features": []
+        },
+        {
+          "title": "Bags, Suitcases & Luggage",
+          "features": []
+        },
+        {
+          "title": "Kids",
+          "features": []
+        },
+        {
+          "title": "Essentials",
+          "features": []
+        },
+        {
+          "title": "Winter",
+          "features": []
+        }
+      ]
     },
     {
       "url": "https://rukminim1.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100",
-      "title": "Electronics"
+      "title": "Electronics",
+      "list": [
+        {
+          "title": "Audio"
+        },
+        {
+          "title": "Electronics GST Store"
+        },
+        {
+          "title": "Cameras & Accessories"
+        },
+        {
+          "title": "Computer Peripherals"
+        },
+        {
+          "title": "Gaming"
+        },
+        {
+          "title": "Health & Personal Care"
+        },
+        {
+          "title": "Laptop Accessories"
+        },
+        {
+          "title": "Laptop and Desktop"
+        },
+        {
+          "title": "Mobile Accessory"
+        },
+        {
+          "title": "Powerbank"
+        },
+        {
+          "title": "Smart Home automation"
+        },
+        {
+          "title": "Smart Wearables"
+        },
+        {
+          "title": "Storage"
+        },
+        {
+          "title": "Tablets"
+        }
+      ]
     },
     {
       "url": "https://rukminim1.flixcart.com/flap/128/128/image/ab7e2b022a4587dd.jpg?q=100",
-      "title": "Home"
+      "title": "Home",
+      "list": []
     },
     {
       "url": "https://rukminim1.flixcart.com/flap/128/128/image/0ff199d1bd27eb98.png?q=100",
-      "title": "Appliances"
+      "title": "Appliances",
+      "list": ""
     },
     {
       "url": "https://rukminim1.flixcart.com/flap/128/128/image/71050627a56b4693.png?q=100",
-      "title": "Travel"
+      "title": "Travel",
+      "list": ""
     },
     {
       "url": "https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100",
-      "title": "Top Offers"
+      "title": "Top Offers",
+      "list": ""
     },
     {
       "url": "https://rukminim1.flixcart.com/flap/128/128/image/dff3f7adcf3a90c6.png?q=100",
-      "title": "Beauty, Toys & More"
+      "title": "Beauty, Toys & More",
+      "list": []
     },
     {
       "url": "https://rukminim1.flixcart.com/fk-p-flap/128/128/image/05d708653beff580.png?q=100",
-      "title": "Two Wheelers"
+      "title": "Two Wheelers",
+      "list": []
     }
+  ],
+  "carouselDesktop": [
+    "https://rukminim1.flixcart.com/fk-p-flap/1688/280/image/07ab097e1ede5d0e.jpg?q=50",
+    "https://rukminim1.flixcart.com/fk-p-flap/1688/280/image/f7d0dcc111d27823.jpg?q=50",
+    "https://rukminim1.flixcart.com/fk-p-flap/1688/280/image/d5a4c22fa5edbeb3.jpg?q=50",
+    "https://rukminim1.flixcart.com/fk-p-flap/1688/280/image/f827f8054dbd984a.jpg?q=50",
+    "https://rukminim1.flixcart.com/fk-p-flap/1688/280/image/74f1b7b7046999b2.jpg?q=50"
   ]
 }

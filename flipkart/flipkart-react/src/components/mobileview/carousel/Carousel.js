@@ -17,28 +17,10 @@ function CreateCarousel() {
   const data = carousel.carouselData;
 
   const length = data?.length;
-  // console.log(length);
-  // console.log(carousel.carouselData)
 
   const CallIndex = () => {
-    // if (index < length) {
-    // setIndex(index);
-    // index = index + 1;
-    // }
-    // return index
-
-    // if (index === 8) {
-    //   setIndex(0);
-    // }
-
     setIndex(index === length - 1 ? 0 : index + 1);
   };
-
-  // useEffect(() => {
-  //   setInterval(CallIndex, 2000);
-  //   // clearInterval(i);
-  // }, []);
-  // console.log(index);
 
   useEffect(() => {
     setTimeout(CallIndex, 2000);
