@@ -30,13 +30,16 @@ function CreateCarouselDesktop() {
   });
 
   const handleClickLeft = () => {
-    image.current.style.transform = `translateX(${101}%)`;
-    console.log(image);
+    // image.current.style.transform = `translateX(${101}%)`;
+    // image.current.style.transition = "transform ease-in-out 0.45s";
+    // console.log(image.current);
+    // setIndex(index === length - 1 ? 0 : index + 1);
   };
+  // console.log(index);
 
   const handleClickRight = () => {
-    image.current.style.transform = `translateX(${-101}%)`;
-    console.log(image);
+    image.current.style.transform = `translateX(${-100}%)`;
+    console.log(image.current);
   };
 
   return (
