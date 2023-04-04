@@ -1,4 +1,5 @@
 import React from "react";
+import GenerateFooterSection from "../desktopview/footer/Footer";
 import CreateHeaderDesktop from "../desktopview/Header/Header";
 import GenerateMainPage from "../desktopview/mainSection/MainPage";
 import CreateNavDesktop from "../desktopview/navBar/NavBar";
@@ -9,6 +10,7 @@ function GenerateHomepageDesktop() {
       <CreateHeaderDesktop />
       <CreateNavDesktop />
       <GenerateMainPage />
+      <GenerateFooterSection />
     </div>
   );
 }

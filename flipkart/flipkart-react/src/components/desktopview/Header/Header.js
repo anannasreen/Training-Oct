@@ -4,6 +4,7 @@ import cart from "./../assets/cart.svg";
 import arrowDown from "./../assets/arrowDown.svg";
 import "./Header.css";
 import DropdownData from "./Dropdown";
+import CreateLoginDropDown from "./LoginDropdown";
 
 function CreateHeaderDesktop() {
   return (
@@ -33,10 +34,14 @@ function CreateHeaderDesktop() {
           </div>
         </div>
         <div className="header-elements">
-          <button>Login</button>
+          <button>
+            Login
+            <CreateLoginDropDown />
+          </button>
           <div className="header-nav-desktop">Become a Seller</div>
           <div className="header-nav-desktop more">
-            More <img className="arrow" src={arrowDown} />
+            More
+            <img className="arrow" src={arrowDown} />
             <DropdownData />
           </div>
           <div className="header-nav-desktop">

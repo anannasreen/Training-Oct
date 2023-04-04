@@ -15,11 +15,11 @@ function CreateDropDown() {
   return (
     <div className="dropdown-desktop">
       <ul>
-        {list?.navDataDesktop?.map((item) => {
+        {list?.navDataDesktop?.list?.map((item) => {
           console.log(item.list);
           return (
             <li className="nav-dropdown" key={item.title}>
-                
+              {item.title}
             </li>
           );
         })}

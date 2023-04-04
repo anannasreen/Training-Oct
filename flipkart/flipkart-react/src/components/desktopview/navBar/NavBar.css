@@ -1,6 +1,6 @@
 .nav-desktop {
   border-bottom: 0.5px solid #c7c4c4;
-  box-shadow: 0 1px 1px 0 rgba(0,0,0,.16);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.16);
 }
 .nav-desktop ul {
   display: flex;
@@ -36,13 +36,13 @@
 .nav-text {
   color: #212121;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   display: flex;
   gap: 8px;
 }
 .nav-text img {
   transform: rotate(-90deg);
 }
-.nav-list{
+.nav-list {
   position: relative;
 }

@@ -1,13 +1,23 @@
-body {
+body,h2 {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Roboto";  
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/fonts/roboto-regular.woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/fonts/roboto-medium.woff2");
+  font-weight: 500;
 }

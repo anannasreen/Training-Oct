@@ -41,7 +41,7 @@
 }
 .logo-text a span {
   color: #ffe500;
-  font-weight: 600;
+  font-weight: 500;
 }
 .search-box {
   display: flex;
@@ -60,7 +60,7 @@
 .header-nav-desktop {
   color: white;
   line-height: 20px;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.1px;
   margin: 0 20px;
   max-width: 150px;
@@ -76,6 +76,7 @@
   height: 32px;
   max-width: 150px;
   margin-inline: auto;
+  position: relative;
 }
 .search-button-desktop {
   padding: 4px 12px 0 8px;
@@ -131,16 +132,41 @@
   left: 80px;
 }
 .dropdown {
+  /* opacity: 0; */
   display: none;
 }
 .more:hover .dropdown {
   display: flex;
   flex-direction: column;
+  /* opacity: 1;
+  transition: opacity ease-in-out 0.4s; */
 }
 .more:hover .arrow {
   transform: rotate(-270deg);
   transition-duration: 0.5s;
 }
-.dropdown li:hover{
+.dropdown li:hover {
   background-color: rgba(251, 251, 251, 0.767);
+}
+.header-elements button:hover .dropdown {
+  display: flex;
+  flex-direction: column;
+  /* opacity: 1;
+  transition: opacity ease-in-out 0.4s; */
+}
+.header-elements button .dropdown {
+  left: -50px;
+  width: 250px;
+}
+.header-elements button .dropdown .triangle {
+  left: 112px;
+}
+.header-elements button .dropdown .dropdown-list ul :first-child {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 500;
+}
+.header-elements button .dropdown .dropdown-list ul :first-child span {
+  color: #2874f0;
 }

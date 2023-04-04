@@ -2,5 +2,7 @@ main {
   background-color: #f1f3f6;
 }
 .main-section {
- margin-block: 20px;
+  margin-block: 20px;
+  max-width: 1680px;
+  margin: 20px auto;
 }
