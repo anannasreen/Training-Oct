@@ -45,8 +45,6 @@ function CreateCarouselDesktop() {
     setTimeout(ChangeIndex, 3000);
   };
 
-  console.log()
-
   return (
     <div className="carousel">
       <div className="carousel-desktop">

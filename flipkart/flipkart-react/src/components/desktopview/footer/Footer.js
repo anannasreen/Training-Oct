@@ -4,19 +4,6 @@ import "./Footer.css";
 function GenerateFooterSection() {
   return (
     <footer>
-      <div className="footer-elements">
-        <div className="stories">
-          <h2>Grocery/Supermart</h2>
-          <p>
-            Launching into the grocery vertical, Flipkart introduce{" "}
-            <b>Supermart</b> that is out to bring everyday essentials close to
-            you. From pulses, spices, dairy, personal and sanitary care,
-            breakfast essentials, health drinks, spreads, ready to cook,
-            grooming to cleaning agents, we are happy to present everything you
-            need to run a house. Now buy
-          </p>
-        </div>
-      </div>
       <div className="footer">
         <div className="footer-items">
           <div className="footer-list-section">
