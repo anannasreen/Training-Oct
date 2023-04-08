@@ -1,5 +1,5 @@
 const fetchData = async () => {
-  const response = await fetch("./data.json");
+  const response = await fetch("./words.json");
   const parsedResponse = await response.json();
   return parsedResponse;
 };
