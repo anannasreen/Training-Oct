@@ -12,6 +12,15 @@ function GenerateWords() {
     WordleData();
   }, []);
   //   console.log(word.words);
+
+  return (
+    <div>
+      {word?.words?.map((item) => {
+        // console.log(item.length);
+        return <div className="letter-box"></div>;
+      })}
+    </div>
+  );
 }
 
 export default GenerateWords;

@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Wordle.css";
 import fetchData from "./../fetchData";
+import GenerateWords from "./Words";
+import GenerateLetters from "./Letters";
 
 function CreateWordle() {
   const [word, setWord] = useState([]);
@@ -13,19 +15,26 @@ function CreateWordle() {
     }
     WordleData();
   }, []);
-  // console.log(word.words);
+  console.log(word.words);
 
-  const GenerateLetters = () => {
-    let td = [];
-    for (let i = 65; i <= 90; i++) {
-      td.push(
-        <button className="letter" key={i} ref={listOne}>
-          {String.fromCharCode(i)}
-        </button>
-      );
-    }
-    return td;
-  };
+  // const GenerateLetters = () => {
+  //   let td = [];
+  //   for (let i = 65; i <= 90; i++) {
+  //     td.push(
+  //       <button
+  //         className="letter"
+  //         key={i}
+  //         ref={listOne}
+  //         onMouseOver={handleMouseOver}
+  //         value={String.fromCharCode(i)}
+  //       >
+  //         {String.fromCharCode(i)}
+  //       </button>
+  //     );
+  //   }
+  //   // console.log(td.length)
+  //   return td;
+  // };
 
   return (
     <div className="container">
@@ -45,6 +54,7 @@ function CreateWordle() {
         <div className="letter-box">
           <GenerateLetters />
         </div>
+        <GenerateWords />
       </div>
     </div>
   );
