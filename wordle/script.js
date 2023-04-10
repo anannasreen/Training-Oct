@@ -3,7 +3,6 @@ const listOne = document.querySelector(".list-one");
 const listTwo = document.querySelector(".list-two");
 const listThree = document.querySelector(".list-three");
 const listFour = document.querySelector(".list-four");
-// console.log(listOne);
 
 const words = [
   "AREA",
