@@ -75,12 +75,10 @@ const lettersOfListfour = listFour.querySelectorAll(".letter");
 
 lettersOfListone.forEach((letter) => {
   letter.addEventListener("mouseenter", (e) => {
-    // console.log(e.target);
     e.target.style.backgroundColor = "#c9b458";
     for (let i = 0; i < words.length; i++) {
       if (words[i].charAt(0) === e.target.value) {
         console.log(words[i]);
-        // const firstLetter = words[i];
 
         for (j = 0; j < listTwo.children.length; j++) {
           if (listTwo.children[j].value === words[i].split("")[1]) {
@@ -101,7 +99,6 @@ lettersOfListone.forEach((letter) => {
         }
       }
     }
-    // if(listTwo.children){}
   });
   letter.addEventListener("mouseleave", (e) => {
     e.target.style.backgroundColor = "#6aaa64";
@@ -121,12 +118,10 @@ lettersOfListone.forEach((letter) => {
 
 lettersOfListtwo.forEach((letter) => {
   letter.addEventListener("mouseenter", (e) => {
-    // console.log(e.target);
     e.target.style.backgroundColor = "#c9b458";
     for (let i = 0; i < words.length; i++) {
       if (words[i].charAt(1) === e.target.value) {
         console.log(words[i]);
-        // const firstLetter = words[i];
 
         for (j = 0; j < listOne.children.length; j++) {
           if (listOne.children[j].value === words[i].split("")[0]) {
@@ -170,7 +165,6 @@ lettersOfListthree.forEach((letter) => {
     for (let i = 0; i < words.length; i++) {
       if (words[i].charAt(2) === e.target.value) {
         console.log(words[i]);
-        // const firstLetter = words[i];
 
         for (j = 0; j < listOne.children.length; j++) {
           if (listOne.children[j].value === words[i].split("")[0]) {
@@ -210,12 +204,10 @@ lettersOfListthree.forEach((letter) => {
 
 lettersOfListfour.forEach((letter) => {
   letter.addEventListener("mouseenter", (e) => {
-    // console.log(e.target);
     e.target.style.backgroundColor = "#c9b458";
     for (let i = 0; i < words.length; i++) {
       if (words[i].charAt(3) === e.target.value) {
         console.log(words[i]);
-        // const firstLetter = words[i];
 
         for (j = 0; j < listOne.children.length; j++) {
           if (listOne.children[j].value === words[i].split("")[0]) {
