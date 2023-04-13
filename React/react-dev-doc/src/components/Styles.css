@@ -35,3 +35,11 @@ body {
 .game-info {
   margin-left: 20px;
 }
+form {
+  text-align: left;
+  /* white-space: nowrap; */
+  display: flex;
+  flex-direction: column;
+  width: 13%;
+  gap: 10px;
+}
