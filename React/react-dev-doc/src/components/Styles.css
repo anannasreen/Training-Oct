@@ -6,6 +6,7 @@ body {
   font-family: sans-serif;
   margin: 20px;
   padding: 0;
+  display: flex;
 }
 .square {
   background-color: white;
@@ -42,4 +43,12 @@ form {
   flex-direction: column;
   width: 13%;
   gap: 10px;
+}
+.todos {
+  padding: 20px;
+  border-radius: 5px;
+}
+.avatar {
+  border-radius: 50%;
+  margin: 20px;
 }

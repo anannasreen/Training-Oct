@@ -11,7 +11,7 @@ import FilterableProductTable from "./components/Product";
 function App() {
   return (
     <div className="App">
-      <FilterableProductTable />
+      {/* <FilterableProductTable /> */}
     </div>
   );
 }
