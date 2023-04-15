@@ -1,25 +1,31 @@
 import "./App.css";
-import AvatarProfile from "./components/Avatar";
-import Card from "./components/Card";
-import Board from "./components/Game";
-import Game from "./components/Game";
-import FilterableProductTable from "./components/Products";
-import Gallery from "./components/Profile";
-import Time from "./components/Time";
-import ToDoList from "./components/ToDoList";
+import DrinkList from "./components/Drink";
+import List from "./components/List";
+import PackingList from "./components/PackingList";
+import Poem from "./components/Poem";
+import RecipeList from "./components/Recipe";
+import Scientist from "./components/Scientist";
+import "./components/Styles.css";
+import Chai from "./components/Chai";
+import TeaGathering from "./components/Tea";
+import Tool from "./components/Toolbar";
+import Click from "./components/Click";
+import Form from "./components/Form";
 
 function App() {
   return (
     <div className="App">
-      {/* <Game /> */}
-      {/* <Board /> */}
-      {/* <Game /> */}
-      {/* <FilterableProductTable products={PRODUCTS} /> */}
-      {/* <Gallery /> */}
-      {/* <ToDoList /> */}
-      {/* <AvatarProfile /> */}
-      {/* <Card /> */}
-      <Time />
+      <Form />
+      {/* <Click /> */}
+      {/* <Tool /> */}
+      {/* <Scientist />
+      <PackingList />
+      <DrinkList /> */}
+      {/* <List /> */}
+      {/* <RecipeList />
+      <Poem />
+      <Chai />
+      <TeaGathering/> */}
     </div>
   );
 }
