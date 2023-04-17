@@ -859,9 +859,6 @@ function setupFilters(data) {
   const l2 = document.querySelector(".samsung");
   const l3 = document.querySelector(".oppo");
 
-  let selectedBrand;
-  let check = "no";
-
   l1.addEventListener("change", () => {
     applyFilters(data);
   });
@@ -886,17 +883,6 @@ function setupFilters(data) {
 }
 
 setupFilters(containerObj);
-
-// an unused utility function to remove
-// an element from an array
-
-// function removeElementFromArray(list, value) {
-//   idx = list.findIndex((val) => {
-//     return val === value;
-//   });
-//   if (idx === -1) return;
-//   return list.splice(idx, 1);
-// }
 
 function brandFilter(data, brands) {
   return data.filter((item) => {
