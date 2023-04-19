@@ -1,0 +1,41 @@
+.App {
+  display: flex;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 1px;
+  grid-template-columns: repeat(3, 1fr);
+  width: 15%;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  font-size: 5rem;
+  color: #e8e5e5;
+  border: solid 1px black;
+}
+
+.square_O {
+  background-color: rgb(87, 218, 21);
+}
+
+.square_X {
+  background-color: crimson;
+}
+
+p {
+  font-size: 2rem;
+}
+
+.reset {
+  margin-top: 2rem;
+  font-size: 2rem;
+  background-color: aqua;
+  border: none;
+  border-radius: 6px;
+  padding: 1rem;
+  cursor: pointer;
+}
