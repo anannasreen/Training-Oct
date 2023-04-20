@@ -4,6 +4,8 @@ import Footer from "./components/Footer";
 import HomePageFn from "./pages/HomePageFn";
 import Usage from "./pages/Usage";
 import DummyPage from "./pages/DummyPage";
+import { Provider } from "react-redux";
+import store from "./redux/store";
 
 class MyApp extends Component {
   constructor(props) {
@@ -39,12 +41,15 @@ class MyApp extends Component {
 
   render() {
     return (
-      <div className="app">
-        <Header onMenuSelect={this.handleMenuSelect} />
-        <div className="app-body">{this.getPage()}</div>
-        <Footer />
-      </div>
+      <Provider store={store}>
+        <div className="app">
+          <Header onMenuSelect={this.handleMenuSelect} />
+          <div className="app-body">{this.getPage()}</div>
+          <Footer />
+        </div>
+      </Provider>
     );
   }
 }
+
 export default MyApp;

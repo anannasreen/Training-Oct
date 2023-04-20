@@ -1,34 +1,56 @@
 import React, { useReducer } from "react";
 import "./Usage.css";
-import usageReducer, { TYPE } from "../reducers/usageReducers";
+import { useDispatch, useSelector } from "react-redux";
 
-const initialState = {
-  value: 0,
-};
+// import usageReducer, { TYPE } from "../reducers/usageReducers";
+
+// const initialState = {
+//   value: 0,
+// };
 
 function Usage() {
-  const [state, dispatch] = useReducer(usageReducer, initialState);
+  // const [state, dispatch] = useReducer(usageReducer, initialState);
+
+  const value = useSelector((state) => {
+    return state.value;
+  });
+
+  // console.log(value);
+
+  const dispatch = useDispatch();
 
   return (
     <div className="usage">
-      <div className="usage-item" style={{ background: state.color }}>
+      <div className="usage-item">
+        {/* <div className="usage-item" style={{ background: state.color }}> */}
         <button
           onClick={() => {
             dispatch({
-              type: TYPE.CHANGE_VALUE,
-              payload: 1,
+              type: "increment",
             });
+
+            // dispatch({
+            //   type: TYPE.CHANGE_VALUE,
+            //   payload: 1,
+            // });
           }}
         >
           Increment
         </button>
-        <label>{state.value}</label>
+
+        {/* <label>{state.value}</label> */}
+
+        <label>{value}</label>
+
         <button
           onClick={() => {
             dispatch({
-              type: TYPE.CHANGE_VALUE,
-              payload: -1,
+              type: "decrement",
             });
+            // dispatch({
+            //   type: TYPE.CHANGE_VALUE,
+            //   payload: -1,
+            // });
           }}
         >
           Decrement
@@ -36,20 +58,20 @@ function Usage() {
       </div>
       <button
         onClick={() => {
-          dispatch({
-            type: TYPE.CHANGE_COLOR,
-            payload: "green",
-          });
+          // dispatch({
+          //   type: TYPE.CHANGE_COLOR,
+          //   payload: "green",
+          // });
         }}
       >
         Green
       </button>
       <button
         onClick={() => {
-          dispatch({
-            type: TYPE.CHANGE_COLOR,
-            payload: "orange",
-          });
+          // dispatch({
+          //   type: TYPE.CHANGE_COLOR,
+          //   payload: "orange",
+          // });
         }}
       >
         Orange
