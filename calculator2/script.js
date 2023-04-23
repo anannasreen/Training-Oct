@@ -113,3 +113,5 @@ function charToDigit(x) {
       return 9;
   }
 }
+
+console.log('hello');
