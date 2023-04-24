@@ -1,7 +1,8 @@
 import React from "react";
 import "./Login.css";
+import PropTypes from "prop-types";
 
-export default function Login() {
+export default function Login({ setToken }) {
   return (
     <div className="login-wrapper">
       <h1>Please Log In</h1>
@@ -21,3 +22,7 @@ export default function Login() {
     </div>
   );
 }
+
+Login.propTypes = {
+  setToken: PropTypes.func.isRequired,
+};
