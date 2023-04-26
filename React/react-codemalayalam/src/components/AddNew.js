@@ -18,7 +18,7 @@ class AddNew extends React.Component {
   };
 
   handleClick = () => {
-    console.log(this.state.titleInput);
+    // console.log(this.state.titleInput);
   };
 
   render() {

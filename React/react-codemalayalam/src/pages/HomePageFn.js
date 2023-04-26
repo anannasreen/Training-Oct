@@ -26,7 +26,7 @@ function HomePageFn() {
   };
 
   const handleDelete = (item) => {
-    console.log("Delete", item);
+    // console.log("Delete", item);
     const newList = data.filter((element) => element.id !== item.id);
     setData(newList);
   };
@@ -57,7 +57,7 @@ function HomePageFn() {
   });
 
   const handleClick = useCallback(() => {
-    console.log("Clicked", activeState);
+    // console.log("Clicked", activeState);
   }, [activeState]);
 
   return (

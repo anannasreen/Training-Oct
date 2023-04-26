@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./Login.css";
 import PropTypes from "prop-types";
+import "./Login.css";
 
 async function loginUser(credentials) {
   return fetch("http://localhost:8080/login", {
@@ -18,7 +18,6 @@ export default function Login({ setToken }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     const token = await loginUser({
       username,
       password,
@@ -31,11 +30,11 @@ export default function Login({ setToken }) {
       <h1>Please Log In</h1>
       <form onSubmit={handleSubmit}>
         <label>
-          <p>Username</p>
-          <input type="text" onClick={(e) => setUserName(e.target.value)} />
+          <p className="text-red">Username</p>
+          <input type="text" onChange={(e) => setUserName(e.target.value)} />
         </label>
         <label>
-          <p>Password</p>
+          <p className="text-red">Password</p>
           <input
             type="password"
             onChange={(e) => setPassword(e.target.value)}

@@ -4,7 +4,7 @@ import AddNew from "./AddNew";
 
 class Tools extends React.Component {
   render() {
-    console.log("RENDER TOOLS");
+    // console.log("RENDER TOOLS");
     const { children, onAction, labelValue } = this.props;
 
     const onlyChild = React.Children.only(children);

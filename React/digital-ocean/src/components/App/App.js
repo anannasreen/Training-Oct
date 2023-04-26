@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import "./App.css";
+import React from "react";
+import "./Apps.css";
 
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Preferences from "../Preferences/Preferences";
@@ -29,7 +29,7 @@ function Apps() {
 
   return (
     <div className="wrapper">
-      <h1>Application</h1>
+      <h1 className="text-red">Applications</h1>
       <BrowserRouter>
         <Switch>
           <Route path="/dashboard">

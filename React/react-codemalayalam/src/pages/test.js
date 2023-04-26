@@ -34,7 +34,7 @@ const store = createStore();
 const state = store.getState();
 
 store.subscribe(() => {
-  console.log(store.getState);
+  // console.log(store.getState);
 
   document.getElementById("value").innerText = store.getState().value;
 });
@@ -55,4 +55,4 @@ document.getElementById("decrement").onclick = () => {
   });
 };
 
-console.log(state);
+// console.log(state);

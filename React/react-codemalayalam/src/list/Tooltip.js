@@ -11,7 +11,7 @@ function Tooltip(props, ref) {
   }
 
   const myTest = () => {
-    console.log("HELLO Im in MyTest");
+    // console.log("HELLO Im in MyTest");
   };
 
   return (

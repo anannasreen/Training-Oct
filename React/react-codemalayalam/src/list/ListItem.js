@@ -6,7 +6,7 @@ import { useTooltip } from "../hooks/ourHooks";
 import Tooltip from "./Tooltip";
 
 function ListItem(props) {
-  console.log("RENDER LIST ITEM");
+  // console.log("RENDER LIST ITEM");
   const { title, descr, isActive, onDelete, onLabelClick } = props;
 
   const [showTooltip, setShowTooltip, labelRef, refObj] = useTooltip();

@@ -6,6 +6,8 @@ import Usage from "./pages/Usage";
 import DummyPage from "./pages/DummyPage";
 import { Provider } from "react-redux";
 import store from "./redux/store";
+import Settings from './pages/Settings'
+import HomePage from './pages/HomePage'
 
 class MyApp extends Component {
   constructor(props) {
@@ -16,7 +18,7 @@ class MyApp extends Component {
   }
 
   handleMenuSelect = (value) => {
-    console.log(value);
+    // console.log(value);
     this.setState({
       currentSelected: value,
     });
@@ -27,11 +29,11 @@ class MyApp extends Component {
 
     switch (currentSelected) {
       case "home":
-        return <HomePageFn />;
+        return <HomePage />;
       case "usage":
         return <Usage />;
       case "settings":
-        return <DummyPage key="settings" name="Settings" />;
+        return <Settings />;
       case "logout":
         return <DummyPage key="logout" name="Logout" />;
       default:
