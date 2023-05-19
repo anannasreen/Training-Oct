@@ -1,18 +1,12 @@
 import "./App.css";
-import Product from "./components/Products";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Apps from "./components/Apps/Apps";
 
 function App() {
-  return <div className="App">
-    <h1>Application</h1>
-    <BrowserRouter>
-    <Switch>
-      <Route path="/dashboard">
-        
-      </Route>
-    </Switch>
-    </BrowserRouter>
-  </div>;
+  return (
+    <div className="App">
+      <Apps />
+    </div>
+  );
 }
 
 export default App;

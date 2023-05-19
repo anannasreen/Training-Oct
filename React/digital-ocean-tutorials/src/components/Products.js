@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function Product() {
-  const [cart, setCart] = useState([]);
 
   return (
     <div className="p-4 border-4 wrapper border-indigo-5/1 ">
