@@ -1,0 +1,305 @@
+{
+  "data": [
+    {
+      "question": "When the phone rings do you",
+      "options": ["Hurry to get to it first", "Hope some one else will answer"]
+    },
+    {
+      "question": "Are you more",
+      "options": [
+        "Observant than introspective",
+        "Introspective than observant"
+      ]
+    },
+    {
+      "question": "Is it worse to",
+      "options": ["Have your head in the clouds", "Be in a rut"]
+    },
+    {
+      "question": "With people, are you usually more",
+      "options": ["Firm than gently", "Gentle than firm"]
+    },
+    {
+      "question": "Are you more comfortable in making",
+      "options": ["Critical judgements", "Value judgements"]
+    },
+    {
+      "question": "Is clutter in the workplace something new",
+      "options": ["Take time to straighten up", "Tolerate pretty well"]
+    },
+    {
+      "question": "Is it your way to",
+      "options": ["Make up your mind quickly", "Pick and choose at some length"]
+    },
+    {
+      "question": "Waiting in line, do you often",
+      "options": ["Chat with others", "Stick to business"]
+    },
+    {
+      "question": "Are you more",
+      "options": ["Sensible than ideational", "Ideational than sensible"]
+    },
+    {
+      "question": "Are you more interested in",
+      "options": ["What is actual", "What is possible"]
+    },
+    {
+      "question": "In making up your mind, are you more likely to go by",
+      "options": ["Data", "Desires"]
+    },
+    {
+      "question": "In sizing up others, do you tend to be",
+      "options": ["Objective and impersonal", "Friendly and personal"]
+    },
+    {
+      "question": "Do you prefer contracts to be",
+      "options": ["Signed, cealed and delivered", "Settled on a handshake"]
+    },
+    {
+      "question": "Are you more satisfied having",
+      "options": ["A finished product", "Work in progress"]
+    },
+    {
+      "question": "At a party, do you",
+      "options": [
+        "Interact with many, even strangers",
+        "Interact with a few friends"
+      ]
+    },
+    {
+      "question": "Do you tend to be more",
+      "options": ["Factual than speculative", "Speculative than factual"]
+    },
+    {
+      "question": "Do you like writers who",
+      "options": ["Say what they mean", "Use metaphors and symbolism"]
+    },
+    {
+      "question": "Which appeals to you more:",
+      "options": ["Consistency of thought", "Harmonious relationships"]
+    },
+    {
+      "question": "If you must disappoint someone, are you usually",
+      "options": ["Frank and straightforward", "Warm and considerate"]
+    },
+    {
+      "question": "On the job, do you want your activities",
+      "options": ["Scheduled", "Unscheduled"]
+    },
+    {
+      "question": "Do you more often prefer",
+      "options": [
+        "Final, unalterable statements",
+        "Tentative, preliminary statements"
+      ]
+    },
+    {
+      "question": "Does interacting with strangers",
+      "options": ["Energize you", "Tax your reserves"]
+    },
+    {
+      "question": "Facts",
+      "options": ["Speak for themselves", "Illustrate principles"]
+    },
+    {
+      "question": "Do you find visionaries and theorists",
+      "options": ["Somewhat annoying", "Rather fascinating"]
+    },
+    {
+      "question": "In a heated discussion, do you",
+      "options": ["Stick to your guns", "Look for common ground"]
+    },
+    {
+      "question": "Is it better to be",
+      "options": ["Just", "Merciful"]
+    },
+    {
+      "question": "At work, is it more natural for you to",
+      "options": ["Point out mistakes", "Try to please others"]
+    },
+    {
+      "question": "Are you more comfortable",
+      "options": ["After a decision", "Before a decision"]
+    },
+    {
+      "question": "Do you tend to",
+      "options": ["Say right out what's on your mind", "Keep your ears open"]
+    },
+    {
+      "question": "Common sense is",
+      "options": ["Usually reliable", "Frequently questionable"]
+    },
+    {
+      "question": "Children often do not",
+      "options": [
+        "Make themselves useful enough",
+        "Exercise their fantasy enough"
+      ]
+    },
+    {
+      "question": "When in charge of others, do you tend to be",
+      "options": ["Firm and unbending", "Forgiving and lenient"]
+    },
+    {
+      "question": "Are you more often",
+      "options": ["A cool-headed person", "A warm-hearted person"]
+    },
+    {
+      "question": "Are you prone to",
+      "options": ["Nailing things down", "Exploring the possibilities"]
+    },
+    {
+      "question": "In most situations, are you more",
+      "options": ["Deliberate than spontaneous", "Spontaneous than deliberate"]
+    },
+    {
+      "question": "Do you think of yourself as",
+      "options": ["An outgoing person", "A private person"]
+    },
+    {
+      "question": "Are you more frequently",
+      "options": ["A practical sort of person", "A fanciful sort of person"]
+    },
+    {
+      "question": "Do you speak more in",
+      "options": [
+        "Particulars than generalities",
+        "Generalities than particulars"
+      ]
+    },
+    {
+      "question": "Which is more of a compliment:",
+      "options": [
+        "'There's a logical person'",
+        "'There's a sentimental person'"
+      ]
+    },
+    {
+      "question": "Which rules you more",
+      "options": ["Your thoughts", "Your feelings"]
+    },
+    {
+      "question": "When finishing a job, do you like to",
+      "options": ["Tie up all the loose ends", "Move on to something else"]
+    },
+    {
+      "question": "Do you prefer to work",
+      "options": ["To deadlines", "Just whenever"]
+    },
+    {
+      "question": "Are you the kind of person, who",
+      "options": ["Is rather talkative", "Doesn't miss much"]
+    },
+    {
+      "question": "Are you inclined to take what is said",
+      "options": ["More literally", "More figuratively"]
+    },
+    {
+      "question": "Do you more often see",
+      "options": ["What's right in front of you", "What can only be imagined"]
+    },
+    {
+      "question": "Is it worse to be",
+      "options": ["A softy", "Hard-nosed"]
+    },
+    {
+      "question": "In trying circumstances, are you sometimes",
+      "options": ["Too unsympathetic", "Too sympathetic"]
+    },
+    {
+      "question": "Do you tend to choose",
+      "options": ["Rather carefully", "Somewhat impulsively"]
+    },
+    {
+      "question": "Are you inclined to be more",
+      "options": ["Hurried than leisurely", "leisurely than hurried"]
+    },
+    {
+      "question": "At work do you tend to",
+      "options": ["Be sociable with your colleagues", "Keep more to yourself"]
+    },
+    {
+      "question": "Are you more likely to trust",
+      "options": ["Your experiences", "Your conceptions"]
+    },
+    {
+      "question": "Are you more inclined to feel",
+      "options": ["Down to earth", "Somewhat removed"]
+    },
+    {
+      "question": "Do you think of yourself as a",
+      "options": ["Tough-minded person", "Tender-hearted person"]
+    },
+    {
+      "question": "Do you value in yourself more than you are",
+      "options": ["Reasonable", "Devoted"]
+    },
+    {
+      "question": "Do you usually want things",
+      "options": ["Settled and decided", "Just penciled in"]
+    },
+    {
+      "question": "Would you say you are more",
+      "options": ["Serious and determined", "Easy going"]
+    },
+    {
+      "question": "Do you consider yourself",
+      "options": ["A good conversationalist", "A good listener"]
+    },
+    {
+      "question": "Do you prize in yourself",
+      "options": ["A strong hold on reality", "A vivid imagination"]
+    },
+    {
+      "question": "Are you drawn more to",
+      "options": ["Fundamentals", "Overtones"]
+    },
+    {
+      "question": "Which seems the greater fault:",
+      "options": ["To be too compassionate", "To be too dispassionate"]
+    },
+    {
+      "question": "Are you swayed more by",
+      "options": ["Convincing evidence", "A touching appeal"]
+    },
+    {
+      "question": "Do you feel better about",
+      "options": ["Coming to closure", "Keeping your options open"]
+    },
+    {
+      "question": "Is it preferable mostly to",
+      "options": [
+        "Make sure things are arranged",
+        "Just let things happen naturally"
+      ]
+    },
+    {
+      "question": "Are you inclined to be",
+      "options": ["Easy to approach", "Somewhat reserved"]
+    },
+    {
+      "question": "In stories, do you prefer",
+      "options": ["Action and adventure", "Fantasy and heroism"]
+    },
+    {
+      "question": "Is it easier for you to",
+      "options": ["Put others to good use", "Identify with others"]
+    },
+    {
+      "question": "Which do you with more for yourself:",
+      "options": ["Strength of will", "Strength of emotion"]
+    },
+    {
+      "question": "Do you see yourself as basically",
+      "options": ["Thick skinned", "Thin skinned"]
+    },
+    {
+      "question": "Do you tend to notice",
+      "options": ["Disorderliness", "Opportunities for change"]
+    },
+    {
+      "question": "Are you more",
+      "options": ["Routinized than whimsical", "Whimsical than routinized"]
+    }
+  ]
+}
